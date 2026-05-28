@@ -81,6 +81,8 @@
   .train-card h4{font-size:1.25rem}
   .train-card span{color:var(--ink-soft);font-size:.96rem}
   .note{font-style:italic;color:var(--ink-soft);margin:6px 0 40px}
+  .train-photo{margin:26px 0 8px}
+  .train-photo img{width:100%;height:auto;max-height:460px;object-fit:cover;border:1px solid var(--line);display:block}
 
   /* ---- Commitment tiers ---- */
   .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -142,8 +144,9 @@
   #pricing .eyebrow{color:#d9a06b}
   #pricing h2{color:#fff}
   #pricing .intro{color:#cfc6b2;max-width:60ch;margin-bottom:14px}
-  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px}
-  @media(max-width:860px){.price-grid{grid-template-columns:1fr}}
+  .price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
+  @media(max-width:980px){.price-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.price-grid{grid-template-columns:1fr}}
   .price-card{background:#383228;border:1px solid #4a4234;border-radius:4px;padding:28px;display:flex;flex-direction:column}
   .price-card h4{color:#fff;font-size:1.3rem;line-height:1.2}
   .price-card .incl{color:#bcb29c;font-size:.9rem;margin:8px 0 22px}
@@ -160,7 +163,7 @@
   .bench .lab{font-size:.85rem;letter-spacing:.1em;opacity:.85;margin-bottom:10px}
   .bench .big{font-family:'Fraunces',serif;font-weight:700;font-size:1.7rem;line-height:1.2}
   .bench .yic{width:70px;height:70px;margin-bottom:20px}
-  .baseline-list{columns:2;column-gap:34px}
+  .baseline-list{columns:2;column-gap:34px;list-style:none}
   @media(max-width:620px){.baseline-list{columns:1}}
   .baseline-list li{break-inside:avoid;margin-bottom:14px;padding-left:18px;position:relative;color:var(--ink-soft);font-size:.96rem}
   .baseline-list li:before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--olive)}
@@ -194,6 +197,58 @@
   footer .brand{justify-content:center;color:#fff;margin-bottom:10px}
   footer a{color:#e8a866;text-decoration:none}
 
+  /* ---- Rinjani trip: itinerary ---- */
+  #trip{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .trip-meta{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 6px}
+  .trip-meta .chip{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:5px 14px;font-size:.85rem;color:var(--ink-soft);font-weight:600}
+  .itin{margin-top:34px;border-left:2px solid var(--line);padding-left:0}
+  .itin .day{position:relative;padding:0 0 26px 28px;border-left:2px solid var(--rust);margin-left:6px}
+  .itin .day:last-child{border-left-color:transparent}
+  .itin .day:before{content:"";position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:var(--rust);border:2px solid var(--card)}
+  .itin .day .dlabel{font-family:'Fraunces',serif;font-weight:700;font-size:1.08rem;color:var(--ink)}
+  .itin .day .dtext{color:var(--ink-soft);font-size:.96rem;margin-top:2px}
+  .itin .day.buffer:before{background:var(--olive)}
+  .itin .day.buffer{border-left-color:var(--olive)}
+  .buffer-note{font-style:italic;color:var(--olive-soft);font-size:.88rem;margin-top:4px}
+
+  /* ---- Elevation graph ---- */
+  .graph-card{background:var(--bg);border:1px solid var(--line);padding:26px;margin-top:18px}
+  .graph-card h3{font-size:1.3rem;margin-bottom:4px}
+  .graph-sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:20px}
+  .daystat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+  @media(max-width:680px){.daystat{grid-template-columns:1fr}}
+  .daystat .ds{background:var(--card);border:1px solid var(--line);padding:14px 16px}
+  .daystat .ds .t{font-family:'Fraunces',serif;font-weight:700;color:var(--rust);font-size:.95rem}
+  .daystat .ds .v{color:var(--ink-soft);font-size:.86rem;margin-top:4px;line-height:1.5}
+  .graph-note{font-size:.8rem;color:var(--ink-soft);font-style:italic;margin-top:16px}
+
+  /* ---- Cost table ---- */
+  #cost{background:var(--dark);color:#f3ecdc}
+  #cost .eyebrow{color:#d9a06b}
+  #cost h2{color:#fff}
+  #cost .intro{color:#cfc6b2;max-width:62ch;margin-bottom:8px}
+  .cost-table{width:100%;border-collapse:collapse;margin-top:30px;font-size:.96rem}
+  .cost-table th,.cost-table td{text-align:left;padding:13px 14px;border-bottom:1px solid #4a4234}
+  .cost-table thead th{color:#bcb29c;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
+  .cost-table td.amt{text-align:right;font-family:'Fraunces',serif;font-weight:600;color:#f3ecdc;white-space:nowrap}
+  .cost-table td.note{color:#9c937e;font-size:.84rem}
+  .cost-table tr.total td{border-bottom:none;border-top:2px solid #6b5e45;padding-top:18px;font-size:1.05rem}
+  .cost-table tr.total .lab{font-family:'Fraunces',serif;font-weight:700;color:#fff}
+  .cost-table tr.total .amt{color:#e8a866;font-size:1.4rem}
+  .cost-foot{color:#9c937e;font-size:.84rem;margin-top:22px;max-width:72ch}
+  .cost-split{margin:26px 0}
+  .cost-inc{background:#383228;border:1px solid #4a4234;border-radius:4px;padding:22px 26px}
+  .cost-inc .ci-head{font-family:'Fraunces',serif;font-weight:700;color:#e8a866;font-size:1.05rem;margin-bottom:14px}
+  .cost-inc .ci-head span{font-family:'Source Sans 3',sans-serif;font-weight:400;color:#9c937e;font-size:.82rem}
+  .cost-inc ul{list-style:none;columns:2;column-gap:30px}
+  @media(max-width:560px){.cost-inc ul{columns:1}}
+  .cost-inc li{color:#cfc6b2;font-size:.92rem;padding:5px 0 5px 18px;position:relative;break-inside:avoid}
+  .cost-inc li:before{content:"✓";position:absolute;left:0;color:#9bbf8a;font-weight:700}
+  .cost-table td.amt{white-space:nowrap}
+  @media(max-width:600px){.cost-table td.note{display:none}.cost-table th.note{display:none}}
+
+  /* ---- Packing list (removed) ---- */
+
   /* reveal */
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
   .reveal.in{opacity:1;transform:none}
@@ -210,6 +265,8 @@
       <a href="#peaks">Peaks</a>
       <a href="#calendar">Calendar</a>
       <a href="#pricing">Pricing</a>
+      <a href="#trip">Trip</a>
+      <a href="#cost">Cost</a>
       <a href="#signup" class="nav-cta">Sign up</a>
     </div>
   </div>
@@ -268,6 +325,10 @@
         <div><h4>Bukit Timah</h4><span>vertical repeats with pack</span></div>
       </div>
     </div>
+    <figure class="train-photo reveal">
+      <img src="training.jpg" alt="The group training together" loading="lazy"
+           onerror="this.closest('figure').style.display='none'">
+    </figure>
     <p class="note reveal">Grouped by fitness. On the mountain, multiple guides so everyone has company at a comfortable pace.</p>
 
     <h3 style="font-size:1.6rem;margin-bottom:24px" class="reveal">What a weekly commitment looks like</h3>
@@ -361,10 +422,10 @@
       <p style="color:var(--ink-soft);margin-top:10px;max-width:60ch">Four climbs mapped across the year. Exact dates are still being set — they're marked TBA for now.</p>
     </div>
     <div class="cal-grid">
-      <div class="cal-card reveal"><div class="order">First climb · List A</div><div class="when">July</div><h4>Rinjani · 3,726 m</h4><div class="loc">Indonesia</div><span class="tba">Date TBA</span></div>
-      <div class="cal-card reveal"><div class="order">List B</div><div class="when">October</div><h4>Goecha La · 4,940 m</h4><div class="loc">Sikkim, India</div><span class="tba">Date TBA</span></div>
-      <div class="cal-card reveal"><div class="order">List B</div><div class="when">Late Nov</div><h4>Tongariro 43 km <span style="font-weight:400">or</span> Overland 65 km</h4><div class="loc">New Zealand / Tasmania</div><span class="tba">Date TBA</span></div>
-      <div class="cal-card reveal"><div class="order">List B</div><div class="when">Late Jan</div><h4>Kilimanjaro · 5,895 m</h4><div class="loc">Tanzania</div><span class="tba">Date TBA</span></div>
+      <div class="cal-card reveal"><div class="order">First climb · List A</div><div class="when">Fri 10 Jul</div><h4>Rinjani · 3,726 m</h4><div class="loc">Indonesia</div><span class="tba">Summit ~12 Jul · tentative</span></div>
+      <div class="cal-card reveal"><div class="order">List B</div><div class="when">Sat 17 Oct</div><h4>Goecha La · 4,940 m</h4><div class="loc">Sikkim, India</div><span class="tba">~9–10 day trek · tentative</span></div>
+      <div class="cal-card reveal"><div class="order">List B</div><div class="when">Sat 28 Nov</div><h4>Overland Track · 65 km</h4><div class="loc">Tasmania</div><span class="tba">Finish ~3 Dec · tentative</span></div>
+      <div class="cal-card reveal"><div class="order">List B</div><div class="when">Mon 18 Jan ’27</div><h4>Kilimanjaro · 5,895 m</h4><div class="loc">Tanzania</div><span class="tba">Summit ~24 Jan · tentative</span></div>
     </div>
   </div>
 </section>
@@ -372,9 +433,9 @@
 <!-- PRICING -->
 <section id="pricing">
   <div class="wrap">
-    <div class="eyebrow reveal">Pricing · per pax</div>
+    <div class="eyebrow reveal">Pricing · per pax · USD</div>
     <h2 class="reveal">Rinjani packages</h2>
-    <p class="intro reveal">Our first climb. All prices are per person — the bigger the group, the lower the rate each.</p>
+    <p class="intro reveal">Our first climb. All prices are per person — the bigger the group, the lower the rate each. The <b>6D/5N</b> is our July trip (Rinjani + Gili). Rates cover the guided trek; flights and hotels are separate (see full cost below).</p>
     <div class="price-grid">
       <div class="price-card reveal">
         <h4>2D / 1N</h4>
@@ -409,8 +470,175 @@
           <li><span class="grp">11–18 pax</span><span class="amt">$280</span></li>
         </ul>
       </div>
+      <div class="price-card reveal" style="border:2px solid var(--rust)">
+        <h4>6D / 5N <span style="font-weight:400;font-size:.7em;color:#e8a866">· our trip</span></h4>
+        <div class="incl">+ Gili Islands &amp; snorkeling</div>
+        <ul class="tier-list">
+          <li><span class="grp">1 pax</span><span class="amt">$820</span></li>
+          <li><span class="grp">2 pax</span><span class="amt">$570</span></li>
+          <li><span class="grp">3–5 pax</span><span class="amt">$520</span></li>
+          <li><span class="grp">6–10 pax</span><span class="amt">$470</span></li>
+          <li><span class="grp">11–18 pax</span><span class="amt">$430</span></li>
+        </ul>
+      </div>
     </div>
-    <p class="price-foot reveal">All prices are per person. Larger groups pay less each — message us to confirm your group's rate.</p>
+    <p class="price-foot reveal">All prices are per person in USD. Larger groups pay less each. The package includes hotels, all transfers, the Gili boat, snorkeling, guide, porters, camping and meals on the trek — flights and personal spending are separate. Message us to confirm your group's rate.</p>
+  </div>
+</section>
+
+<!-- RINJANI TRIP: ITINERARY + GRAPH -->
+<section id="trip">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <h2>Rinjani — our first trip</h2>
+      <div class="trip-meta">
+        <span class="chip">Fri 10 – Wed 15 Jul 2026</span>
+        <span class="chip">6 days / 5 nights</span>
+        <span class="chip">Fly Scoot SIN ⇄ LOP</span>
+        <span class="chip">Dates tentative</span>
+      </div>
+      <p style="color:var(--ink-soft);margin-top:10px;max-width:62ch">Our first climb — Rinjani plus the Gili Islands to finish. Out on the Fri 10 Jul Scoot flight, summit Sun 12 Jul, home on the Wed 15 Jul return. Dates are tentative until we book.</p>
+    </div>
+
+    <div class="itin reveal">
+      <div class="day"><div class="dlabel">Day 1 · Fri 10 Jul — Arrival → Sembalun</div><div class="dtext">Pick-up from Lombok airport, transfer to Sembalun village, hotel check-in, free time and trekking briefing.</div></div>
+      <div class="day"><div class="dlabel">Day 2 · Sat 11 Jul — Trek to Crater Rim</div><div class="dtext">Breakfast, start trekking from Sembalun (1,150m) through savanna and forest, lunch on the trail, reach Crater Rim (2,639m), sunset over Segara Anak Lake, dinner and camp.</div></div>
+      <div class="day"><div class="dlabel">Day 3 · Sun 12 Jul — Summit → Lake &amp; Hot Spring</div><div class="dtext">Wake ~2:00 AM for the summit push to 3,726m, sunrise from the top, back to camp for breakfast, trek down to Segara Anak Lake, relax at the hot springs, dinner and camp by the lake.</div></div>
+      <div class="day"><div class="dlabel">Day 4 · Mon 13 Jul — Lake → Torean → Senaru</div><div class="dtext">Breakfast at the lake, trek down the scenic Torean route (waterfalls and jungle) to Torean village, transfer to Senaru, hotel check-in and rest.</div></div>
+      <div class="day"><div class="dlabel">Day 5 · Tue 14 Jul — Waterfalls → Gili Islands</div><div class="dtext">Morning at Sendang Gile and Tiu Kelep waterfalls, transfer to the harbour, boat to the Gili Islands, snorkeling over coral reefs and turtles, hotel check-in and free time.</div></div>
+      <div class="day"><div class="dlabel">Day 6 · Wed 15 Jul — Gili → Home</div><div class="dtext">Breakfast, boat back to the Lombok mainland, transfer to the airport, fly home.</div></div>
+    </div>
+
+    <div class="graph-card reveal">
+      <h3>What the climb actually feels like</h3>
+      <p class="graph-sub">An honest, only-slightly-dramatic profile of the three trek days — Sembalun up to the summit, down to the lake, and out the Torean side.</p>
+      <svg viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto" role="img" aria-label="Illustrated feel of the Rinjani climb with stick figures and notes">
+        <defs>
+          <style>
+            .lbl{font-family:'Source Sans 3',sans-serif;font-size:11px;fill:#6b6353}
+            .note{font-family:'Source Sans 3',sans-serif;font-size:11px;fill:#8a4724;font-style:italic}
+            .big{font-family:'Fraunces',serif;font-size:13px;font-weight:700;fill:#a0552c}
+            .fig{stroke:#2e2a22;stroke-width:2;fill:none;stroke-linecap:round}
+          </style>
+        </defs>
+
+        <!-- sun -->
+        <g>
+          <circle cx="70" cy="60" r="20" fill="#e8a866"/>
+          <g stroke="#e8a866" stroke-width="2.5" stroke-linecap="round">
+            <line x1="70" y1="22" x2="70" y2="32"/><line x1="70" y1="88" x2="70" y2="98"/>
+            <line x1="32" y1="60" x2="42" y2="60"/><line x1="98" y1="60" x2="108" y2="60"/>
+            <line x1="43" y1="33" x2="50" y2="40"/><line x1="90" y1="80" x2="97" y2="87"/>
+            <line x1="43" y1="87" x2="50" y2="80"/><line x1="90" y1="40" x2="97" y2="33"/>
+          </g>
+          <text x="70" y="115" text-anchor="middle" class="note">8am and already roasting</text>
+        </g>
+
+        <!-- mountain outline: Sembalun(low L) -> rim -> SUMMIT -> crater/lake -> down to Senaru, then Gili sea -->
+        <path d="M0 360 L120 330 L240 250 L340 250 L430 70 L520 250 L600 250 L660 300 L760 330 L760 420 L0 420 Z"
+              fill="#a0552c" opacity="0.10"/>
+        <path d="M0 360 L120 330 L240 250 L340 250 L430 70 L520 250 L600 250 L660 300 L760 330"
+              fill="none" stroke="#a0552c" stroke-width="3"/>
+
+        <!-- crater lake (in the bowl) -->
+        <ellipse cx="445" cy="262" rx="48" ry="13" fill="#7d9bb0" opacity="0.7"/>
+        <text x="445" y="266" text-anchor="middle" class="lbl" font-size="9" fill="#fff">lake</text>
+
+        <!-- Gili sea bottom right -->
+        <path d="M700 360 Q740 352 780 360 L820 360 L820 420 L690 420 Z" fill="#7d9bb0" opacity="0.55"/>
+
+        <!-- summit elevation label -->
+        <text x="430" y="55" text-anchor="middle" class="big">Summit 3,726 m</text>
+
+        <!-- ===== stick figures + notes ===== -->
+        <!-- start, Sembalun -->
+        <g class="fig" transform="translate(120,300)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="10" x2="-8" y2="18"/><line x1="0" y1="10" x2="8" y2="18"/><line x1="0" y1="20" x2="-6" y2="32"/><line x1="0" y1="20" x2="6" y2="32"/></g>
+        <text x="120" y="352" text-anchor="middle" class="lbl">Sembalun 1,150 m</text>
+        <text x="120" y="285" text-anchor="middle" class="note">"How hard can it be?"</text>
+
+        <!-- climbing day 2, struggling -->
+        <g class="fig" transform="translate(215,262) rotate(15)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="10" x2="-8" y2="16"/><line x1="0" y1="10" x2="8" y2="14"/><line x1="0" y1="20" x2="-6" y2="32"/><line x1="0" y1="20" x2="7" y2="30"/></g>
+        <text x="205" y="225" text-anchor="middle" class="note">"Why are there<tspan x="205" dy="13">no trees?!"</tspan></text>
+
+        <!-- crater rim camp -->
+        <g class="fig" transform="translate(300,228)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="10" x2="-9" y2="10"/><line x1="0" y1="10" x2="9" y2="10"/><line x1="0" y1="20" x2="-6" y2="32"/><line x1="0" y1="20" x2="6" y2="32"/></g>
+        <text x="300" y="212" text-anchor="middle" class="note">"Sunset! Worth it."</text>
+        <text x="300" y="255" text-anchor="middle" class="lbl">Crater rim 2,639 m</text>
+
+        <!-- near summit, suffering -->
+        <g class="fig" transform="translate(400,120) rotate(20)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="10" x2="-8" y2="15"/><line x1="0" y1="10" x2="8" y2="13"/><line x1="0" y1="20" x2="-7" y2="31"/><line x1="0" y1="20" x2="6" y2="32"/></g>
+        <text x="360" y="120" text-anchor="middle" class="note">"2am. Two steps up,<tspan x="360" dy="13">one slide back."</tspan></text>
+
+        <!-- on summit, triumphant -->
+        <g class="fig" transform="translate(445,52)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="9" x2="-9" y2="0"/><line x1="0" y1="9" x2="9" y2="0"/><line x1="0" y1="20" x2="-6" y2="32"/><line x1="0" y1="20" x2="6" y2="32"/></g>
+        <text x="500" y="60" text-anchor="start" class="note">"BOOM. Total legend."</text>
+
+        <!-- hot springs by lake -->
+        <g class="fig" transform="translate(490,250)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="18"/><line x1="0" y1="10" x2="-8" y2="16"/><line x1="0" y1="10" x2="8" y2="16"/></g>
+        <text x="540" y="235" text-anchor="middle" class="note">"Hot springs.<tspan x="540" dy="13">I live here now."</tspan></text>
+
+        <!-- descent to Senaru, wrecked knees -->
+        <g class="fig" transform="translate(635,290) rotate(-12)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="10" x2="-8" y2="14"/><line x1="0" y1="10" x2="8" y2="16"/><line x1="0" y1="20" x2="-7" y2="31"/><line x1="0" y1="20" x2="6" y2="32"/></g>
+        <text x="650" y="270" text-anchor="middle" class="note">"Can't feel<tspan x="650" dy="13">my legs."</tspan></text>
+
+        <!-- Gili, toes in sand -->
+        <g class="fig" transform="translate(750,332)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="18"/><line x1="0" y1="9" x2="-9" y2="4"/><line x1="0" y1="9" x2="9" y2="4"/><line x1="0" y1="18" x2="-6" y2="28"/><line x1="0" y1="18" x2="6" y2="28"/></g>
+        <text x="752" y="385" text-anchor="middle" class="lbl">Gili Island ~0 m</text>
+        <text x="752" y="320" text-anchor="middle" class="note">"Cold Bintang.<tspan x="752" dy="13">Worth every step."</tspan></text>
+
+        <!-- day band labels -->
+        <g class="big" font-size="11">
+          <text x="180" y="395">Day 2 · up to the rim</text>
+          <text x="420" y="410" text-anchor="middle">Day 3 · summit + lake</text>
+          <text x="660" y="395" text-anchor="end">Day 4 · out to Senaru</text>
+        </g>
+      </svg>
+      <div class="daystat">
+        <div class="ds"><div class="t">Day 2 — to crater rim</div><div class="v">Sembalun 1,150m → rim 2,639m<br>~10 km · 6–7 hrs, open savanna</div></div>
+        <div class="ds"><div class="t">Day 3 — summit + lake</div><div class="v">2AM push to 3,726m, then big drop to the lake<br>the long, hard, glorious day</div></div>
+        <div class="ds"><div class="t">Day 4 — Torean to Senaru</div><div class="v">Out via the Torean route<br>~10 km · waterfalls &amp; jungle, knees complain</div></div>
+      </div>
+      <p class="graph-note">An original, light-hearted illustration — not to scale. Real distances, elevations and feelings vary by person, group and how much sleep you got.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COST -->
+<section id="cost">
+  <div class="wrap">
+    <div class="eyebrow reveal">What it costs · per person</div>
+    <h2 class="reveal">What it costs, all in</h2>
+    <p class="intro reveal">Everything for the 6-day Rinjani + Gili trip, per person. The trek package already covers most of it in Indonesia. Below, every cost is converted to SGD so you can see one all-in estimate.</p>
+
+    <div class="cost-split reveal">
+      <div class="cost-inc">
+        <div class="ci-head">✓ Already inside the trek package</div>
+        <ul>
+          <li>Hotels — Sembalun, Senaru &amp; Gili Island</li>
+          <li>All land transfers + airport pick-up/drop-off</li>
+          <li>Gili boat transfer &amp; snorkeling trip</li>
+          <li>Guide, porters &amp; camping gear</li>
+          <li>All meals on the trek</li>
+          <li>Park fees &amp; trek permits</li>
+          <li>Rinjani completion certificate</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="overflow-x:auto">
+    <table class="cost-table reveal">
+      <thead><tr><th>Item</th><th class="note">What it covers</th><th style="text-align:right">Est. (SGD)</th></tr></thead>
+      <tbody>
+        <tr><td>Trek package (6D/5N)</td><td class="note">Guide, porters, hotels, transfers, Gili boat, snorkeling, camping, trek meals, park fees, completion certificate</td><td class="amt">$580 – $1,110</td></tr>
+        <tr><td>Return flights — Scoot SIN ⇄ LOP</td><td class="note">Fri 10 → Wed 15 Jul, peak season</td><td class="amt">$250 – $420</td></tr>
+        <tr><td>Guide &amp; porter tips</td><td class="note">Customary at the end of the trek</td><td class="amt">$35 – $70</td></tr>
+        <tr><td>Travel insurance</td><td class="note">Recommended — covers altitude trekking</td><td class="amt">$20 – $50</td></tr>
+        <tr><td>Personal spending</td><td class="note">Drinks, extra meals &amp; snacks, SIM, souvenirs</td><td class="amt">$60 – $150</td></tr>
+        <tr class="total"><td class="lab">Estimated total</td><td class="note">all-in, per person</td><td class="amt">≈ $950 – $1,800</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="cost-foot reveal">All figures converted to SGD at roughly 1 USD ≈ 1.35 SGD (rates vary). The trek package is the operator's USD rate and drops with bigger groups (see Pricing); flights and personal spending are estimates that depend on your dates and choices. These are estimates, not a fixed quote — message us and we'll work out your real number.</p>
   </div>
 </section>
 
