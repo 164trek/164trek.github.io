@@ -1,9 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>164 Trek Group — Train weekly. Climb together. Safely.</title>
- <meta property="og:image" content="https://maryjeiel.github.io/164trek/164trek-cover.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>164 Trek Group — Train weekly. Climb together. Safely.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -229,10 +229,15 @@
   #cost .eyebrow{color:#d9a06b}
   #cost h2{color:#fff}
   #cost .intro{color:#cfc6b2;max-width:62ch;margin-bottom:8px}
-  .cost-table{width:100%;border-collapse:collapse;margin-top:30px;font-size:.96rem}
+  .cost-table{width:100%;border-collapse:collapse;margin-top:30px;font-size:.96rem;table-layout:fixed}
+  .cost-table th:nth-child(1),.cost-table td:nth-child(1){width:22%}
+  .cost-table th:nth-child(2),.cost-table td:nth-child(2){width:56%}
+  .cost-table th:nth-child(3),.cost-table td:nth-child(3){width:22%}
+  .cost-table td:nth-child(1){font-weight:600;color:#f3ecdc}
+  .cost-table td,.cost-table th{overflow-wrap:break-word;word-break:normal;vertical-align:top}
   .cost-table th,.cost-table td{text-align:left;padding:13px 14px;border-bottom:1px solid #4a4234}
   .cost-table thead th{color:#bcb29c;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
-  .cost-table td.amt{text-align:right;font-family:'Fraunces',serif;font-weight:600;color:#f3ecdc;white-space:nowrap}
+  .cost-table td.amt{text-align:right;font-family:'Fraunces',serif;font-weight:600;color:#f3ecdc}
   .cost-table td.note{color:#9c937e;font-size:.84rem}
   .cost-table tr.total td{border-bottom:none;border-top:2px solid #6b5e45;padding-top:18px;font-size:1.05rem}
   .cost-table tr.total .lab{font-family:'Fraunces',serif;font-weight:700;color:#fff}
@@ -246,7 +251,6 @@
   @media(max-width:560px){.cost-inc ul{columns:1}}
   .cost-inc li{color:#cfc6b2;font-size:.92rem;padding:5px 0 5px 18px;position:relative;break-inside:avoid}
   .cost-inc li:before{content:"✓";position:absolute;left:0;color:#9bbf8a;font-weight:700}
-  .cost-table td.amt{white-space:nowrap}
   @media(max-width:600px){.cost-table td.note{display:none}.cost-table th.note{display:none}}
 
   /* ---- Packing list (removed) ---- */
