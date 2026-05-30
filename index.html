@@ -2,10 +2,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>164 Trek Group — Train weekly. Climb together. Safely.</title>
+<title>164 Trek Group. Train weekly. Climb together. Safely.</title>
 <meta name="description" content="A walking-trails-only trekking group. Train weekly, climb together, safely.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="164 Trek Group — Train weekly. Climb together. Safely.">
+<meta property="og:title" content="164 Trek Group. Train weekly. Climb together. Safely.">
 <meta property="og:description" content="A walking-trails-only trekking group. Train weekly, climb together, safely.">
 <meta property="og:image" content="https://maryjeiel.github.io/164trek/164trek-cover.png">
 <meta property="og:url" content="https://maryjeiel.github.io/164trek/">
@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
 <style>
   :root{
     --bg:#f0e8d8;
@@ -27,260 +28,743 @@
     --line:#ddd2bb;
     --dark:#2e2a22;
   }
+
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
+
   body{
     background:var(--bg);
     color:var(--ink);
     font-family:'Source Sans 3',sans-serif;
-    line-height:1.6;
+    line-height:1.7;
+    font-weight:400;
     -webkit-font-smoothing:antialiased;
   }
-  h1,h2,h3,h4{font-family:'Fraunces',serif;font-weight:700;letter-spacing:-0.01em;line-height:1.1}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
-  section{padding:84px 0}
-  .eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);font-weight:600;margin-bottom:14px}
 
-  /* ---- Nav ---- */
-  nav{position:sticky;top:0;z-index:50;background:rgba(240,232,216,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav-inner{max-width:1120px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-  .brand{font-family:'Fraunces',serif;font-weight:900;font-size:1.15rem;display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none}
-  .brand .num{background:var(--rust);color:#fff;border-radius:6px;padding:2px 9px;font-size:.95rem}
-  .nav-links{display:flex;gap:26px;align-items:center}
-  .nav-links a{color:var(--ink-soft);text-decoration:none;font-size:.92rem;font-weight:500;transition:color .2s}
+  h1,h2,h3,h4{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    letter-spacing:-0.005em;
+    line-height:1.2;
+  }
+
+  h2{font-weight:500}
+
+  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
+  section{padding:96px 0}
+
+  .eyebrow{
+    font-size:.78rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--rust);
+    font-weight:600;
+    margin-bottom:16px;
+  }
+
+  nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(240,232,216,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+
+  .nav-inner{
+    position:relative;
+    max-width:1120px;
+    margin:0 auto;
+    padding:14px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+  }
+
+  .brand{
+    font-family:'Fraunces',serif;
+    font-weight:900;
+    font-size:1.15rem;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--ink);
+    text-decoration:none;
+  }
+
+  .brand .num{
+    background:var(--rust);
+    color:#fff;
+    border-radius:6px;
+    padding:2px 9px;
+    font-size:.95rem;
+  }
+
+  .nav-links{
+    display:flex;
+    gap:22px;
+    align-items:center;
+  }
+
+  .nav-links a{
+    color:var(--ink-soft);
+    text-decoration:none;
+    font-size:.92rem;
+    font-weight:500;
+    transition:color .2s;
+  }
+
   .nav-links a:hover{color:var(--rust)}
-  .nav-cta{background:var(--rust);color:#fff!important;padding:9px 18px;border-radius:8px;font-weight:600}
-  .nav-cta:hover{background:var(--rust-deep)}
-  @media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}
 
-  /* ---- Hero ---- */
-  .hero{padding:120px 0 96px;position:relative;overflow:hidden}
-  .hero h1{font-size:clamp(2.6rem,6vw,5rem);max-width:14ch}
-  .hero .dots{position:absolute;top:130px;right:40px;display:flex;flex-direction:column;gap:14px}
-  .hero .dots span{width:22px;height:22px;border-radius:50%}
+  .nav-cta{
+    background:var(--rust);
+    color:#fff!important;
+    padding:9px 18px;
+    border-radius:8px;
+    font-weight:600;
+  }
+
+  .nav-cta:hover{background:var(--rust-deep)}
+
+  .nav-toggle{
+    display:none;
+    background:none;
+    border:0;
+    cursor:pointer;
+    padding:8px;
+    color:var(--ink);
+  }
+
+  .nav-toggle svg{
+    display:block;
+    width:24px;
+    height:24px;
+  }
+
+  @media(max-width:820px){
+    .nav-toggle{display:block}
+
+    .nav-links{
+      display:none;
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      flex-direction:column;
+      align-items:stretch;
+      gap:0;
+      background:var(--bg);
+      border-bottom:1px solid var(--line);
+      padding:8px 0;
+    }
+
+    .nav-links.open{display:flex}
+
+    .nav-links a{
+      padding:12px 24px;
+      font-size:1rem;
+      border-top:1px solid var(--line);
+    }
+
+    .nav-links a:first-child{border-top:none}
+
+    .nav-cta{
+      margin:8px 24px;
+      text-align:center;
+      border-radius:6px;
+    }
+  }
+
+  .hero{
+    padding:120px 0 96px;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .hero h1{
+    font-size:clamp(3.6rem,10vw,7rem);
+    max-width:14ch;
+    letter-spacing:-0.02em;
+  }
+
+  .hero p.tagline{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(1.2rem,2.4vw,1.6rem);
+    color:var(--ink);
+    margin-top:6px;
+  }
+
+  .hero .dots{
+    position:absolute;
+    top:130px;
+    right:40px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .hero .dots span{
+    width:22px;
+    height:22px;
+    border-radius:50%;
+  }
+
   .dot-rust{background:var(--rust)}
   .dot-olive{background:var(--olive)}
-  .hero p.lede{margin-top:26px;font-size:1.22rem;color:var(--ink-soft);max-width:48ch}
-  .hero-actions{margin-top:38px;display:flex;gap:14px;flex-wrap:wrap}
-  .btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:9px;font-weight:600;font-size:1rem;text-decoration:none;transition:transform .15s,background .2s}
-  .btn-primary{background:var(--rust);color:#fff}
-  .btn-primary:hover{background:var(--rust-deep);transform:translateY(-2px)}
-  .btn-ghost{border:1.5px solid var(--line);color:var(--ink)}
-  .btn-ghost:hover{border-color:var(--rust);color:var(--rust)}
 
-  /* ---- Cards / grids ---- */
-  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  @media(max-width:760px){.grid-2,.grid-3{grid-template-columns:1fr}}
-  .card{background:var(--card);border:1px solid var(--line);padding:30px 32px;border-radius:2px}
-  .card.accent{border-left:5px solid var(--rust)}
-  .card h3{font-size:1.45rem;margin-bottom:10px}
+  .hero p.lede{
+    margin-top:26px;
+    font-size:1.22rem;
+    color:var(--ink-soft);
+    max-width:48ch;
+  }
+
+  .grid-2{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:0;
+  }
+
+  .grid-3{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
+  }
+
+  @media(max-width:760px){
+    .grid-3{grid-template-columns:1fr}
+  }
+
+  .card{
+    background:transparent;
+    border:none;
+    border-top:1px solid var(--line);
+    padding:24px 0;
+    border-radius:0;
+  }
+
+  .card.accent{
+    border-left:none;
+    padding-left:0;
+  }
+
+  .card h3{
+    font-size:1.3rem;
+    font-weight:500;
+    margin-bottom:8px;
+  }
+
   .card p{color:var(--ink-soft)}
 
   .section-head{margin-bottom:44px}
-  .section-head h2{font-size:clamp(2rem,4vw,2.9rem)}
 
-  /* ---- Weekly training icons row ---- */
-  .train-row{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:22px}
-  @media(max-width:760px){.train-row{grid-template-columns:1fr}}
-  .train-card{background:var(--card);border:1px solid var(--line);padding:26px 28px;display:flex;align-items:center;gap:18px}
-  .train-card .ic{flex:0 0 auto;width:54px;height:54px;color:var(--rust)}
+  .section-head h2{
+    font-size:clamp(2rem,4vw,2.9rem);
+  }
+
+  .train-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    margin-bottom:22px;
+  }
+
+  @media(max-width:760px){
+    .train-row{grid-template-columns:1fr}
+  }
+
+  .train-card{
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:26px 28px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+  }
+
+  .train-card .ic{
+    flex:0 0 auto;
+    width:54px;
+    height:54px;
+    color:var(--rust);
+  }
+
   .train-card h4{font-size:1.25rem}
-  .train-card span{color:var(--ink-soft);font-size:.96rem}
-  .note{font-style:italic;color:var(--ink-soft);margin:6px 0 40px}
-  .train-photo{margin:26px 0 8px}
-  .train-photo img{width:100%;height:auto;object-fit:contain;border:1px solid var(--line);display:block}
-  .train-photo figcaption{font-size:.85rem;color:var(--ink-soft);font-style:italic;margin-top:8px;text-align:center}
 
-  /* ---- Commitment tiers ---- */
-  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  @media(max-width:860px){.tiers{grid-template-columns:1fr}}
-  .tier{background:var(--card);border:1px solid var(--line)}
-  .tier .top{padding:14px 20px;display:flex;justify-content:space-between;align-items:baseline;color:#fff}
-  .tier .top b{font-family:'Fraunces',serif;font-size:1.2rem}
-  .tier .top em{font-style:normal;font-size:.82rem;opacity:.85;margin-left:6px}
-  .tier .top .hrs{font-weight:700;font-size:.92rem}
+  .train-card span{
+    color:var(--ink-soft);
+    font-size:.96rem;
+  }
+
+  .note{
+    font-style:italic;
+    color:var(--ink-soft);
+    margin:6px 0 40px;
+  }
+
+  .tiers{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+  }
+
+  @media(max-width:860px){
+    .tiers{grid-template-columns:1fr}
+  }
+
+  .tier{
+    background:var(--card);
+    border:1px solid var(--line);
+  }
+
+  .tier .top{
+    padding:14px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    color:#fff;
+  }
+
+  .tier .top b{
+    font-family:'Fraunces',serif;
+    font-size:1.2rem;
+  }
+
+  .tier .top em{
+    font-style:normal;
+    font-size:.82rem;
+    opacity:.85;
+    margin-left:6px;
+  }
+
+  .tier .top .hrs{
+    font-weight:700;
+    font-size:.92rem;
+  }
+
   .tier.light .top{background:var(--rust)}
   .tier.standard .top{background:var(--olive)}
   .tier.heavy .top{background:var(--dark)}
-  .tier ul{list-style:none;padding:20px 22px}
-  .tier li{position:relative;padding-left:18px;margin-bottom:12px;color:var(--ink-soft);font-size:.96rem}
-  .tier li:before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--rust)}
 
-  /* ---- Candidate lists ---- */
-  .lists{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-  @media(max-width:760px){.lists{grid-template-columns:1fr}}
-  .list-block h3{font-size:1.35rem;margin-bottom:6px}
-  .list-block .sub{color:var(--ink-soft);margin-bottom:18px;font-size:.95rem}
-  .peak{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--rust);padding:16px 20px;margin-bottom:12px}
-  .peak .pk-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.08rem}
-  .peak .pk-meta{color:var(--ink-soft);font-size:.9rem;margin-top:2px}
-  .peak .pk-desc{color:var(--ink-soft);font-size:.9rem;font-style:italic;margin-top:5px}
+  .tier ul{
+    list-style:none;
+    padding:20px 22px;
+  }
+
+  .tier li{
+    position:relative;
+    padding-left:18px;
+    margin-bottom:12px;
+    color:var(--ink-soft);
+    font-size:.96rem;
+  }
+
+  .tier li:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:9px;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--rust);
+  }
+
+  .lists{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:32px;
+  }
+
+  @media(max-width:760px){
+    .lists{grid-template-columns:1fr}
+  }
+
+  .list-block h3{
+    font-size:1.35rem;
+    margin-bottom:6px;
+  }
+
+  .list-block .sub{
+    color:var(--ink-soft);
+    margin-bottom:18px;
+    font-size:.95rem;
+  }
+
+  .peak{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:4px solid var(--rust);
+    padding:16px 20px;
+    margin-bottom:12px;
+  }
+
+  .peak .pk-name{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:1.08rem;
+  }
+
+  .peak .pk-meta{
+    color:var(--ink-soft);
+    font-size:.9rem;
+    margin-top:2px;
+  }
+
+  .peak .pk-desc{
+    color:var(--ink-soft);
+    font-size:.9rem;
+    font-style:italic;
+    margin-top:5px;
+  }
+
   .list-b .peak{border-left-color:var(--olive)}
 
-  /* ---- Calendar ---- */
-  #calendar{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .cal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  @media(max-width:860px){.cal-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:520px){.cal-grid{grid-template-columns:1fr}}
-  .cal-card{background:var(--bg);border:1px solid var(--line);padding:24px;position:relative;overflow:hidden}
-  .cal-card .when{font-family:'Fraunces',serif;font-weight:700;font-size:1.6rem;color:var(--rust)}
-  .cal-card .order{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--olive);font-weight:600;margin-bottom:10px}
-  .cal-card h4{font-size:1.18rem;margin:8px 0 3px}
-  .cal-card .loc{color:var(--ink-soft);font-size:.92rem}
-  .cal-card .tba{display:inline-block;margin-top:12px;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;background:var(--line);color:var(--ink-soft);padding:3px 10px;border-radius:20px;font-weight:600}
+  #calendar{
+    background:var(--card);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
 
-  /* ---- Travel windows table ---- */
-  .legend{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:24px;font-size:.86rem;color:var(--ink-soft)}
-  .legend span{display:inline-flex;align-items:center;gap:7px}
-  .swatch{width:14px;height:14px;border-radius:3px;display:inline-block}
-  .sw-prime{background:var(--rust)}
-  .sw-shoulder{background:#d9b48a}
-  .sw-avoid{background:#e3dcc9;border:1px solid var(--line)}
-  .tw-wrap{overflow-x:auto}
-  table.tw{width:100%;border-collapse:collapse;min-width:680px;font-size:.86rem}
-  table.tw th,table.tw td{padding:8px 4px;text-align:center}
-  table.tw thead th{color:var(--ink-soft);font-weight:600;font-size:.8rem}
-  table.tw td.name{text-align:left;white-space:nowrap;padding-right:16px}
-  table.tw td.name b{font-family:'Fraunces',serif;font-weight:600;font-size:.98rem;display:block}
-  table.tw td.name small{color:var(--ink-soft)}
-  table.tw .cell{height:22px;border-radius:3px;margin:2px 1px}
-  .grp-row td{padding-top:18px;text-transform:uppercase;letter-spacing:.12em;font-size:.74rem;color:var(--rust);font-weight:700;text-align:left}
+  .cal-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+  }
 
-  /* ---- Pricing ---- */
-  #pricing{background:var(--dark);color:#f3ecdc}
-  #pricing .eyebrow{color:#d9a06b}
-  #pricing h2{color:#fff}
-  #pricing .intro{color:#cfc6b2;max-width:60ch;margin-bottom:14px}
-  .price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px}
-  @media(max-width:980px){.price-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:560px){.price-grid{grid-template-columns:1fr}}
-  .price-card{background:#383228;border:1px solid #4a4234;border-radius:4px;padding:28px;display:flex;flex-direction:column}
-  .price-card h4{color:#fff;font-size:1.3rem;line-height:1.2}
-  .price-card .incl{color:#bcb29c;font-size:.9rem;margin:8px 0 22px}
-  .tier-list{list-style:none}
-  .tier-list li{display:flex;justify-content:space-between;align-items:baseline;padding:11px 0;border-bottom:1px solid #4a4234}
-  .tier-list li:last-child{border-bottom:none}
-  .tier-list .grp{color:#cfc6b2;font-size:.92rem}
-  .tier-list .amt{font-family:'Fraunces',serif;font-weight:600;color:#f3ecdc;font-size:1.12rem}
-  .tier-list li:first-child .amt{color:#e8a866}
-  .tier-list .cur{font-family:'Source Sans 3',sans-serif;font-weight:600;color:#bcb29c;font-size:.7em;margin-right:3px;letter-spacing:.04em}
-  .price-foot{color:#9c937e;font-size:.82rem;margin-top:30px;max-width:70ch}
+  @media(max-width:860px){
+    .cal-grid{grid-template-columns:1fr 1fr}
+  }
 
-  /* ---- Coaching / baseline ---- */
-  .bench{background:var(--rust);color:#fff;border-radius:2px;padding:40px 34px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
-  .bench .lab{font-size:.85rem;letter-spacing:.1em;opacity:.85;margin-bottom:10px}
-  .bench .big{font-family:'Fraunces',serif;font-weight:700;font-size:1.7rem;line-height:1.2}
-  .bench .yic{width:70px;height:70px;margin-bottom:20px}
-  .baseline-list{columns:2;column-gap:34px;list-style:none}
-  @media(max-width:620px){.baseline-list{columns:1}}
-  .baseline-list li{break-inside:avoid;margin-bottom:14px;padding-left:18px;position:relative;color:var(--ink-soft);font-size:.96rem}
-  .baseline-list li:before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--olive)}
+  @media(max-width:520px){
+    .cal-grid{grid-template-columns:1fr}
+  }
 
-  /* ---- Need back steps ---- */
-  .steps{counter-reset:step}
-  .step{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
-  .step:last-child{border-bottom:none}
-  .step .n{counter-increment:step;flex:0 0 auto;width:40px;height:40px;border-radius:50%;background:var(--rust);color:#fff;font-family:'Fraunces',serif;font-weight:700;display:flex;align-items:center;justify-content:center}
-  .step .n:before{content:counter(step)}
-  .step h4{font-size:1.2rem;margin-bottom:4px}
-  .step p,.step ul{color:var(--ink-soft);font-size:.95rem}
-  .step ul{list-style:none;margin-top:6px}
-  .step ul li{padding-left:16px;position:relative;margin-bottom:4px}
-  .step ul li:before{content:"–";position:absolute;left:0;color:var(--rust)}
+  .cal-card{
+    background:var(--bg);
+    border:1px solid var(--line);
+    padding:24px;
+    position:relative;
+    overflow:hidden;
+    display:block;
+    transition:border-color .2s,transform .15s;
+  }
 
-  /* ---- CTA / contact ---- */
-  #signup{text-align:center}
-  #signup h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:18px}
-  #signup p{color:var(--ink-soft);max-width:50ch;margin:0 auto 30px;font-size:1.1rem}
-  .wa-btn{display:inline-flex;align-items:center;gap:12px;background:#25d366;color:#fff;text-decoration:none;font-weight:700;font-size:1.15rem;padding:16px 30px;border-radius:12px;transition:transform .15s,filter .2s}
-  .wa-btn:hover{transform:translateY(-2px);filter:brightness(.96)}
-  .wa-btn svg{width:26px;height:26px}
-  .wa-num{margin-top:16px;color:var(--ink-soft);font-size:1rem}
-  .dates-row{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;margin-top:40px}
-  .date-box{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--rust);padding:18px 26px;min-width:200px;text-align:left}
-  .date-box .t{font-family:'Fraunces',serif;font-weight:700;font-size:1.1rem;margin-bottom:4px}
-  .date-box .d{color:var(--ink-soft)}
+  a.cal-card:hover{
+    border-color:var(--rust);
+    transform:translateY(-2px);
+  }
 
-  footer{background:var(--dark);color:#cfc6b2;text-align:center;padding:40px 20px;font-size:.9rem}
-  footer .brand{justify-content:center;color:#fff;margin-bottom:10px}
-  footer a{color:#e8a866;text-decoration:none}
+  .cal-card .when{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:1.6rem;
+    color:var(--rust);
+  }
 
-  /* ---- Rinjani trip: itinerary ---- */
-  #trip{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .trip-meta{display:flex;gap:14px;flex-wrap:wrap;margin:14px 0 6px}
-  .trip-meta .chip{background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:5px 14px;font-size:.85rem;color:var(--ink-soft);font-weight:600}
-  .itin{margin-top:34px;border-left:2px solid var(--line);padding-left:0}
-  .itin .day{position:relative;padding:0 0 26px 28px;border-left:2px solid var(--rust);margin-left:6px}
+  .cal-card .order{
+    font-size:.72rem;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--olive);
+    font-weight:600;
+    margin-bottom:10px;
+  }
+
+  .cal-card h4{
+    font-size:1.18rem;
+    margin:8px 0 3px;
+  }
+
+  .cal-card .loc{
+    color:var(--ink-soft);
+    font-size:.92rem;
+  }
+
+  .cal-card .tba{
+    display:inline-block;
+    margin-top:12px;
+    font-size:.74rem;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    background:var(--line);
+    color:var(--ink-soft);
+    padding:3px 10px;
+    border-radius:20px;
+    font-weight:600;
+  }
+
+  #trip{
+    background:var(--card);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+
+  .itin{
+    margin-top:34px;
+    border-left:2px solid var(--line);
+    padding-left:0;
+  }
+
+  .itin .day{
+    position:relative;
+    padding:0 0 26px 28px;
+    border-left:2px solid var(--rust);
+    margin-left:6px;
+  }
+
   .itin .day:last-child{border-left-color:transparent}
-  .itin .day:before{content:"";position:absolute;left:-7px;top:2px;width:12px;height:12px;border-radius:50%;background:var(--rust);border:2px solid var(--card)}
-  .itin .day .dlabel{font-family:'Fraunces',serif;font-weight:700;font-size:1.08rem;color:var(--ink)}
-  .itin .day .dtext{color:var(--ink-soft);font-size:.96rem;margin-top:2px}
-  .itin .day.buffer:before{background:var(--olive)}
-  .itin .day.buffer{border-left-color:var(--olive)}
-  .buffer-note{font-style:italic;color:var(--olive-soft);font-size:.88rem;margin-top:4px}
 
-  /* ---- Elevation graph ---- */
-  .graph-card{background:var(--bg);border:1px solid var(--line);padding:26px;margin-top:18px}
-  .graph-card h3{font-size:1.3rem;margin-bottom:4px}
-  .graph-sub{color:var(--ink-soft);font-size:.92rem;margin-bottom:20px}
-  .daystat{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
-  @media(max-width:680px){.daystat{grid-template-columns:1fr}}
-  .daystat .ds{background:var(--card);border:1px solid var(--line);padding:14px 16px}
-  .daystat .ds .t{font-family:'Fraunces',serif;font-weight:700;color:var(--rust);font-size:.95rem}
-  .daystat .ds .v{color:var(--ink-soft);font-size:.86rem;margin-top:4px;line-height:1.5}
-  .graph-note{font-size:.8rem;color:var(--ink-soft);font-style:italic;margin-top:16px}
+  .itin .day:before{
+    content:"";
+    position:absolute;
+    left:-7px;
+    top:2px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:var(--rust);
+    border:2px solid var(--card);
+  }
 
-  /* ---- Cost table ---- */
-  #cost{background:var(--dark);color:#f3ecdc}
+  .itin .day .dlabel{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    font-size:1.08rem;
+    color:var(--ink);
+  }
+
+  .itin .day .dtext{
+    color:var(--ink-soft);
+    font-size:.96rem;
+    margin-top:2px;
+  }
+
+  .graph-card{
+    background:var(--bg);
+    border:1px solid var(--line);
+    padding:26px;
+    margin-top:18px;
+  }
+
+  .graph-card h3{
+    font-size:1.3rem;
+    margin-bottom:4px;
+  }
+
+  .graph-sub{
+    color:var(--ink-soft);
+    font-size:.92rem;
+    margin-bottom:20px;
+  }
+
+  .graph-note{
+    font-size:.8rem;
+    color:var(--ink-soft);
+    font-style:italic;
+    margin-top:16px;
+  }
+
+  #cost{
+    background:var(--dark);
+    color:#f3ecdc;
+  }
+
   #cost .eyebrow{color:#d9a06b}
   #cost h2{color:#fff}
-  #cost .intro{color:#cfc6b2;max-width:62ch;margin-bottom:8px}
-  .cost-table{width:100%;border-collapse:collapse;margin-top:30px;font-size:.96rem;table-layout:fixed}
-  .cost-table th:nth-child(1),.cost-table td:nth-child(1){width:22%}
-  .cost-table th:nth-child(2),.cost-table td:nth-child(2){width:56%}
-  .cost-table th:nth-child(3),.cost-table td:nth-child(3){width:22%}
-  .cost-table td:nth-child(1){font-weight:600;color:#f3ecdc}
-  .cost-table td,.cost-table th{overflow-wrap:break-word;word-break:normal;vertical-align:top}
-  .cost-table th,.cost-table td{text-align:left;padding:13px 14px;border-bottom:1px solid #4a4234}
-  .cost-table thead th{color:#bcb29c;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
-  .cost-table td.amt{text-align:right;font-family:'Fraunces',serif;font-weight:600;color:#f3ecdc}
-  .cost-table td.note{color:#9c937e;font-size:.84rem}
-  .cost-table tr.total td{border-bottom:none;border-top:2px solid #6b5e45;padding-top:18px;font-size:1.05rem}
-  .cost-table tr.total .lab{font-family:'Fraunces',serif;font-weight:700;color:#fff}
-  .cost-table tr.total .amt{color:#e8a866;font-size:1.4rem}
-  .cost-foot{color:#9c937e;font-size:.84rem;margin-top:22px;max-width:72ch}
+
   .cost-split{margin:26px 0}
-  .cost-inc{background:#383228;border:1px solid #4a4234;border-radius:4px;padding:22px 26px}
-  .cost-inc .ci-head{font-family:'Fraunces',serif;font-weight:700;color:#e8a866;font-size:1.05rem;margin-bottom:14px}
-  .cost-inc .ci-head span{font-family:'Source Sans 3',sans-serif;font-weight:400;color:#9c937e;font-size:.82rem}
-  .cost-inc ul{list-style:none;columns:2;column-gap:30px}
-  @media(max-width:560px){.cost-inc ul{columns:1}}
-  .cost-inc li{color:#cfc6b2;font-size:.92rem;padding:5px 0 5px 18px;position:relative;break-inside:avoid}
-  .cost-inc li:before{content:"✓";position:absolute;left:0;color:#9bbf8a;font-weight:700}
-  @media(max-width:600px){.cost-table td.note{display:none}.cost-table th.note{display:none}}
 
-  /* ---- Packing list (removed) ---- */
+  .cost-inc{
+    background:#383228;
+    border:1px solid #4a4234;
+    border-radius:4px;
+    padding:22px 26px;
+  }
 
-  /* reveal */
-  .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
-  .reveal.in{opacity:1;transform:none}
+  .cost-inc .ci-head{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    color:#e8a866;
+    font-size:1.05rem;
+    margin-bottom:14px;
+  }
+
+  .cost-inc ul{
+    list-style:none;
+    columns:2;
+    column-gap:30px;
+  }
+
+  @media(max-width:560px){
+    .cost-inc ul{columns:1}
+  }
+
+  .cost-inc li{
+    color:#cfc6b2;
+    font-size:.92rem;
+    padding:5px 0 5px 18px;
+    position:relative;
+    break-inside:avoid;
+  }
+
+  .cost-inc li:before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    color:#9bbf8a;
+    font-weight:700;
+  }
+
+  .cost-foot{
+    color:#9c937e;
+    font-size:.84rem;
+    margin-top:22px;
+    max-width:72ch;
+  }
+
+  .baseline-list{
+    columns:2;
+    column-gap:34px;
+    list-style:none;
+  }
+
+  @media(max-width:620px){
+    .baseline-list{columns:1}
+  }
+
+  .baseline-list li{
+    break-inside:avoid;
+    margin-bottom:14px;
+    padding-left:18px;
+    position:relative;
+    color:var(--ink-soft);
+    font-size:.96rem;
+  }
+
+  .baseline-list li:before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:9px;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--olive);
+  }
+
+  .steps{counter-reset:step}
+
+  .step{
+    display:flex;
+    gap:20px;
+    padding:22px 0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .step:last-child{border-bottom:none}
+
+  .step .n{
+    counter-increment:step;
+    flex:0 0 auto;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:var(--rust);
+    color:#fff;
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .step .n:before{content:counter(step)}
+
+  .step h4{
+    font-size:1.2rem;
+    margin-bottom:4px;
+  }
+
+  .step p,.step ul{
+    color:var(--ink-soft);
+    font-size:.95rem;
+  }
+
+  .step ul{
+    list-style:none;
+    margin-top:6px;
+  }
+
+  .step ul li{
+    padding-left:16px;
+    position:relative;
+    margin-bottom:4px;
+  }
+
+  .step ul li:before{
+    content:"–";
+    position:absolute;
+    left:0;
+    color:var(--rust);
+  }
+
+  footer{
+    background:var(--dark);
+    color:#cfc6b2;
+    text-align:center;
+    padding:40px 20px;
+    font-size:.9rem;
+  }
+
+  footer .brand{
+    justify-content:center;
+    color:#fff;
+    margin-bottom:10px;
+  }
+
+  footer a{
+    color:#e8a866;
+    text-decoration:none;
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(20px);
+    transition:opacity .7s ease,transform .7s ease;
+  }
+
+  .reveal.in{
+    opacity:1;
+    transform:none;
+  }
 </style>
 </head>
+
 <body>
 
 <nav>
   <div class="nav-inner">
     <a href="#top" class="brand"><span class="num">164</span> Trek Group</a>
-    <div class="nav-links">
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="var m=document.getElementById('navLinks');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="4" y1="7" x2="20" y2="7"/>
+        <line x1="4" y1="12" x2="20" y2="12"/>
+        <line x1="4" y1="17" x2="20" y2="17"/>
+      </svg>
+    </button>
+
+    <div class="nav-links" id="navLinks" onclick="if(event.target.tagName==='A')this.classList.remove('open')">
       <a href="#principles">Principles</a>
       <a href="#training">Training</a>
       <a href="#peaks">Peaks</a>
       <a href="#calendar">Calendar</a>
-      <a href="#pricing">Pricing</a>
       <a href="#trip">Trip</a>
       <a href="#cost">Cost</a>
-      <a href="#signup" class="nav-cta">Sign up</a>
+      <a href="https://wa.me/6582869005?text=Hi!%20I'd%20like%20to%20join%20the%20164%20Trek%20Group." target="_blank" rel="noopener" class="nav-cta">Contact us</a>
     </div>
   </div>
 </nav>
@@ -291,72 +775,108 @@
       <span class="dot-rust"></span>
       <span class="dot-olive"></span>
     </div>
-    <div class="eyebrow">164 Trek Group</div>
-    <h1>Train weekly. Climb together. Safely.</h1>
-    <p class="lede">A walking-trails-only trekking group. We build the fitness to finish comfortably, start with one mountain, and keep each other accountable along the way.</p>
-    <div class="hero-actions">
-      <a href="#signup" class="btn btn-primary">Message us to join</a>
-      <a href="#calendar" class="btn btn-ghost">See the calendar</a>
-    </div>
+
+    <h1>164 Trek</h1>
+    <p class="tagline">Train weekly. Climb together.</p>
+    <p class="lede">A walking trails trekking group. We pick the next mountain as a group. If you're keen to join us, just contact us.</p>
   </div>
 </header>
 
-<!-- PRINCIPLES -->
 <section id="principles">
   <div class="wrap">
-    <div class="section-head reveal"><h2>Design principles</h2></div>
+    <div class="section-head reveal">
+      <h2>Design principles</h2>
+    </div>
+
     <div class="grid-2">
-      <div class="card accent reveal"><h3>No falling risk</h3><p>Walking trails only. Altitude, scree, weather, mud are fine. Ropes, exposed ridges, glaciers are out.</p></div>
-      <div class="card accent reveal"><h3>Start small</h3><p>One mountain first, then the group decides what's next.</p></div>
-      <div class="card accent reveal"><h3>Prepared, not rushed</h3><p>We build the fitness to finish comfortably and enjoy the whole way up.</p></div>
-      <div class="card accent reveal"><h3>Mutual accountability</h3><p>We encourage each other on training, recovery, diet.</p></div>
+      <div class="card accent reveal">
+        <h3>No falling risk</h3>
+        <p>Walking trails only. Altitude, scree, weather, mud are fine. Ropes, exposed ridges, glaciers are out.</p>
+      </div>
+
+      <div class="card accent reveal">
+        <h3>Start small</h3>
+        <p>One mountain first, then the group decides what's next.</p>
+      </div>
+
+      <div class="card accent reveal">
+        <h3>Prepared, not rushed</h3>
+        <p>We build the fitness to finish comfortably and enjoy the whole way up.</p>
+      </div>
+
+      <div class="card accent reveal">
+        <h3>Mutual accountability</h3>
+        <p>We encourage each other on training, recovery, diet.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TRAINING -->
-<section id="training" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="training">
   <div class="wrap">
-    <div class="section-head reveal"><h2>Weekly training</h2></div>
+    <div class="section-head reveal">
+      <h2>Weekly training</h2>
+    </div>
+
     <div class="train-row">
       <div class="train-card reveal">
         <svg class="ic" viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round">
-          <path d="M4 10c6-7 12 7 18 0s12 7 18 0 12 7 18 0"/><path d="M4 22c6-7 12 7 18 0s12 7 18 0 12 7 18 0"/><path d="M4 34c6-7 12 7 18 0s12 7 18 0 12 7 18 0"/>
+          <path d="M4 10c6-7 12 7 18 0s12 7 18 0 12 7 18 0"/>
+          <path d="M4 22c6-7 12 7 18 0s12 7 18 0 12 7 18 0"/>
+          <path d="M4 34c6-7 12 7 18 0s12 7 18 0 12 7 18 0"/>
         </svg>
-        <div><h4>River Valley</h4><span>long runs, weighted-pack walks</span></div>
+        <div>
+          <h4>River Valley</h4>
+          <span>long runs, weighted-pack walks</span>
+        </div>
       </div>
+
       <div class="train-card reveal">
         <svg class="ic" viewBox="0 0 64 64" fill="currentColor">
-          <rect x="28" y="2" width="8" height="8" rx="2"/><circle cx="32" cy="38" r="22" fill="none" stroke="currentColor" stroke-width="5"/><rect x="30" y="22" width="4" height="18" rx="2"/>
+          <rect x="28" y="2" width="8" height="8" rx="2"/>
+          <circle cx="32" cy="38" r="22" fill="none" stroke="currentColor" stroke-width="5"/>
+          <rect x="30" y="22" width="4" height="18" rx="2"/>
         </svg>
-        <div><h4>Stadium (Kallang)</h4><span>stairs, steady endurance sets</span></div>
+        <div>
+          <h4>Stadium (Kallang)</h4>
+          <span>stairs, steady endurance sets</span>
+        </div>
       </div>
+
       <div class="train-card reveal">
         <svg class="ic" viewBox="0 0 64 64" fill="currentColor">
-          <path d="M6 54 L26 18 L36 36 L44 24 L58 54 Z"/><path d="M22 26 l4 -7 l4 7 l-4 5 z" fill="var(--card)"/>
+          <path d="M6 54 L26 18 L36 36 L44 24 L58 54 Z"/>
+          <path d="M22 26 l4 -7 l4 7 l-4 5 z" fill="var(--card)"/>
         </svg>
-        <div><h4>Bukit Timah</h4><span>vertical repeats with pack</span></div>
+        <div>
+          <h4>Bukit Timah</h4>
+          <span>vertical repeats with pack</span>
+        </div>
       </div>
     </div>
-    <figure class="train-photo reveal">
-      <img src="training.jpg" alt="The group training together" loading="lazy"
-           onerror="this.closest('figure').style.display='none'">
-      <figcaption>Training as a group · 27 May 2026, Botanic Gardens</figcaption>
-    </figure>
+
     <p class="note reveal">Grouped by fitness. On the mountain, multiple guides so everyone has company at a comfortable pace.</p>
 
     <h3 style="font-size:1.6rem;margin-bottom:24px" class="reveal">What a weekly commitment looks like</h3>
+
     <div class="tiers">
       <div class="tier light reveal">
-        <div class="top"><span><b>Light</b><em>entry</em></span><span class="hrs">~3 hr/wk</span></div>
+        <div class="top">
+          <span><b>Light</b><em>entry</em></span>
+          <span class="hrs">~3 hr/wk</span>
+        </div>
         <ul>
           <li>1 group session + solo MWF</li>
           <li>Solo: easy jog every morning or evening, no pack</li>
           <li>Sat group: Bukit Timah, 2 repeats with 5kg pack (~2 hr)</li>
         </ul>
       </div>
+
       <div class="tier standard reveal">
-        <div class="top"><span><b>Standard</b></span><span class="hrs">~5–6 hr/wk</span></div>
+        <div class="top">
+          <span><b>Standard</b></span>
+          <span class="hrs">~5–6 hr/wk</span>
+        </div>
         <ul>
           <li>2 group sessions + 1 solo</li>
           <li>Tue PM: Kallang stadium, stairs and endurance (~1 hr)</li>
@@ -364,8 +884,12 @@
           <li>Sun or solo: long PCN walk/run, 90 min</li>
         </ul>
       </div>
+
       <div class="tier heavy reveal">
-        <div class="top"><span><b>Heavy</b><em>pre-climb block</em></span><span class="hrs">~8–10 hr/wk</span></div>
+        <div class="top">
+          <span><b>Heavy</b><em>pre-climb block</em></span>
+          <span class="hrs">~8–10 hr/wk</span>
+        </div>
         <ul>
           <li>3 group + 2 solo</li>
           <li>Adds a second hill day, longer pack carries, back-to-back weekends</li>
@@ -375,24 +899,41 @@
   </div>
 </section>
 
-<!-- PEAKS -->
 <section id="peaks">
   <div class="wrap">
     <div class="section-head reveal">
       <h2>Ten candidates, two lists</h2>
       <p style="color:var(--ink-soft);margin-top:10px;max-width:60ch">We start with one from List A. Once it's done, the group picks one from List B.</p>
     </div>
+
     <div class="lists">
       <div class="list-block list-a reveal">
-        <h3>List A — easy access</h3>
+        <h3>List A, easy access</h3>
         <p class="sub">Start here.</p>
-        <div class="peak"><span class="pk-name">Kinabalu, Malaysia</span><div class="pk-meta">4,095 m · Standard 2 days</div><div class="pk-desc">We summit comfortably in a guided day group.</div></div>
-        <div class="peak"><span class="pk-name">Rinjani, Indonesia</span><div class="pk-meta">3,726 m · Standard 3 days</div><div class="pk-desc">We plan a well-paced 2–3 day itinerary.</div></div>
-        <div class="peak"><span class="pk-name">Annapurna Circuit, Nepal</span><div class="pk-meta">5,416 m · Standard 15–20 days</div><div class="pk-desc">We follow a safe, steady schedule.</div></div>
+
+        <div class="peak">
+          <span class="pk-name">Kinabalu, Malaysia</span>
+          <div class="pk-meta">4,095 m · Standard 2 days</div>
+          <div class="pk-desc">We summit comfortably in a guided day group.</div>
+        </div>
+
+        <div class="peak">
+          <span class="pk-name">Rinjani, Indonesia</span>
+          <div class="pk-meta">3,726 m · Standard 3 days</div>
+          <div class="pk-desc">We plan a well-paced 2–3 day itinerary.</div>
+        </div>
+
+        <div class="peak">
+          <span class="pk-name">Annapurna Circuit, Nepal</span>
+          <div class="pk-meta">5,416 m · Standard 15–20 days</div>
+          <div class="pk-desc">We follow a safe, steady schedule.</div>
+        </div>
       </div>
+
       <div class="list-block list-b reveal">
-        <h3>List B — longer haul</h3>
+        <h3>List B, longer haul</h3>
         <p class="sub">Next round.</p>
+
         <div class="peak"><span class="pk-name">Tongariro Northern Circuit, NZ</span><div class="pk-meta">43 km · Std 3–4 days</div></div>
         <div class="peak"><span class="pk-name">Overland Track, Tasmania</span><div class="pk-meta">65 km · Std 6–8 days</div></div>
         <div class="peak"><span class="pk-name">Goecha La, Sikkim India</span><div class="pk-meta">4,940 m · Std 10–11 days</div></div>
@@ -405,128 +946,93 @@
   </div>
 </section>
 
-<!-- TRAVEL WINDOWS -->
-<section id="windows" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Best travel windows</h2>
-      <p style="color:var(--ink-soft);margin-top:10px">When each climb is comfortable to do over the year.</p>
-    </div>
-    <div class="legend reveal">
-      <span><i class="swatch sw-prime"></i> Prime — best months</span>
-      <span><i class="swatch sw-shoulder"></i> Shoulder — workable</span>
-      <span><i class="swatch sw-avoid"></i> Avoid — wet / closed</span>
-    </div>
-    <div class="tw-wrap reveal">
-      <table class="tw" id="twtable">
-        <thead><tr><th class="name"></th>
-          <th>J</th><th>F</th><th>M</th><th>A</th><th>M</th><th>J</th><th>J</th><th>A</th><th>S</th><th>O</th><th>N</th><th>D</th>
-          <th style="text-align:left;padding-left:14px">Best window</th></tr></thead>
-        <tbody id="twbody"></tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- CALENDAR -->
 <section id="calendar">
   <div class="wrap">
     <div class="section-head reveal">
       <h2>Our calendar</h2>
-      <p style="color:var(--ink-soft);margin-top:10px;max-width:60ch">Four climbs mapped across the year. Exact dates are still being set — they're marked TBA for now.</p>
+      <p style="color:var(--ink-soft);margin-top:10px;max-width:60ch">Four climbs mapped across the year. Exact dates are still being set, marked TBA for now.</p>
     </div>
+
     <div class="cal-grid">
-      <div class="cal-card reveal"><div class="order">First climb · List A</div><div class="when">Fri 10 Jul</div><h4>Rinjani · 3,726 m</h4><div class="loc">Indonesia</div><span class="tba">Summit ~12 Jul · tentative</span></div>
-      <div class="cal-card reveal"><div class="order">List B</div><div class="when">Sat 17 Oct</div><h4>Goecha La · 4,940 m</h4><div class="loc">Sikkim, India</div><span class="tba">~9–10 day trek · tentative</span></div>
-      <div class="cal-card reveal"><div class="order">List B</div><div class="when">Sat 28 Nov</div><h4>Overland Track · 65 km</h4><div class="loc">Tasmania</div><span class="tba">Finish ~3 Dec · tentative</span></div>
-      <div class="cal-card reveal"><div class="order">List B</div><div class="when">Mon 18 Jan ’27</div><h4>Kilimanjaro · 5,895 m</h4><div class="loc">Tanzania</div><span class="tba">Summit ~24 Jan · tentative</span></div>
+      <a href="https://www.flyscoot.com/en/flights/SIN-LOP" target="_blank" rel="noopener" class="cal-card reveal" style="text-decoration:none;color:inherit">
+        <div class="order">First climb · List A</div>
+        <div class="when">Fri 10 Jul</div>
+        <h4>Rinjani · 3,726 m</h4>
+        <div class="loc">Indonesia</div>
+        <span class="tba">Summit ~12 Jul · check Scoot ↗</span>
+      </a>
+
+      <div class="cal-card reveal">
+        <div class="order">List B</div>
+        <div class="when">Sat 17 Oct</div>
+        <h4>Goecha La · 4,940 m</h4>
+        <div class="loc">Sikkim, India</div>
+        <span class="tba">~9–10 day trek · tentative</span>
+      </div>
+
+      <div class="cal-card reveal">
+        <div class="order">List B</div>
+        <div class="when">Sat 28 Nov</div>
+        <h4>Overland Track · 65 km</h4>
+        <div class="loc">Tasmania</div>
+        <span class="tba">Finish ~3 Dec · tentative</span>
+      </div>
+
+      <div class="cal-card reveal">
+        <div class="order">List B</div>
+        <div class="when">Mon 18 Jan ’27</div>
+        <h4>Kilimanjaro · 5,895 m</h4>
+        <div class="loc">Tanzania</div>
+        <span class="tba">Summit ~24 Jan · tentative</span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing">
-  <div class="wrap">
-    <div class="eyebrow reveal">Pricing · per pax · USD</div>
-    <h2 class="reveal">Rinjani packages</h2>
-    <p class="intro reveal">Our first climb. All prices are per person — the bigger the group, the lower the rate each. The <b>6D/5N</b> is our July trip (Rinjani + Gili). Rates cover the guided trek; flights and hotels are separate (see full cost below).</p>
-    <div class="price-grid">
-      <div class="price-card reveal">
-        <h4>2D / 1N</h4>
-        <div class="incl">Crater Rim</div>
-        <ul class="tier-list">
-          <li><span class="grp">1 pax</span><span class="amt"><span class="cur">USD</span>$420</span></li>
-          <li><span class="grp">2 pax</span><span class="amt"><span class="cur">USD</span>$270</span></li>
-          <li><span class="grp">3–5 pax</span><span class="amt"><span class="cur">USD</span>$220</span></li>
-          <li><span class="grp">6–10 pax</span><span class="amt"><span class="cur">USD</span>$180</span></li>
-          <li><span class="grp">11–18 pax</span><span class="amt"><span class="cur">USD</span>$160</span></li>
-        </ul>
-      </div>
-      <div class="price-card reveal">
-        <h4>3D / 2N</h4>
-        <div class="incl">+ Summit, Lake, Hot Spring</div>
-        <ul class="tier-list">
-          <li><span class="grp">1 pax</span><span class="amt"><span class="cur">USD</span>$520</span></li>
-          <li><span class="grp">2 pax</span><span class="amt"><span class="cur">USD</span>$320</span></li>
-          <li><span class="grp">3–5 pax</span><span class="amt"><span class="cur">USD</span>$280</span></li>
-          <li><span class="grp">6–10 pax</span><span class="amt"><span class="cur">USD</span>$240</span></li>
-          <li><span class="grp">11–18 pax</span><span class="amt"><span class="cur">USD</span>$210</span></li>
-        </ul>
-      </div>
-      <div class="price-card reveal">
-        <h4>4D / 3N</h4>
-        <div class="incl">+ Summit, Lake, Hot Spring</div>
-        <ul class="tier-list">
-          <li><span class="grp">1 pax</span><span class="amt"><span class="cur">USD</span>$670</span></li>
-          <li><span class="grp">2 pax</span><span class="amt"><span class="cur">USD</span>$420</span></li>
-          <li><span class="grp">3–5 pax</span><span class="amt"><span class="cur">USD</span>$370</span></li>
-          <li><span class="grp">6–10 pax</span><span class="amt"><span class="cur">USD</span>$320</span></li>
-          <li><span class="grp">11–18 pax</span><span class="amt"><span class="cur">USD</span>$280</span></li>
-        </ul>
-      </div>
-      <div class="price-card reveal" style="border:2px solid var(--rust)">
-        <h4>6D / 5N <span style="font-weight:400;font-size:.7em;color:#e8a866">· our trip</span></h4>
-        <div class="incl">+ Gili Islands &amp; snorkeling</div>
-        <ul class="tier-list">
-          <li><span class="grp">1 pax</span><span class="amt"><span class="cur">USD</span>$820</span></li>
-          <li><span class="grp">2 pax</span><span class="amt"><span class="cur">USD</span>$570</span></li>
-          <li><span class="grp">3–5 pax</span><span class="amt"><span class="cur">USD</span>$520</span></li>
-          <li><span class="grp">6–10 pax</span><span class="amt"><span class="cur">USD</span>$470</span></li>
-          <li><span class="grp">11–18 pax</span><span class="amt"><span class="cur">USD</span>$430</span></li>
-        </ul>
-      </div>
-    </div>
-    <p class="price-foot reveal">All prices are per person in USD. Larger groups pay less each. The package includes hotels, all transfers, the Gili boat, snorkeling, guide, porters, camping and meals on the trek — flights and personal spending are separate. Message us to confirm your group's rate.</p>
-  </div>
-</section>
-
-<!-- RINJANI TRIP: ITINERARY + GRAPH -->
 <section id="trip">
   <div class="wrap">
     <div class="section-head reveal">
-      <h2>Rinjani — our first trip</h2>
-      <div class="trip-meta">
-        <span class="chip">Fri 10 – Wed 15 Jul 2026</span>
-        <span class="chip">6 days / 5 nights</span>
-        <span class="chip">Fly Scoot SIN ⇄ LOP</span>
-        <span class="chip">Dates tentative</span>
-      </div>
-      <p style="color:var(--ink-soft);margin-top:10px;max-width:62ch">Our first climb — Rinjani plus the Gili Islands to finish. Out on the Fri 10 Jul Scoot flight, summit Sun 12 Jul, home on the Wed 15 Jul return. Dates are tentative until we book.</p>
+      <h2>Rinjani, July 10–15</h2>
+      <p style="color:var(--ink-soft);margin-top:10px;max-width:62ch">Scoot TR258 departs Singapore Friday 07:35, lands Lombok 10:25. Return Wednesday. Times subject to Scoot's schedule.</p>
     </div>
 
     <div class="itin reveal">
-      <div class="day"><div class="dlabel">Day 1 · Fri 10 Jul — Arrival → Sembalun</div><div class="dtext">Pick-up from Lombok airport, transfer to Sembalun village, hotel check-in, free time and trekking briefing.</div></div>
-      <div class="day"><div class="dlabel">Day 2 · Sat 11 Jul — Trek to Crater Rim</div><div class="dtext">Breakfast, start trekking from Sembalun (1,150m) through savanna and forest, lunch on the trail, reach Crater Rim (2,639m), sunset over Segara Anak Lake, dinner and camp.</div></div>
-      <div class="day"><div class="dlabel">Day 3 · Sun 12 Jul — Summit → Lake &amp; Hot Spring</div><div class="dtext">Wake ~2:00 AM for the summit push to 3,726m, sunrise from the top, back to camp for breakfast, trek down to Segara Anak Lake, relax at the hot springs, dinner and camp by the lake.</div></div>
-      <div class="day"><div class="dlabel">Day 4 · Mon 13 Jul — Lake → Torean → Senaru</div><div class="dtext">Breakfast at the lake, trek down the scenic Torean route (waterfalls and jungle) to Torean village, transfer to Senaru, hotel check-in and rest.</div></div>
-      <div class="day"><div class="dlabel">Day 5 · Tue 14 Jul — Waterfalls → Gili Islands</div><div class="dtext">Morning at Sendang Gile and Tiu Kelep waterfalls, transfer to the harbour, boat to the Gili Islands, snorkeling over coral reefs and turtles, hotel check-in and free time.</div></div>
-      <div class="day"><div class="dlabel">Day 6 · Wed 15 Jul — Gili → Home</div><div class="dtext">Breakfast, boat back to the Lombok mainland, transfer to the airport, fly home.</div></div>
+      <div class="day">
+        <div class="dlabel">Fri 10 Jul. Arrival, Sembalun</div>
+        <div class="dtext">Airport pick-up, drive to Sembalun, hotel, trekking briefing.</div>
+      </div>
+
+      <div class="day">
+        <div class="dlabel">Sat 11 Jul. Trek to Crater Rim</div>
+        <div class="dtext">Sembalun (1,150m) up through savanna and forest to Crater Rim (2,639m). Sunset over Segara Anak Lake. Camp.</div>
+      </div>
+
+      <div class="day">
+        <div class="dlabel">Sun 12 Jul. Summit, Lake, Hot Spring</div>
+        <div class="dtext">2 AM push to the 3,726m summit for sunrise. Down to Segara Anak Lake, hot springs, camp.</div>
+      </div>
+
+      <div class="day">
+        <div class="dlabel">Mon 13 Jul. Torean to Senaru</div>
+        <div class="dtext">Down the Torean route past waterfalls and jungle to Senaru, hotel.</div>
+      </div>
+
+      <div class="day">
+        <div class="dlabel">Tue 14 Jul. Waterfalls, Gili Islands</div>
+        <div class="dtext">Sendang Gile and Tiu Kelep waterfalls, boat to Gili, snorkeling.</div>
+      </div>
+
+      <div class="day">
+        <div class="dlabel">Wed 15 Jul. Home</div>
+        <div class="dtext">Boat back to Lombok, airport, fly home.</div>
+      </div>
     </div>
 
-    <div class="graph-card reveal">
+    <figure class="graph-card reveal">
       <h3>What the climb actually feels like</h3>
-      <p class="graph-sub">An honest, only-slightly-dramatic profile of the three trek days — Sembalun up to the summit, down to the lake, and out the Torean side.</p>
-      <svg viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto" role="img" aria-label="Illustrated feel of the Rinjani climb with stick figures and notes">
+      <p class="graph-sub">An honest, only-slightly-dramatic profile of the three trek days. Sembalun up to the summit, down to the lake, and out the Torean side.</p>
+
+      <svg viewBox="0 0 820 420" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto" role="img" aria-label="Stick-figure illustration of the Rinjani climb">
         <defs>
           <style>
             .lbl{font-family:'Source Sans 3',sans-serif;font-size:11px;fill:#6b6353}
@@ -536,173 +1042,136 @@
           </style>
         </defs>
 
-        <!-- sun -->
         <g>
           <circle cx="70" cy="60" r="20" fill="#e8a866"/>
           <g stroke="#e8a866" stroke-width="2.5" stroke-linecap="round">
-            <line x1="70" y1="22" x2="70" y2="32"/><line x1="70" y1="88" x2="70" y2="98"/>
-            <line x1="32" y1="60" x2="42" y2="60"/><line x1="98" y1="60" x2="108" y2="60"/>
-            <line x1="43" y1="33" x2="50" y2="40"/><line x1="90" y1="80" x2="97" y2="87"/>
-            <line x1="43" y1="87" x2="50" y2="80"/><line x1="90" y1="40" x2="97" y2="33"/>
+            <line x1="70" y1="22" x2="70" y2="32"/>
+            <line x1="70" y1="88" x2="70" y2="98"/>
+            <line x1="32" y1="60" x2="42" y2="60"/>
+            <line x1="98" y1="60" x2="108" y2="60"/>
+            <line x1="43" y1="33" x2="50" y2="40"/>
+            <line x1="90" y1="80" x2="97" y2="87"/>
+            <line x1="43" y1="87" x2="50" y2="80"/>
+            <line x1="90" y1="40" x2="97" y2="33"/>
           </g>
           <text x="70" y="115" text-anchor="middle" class="note">8am and already roasting</text>
         </g>
 
-        <!-- mountain outline: Sembalun(low L) -> rim -> SUMMIT -> crater/lake -> down to Senaru, then Gili sea -->
-        <path d="M0 360 L120 330 L240 250 L340 250 L430 70 L520 250 L600 250 L660 300 L760 330 L760 420 L0 420 Z"
-              fill="#a0552c" opacity="0.10"/>
-        <path d="M0 360 L120 330 L240 250 L340 250 L430 70 L520 250 L600 250 L660 300 L760 330"
-              fill="none" stroke="#a0552c" stroke-width="3"/>
+        <path d="M0 360 L120 330 L240 250 L340 250 L430 70 L520 250 L600 250 L660 300 L760 330 L760 420 L0 420 Z" fill="#a0552c" opacity="0.10"/>
+        <path d="M0 360 L120 330 L240 250 L340 250 L430 70 L520 250 L600 250 L660 300 L760 330" fill="none" stroke="#a0552c" stroke-width="3"/>
 
-        <!-- crater lake (in the bowl) -->
         <ellipse cx="445" cy="262" rx="48" ry="13" fill="#7d9bb0" opacity="0.7"/>
         <text x="445" y="266" text-anchor="middle" class="lbl" font-size="9" fill="#fff">lake</text>
 
-        <!-- Gili sea bottom right -->
         <path d="M700 360 Q740 352 780 360 L820 360 L820 420 L690 420 Z" fill="#7d9bb0" opacity="0.55"/>
 
-        <!-- summit elevation label -->
         <text x="430" y="55" text-anchor="middle" class="big">Summit 3,726 m</text>
 
-        <!-- ===== stick figures + notes ===== -->
-        <!-- start, Sembalun -->
-        <g class="fig" transform="translate(120,300)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="10" x2="-8" y2="18"/><line x1="0" y1="10" x2="8" y2="18"/><line x1="0" y1="20" x2="-6" y2="32"/><line x1="0" y1="20" x2="6" y2="32"/></g>
+        <g class="fig" transform="translate(120,300)">
+          <circle cx="0" cy="0" r="6"/>
+          <line x1="0" y1="6" x2="0" y2="20"/>
+          <line x1="0" y1="10" x2="-8" y2="18"/>
+          <line x1="0" y1="10" x2="8" y2="18"/>
+          <line x1="0" y1="20" x2="-6" y2="32"/>
+          <line x1="0" y1="20" x2="6" y2="32"/>
+        </g>
         <text x="120" y="352" text-anchor="middle" class="lbl">Sembalun 1,150 m</text>
         <text x="120" y="285" text-anchor="middle" class="note">"How hard can it be?"</text>
 
-        <!-- climbing day 2, struggling -->
-        <g class="fig" transform="translate(215,262) rotate(15)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="10" x2="-8" y2="16"/><line x1="0" y1="10" x2="8" y2="14"/><line x1="0" y1="20" x2="-6" y2="32"/><line x1="0" y1="20" x2="7" y2="30"/></g>
-        <text x="205" y="225" text-anchor="middle" class="note">"Why are there<tspan x="205" dy="13">no trees?!"</tspan></text>
-
-        <!-- crater rim camp -->
-        <g class="fig" transform="translate(300,228)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="10" x2="-9" y2="10"/><line x1="0" y1="10" x2="9" y2="10"/><line x1="0" y1="20" x2="-6" y2="32"/><line x1="0" y1="20" x2="6" y2="32"/></g>
-        <text x="300" y="212" text-anchor="middle" class="note">"Sunset! Worth it."</text>
-        <text x="300" y="255" text-anchor="middle" class="lbl">Crater rim 2,639 m</text>
-
-        <!-- near summit, suffering -->
-        <g class="fig" transform="translate(400,120) rotate(20)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="10" x2="-8" y2="15"/><line x1="0" y1="10" x2="8" y2="13"/><line x1="0" y1="20" x2="-7" y2="31"/><line x1="0" y1="20" x2="6" y2="32"/></g>
-        <text x="360" y="120" text-anchor="middle" class="note">"2am. Two steps up,<tspan x="360" dy="13">one slide back."</tspan></text>
-
-        <!-- on summit, triumphant -->
-        <g class="fig" transform="translate(445,52)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="9" x2="-9" y2="0"/><line x1="0" y1="9" x2="9" y2="0"/><line x1="0" y1="20" x2="-6" y2="32"/><line x1="0" y1="20" x2="6" y2="32"/></g>
-        <text x="500" y="60" text-anchor="start" class="note">"BOOM. Total legend."</text>
-
-        <!-- hot springs by lake -->
-        <g class="fig" transform="translate(490,250)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="18"/><line x1="0" y1="10" x2="-8" y2="16"/><line x1="0" y1="10" x2="8" y2="16"/></g>
-        <text x="540" y="235" text-anchor="middle" class="note">"Hot springs.<tspan x="540" dy="13">I live here now."</tspan></text>
-
-        <!-- descent to Senaru, wrecked knees -->
-        <g class="fig" transform="translate(635,290) rotate(-12)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="20"/><line x1="0" y1="10" x2="-8" y2="14"/><line x1="0" y1="10" x2="8" y2="16"/><line x1="0" y1="20" x2="-7" y2="31"/><line x1="0" y1="20" x2="6" y2="32"/></g>
-        <text x="650" y="270" text-anchor="middle" class="note">"Can't feel<tspan x="650" dy="13">my legs."</tspan></text>
-
-        <!-- Gili, toes in sand -->
-        <g class="fig" transform="translate(750,332)"><circle cx="0" cy="0" r="6"/><line x1="0" y1="6" x2="0" y2="18"/><line x1="0" y1="9" x2="-9" y2="4"/><line x1="0" y1="9" x2="9" y2="4"/><line x1="0" y1="18" x2="-6" y2="28"/><line x1="0" y1="18" x2="6" y2="28"/></g>
-        <text x="752" y="385" text-anchor="middle" class="lbl">Gili Island ~0 m</text>
-        <text x="752" y="320" text-anchor="middle" class="note">"Cold Bintang.<tspan x="752" dy="13">Worth every step."</tspan></text>
-
-        <!-- day band labels -->
         <g class="big" font-size="11">
-          <text x="180" y="395">Day 2 · up to the rim</text>
-          <text x="420" y="410" text-anchor="middle">Day 3 · summit + lake</text>
-          <text x="660" y="395" text-anchor="end">Day 4 · out to Senaru</text>
+          <text x="180" y="395">Day 2, up to the rim</text>
+          <text x="420" y="410" text-anchor="middle">Day 3, summit and lake</text>
+          <text x="660" y="395" text-anchor="end">Day 4, out to Senaru</text>
         </g>
       </svg>
-      <div class="daystat">
-        <div class="ds"><div class="t">Day 2 — to crater rim</div><div class="v">Sembalun 1,150m → rim 2,639m<br>~10 km · 6–7 hrs, open savanna</div></div>
-        <div class="ds"><div class="t">Day 3 — summit + lake</div><div class="v">2AM push to 3,726m, then big drop to the lake<br>the long, hard, glorious day</div></div>
-        <div class="ds"><div class="t">Day 4 — Torean to Senaru</div><div class="v">Out via the Torean route<br>~10 km · waterfalls &amp; jungle, knees complain</div></div>
-      </div>
-      <p class="graph-note">An original, light-hearted illustration — not to scale. Real distances, elevations and feelings vary by person, group and how much sleep you got.</p>
-    </div>
+
+      <figcaption class="graph-note">
+        Inspired by Brian at
+        <a href="https://planetbell.me/2016/02/25/trekking-rinjani-tips-and-advice/" target="_blank" rel="noopener" style="color:var(--rust)">planetbell.me</a>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- COST -->
 <section id="cost">
   <div class="wrap">
-    <div class="eyebrow reveal">What it costs · per person</div>
-    <h2 class="reveal">What it costs, all in</h2>
-    <p class="intro reveal">Everything for the 6-day Rinjani + Gili trip, per person. The trek package already covers most of it in Indonesia. Below, every cost is converted to SGD so you can see one all-in estimate.</p>
+    <div class="section-head reveal">
+      <h2>Price</h2>
+      <p style="color:#cfc6b2;margin-top:10px;max-width:62ch">Per person, includes return flight from Singapore.</p>
+    </div>
+
+    <div style="margin:30px 0;padding:30px;background:#383228;border:1px solid #4a4234;max-width:420px;text-align:center" class="reveal">
+      <div style="font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#bcb29c;margin-bottom:8px">6D / 5N, Rinjani + Gili</div>
+      <div style="font-family:'Fraunces',serif;font-weight:700;font-size:3rem;color:#e8a866;line-height:1">SGD $1,800</div>
+      <div style="color:#cfc6b2;margin-top:6px">for one person</div>
+    </div>
 
     <div class="cost-split reveal">
       <div class="cost-inc">
-        <div class="ci-head">✓ Already inside the trek package</div>
+        <div class="ci-head">Included</div>
         <ul>
-          <li>Hotels — Sembalun, Senaru &amp; Gili Island</li>
-          <li>All land transfers + airport pick-up/drop-off</li>
-          <li>Gili boat transfer &amp; snorkeling trip</li>
-          <li>Guide, porters &amp; camping gear</li>
+          <li>Return flight, Scoot SIN to LOP</li>
+          <li>Hotels in Sembalun, Senaru, Gili</li>
+          <li>All transfers and the Gili boat</li>
+          <li>Guide, porters, camping gear</li>
           <li>All meals on the trek</li>
-          <li>Park fees &amp; trek permits</li>
-          <li>Rinjani completion certificate</li>
+          <li>Snorkeling at Gili</li>
+          <li>Park fees and permits</li>
+          <li>Completion certificate</li>
         </ul>
       </div>
     </div>
 
-    <div style="overflow-x:auto">
-    <table class="cost-table reveal">
-      <thead><tr><th>Item</th><th class="note">What it covers</th><th style="text-align:right">Est. (SGD)</th></tr></thead>
-      <tbody>
-        <tr><td>Trek package (6D/5N)</td><td class="note">Guide, porters, hotels, transfers, Gili boat, snorkeling, camping, trek meals, park fees, completion certificate</td><td class="amt"><span style="font-size:.7em;color:#9c937e;font-weight:600;letter-spacing:.04em;margin-right:3px">SGD</span>$580 – $1,110</td></tr>
-        <tr><td>Return flights — Scoot SIN ⇄ LOP</td><td class="note">Fri 10 → Wed 15 Jul, peak season</td><td class="amt"><span style="font-size:.7em;color:#9c937e;font-weight:600;letter-spacing:.04em;margin-right:3px">SGD</span>$250 – $420</td></tr>
-        <tr><td>Guide &amp; porter tips</td><td class="note">Customary at the end of the trek</td><td class="amt"><span style="font-size:.7em;color:#9c937e;font-weight:600;letter-spacing:.04em;margin-right:3px">SGD</span>$35 – $70</td></tr>
-        <tr><td>Travel insurance</td><td class="note">Recommended — covers altitude trekking</td><td class="amt"><span style="font-size:.7em;color:#9c937e;font-weight:600;letter-spacing:.04em;margin-right:3px">SGD</span>$20 – $50</td></tr>
-        <tr><td>Personal spending</td><td class="note">Drinks, extra meals &amp; snacks, SIM, souvenirs</td><td class="amt"><span style="font-size:.7em;color:#9c937e;font-weight:600;letter-spacing:.04em;margin-right:3px">SGD</span>$60 – $150</td></tr>
-        <tr class="total"><td class="lab">Estimated total</td><td class="note">all-in, per person</td><td class="amt"><span style="font-size:.7em;color:#9c937e;font-weight:600;letter-spacing:.04em;margin-right:3px">SGD</span>≈ $950 – $1,800</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p class="cost-foot reveal">All figures converted to SGD at roughly 1 USD ≈ 1.35 SGD (rates vary). The trek package is the operator's USD rate and drops with bigger groups (see Pricing); flights and personal spending are estimates that depend on your dates and choices. These are estimates, not a fixed quote — message us and we'll work out your real number.</p>
+    <p class="cost-foot reveal">Flight estimated at SGD $350 return. Not included: insurance, tips, personal spending.</p>
   </div>
 </section>
 
-<!-- COACHING + BASELINE -->
 <section id="coaching">
   <div class="wrap">
-    <div class="section-head reveal"><h2>How we coach each other</h2></div>
+    <div class="section-head reveal">
+      <h2>How we coach each other</h2>
+    </div>
+
     <div class="grid-2" style="margin-bottom:22px">
-      <div style="display:flex;flex-direction:column;gap:22px">
-        <div class="card accent reveal"><h3>Progress check-ins, weekly</h3><p>How training is going, how recovery feels, comfortable Bukit Timah round trips.</p></div>
-        <div class="card accent reveal"><h3>Light diet check-ins</h3><p>No preaching.</p></div>
+      <div class="card accent reveal">
+        <h3>Progress check-ins, weekly</h3>
+        <p>How training is going, how recovery feels, comfortable Bukit Timah round trips.</p>
       </div>
-      <div class="bench reveal">
-        <svg class="yic" viewBox="0 0 100 100" fill="none" stroke="#fff" stroke-width="5">
-          <path d="M50 12 L86 74 L14 74 Z"/>
-          <path d="M50 44 c-7 6 -7 16 0 22 c7 -6 7 -16 0 -22 Z" fill="#fff" stroke="none"/>
-          <path d="M50 50 c-9 -2 -16 4 -16 12 c9 2 16 -4 16 -12 Z" fill="#fff" stroke="none"/>
-          <path d="M50 50 c9 -2 16 4 16 12 c-9 2 -16 -4 -16 -12 Z" fill="#fff" stroke="none"/>
-        </svg>
-        <div class="lab">Fitness benchmark</div>
-        <div class="big">Full Ashtanga primary series at the summit</div>
+
+      <div class="card accent reveal">
+        <h3>Light diet check-ins</h3>
+        <p>No preaching.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BASELINE -->
 <section id="baseline" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="section-head reveal">
       <h2>Baseline</h2>
       <p style="color:var(--ink-soft);margin-top:10px">For grouping, not gatekeeping. About finishing safely, not racing.</p>
     </div>
+
     <ul class="baseline-list reveal">
-      <li>Resting HR (e.g., 52)</li>
-      <li>Bukit Timah round trip, no pack (e.g., comfortable in 65 min)</li>
-      <li>100 floors at Pinnacle@Duxton with 5kg pack (how it felt)</li>
-      <li>How far you can walk/run without strain in 12 minutes (e.g., 2.5 km)</li>
-      <li>Longest trek in last 2 years (e.g., 4-day hike in Nepal, 2024)</li>
-      <li>Weekly cardio hours (e.g., 4 hr)</li>
-      <li>Altitude experience above 3,000 m (e.g., once, 4,200 m)</li>
-      <li>Injuries (e.g., minor knee strain, managed)</li>
+      <li>Resting HR, e.g. 52</li>
+      <li>Bukit Timah round trip, no pack, e.g. comfortable in 65 min</li>
+      <li>100 floors at Pinnacle@Duxton with 5kg pack, how it felt</li>
+      <li>How far you can walk/run without strain in 12 minutes, e.g. 2.5 km</li>
+      <li>Longest trek in last 2 years, e.g. 4-day hike in Nepal, 2024</li>
+      <li>Weekly cardio hours, e.g. 4 hr</li>
+      <li>Altitude experience above 3,000 m, e.g. once, 4,200 m</li>
+      <li>Injuries, e.g. minor knee strain, managed</li>
     </ul>
   </div>
 </section>
 
-<!-- WHAT WE NEED BACK -->
 <section id="needback">
   <div class="wrap">
-    <div class="section-head reveal"><h2>What we need back</h2></div>
+    <div class="section-head reveal">
+      <h2>What we need back</h2>
+    </div>
+
     <div class="steps reveal">
       <div class="step">
         <div class="n"></div>
@@ -710,41 +1179,45 @@
           <h4>Pick one from List A and one from List B</h4>
           <p>We start with List A. List B is the next round.</p>
           <ul>
-            <li><b>List A:</b> Kinabalu (4,095 m), Rinjani (3,726 m), Annapurna Circuit (5,416 m)</li>
-            <li><b>List B:</b> Tongariro NZ (43 km), Overland Tasmania (65 km), Goecha La India (4,940 m), Tour du Mont Blanc (170 km), Kilimanjaro Tanzania (5,895 m), Toubkal Morocco (4,167 m), Huayhuash Peru (130 km)</li>
+            <li><b>List A:</b> Kinabalu, Rinjani, Annapurna Circuit</li>
+            <li><b>List B:</b> Tongariro NZ, Overland Tasmania, Goecha La India, Tour du Mont Blanc, Kilimanjaro Tanzania, Toubkal Morocco, Huayhuash Peru</li>
           </ul>
         </div>
       </div>
-      <div class="step"><div class="n"></div><div><h4>Date windows over the next 12 months</h4></div></div>
-      <div class="step"><div class="n"></div><div><h4>Training commitment</h4><p>Yes / probably / hard no</p></div></div>
+
       <div class="step">
         <div class="n"></div>
-        <div><h4>Baseline</h4>
+        <div>
+          <h4>Date windows over the next 12 months</h4>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="n"></div>
+        <div>
+          <h4>Training commitment</h4>
+          <p>Yes / probably / hard no</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="n"></div>
+        <div>
+          <h4>Baseline</h4>
           <ul>
-            <li>Resting HR · Bukit Timah round trip (no pack) · 100 floors at Pinnacle@Duxton with 5kg pack</li>
-            <li>12-min walk/run distance · longest trek in last 2 years · weekly cardio hours</li>
-            <li>Altitude experience above 3,000 m · injuries</li>
+            <li>Resting HR · Bukit Timah round trip · 100 floors with 5kg pack</li>
+            <li>12-min walk/run distance · longest trek · weekly cardio hours</li>
+            <li>Altitude experience · injuries</li>
           </ul>
         </div>
       </div>
-      <div class="step"><div class="n"></div><div><h4>Cost ceiling</h4></div></div>
-    </div>
-  </div>
-</section>
 
-<!-- SIGNUP -->
-<section id="signup">
-  <div class="wrap">
-    <div class="eyebrow reveal" style="text-align:center">Train weekly. Climb together. Safely.</div>
-    <h2 class="reveal">Sign up to join</h2>
-    <p class="reveal">Message us on WhatsApp to join, ask about the trial session, or send your baseline. Easy.</p>
-    <a class="wa-btn reveal" href="https://wa.me/6582869005?text=Hi!%20I'd%20like%20to%20join%20the%20164%20Trek%20Group." target="_blank" rel="noopener">
-      <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.4 2 7.7L.5 31.5l8-2.1c2.2 1.2 4.8 1.9 7.5 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.3c-2.4 0-4.7-.7-6.7-1.9l-.5-.3-4.7 1.2 1.3-4.6-.3-.5a12.8 12.8 0 01-2-6.9C3.1 8.9 8.9 3.1 16 3.1S28.9 8.9 28.9 16 23.1 28.8 16 28.8zm7.1-9.6c-.4-.2-2.3-1.1-2.7-1.3-.4-.1-.6-.2-.9.2-.3.4-1 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.7.2-.2.3-.4.4-.7.1-.2.1-.5 0-.7-.1-.2-.9-2.2-1.3-3-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.3s1.4 3.8 1.6 4.1c.2.3 2.8 4.3 6.8 6 .9.4 1.7.6 2.3.8.9.3 1.8.2 2.5.1.8-.1 2.3-.9 2.6-1.9.3-.9.3-1.7.2-1.9-.1-.2-.4-.3-.8-.5z"/></svg>
-      Message us to join
-    </a>
-    <div class="dates-row">
-      <div class="date-box reveal"><div class="t">Trial session</div><div class="d">Date: TBA</div></div>
-      <div class="date-box reveal"><div class="t">Reply by</div><div class="d">Date: TBA</div></div>
+      <div class="step">
+        <div class="n"></div>
+        <div>
+          <h4>Cost ceiling</h4>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -755,35 +1228,20 @@
 </footer>
 
 <script>
-// Travel windows data: 0=avoid,1=shoulder,2=prime  (Jan..Dec)
-const windows=[
-  {grp:"List A — start here"},
-  {name:"Kinabalu",loc:"Malaysia · 4,095 m",best:"Feb–Apr",m:[1,2,2,2,1,1,1,1,1,0,0,1]},
-  {name:"Rinjani",loc:"Indonesia · 3,726 m",best:"May–Oct",m:[0,0,1,1,2,2,2,2,2,2,1,0]},
-  {name:"Annapurna Circuit",loc:"Nepal · 5,416 m",best:"Oct–Nov, Mar–Apr",m:[0,1,2,2,1,0,0,0,1,2,2,1]},
-  {grp:"List B — next round"},
-  {name:"Tongariro Circuit",loc:"New Zealand · 43 km",best:"Dec–Mar",m:[2,2,2,1,0,0,0,0,1,1,1,2]},
-  {name:"Overland Track",loc:"Tasmania · 65 km",best:"Dec–Mar",m:[2,2,2,1,0,0,0,0,1,1,1,2]},
-  {name:"Goecha La",loc:"Sikkim · 4,940 m",best:"Mar–May, Oct–Nov",m:[0,1,2,2,2,0,0,0,1,2,2,1]},
-  {name:"Tour du Mont Blanc",loc:"Alps · 170 km",best:"Jul–Sep",m:[0,0,0,0,1,1,2,2,2,1,0,0]},
-  {name:"Kilimanjaro",loc:"Tanzania · 5,895 m",best:"Jan–Feb, Jun–Oct",m:[2,2,1,0,0,2,2,2,2,2,1,1]},
-  {name:"Toubkal",loc:"Morocco · 4,167 m",best:"Apr–Jun, Sep–Oct",m:[0,1,1,2,2,2,1,1,2,2,1,0]},
-  {name:"Huayhuash Circuit",loc:"Peru · 130 km",best:"May–Sep",m:[0,0,1,1,2,2,2,2,2,1,0,0]}
-];
-const colors={0:"var(--sw-avoid,#e3dcc9)",1:"#d9b48a",2:"var(--rust)"};
-const body=document.getElementById('twbody');
-windows.forEach(r=>{
-  const tr=document.createElement('tr');
-  if(r.grp){tr.className='grp-row';tr.innerHTML=`<td colspan="14">${r.grp}</td>`;body.appendChild(tr);return;}
-  let cells=`<td class="name"><b>${r.name}</b><small>${r.loc}</small></td>`;
-  r.m.forEach(v=>{const c=v===2?'var(--rust)':v===1?'#d9b48a':'#e3dcc9';const b=v===0?'border:1px solid var(--line);':'';cells+=`<td><div class="cell" style="background:${c};${b}"></div></td>`;});
-  cells+=`<td style="text-align:left;padding-left:14px;color:var(--ink-soft);white-space:nowrap">${r.best}</td>`;
-  tr.innerHTML=cells;body.appendChild(tr);
-});
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  });
+},{threshold:.12});
 
-// scroll reveal
-const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
-document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*0.06)+'s';io.observe(el);});
+document.querySelectorAll('.reveal').forEach((el,i)=>{
+  el.style.transitionDelay = (i % 4 * 0.06) + 's';
+  io.observe(el);
+});
 </script>
+
 </body>
 </html>
