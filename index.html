@@ -39,15 +39,26 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   background:var(--bg);
   color:var(--ink);
   font-family:'Inter',sans-serif;
   line-height:1.6;
 }
-img{max-width:100%;display:block}
-a{color:inherit}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+}
 
 h1,h2,h3{
   font-family:'DM Serif Display',serif;
@@ -96,7 +107,7 @@ h1,h2,h3{
 }
 
 .hero-inner{
-  max-width:980px;
+  max-width:1050px;
 }
 
 .hero h1{
@@ -105,7 +116,7 @@ h1,h2,h3{
 }
 
 .hero p{
-  max-width:720px;
+  max-width:880px;
   margin:22px auto 0;
   color:rgba(255,255,255,.88);
   font-size:1.12rem;
@@ -118,9 +129,9 @@ h1,h2,h3{
 }
 
 .hero .price{
-  margin-top:8px;
-  font-size:1.18rem;
-  font-weight:800;
+  margin-top:14px;
+  font-size:clamp(1.5rem,3vw,2.4rem);
+  font-weight:900;
 }
 
 .btn{
@@ -186,8 +197,16 @@ h2{
   font-weight:800;
 }
 
-.included{
+.how-much{
   background:var(--bg);
+}
+
+.how-much h2{
+  font-size:clamp(2.8rem,6vw,5rem);
+}
+
+.included{
+  background:var(--paper);
 }
 
 .included-list{
@@ -215,7 +234,7 @@ h2{
 }
 
 .itinerary{
-  background:var(--paper);
+  background:var(--bg);
 }
 
 .days{
@@ -246,7 +265,7 @@ h2{
 }
 
 .illustration{
-  background:var(--bg);
+  background:var(--paper);
 }
 
 .illustration-card{
@@ -273,7 +292,7 @@ h2{
 }
 
 .photos{
-  background:var(--paper);
+  background:var(--bg);
 }
 
 .photo-grid{
@@ -410,7 +429,7 @@ footer b{
 <header class="hero">
   <div class="hero-inner">
     <h1>Rinjani + Gili Island</h1>
-    <p>6D5N trek from Singapore to Lombok, Indonesia — Mount Rinjani 3,726m + Gili Island.</p>
+    <p>6D5N trek from Singapore to Mount Rinjani and Gili Island.</p>
     <div class="date">10–15 July 2026</div>
     <div class="price">SGD $1,800 per person, all-inclusive from Singapore</div>
     <a class="btn" href="#reserve">Reserve your slot</a>
@@ -425,10 +444,29 @@ footer b{
     </div>
 
     <div class="text">
-      <p><b>Outbound:</b> Singapore to Lombok, Friday, 10 July 2026.</p>
-      <p><b>Return:</b> Lombok to Singapore, Wednesday, 15 July 2026.</p>
+      <p><b>Outbound — Friday, 10 July 2026</b><br>
+      Scoot TR260 · SIN → LOP · 06:10 → 09:00 · 2h 50m</p>
+
+      <p><b>Return — Wednesday, 15 July 2026</b><br>
+      Scoot TR261 · LOP → SIN · 09:35 → 12:35 · 3h 0m</p>
+
       <p>The return flight is included in the SGD $1,800 package. We handle the booking.</p>
-      <p><a href="https://booking.flyscoot.com/book/flight/return/SIN/2026-07-10/LOP/LOP/2026-07-15/SIN?adult=1&child=0&infant=0&emcid=T-wz8wQ6PSv" target="_blank" rel="noopener">Click here to check the live Scoot fare.</a></p>
+
+      <p>
+        <a href="https://booking.flyscoot.com/book/flight/return/SIN/2026-07-10/LOP/LOP/2026-07-15/SIN?adult=1&child=0&infant=0&emcid=T-wz8wQ6PSv" target="_blank" rel="noopener">
+          Check the live Scoot fare.
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section how-much">
+  <div class="wrap">
+    <div class="center">
+      <div class="label">How much</div>
+      <h2>SGD $1,800 per person</h2>
+      <p class="text">All-inclusive from Singapore. This includes the return flight, hotels, transfers, guide, porters, camping gear, trek meals, park fees, waterfalls, and snorkeling.</p>
     </div>
   </div>
 </section>
@@ -520,8 +558,8 @@ footer b{
         <text x="500" y="58" text-anchor="middle" font-family="Inter" font-size="26" font-weight="900" fill="#211c16">Summit</text>
         <text x="500" y="84" text-anchor="middle" font-family="Inter" font-size="18" font-weight="800" fill="#5f574e">3,726 m</text>
 
-        <text x="278" y="230" text-anchor="middle" font-family="Inter" font-size="24" font-weight="900" fill="#211c16">Crater Rim</text>
-        <text x="278" y="255" text-anchor="middle" font-family="Inter" font-size="17" font-weight="800" fill="#5f574e">2,639 m</text>
+        <text x="248" y="224" text-anchor="middle" font-family="Inter" font-size="24" font-weight="900" fill="#211c16">Crater Rim</text>
+        <text x="248" y="249" text-anchor="middle" font-family="Inter" font-size="17" font-weight="800" fill="#5f574e">2,639 m</text>
 
         <text x="110" y="436" text-anchor="middle" font-family="Inter" font-size="18" font-weight="800" fill="#5f574e">Sembalun</text>
         <text x="900" y="436" text-anchor="middle" font-family="Inter" font-size="18" font-weight="800" fill="#5f574e">Senaru / Gili</text>
@@ -572,7 +610,6 @@ footer b{
 <section class="section photos">
   <div class="wrap">
     <div class="center">
-      <div class="label">Photos</div>
       <h2>Rinjani and Gili</h2>
     </div>
 
@@ -619,7 +656,7 @@ footer b{
       <p>Message us on WhatsApp.</p>
 
       <a class="btn" href="https://wa.me/6582869005?text=Hi!%20I%20want%20to%20reserve%20a%20slot%20for%20the%20Rinjani%20%2B%20Gili%206D5N%20trip." target="_blank" rel="noopener">
-        WhatsApp
+        Message on WhatsApp
       </a>
 
       <div class="contact">
