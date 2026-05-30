@@ -54,15 +54,6 @@
   .wrap{max-width:780px;margin:0 auto;padding:0 24px}
   section{padding:96px 0}
 
-  .eyebrow{
-    font-size:.78rem;
-    letter-spacing:.18em;
-    text-transform:uppercase;
-    color:var(--rust);
-    font-weight:600;
-    margin-bottom:16px;
-  }
-
   nav{
     position:sticky;
     top:0;
@@ -228,27 +219,12 @@
     gap:0;
   }
 
-  .grid-3{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:24px;
-  }
-
-  @media(max-width:760px){
-    .grid-3{grid-template-columns:1fr}
-  }
-
   .card{
     background:transparent;
     border:none;
     border-top:1px solid var(--line);
     padding:24px 0;
     border-radius:0;
-  }
-
-  .card.accent{
-    border-left:none;
-    padding-left:0;
   }
 
   .card h3{
@@ -573,7 +549,6 @@
     color:#f3ecdc;
   }
 
-  #cost .eyebrow{color:#d9a06b}
   #cost h2{color:#fff}
 
   .cost-split{margin:26px 0}
@@ -726,27 +701,8 @@
   #message-us p{
     color:var(--ink-soft);
     max-width:48ch;
-    margin:0 auto 28px;
+    margin:0 auto;
     font-size:1.1rem;
-  }
-
-  .wa-btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    background:#25d366;
-    color:#fff;
-    text-decoration:none;
-    font-weight:700;
-    font-size:1.05rem;
-    padding:14px 26px;
-    border-radius:12px;
-    transition:transform .15s,filter .2s;
-  }
-
-  .wa-btn:hover{
-    transform:translateY(-2px);
-    filter:brightness(.96);
   }
 
   footer{
@@ -761,11 +717,6 @@
     justify-content:center;
     color:#fff;
     margin-bottom:10px;
-  }
-
-  footer a{
-    color:#e8a866;
-    text-decoration:none;
   }
 
   .reveal{
@@ -827,22 +778,22 @@
     </div>
 
     <div class="grid-2">
-      <div class="card accent reveal">
+      <div class="card reveal">
         <h3>No falling risk</h3>
         <p>Walking trails only. Altitude, scree, weather, mud are fine. Ropes, exposed ridges, glaciers are out.</p>
       </div>
 
-      <div class="card accent reveal">
+      <div class="card reveal">
         <h3>Start small</h3>
         <p>One mountain first, then the group decides what's next.</p>
       </div>
 
-      <div class="card accent reveal">
+      <div class="card reveal">
         <h3>Prepared, not rushed</h3>
         <p>We build the fitness to finish comfortably and enjoy the whole way up.</p>
       </div>
 
-      <div class="card accent reveal">
+      <div class="card reveal">
         <h3>Mutual accountability</h3>
         <p>We encourage each other on training, recovery, diet.</p>
       </div>
@@ -992,12 +943,16 @@
     </div>
 
     <div class="cal-grid">
-      <a href="https://www.flyscoot.com/en/flights/SIN-LOP" target="_blank" rel="noopener" class="cal-card reveal" style="text-decoration:none;color:inherit">
+      <a href="https://booking.flyscoot.com/en/?from=SIN&to=LOP&departureDate=2026-07-10&returnDate=2026-07-15&adult=1"
+         target="_blank"
+         rel="noopener"
+         class="cal-card reveal"
+         style="text-decoration:none;color:inherit">
         <div class="order">First climb · List A</div>
         <div class="when">Fri 10 Jul</div>
         <h4>Rinjani · 3,726 m</h4>
         <div class="loc">Indonesia</div>
-        <span class="tba">Summit ~12 Jul · check Scoot ↗</span>
+        <span class="tba">Check Scoot fare · SIN to LOP ↗</span>
       </a>
 
       <div class="cal-card reveal">
@@ -1080,28 +1035,11 @@
           </style>
         </defs>
 
-        <g>
-          <circle cx="70" cy="60" r="20" fill="#e8a866"/>
-          <g stroke="#e8a866" stroke-width="2.5" stroke-linecap="round">
-            <line x1="70" y1="22" x2="70" y2="32"/>
-            <line x1="70" y1="88" x2="70" y2="98"/>
-            <line x1="32" y1="60" x2="42" y2="60"/>
-            <line x1="98" y1="60" x2="108" y2="60"/>
-            <line x1="43" y1="33" x2="50" y2="40"/>
-            <line x1="90" y1="80" x2="97" y2="87"/>
-            <line x1="43" y1="87" x2="50" y2="80"/>
-            <line x1="90" y1="40" x2="97" y2="33"/>
-          </g>
-          <text x="70" y="115" text-anchor="middle" class="note">8am and already roasting</text>
-        </g>
-
         <path d="M0 360 L120 330 L240 250 L340 250 L430 70 L520 250 L600 250 L660 300 L760 330 L760 420 L0 420 Z" fill="#a0552c" opacity="0.10"/>
         <path d="M0 360 L120 330 L240 250 L340 250 L430 70 L520 250 L600 250 L660 300 L760 330" fill="none" stroke="#a0552c" stroke-width="3"/>
 
         <ellipse cx="445" cy="262" rx="48" ry="13" fill="#7d9bb0" opacity="0.7"/>
         <text x="445" y="266" text-anchor="middle" class="lbl" font-size="9" fill="#fff">lake</text>
-
-        <path d="M700 360 Q740 352 780 360 L820 360 L820 420 L690 420 Z" fill="#7d9bb0" opacity="0.55"/>
 
         <text x="430" y="55" text-anchor="middle" class="big">Summit 3,726 m</text>
 
@@ -1117,17 +1055,6 @@
         <text x="120" y="352" text-anchor="middle" class="lbl">Sembalun 1,150 m</text>
         <text x="120" y="285" text-anchor="middle" class="note">"How hard can it be?"</text>
 
-        <g class="fig" transform="translate(215,262) rotate(15)">
-          <circle cx="0" cy="0" r="6"/>
-          <line x1="0" y1="6" x2="0" y2="20"/>
-          <line x1="0" y1="10" x2="-8" y2="16"/>
-          <line x1="0" y1="10" x2="8" y2="14"/>
-          <line x1="0" y1="20" x2="-6" y2="32"/>
-          <line x1="0" y1="20" x2="7" y2="30"/>
-        </g>
-
-        <text x="205" y="225" text-anchor="middle" class="note">"Why are there<tspan x="205" dy="13">no trees?!"</tspan></text>
-
         <g class="fig" transform="translate(300,228)">
           <circle cx="0" cy="0" r="6"/>
           <line x1="0" y1="6" x2="0" y2="20"/>
@@ -1140,17 +1067,6 @@
         <text x="300" y="212" text-anchor="middle" class="note">"Sunset! Worth it."</text>
         <text x="300" y="255" text-anchor="middle" class="lbl">Crater rim 2,639 m</text>
 
-        <g class="fig" transform="translate(400,120) rotate(20)">
-          <circle cx="0" cy="0" r="6"/>
-          <line x1="0" y1="6" x2="0" y2="20"/>
-          <line x1="0" y1="10" x2="-8" y2="15"/>
-          <line x1="0" y1="10" x2="8" y2="13"/>
-          <line x1="0" y1="20" x2="-7" y2="31"/>
-          <line x1="0" y1="20" x2="6" y2="32"/>
-        </g>
-
-        <text x="360" y="120" text-anchor="middle" class="note">"2am. Two steps up,<tspan x="360" dy="13">one slide back."</tspan></text>
-
         <g class="fig" transform="translate(445,52)">
           <circle cx="0" cy="0" r="6"/>
           <line x1="0" y1="6" x2="0" y2="20"/>
@@ -1161,26 +1077,6 @@
         </g>
 
         <text x="500" y="60" text-anchor="start" class="note">"BOOM. Total legend."</text>
-
-        <g class="fig" transform="translate(490,250)">
-          <circle cx="0" cy="0" r="6"/>
-          <line x1="0" y1="6" x2="0" y2="18"/>
-          <line x1="0" y1="10" x2="-8" y2="16"/>
-          <line x1="0" y1="10" x2="8" y2="16"/>
-        </g>
-
-        <text x="540" y="235" text-anchor="middle" class="note">"Hot springs.<tspan x="540" dy="13">I live here now."</tspan></text>
-
-        <g class="fig" transform="translate(635,290) rotate(-12)">
-          <circle cx="0" cy="0" r="6"/>
-          <line x1="0" y1="6" x2="0" y2="20"/>
-          <line x1="0" y1="10" x2="-8" y2="14"/>
-          <line x1="0" y1="10" x2="8" y2="16"/>
-          <line x1="0" y1="20" x2="-7" y2="31"/>
-          <line x1="0" y1="20" x2="6" y2="32"/>
-        </g>
-
-        <text x="650" y="270" text-anchor="middle" class="note">"Can't feel<tspan x="650" dy="13">my legs."</tspan></text>
 
         <g class="fig" transform="translate(750,332)">
           <circle cx="0" cy="0" r="6"/>
@@ -1249,12 +1145,12 @@
     </div>
 
     <div class="grid-2" style="margin-bottom:22px">
-      <div class="card accent reveal">
+      <div class="card reveal">
         <h3>Progress check-ins, weekly</h3>
         <p>How training is going, how recovery feels, comfortable Bukit Timah round trips.</p>
       </div>
 
-      <div class="card accent reveal">
+      <div class="card reveal">
         <h3>Light diet check-ins</h3>
         <p>No preaching.</p>
       </div>
@@ -1341,8 +1237,7 @@
 <section id="message-us">
   <div class="wrap reveal">
     <h2>Want to join?</h2>
-    <p>Click the Contact us button above or send us a message. We’ll add you to the group and share the next training details.</p>
-
+    <p>Click the Contact us button above and send us a message. We’ll add you to the group and share the next training details.</p>
   </div>
 </section>
 
