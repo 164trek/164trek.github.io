@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>164 Trek | Rinjani + Gili Island 6D5N</title>
-<meta name="description" content="Rinjani + Gili Island 6D5N trekking trip by 164 Trek. July 10–15, 2026.">
+<meta name="description" content="Rinjani + Gili Island, 6D5N trek from Singapore. 10–15 July 2026. SGD $1,800 per person, all-inclusive from Singapore.">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="164 Trek">
 <meta property="og:title" content="164 Trek | Rinjani + Gili Island 6D5N">
-<meta property="og:description" content="Rinjani + Gili Island. 6D5N trekking trip. July 10–15, 2026.">
+<meta property="og:description" content="Rinjani + Gili Island, 6D5N trek from Singapore. 10–15 July 2026.">
 <meta property="og:image" content="https://164trek.github.io/rinjani-cover.png">
 <meta property="og:image:secure_url" content="https://164trek.github.io/rinjani-cover.png">
 <meta property="og:image:type" content="image/png">
@@ -18,12 +18,12 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="164 Trek | Rinjani + Gili Island 6D5N">
-<meta name="twitter:description" content="Rinjani + Gili Island. 6D5N trekking trip. July 10–15, 2026.">
+<meta name="twitter:description" content="Rinjani + Gili Island, 6D5N trek from Singapore. 10–15 July 2026.">
 <meta name="twitter:image" content="https://164trek.github.io/rinjani-cover.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -33,7 +33,7 @@
   --soft:#5f574e;
   --muted:#8c8175;
   --line:#ddd3c6;
-  --dark:#101511;
+  --dark:#0f1411;
   --green:#2f4938;
   --sand:#d8c3a5;
 }
@@ -50,64 +50,79 @@ img{max-width:100%;display:block}
 a{color:inherit}
 
 h1,h2,h3{
-  font-family:'Courier Prime',monospace;
+  font-family:'DM Serif Display',serif;
   line-height:1.05;
+  font-weight:400;
 }
 
 .nav{
-  background:var(--dark);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  background:rgba(15,20,17,.96);
   color:#fff;
-  padding:22px;
+  padding:28px 22px;
   text-align:center;
+  backdrop-filter:blur(10px);
 }
+
 .logo{
   font-weight:900;
-  letter-spacing:.08em;
+  letter-spacing:.1em;
   text-transform:uppercase;
-  font-size:1rem;
+  font-size:1.25rem;
 }
+
 .logo span{
   border:1px solid rgba(255,255,255,.45);
   border-radius:999px;
-  padding:4px 9px;
-  margin-right:8px;
+  padding:5px 11px;
+  margin-right:10px;
 }
 
 .hero{
-  min-height:84vh;
+  min-height:90vh;
   background:
-    linear-gradient(rgba(16,21,17,.45),rgba(16,21,17,.55)),
+    linear-gradient(rgba(15,20,17,.45),rgba(15,20,17,.58)),
     url("rinjanisummit.png") center/cover no-repeat;
   color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
   text-align:center;
-  padding:70px 22px;
+  padding:140px 22px 80px;
 }
+
 .hero-inner{
-  max-width:920px;
+  max-width:980px;
 }
+
 .hero h1{
   font-size:clamp(3rem,8vw,7rem);
   color:#fff;
 }
+
 .hero p{
-  max-width:680px;
+  max-width:720px;
   margin:22px auto 0;
   color:rgba(255,255,255,.88);
-  font-size:1.1rem;
+  font-size:1.12rem;
 }
+
 .hero .date{
   margin-top:22px;
-  font-size:clamp(1.5rem,3vw,2.3rem);
+  font-size:clamp(1.5rem,3vw,2.25rem);
   font-weight:900;
 }
+
 .hero .price{
   margin-top:8px;
-  font-size:1.2rem;
+  font-size:1.18rem;
   font-weight:800;
 }
+
 .btn{
   display:inline-block;
   margin-top:28px;
@@ -125,49 +140,47 @@ h1,h2,h3{
 .section{
   padding:78px 22px;
 }
+
 .wrap{
   max-width:1080px;
   margin:auto;
 }
+
 .center{
   text-align:center;
-  max-width:760px;
+  max-width:780px;
   margin:auto;
 }
+
 .label{
-  font-family:'Courier Prime',monospace;
   text-transform:uppercase;
-  letter-spacing:.08em;
-  font-weight:700;
+  letter-spacing:.14em;
+  font-weight:900;
   color:var(--green);
   margin-bottom:12px;
+  font-size:.82rem;
 }
+
 h2{
-  font-size:clamp(2rem,4.5vw,4rem);
+  font-size:clamp(2.2rem,4.5vw,4rem);
   margin-bottom:22px;
 }
+
 .text{
   max-width:760px;
   margin:0 auto;
   color:var(--soft);
   font-size:1.08rem;
 }
+
 .text p{
-  margin-bottom:16px;
+  margin-bottom:14px;
 }
 
 .flight{
   background:var(--paper);
 }
-.plain-list{
-  max-width:760px;
-  margin:26px auto 0;
-  color:var(--soft);
-  font-size:1.05rem;
-}
-.plain-list p{
-  margin-bottom:10px;
-}
+
 .flight a{
   color:var(--green);
   font-weight:800;
@@ -176,6 +189,7 @@ h2{
 .included{
   background:var(--bg);
 }
+
 .included-list{
   max-width:760px;
   margin:28px auto 0;
@@ -183,120 +197,85 @@ h2{
   column-gap:44px;
   list-style:none;
 }
+
 .included-list li{
   break-inside:avoid;
   padding:7px 0;
   color:var(--soft);
 }
+
 .included-list li:before{
   content:"✓ ";
   color:var(--green);
   font-weight:900;
 }
+
 @media(max-width:700px){
   .included-list{columns:1}
 }
 
-.upcoming{
+.itinerary{
   background:var(--paper);
 }
-.trip-list{
-  max-width:820px;
-  margin:34px auto 0;
-  display:grid;
-  gap:16px;
-}
-.trip-row{
-  border-top:1px solid var(--line);
-  padding-top:16px;
-  display:grid;
-  grid-template-columns:180px 1fr;
-  gap:20px;
-  text-decoration:none;
-}
-.trip-row:last-child{
-  border-bottom:1px solid var(--line);
-  padding-bottom:16px;
-}
-.trip-date{
-  font-family:'Courier Prime',monospace;
-  font-weight:700;
-  color:var(--green);
-}
-.trip-row h3{
-  font-size:1.25rem;
-  margin-bottom:4px;
-}
-.trip-row p{
-  color:var(--soft);
-}
-.trip-row .small{
-  display:block;
-  margin-top:4px;
-  color:var(--muted);
-  font-size:.92rem;
-}
-@media(max-width:620px){
-  .trip-row{
-    grid-template-columns:1fr;
-    gap:6px;
-  }
-}
 
-.itinerary{
-  background:var(--bg);
-}
 .days{
   max-width:900px;
-  margin:38px auto 0;
+  margin:20px auto 0;
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:28px 60px;
+  gap:30px 64px;
 }
+
 .day h3{
-  font-size:1.45rem;
+  font-size:1.55rem;
   color:var(--muted);
   margin-bottom:8px;
 }
+
 .day b{
   display:block;
   margin-bottom:8px;
 }
+
 .day p{
   color:var(--soft);
 }
+
 @media(max-width:800px){
-  .days{
-    grid-template-columns:1fr;
-  }
+  .days{grid-template-columns:1fr}
 }
 
 .illustration{
-  background:var(--paper);
+  background:var(--bg);
 }
+
 .illustration-card{
   margin:34px auto 0;
   max-width:1000px;
 }
+
 .illustration-card svg{
   width:100%;
   height:auto;
   display:block;
 }
+
 .caption{
   text-align:center;
   margin-top:12px;
   color:var(--muted);
   font-size:.9rem;
 }
+
 .caption a{
   color:var(--green);
   font-weight:800;
 }
 
 .photos{
-  background:var(--bg);
+  background:var(--paper);
 }
+
 .photo-grid{
   max-width:980px;
   margin:36px auto 0;
@@ -304,51 +283,73 @@ h2{
   grid-template-columns:repeat(3,1fr);
   gap:18px;
 }
+
 .photo{
+  position:relative;
   border:0;
   padding:0;
   background:none;
   cursor:pointer;
   overflow:hidden;
 }
+
 .photo img{
   width:100%;
   height:245px;
   object-fit:cover;
   transition:transform .25s ease;
 }
+
 .photo:hover img{
   transform:scale(1.04);
 }
+
+.photo span{
+  position:absolute;
+  left:16px;
+  bottom:14px;
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  padding:7px 12px;
+  border-radius:999px;
+  font-size:.85rem;
+  font-weight:800;
+}
+
 .credit{
   margin-top:22px;
   text-align:center;
   color:var(--muted);
   font-size:.9rem;
 }
+
 @media(max-width:850px){
   .photo-grid{grid-template-columns:1fr 1fr}
 }
+
 @media(max-width:560px){
   .photo-grid{grid-template-columns:1fr}
 }
 
 .reserve{
   background:
-    linear-gradient(rgba(16,21,17,.78),rgba(16,21,17,.86)),
+    linear-gradient(rgba(15,20,17,.78),rgba(15,20,17,.86)),
     url("giliisland.png") center/cover no-repeat;
   color:#fff;
   text-align:center;
 }
+
 .reserve h2{
   color:#fff;
 }
+
 .reserve p{
   color:rgba(255,255,255,.78);
 }
+
 .reserve .contact{
   margin-top:22px;
-  color:rgba(255,255,255,.75);
+  color:rgba(255,255,255,.78);
 }
 
 footer{
@@ -358,6 +359,7 @@ footer{
   padding:34px 20px;
   font-size:.9rem;
 }
+
 footer b{
   color:#fff;
 }
@@ -366,20 +368,23 @@ footer b{
   display:none;
   position:fixed;
   inset:0;
-  z-index:999;
+  z-index:9999;
   background:rgba(0,0,0,.86);
   padding:24px;
   align-items:center;
   justify-content:center;
 }
+
 .lightbox.open{
   display:flex;
 }
+
 .lightbox img{
   max-width:min(100%,1100px);
   max-height:82vh;
   object-fit:contain;
 }
+
 .lightbox-close{
   position:fixed;
   top:18px;
@@ -405,9 +410,9 @@ footer b{
 <header class="hero">
   <div class="hero-inner">
     <h1>Rinjani + Gili Island</h1>
-    <p>6D5N trekking trip from Singapore to Lombok.</p>
+    <p>6D5N trek from Singapore to Lombok, Indonesia — Mount Rinjani 3,726m + Gili Island.</p>
     <div class="date">10–15 July 2026</div>
-    <div class="price">SGD $1,800 per person</div>
+    <div class="price">SGD $1,800 per person, all-inclusive from Singapore</div>
     <a class="btn" href="#reserve">Reserve your slot</a>
   </div>
 </header>
@@ -419,7 +424,7 @@ footer b{
       <h2>Scoot SIN ⇄ LOP</h2>
     </div>
 
-    <div class="plain-list">
+    <div class="text">
       <p><b>Outbound:</b> Singapore to Lombok, Friday, 10 July 2026.</p>
       <p><b>Return:</b> Lombok to Singapore, Wednesday, 15 July 2026.</p>
       <p>The return flight is included in the SGD $1,800 package. We handle the booking.</p>
@@ -436,68 +441,22 @@ footer b{
     </div>
 
     <ul class="included-list">
-      <li>Return flight, Scoot SIN to LOP</li>
-      <li>Hotels in Sembalun, Senaru, and Gili</li>
-      <li>All land transfers and Gili boat</li>
-      <li>Guide, porters, and camping gear</li>
-      <li>All meals during the trek</li>
-      <li>Rinjani park fees and permits</li>
-      <li>Waterfalls visit</li>
-      <li>Gili snorkeling</li>
+      <li>Return flight</li>
+      <li>Hotels</li>
+      <li>Transfers</li>
+      <li>Guide</li>
+      <li>Porters</li>
+      <li>Camping gear</li>
+      <li>Trek meals</li>
+      <li>Park fees</li>
+      <li>Waterfalls</li>
+      <li>Snorkeling</li>
     </ul>
-  </div>
-</section>
-
-<section class="section upcoming">
-  <div class="wrap">
-    <div class="center">
-      <div class="label">Upcoming</div>
-      <h2>Trips</h2>
-    </div>
-
-    <div class="trip-list">
-      <a class="trip-row" href="https://booking.flyscoot.com/book/flight/return/SIN/2026-07-10/LOP/LOP/2026-07-15/SIN?adult=1&child=0&infant=0&emcid=T-wz8wQ6PSv" target="_blank" rel="noopener">
-        <div class="trip-date">10–15 Jul 2026</div>
-        <div>
-          <h3>Rinjani + Gili Island</h3>
-          <p>Current trip. Click to check Scoot fare.</p>
-        </div>
-      </a>
-
-      <div class="trip-row">
-        <div class="trip-date">Oct 2026</div>
-        <div>
-          <h3>Goecha La</h3>
-          <p>Coming soon.</p>
-        </div>
-      </div>
-
-      <div class="trip-row">
-        <div class="trip-date">Nov 2026</div>
-        <div>
-          <h3>Overland Track</h3>
-          <p>Coming soon.</p>
-        </div>
-      </div>
-
-      <div class="trip-row">
-        <div class="trip-date">Jan 2027</div>
-        <div>
-          <h3>Kilimanjaro</h3>
-          <p>Coming soon.</p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
 <section class="section itinerary">
   <div class="wrap">
-    <div class="center">
-      <div class="label">Itinerary</div>
-      <h2>6 days, 5 nights</h2>
-    </div>
-
     <div class="days">
       <div class="day">
         <h3>Day 1</h3>
@@ -558,10 +517,10 @@ footer b{
         <ellipse cx="650" cy="315" rx="86" ry="24" fill="#7bb6c9" opacity=".75"/>
         <text x="650" y="356" text-anchor="middle" font-family="Inter" font-size="18" font-weight="800" fill="#2f4938">Segara Anak Lake</text>
 
-        <text x="500" y="58" text-anchor="middle" font-family="Courier Prime" font-size="28" font-weight="700" fill="#211c16">Summit</text>
+        <text x="500" y="58" text-anchor="middle" font-family="Inter" font-size="26" font-weight="900" fill="#211c16">Summit</text>
         <text x="500" y="84" text-anchor="middle" font-family="Inter" font-size="18" font-weight="800" fill="#5f574e">3,726 m</text>
 
-        <text x="278" y="230" text-anchor="middle" font-family="Courier Prime" font-size="24" font-weight="700" fill="#211c16">Crater Rim</text>
+        <text x="278" y="230" text-anchor="middle" font-family="Inter" font-size="24" font-weight="900" fill="#211c16">Crater Rim</text>
         <text x="278" y="255" text-anchor="middle" font-family="Inter" font-size="17" font-weight="800" fill="#5f574e">2,639 m</text>
 
         <text x="110" y="436" text-anchor="middle" font-family="Inter" font-size="18" font-weight="800" fill="#5f574e">Sembalun</text>
@@ -620,26 +579,32 @@ footer b{
     <div class="photo-grid">
       <button class="photo" onclick="openLightbox('rinjanisummit.png')">
         <img src="rinjanisummit.png" alt="Mount Rinjani summit view">
+        <span>Summit</span>
       </button>
 
       <button class="photo" onclick="openLightbox('craterrim.png')">
         <img src="craterrim.png" alt="Rinjani crater rim">
+        <span>Crater Rim</span>
       </button>
 
       <button class="photo" onclick="openLightbox('hotspring.png')">
         <img src="hotspring.png" alt="Rinjani lake and hot spring">
+        <span>Lake & Hot Spring</span>
       </button>
 
       <button class="photo" onclick="openLightbox('waterfalls.png')">
         <img src="waterfalls.png" alt="Waterfalls near Rinjani">
+        <span>Waterfalls</span>
       </button>
 
       <button class="photo" onclick="openLightbox('giliisland.png')">
         <img src="giliisland.png" alt="Gili Island beach">
+        <span>Gili Island</span>
       </button>
 
       <button class="photo" onclick="openLightbox('snorkel.png')">
         <img src="snorkel.png" alt="Snorkeling in Gili Island">
+        <span>Snorkeling</span>
       </button>
     </div>
 
