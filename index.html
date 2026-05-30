@@ -1,737 +1,546 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>164 Trek Group</title>
-<meta name="description" content="Train weekly. Climb together. Safely. A trekking group for people who want to prepare well, meet good people, and enjoy the trail.">
-
+<title>164 Trek | Rinjani 6D5N</title>
+<meta name="description" content="164 Trek is a Singapore-based trekking group training together for safe treks, starting with Rinjani, Indonesia in 6D5N.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="164 Trek Group">
-<meta property="og:description" content="Train weekly. Climb together. Safely. Join weekly training and upcoming treks.">
-<meta property="og:image" content="https://164trek.github.io/164trek-cover.png">
-<meta property="og:url" content="https://164trek.github.io/">
-
+<meta property="og:title" content="164 Trek | Rinjani 6D5N">
+<meta property="og:description" content="Train together. Trek safely. Join our upcoming Rinjani 6D5N trip from Singapore to Lombok.">
+<meta property="og:image" content="https://164trek.github.io/164trek/164trek-cover.png">
+<meta property="og:url" content="https://164trek.github.io/164trek/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="164 Trek Group">
-<meta name="twitter:description" content="Train weekly. Climb together. Safely.">
-<meta name="twitter:image" content="https://164trek.github.io/164trek-cover.png">
+<meta name="twitter:image" content="https://164trek.github.io/164trek/164trek-cover.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,900&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  :root{
-    --bg:#f0e8d8;
-    --card:#f7f1e3;
-    --ink:#2e2a22;
-    --ink-soft:#6b6353;
-    --rust:#a0552c;
-    --rust-deep:#8a4724;
-    --olive:#7d7a55;
-    --line:#ddd2bb;
-    --dark:#2e2a22;
-  }
+:root{
+  --bg:#f3ecdc;
+  --card:#fbf6ea;
+  --ink:#2f2a22;
+  --soft:#6f6656;
+  --rust:#a0552c;
+  --rust-dark:#844321;
+  --olive:#77784f;
+  --line:#ddd1b8;
+  --dark:#2f2a22;
+  --white:#fffaf0;
+}
 
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 
-  body{
-    background:var(--bg);
-    color:var(--ink);
-    font-family:'Source Sans 3',sans-serif;
-    line-height:1.7;
-    font-weight:400;
-    -webkit-font-smoothing:antialiased;
-  }
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Source Sans 3',sans-serif;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
 
-  h1,h2,h3,h4{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    letter-spacing:-0.005em;
-    line-height:1.2;
-  }
+h1,h2,h3,h4{
+  font-family:'Fraunces',serif;
+  line-height:1.1;
+  letter-spacing:-0.02em;
+}
 
-  h2{font-weight:500}
-  .wrap{max-width:780px;margin:0 auto;padding:0 24px}
-  section{padding:96px 0}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.narrow{max-width:760px}
+section{padding:96px 0}
+.small-label{
+  font-size:.78rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--rust);
+  font-weight:700;
+  margin-bottom:14px;
+}
 
-  nav{
-    position:sticky;
-    top:0;
-    z-index:50;
-    background:rgba(240,232,216,.92);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-  }
+nav{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(243,236,220,.94);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(10px);
+}
 
-  .nav-inner{
-    position:relative;
-    max-width:1120px;
-    margin:0 auto;
-    padding:14px 24px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-  }
+.nav-inner{
+  max-width:1180px;
+  margin:0 auto;
+  padding:14px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  position:relative;
+}
 
-  .brand{
-    font-family:'Fraunces',serif;
-    font-weight:900;
-    font-size:1.15rem;
-    display:flex;
-    align-items:center;
-    gap:10px;
-    color:var(--ink);
-    text-decoration:none;
-  }
+.brand{
+  font-family:'Fraunces',serif;
+  font-weight:900;
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:1.1rem;
+}
 
-  .brand .num{
-    background:var(--rust);
-    color:#fff;
-    border-radius:6px;
-    padding:2px 9px;
-    font-size:.95rem;
-  }
+.brand .num{
+  background:var(--rust);
+  color:white;
+  border-radius:7px;
+  padding:2px 9px;
+}
 
+.nav-links{
+  display:flex;
+  gap:22px;
+  align-items:center;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:var(--soft);
+  font-weight:600;
+  font-size:.93rem;
+}
+
+.nav-links a:hover{color:var(--rust)}
+
+.nav-cta{
+  background:var(--rust);
+  color:white!important;
+  padding:9px 16px;
+  border-radius:9px;
+}
+
+.nav-cta:hover{background:var(--rust-dark)}
+
+.nav-toggle{
+  display:none;
+  border:0;
+  background:none;
+  color:var(--ink);
+  cursor:pointer;
+  padding:8px;
+}
+
+.nav-toggle svg{width:24px;height:24px;display:block}
+
+@media(max-width:860px){
+  .nav-toggle{display:block}
   .nav-links{
-    display:flex;
-    gap:22px;
-    align-items:center;
-  }
-
-  .nav-links a{
-    color:var(--ink-soft);
-    text-decoration:none;
-    font-size:.92rem;
-    font-weight:500;
-    transition:color .2s;
-  }
-
-  .nav-links a:hover{color:var(--rust)}
-
-  .nav-cta{
-    background:var(--rust);
-    color:#fff!important;
-    padding:9px 18px;
-    border-radius:8px;
-    font-weight:600;
-  }
-
-  .nav-cta:hover{background:var(--rust-deep)}
-
-  .nav-toggle{
     display:none;
-    background:none;
-    border:0;
-    cursor:pointer;
-    padding:8px;
-    color:var(--ink);
-  }
-
-  .nav-toggle svg{
-    display:block;
-    width:24px;
-    height:24px;
-  }
-
-  @media(max-width:820px){
-    .nav-toggle{display:block}
-
-    .nav-links{
-      display:none;
-      position:absolute;
-      top:100%;
-      left:0;
-      right:0;
-      flex-direction:column;
-      align-items:stretch;
-      gap:0;
-      background:var(--bg);
-      border-bottom:1px solid var(--line);
-      padding:8px 0;
-    }
-
-    .nav-links.open{display:flex}
-
-    .nav-links a{
-      padding:12px 24px;
-      font-size:1rem;
-      border-top:1px solid var(--line);
-    }
-
-    .nav-links a:first-child{border-top:none}
-
-    .nav-cta{
-      margin:8px 24px;
-      text-align:center;
-      border-radius:6px;
-    }
-  }
-
-  .hero{
-    padding:120px 0 96px;
-    position:relative;
-    overflow:hidden;
-  }
-
-  .hero h1{
-    font-size:clamp(3.6rem,10vw,7rem);
-    max-width:14ch;
-    letter-spacing:-0.02em;
-  }
-
-  .hero p.tagline{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:clamp(1.2rem,2.4vw,1.6rem);
-    color:var(--ink);
-    margin-top:6px;
-  }
-
-  .hero .dots{
     position:absolute;
-    top:130px;
-    right:40px;
-    display:flex;
+    top:100%;
+    left:0;
+    right:0;
     flex-direction:column;
-    gap:14px;
-  }
-
-  .hero .dots span{
-    width:22px;
-    height:22px;
-    border-radius:50%;
-  }
-
-  .dot-rust{background:var(--rust)}
-  .dot-olive{background:var(--olive)}
-
-  .hero p.lede{
-    margin-top:26px;
-    font-size:1.22rem;
-    color:var(--ink-soft);
-    max-width:48ch;
-  }
-
-  .grid-2{
-    display:grid;
-    grid-template-columns:1fr;
+    align-items:stretch;
     gap:0;
-  }
-
-  .card{
-    background:transparent;
-    border:none;
-    border-top:1px solid var(--line);
-    padding:24px 0;
-    border-radius:0;
-  }
-
-  .card h3{
-    font-size:1.3rem;
-    font-weight:500;
-    margin-bottom:8px;
-  }
-
-  .card p{color:var(--ink-soft)}
-
-  .section-head{margin-bottom:44px}
-
-  .section-head h2{
-    font-size:clamp(2rem,4vw,2.9rem);
-  }
-
-  .train-row{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-    margin-bottom:22px;
-  }
-
-  @media(max-width:760px){
-    .train-row{grid-template-columns:1fr}
-  }
-
-  .train-card{
-    background:var(--card);
-    border:1px solid var(--line);
-    padding:26px 28px;
-    display:flex;
-    align-items:center;
-    gap:18px;
-  }
-
-  .train-card .ic{
-    flex:0 0 auto;
-    width:54px;
-    height:54px;
-    color:var(--rust);
-  }
-
-  .train-card h4{font-size:1.25rem}
-
-  .train-card span{
-    color:var(--ink-soft);
-    font-size:.96rem;
-  }
-
-  .note{
-    font-style:italic;
-    color:var(--ink-soft);
-    margin:6px 0 40px;
-  }
-
-  .tiers{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-  }
-
-  @media(max-width:860px){
-    .tiers{grid-template-columns:1fr}
-  }
-
-  .tier{
-    background:var(--card);
-    border:1px solid var(--line);
-  }
-
-  .tier .top{
-    padding:14px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:baseline;
-    color:#fff;
-  }
-
-  .tier .top b{
-    font-family:'Fraunces',serif;
-    font-size:1.2rem;
-  }
-
-  .tier .top em{
-    font-style:normal;
-    font-size:.82rem;
-    opacity:.85;
-    margin-left:6px;
-  }
-
-  .tier .top .hrs{
-    font-weight:700;
-    font-size:.92rem;
-  }
-
-  .tier.light .top{background:var(--rust)}
-  .tier.standard .top{background:var(--olive)}
-  .tier.heavy .top{background:var(--dark)}
-
-  .tier ul{
-    list-style:none;
-    padding:20px 22px;
-  }
-
-  .tier li{
-    position:relative;
-    padding-left:18px;
-    margin-bottom:12px;
-    color:var(--ink-soft);
-    font-size:.96rem;
-  }
-
-  .tier li:before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:9px;
-    width:6px;
-    height:6px;
-    border-radius:50%;
-    background:var(--rust);
-  }
-
-  .lists{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:32px;
-  }
-
-  @media(max-width:760px){
-    .lists{grid-template-columns:1fr}
-  }
-
-  .list-block h3{
-    font-size:1.35rem;
-    margin-bottom:6px;
-  }
-
-  .list-block .sub{
-    color:var(--ink-soft);
-    margin-bottom:18px;
-    font-size:.95rem;
-  }
-
-  .peak{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-left:4px solid var(--rust);
-    padding:16px 20px;
-    margin-bottom:12px;
-  }
-
-  .peak .pk-name{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    font-size:1.08rem;
-  }
-
-  .peak .pk-meta{
-    color:var(--ink-soft);
-    font-size:.9rem;
-    margin-top:2px;
-  }
-
-  .peak .pk-desc{
-    color:var(--ink-soft);
-    font-size:.9rem;
-    font-style:italic;
-    margin-top:5px;
-  }
-
-  .list-b .peak{border-left-color:var(--olive)}
-
-  #calendar{
-    background:var(--card);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-  }
-
-  .cal-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-  }
-
-  @media(max-width:860px){
-    .cal-grid{grid-template-columns:1fr 1fr}
-  }
-
-  @media(max-width:520px){
-    .cal-grid{grid-template-columns:1fr}
-  }
-
-  .cal-card{
     background:var(--bg);
-    border:1px solid var(--line);
-    padding:24px;
-    position:relative;
-    overflow:hidden;
-    display:block;
-    transition:border-color .2s,transform .15s;
+    border-bottom:1px solid var(--line);
+    padding:8px 0;
   }
-
-  a.cal-card:hover{
-    border-color:var(--rust);
-    transform:translateY(-2px);
-  }
-
-  .cal-card .when{
-    font-family:'Fraunces',serif;
-    font-weight:700;
-    font-size:1.6rem;
-    color:var(--rust);
-  }
-
-  .cal-card .order{
-    font-size:.72rem;
-    letter-spacing:.14em;
-    text-transform:uppercase;
-    color:var(--olive);
-    font-weight:600;
-    margin-bottom:10px;
-  }
-
-  .cal-card h4{
-    font-size:1.18rem;
-    margin:8px 0 3px;
-  }
-
-  .cal-card .loc{
-    color:var(--ink-soft);
-    font-size:.92rem;
-  }
-
-  .cal-card .tba{
-    display:inline-block;
-    margin-top:12px;
-    font-size:.74rem;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    background:var(--line);
-    color:var(--ink-soft);
-    padding:3px 10px;
-    border-radius:20px;
-    font-weight:600;
-  }
-
-  #trip{
-    background:var(--card);
+  .nav-links.open{display:flex}
+  .nav-links a{
+    padding:12px 24px;
     border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
   }
-
-  .itin{
-    margin-top:34px;
-    border-left:2px solid var(--line);
-    padding-left:0;
-  }
-
-  .itin .day{
-    position:relative;
-    padding:0 0 26px 28px;
-    border-left:2px solid var(--rust);
-    margin-left:6px;
-  }
-
-  .itin .day:last-child{border-left-color:transparent}
-
-  .itin .day:before{
-    content:"";
-    position:absolute;
-    left:-7px;
-    top:2px;
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:var(--rust);
-    border:2px solid var(--card);
-  }
-
-  .itin .day .dlabel{
-    font-family:'Fraunces',serif;
-    font-weight:700;
-    font-size:1.08rem;
-    color:var(--ink);
-  }
-
-  .itin .day .dtext{
-    color:var(--ink-soft);
-    font-size:.96rem;
-    margin-top:2px;
-  }
-
-  .graph-card{
-    background:var(--bg);
-    border:1px solid var(--line);
-    padding:26px;
-    margin-top:18px;
-  }
-
-  .graph-card h3{
-    font-size:1.3rem;
-    margin-bottom:4px;
-  }
-
-  .graph-sub{
-    color:var(--ink-soft);
-    font-size:.92rem;
-    margin-bottom:20px;
-  }
-
-  .graph-note{
-    font-size:.8rem;
-    color:var(--ink-soft);
-    font-style:italic;
-    margin-top:16px;
-  }
-
-  #cost{
-    background:var(--dark);
-    color:#f3ecdc;
-  }
-
-  #cost h2{color:#fff}
-
-  .cost-split{margin:26px 0}
-
-  .cost-inc{
-    background:#383228;
-    border:1px solid #4a4234;
-    border-radius:4px;
-    padding:22px 26px;
-  }
-
-  .cost-inc .ci-head{
-    font-family:'Fraunces',serif;
-    font-weight:700;
-    color:#e8a866;
-    font-size:1.05rem;
-    margin-bottom:14px;
-  }
-
-  .cost-inc ul{
-    list-style:none;
-    columns:2;
-    column-gap:30px;
-  }
-
-  @media(max-width:560px){
-    .cost-inc ul{columns:1}
-  }
-
-  .cost-inc li{
-    color:#cfc6b2;
-    font-size:.92rem;
-    padding:5px 0 5px 18px;
-    position:relative;
-    break-inside:avoid;
-  }
-
-  .cost-inc li:before{
-    content:"✓";
-    position:absolute;
-    left:0;
-    color:#9bbf8a;
-    font-weight:700;
-  }
-
-  .cost-foot{
-    color:#9c937e;
-    font-size:.84rem;
-    margin-top:22px;
-    max-width:72ch;
-  }
-
-  .baseline-list{
-    columns:2;
-    column-gap:34px;
-    list-style:none;
-  }
-
-  @media(max-width:620px){
-    .baseline-list{columns:1}
-  }
-
-  .baseline-list li{
-    break-inside:avoid;
-    margin-bottom:14px;
-    padding-left:18px;
-    position:relative;
-    color:var(--ink-soft);
-    font-size:.96rem;
-  }
-
-  .baseline-list li:before{
-    content:"";
-    position:absolute;
-    left:0;
-    top:9px;
-    width:6px;
-    height:6px;
-    border-radius:50%;
-    background:var(--olive);
-  }
-
-  .steps{counter-reset:step}
-
-  .step{
-    display:flex;
-    gap:20px;
-    padding:22px 0;
-    border-bottom:1px solid var(--line);
-  }
-
-  .step:last-child{border-bottom:none}
-
-  .step .n{
-    counter-increment:step;
-    flex:0 0 auto;
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:var(--rust);
-    color:#fff;
-    font-family:'Fraunces',serif;
-    font-weight:700;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-
-  .step .n:before{content:counter(step)}
-
-  .step h4{
-    font-size:1.2rem;
-    margin-bottom:4px;
-  }
-
-  .step p,.step ul{
-    color:var(--ink-soft);
-    font-size:.95rem;
-  }
-
-  .step ul{
-    list-style:none;
-    margin-top:6px;
-  }
-
-  .step ul li{
-    padding-left:16px;
-    position:relative;
-    margin-bottom:4px;
-  }
-
-  .step ul li:before{
-    content:"–";
-    position:absolute;
-    left:0;
-    color:var(--rust);
-  }
-
-  #message-us{
+  .nav-cta{
+    margin:8px 24px;
     text-align:center;
-    background:var(--bg);
-    border-top:1px solid var(--line);
   }
+}
 
-  #message-us h2{
-    font-size:clamp(2rem,5vw,3.2rem);
-    margin-bottom:16px;
-  }
+.hero{
+  padding:118px 0 80px;
+}
 
-  #message-us p{
-    color:var(--ink-soft);
-    max-width:48ch;
-    margin:0 auto;
-    font-size:1.1rem;
-  }
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:56px;
+  align-items:end;
+}
 
-  footer{
-    background:var(--dark);
-    color:#cfc6b2;
-    text-align:center;
-    padding:40px 20px;
-    font-size:.9rem;
-  }
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero{padding:86px 0 70px}
+}
 
-  footer .brand{
-    justify-content:center;
-    color:#fff;
-    margin-bottom:10px;
-  }
+.hero h1{
+  font-size:clamp(3.2rem,8vw,6.4rem);
+  max-width:9ch;
+}
 
-  .reveal{
-    opacity:0;
-    transform:translateY(20px);
-    transition:opacity .7s ease,transform .7s ease;
-  }
+.hero .sub{
+  font-family:'Fraunces',serif;
+  font-size:clamp(1.25rem,2.4vw,1.8rem);
+  font-weight:600;
+  margin-top:10px;
+}
 
-  .reveal.in{
-    opacity:1;
-    transform:none;
-  }
+.hero p{
+  color:var(--soft);
+  font-size:1.15rem;
+  margin-top:24px;
+  max-width:56ch;
+}
+
+.hero-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:28px;
+}
+
+.hero-card .date{
+  font-family:'Fraunces',serif;
+  font-size:2rem;
+  font-weight:700;
+  color:var(--rust);
+}
+
+.hero-card .meta{
+  color:var(--soft);
+  margin-top:4px;
+}
+
+.hero-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-weight:700;
+  padding:13px 20px;
+  border-radius:10px;
+}
+
+.btn-primary{
+  background:var(--rust);
+  color:white;
+}
+
+.btn-primary:hover{background:var(--rust-dark)}
+
+.btn-line{
+  border:1.5px solid var(--line);
+  color:var(--ink);
+}
+
+.btn-line:hover{
+  border-color:var(--rust);
+  color:var(--rust);
+}
+
+.section-head{
+  margin-bottom:42px;
+}
+
+.section-head h2{
+  font-size:clamp(2.1rem,4.8vw,3.5rem);
+}
+
+.section-head p{
+  color:var(--soft);
+  margin-top:12px;
+  max-width:64ch;
+  font-size:1.06rem;
+}
+
+.grid-3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.grid-2{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+@media(max-width:800px){
+  .grid-3,.grid-2{grid-template-columns:1fr}
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:26px;
+}
+
+.card h3{
+  font-size:1.35rem;
+  margin-bottom:8px;
+}
+
+.card p,.card li{
+  color:var(--soft);
+}
+
+.card ul{
+  list-style:none;
+  margin-top:12px;
+}
+
+.card li{
+  padding-left:18px;
+  position:relative;
+  margin-bottom:8px;
+}
+
+.card li:before{
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--rust);
+  position:absolute;
+  left:0;
+  top:10px;
+}
+
+.event{
+  background:var(--dark);
+  color:var(--white);
+}
+
+.event .small-label{color:#e4a66b}
+.event .section-head p{color:#cfc6b4}
+
+.event-card{
+  background:#3a3329;
+  border:1px solid #514737;
+  padding:30px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+@media(max-width:820px){
+  .event-card{grid-template-columns:1fr}
+}
+
+.event-card h3{
+  font-size:2rem;
+  color:white;
+}
+
+.event-card p,.event-card li{
+  color:#d2c7b2;
+}
+
+.event-card ul{
+  list-style:none;
+  margin-top:16px;
+}
+
+.event-card li{
+  padding:8px 0 8px 22px;
+  position:relative;
+  border-bottom:1px solid #514737;
+}
+
+.event-card li:before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  color:#9fca8a;
+  font-weight:700;
+}
+
+.price-box{
+  background:#2f2a22;
+  border:1px solid #5d513f;
+  padding:24px;
+}
+
+.price-box .price{
+  font-family:'Fraunces',serif;
+  font-size:3rem;
+  color:#e8a866;
+  font-weight:700;
+  line-height:1;
+}
+
+.price-box .fine{
+  color:#a99f8b;
+  font-size:.9rem;
+  margin-top:10px;
+}
+
+.itinerary{
+  display:grid;
+  gap:14px;
+}
+
+.day{
+  background:var(--card);
+  border:1px solid var(--line);
+  display:grid;
+  grid-template-columns:130px 1fr;
+  gap:20px;
+  padding:22px;
+}
+
+@media(max-width:640px){
+  .day{grid-template-columns:1fr}
+}
+
+.day .tag{
+  font-family:'Fraunces',serif;
+  color:var(--rust);
+  font-size:1.25rem;
+  font-weight:700;
+}
+
+.day h3{
+  font-size:1.3rem;
+  margin-bottom:6px;
+}
+
+.day p{
+  color:var(--soft);
+}
+
+.time{
+  font-weight:700;
+  color:var(--ink);
+}
+
+.extra{
+  background:var(--card);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.pill-list{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+
+.pill{
+  background:var(--bg);
+  border:1px solid var(--line);
+  padding:8px 13px;
+  border-radius:100px;
+  color:var(--soft);
+  font-weight:600;
+}
+
+.training-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+@media(max-width:860px){
+  .training-row{grid-template-columns:1fr}
+}
+
+.training-card{
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:26px;
+}
+
+.training-card h3{
+  font-size:1.45rem;
+  margin-bottom:10px;
+}
+
+.training-card p{
+  color:var(--soft);
+}
+
+.schedule{
+  margin-top:18px;
+  border-top:1px solid var(--line);
+}
+
+.schedule div{
+  padding:12px 0;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+}
+
+.schedule b{color:var(--ink)}
+.schedule span{color:var(--soft);text-align:right}
+
+.faq{
+  background:var(--card);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.faq-item{
+  border-top:1px solid var(--line);
+  padding:22px 0;
+}
+
+.faq-item h3{
+  font-size:1.25rem;
+  margin-bottom:6px;
+}
+
+.faq-item p{
+  color:var(--soft);
+}
+
+.contact{
+  text-align:center;
+}
+
+.contact h2{
+  font-size:clamp(2.2rem,5vw,3.6rem);
+}
+
+.contact p{
+  color:var(--soft);
+  max-width:52ch;
+  margin:16px auto 28px;
+  font-size:1.08rem;
+}
+
+footer{
+  background:var(--dark);
+  color:white;
+  text-align:center;
+  padding:34px 20px;
+  font-family:'Fraunces',serif;
+  font-weight:900;
+  font-size:1.2rem;
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+
+.reveal.in{
+  opacity:1;
+  transform:none;
+}
 </style>
 </head>
 
@@ -739,7 +548,7 @@
 
 <nav>
   <div class="nav-inner">
-    <a href="#top" class="brand"><span class="num">164</span> Trek Group</a>
+    <a href="#top" class="brand"><span class="num">164</span> Trek</a>
 
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="var m=document.getElementById('navLinks');m.classList.toggle('open');this.setAttribute('aria-expanded',m.classList.contains('open'))">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
@@ -750,56 +559,210 @@
     </button>
 
     <div class="nav-links" id="navLinks" onclick="if(event.target.tagName==='A')this.classList.remove('open')">
-      <a href="#principles">Principles</a>
+      <a href="#about">About</a>
+      <a href="#event">Rinjani</a>
+      <a href="#itinerary">Itinerary</a>
       <a href="#training">Training</a>
-      <a href="#peaks">Peaks</a>
-      <a href="#calendar">Calendar</a>
-      <a href="#trip">Trip</a>
-      <a href="#cost">Cost</a>
-      <a href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I'd%20like%20to%20join%20the%20164%20Trek%20Group." target="_blank" rel="noopener" class="nav-cta">Contact us</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20want%20to%20reserve%20a%20slot%20for%20the%20Rinjani%206D5N%20trip." target="_blank" rel="noopener" class="nav-cta">Contact us</a>
     </div>
   </div>
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap">
-    <div class="dots">
-      <span class="dot-rust"></span>
-      <span class="dot-olive"></span>
+  <div class="wrap hero-grid">
+    <div class="reveal">
+      <div class="small-label">Upcoming trek</div>
+      <h1>Rinjani, Indonesia</h1>
+      <div class="sub">6D5N from Singapore to Lombok</div>
+      <p>
+        A small trekking trip for people who want to train together, climb safely, and still enjoy the whole experience. Rinjani is not just a summit. It is the lake, hot springs, waterfalls, Gili Island, and coming home with people you actually shared the climb with.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20want%20to%20reserve%20a%20slot%20for%20the%20Rinjani%206D5N%20trip." target="_blank" rel="noopener">Reserve your slot now</a>
+        <a class="btn btn-line" href="#itinerary">See itinerary</a>
+      </div>
     </div>
 
-    <h1>164 Trek</h1>
-    <p class="tagline">Train weekly. Climb together.</p>
-    <p class="lede">A trekking group for walking trails, weekly training, and safe climbs. We pick the next mountain as a group. If you're keen to join us, just contact us.</p>
+    <div class="hero-card reveal">
+      <div class="small-label">Trip details</div>
+      <div class="date">10 to 15 July</div>
+      <div class="meta">6 days, 5 nights</div>
+      <div class="meta">Singapore to Lombok</div>
+      <div class="meta">Rinjani summit, waterfalls, lake, hot springs, Gili Island</div>
+      <div class="hero-actions">
+        <a class="btn btn-line" href="https://booking.flyscoot.com/book/flight/return/SIN/2026-07-10/LOP/LOP/2026-07-15/SIN?adult=1&child=0&infant=0" target="_blank" rel="noopener">Check Scoot fare</a>
+      </div>
+    </div>
   </div>
 </header>
 
-<section id="principles">
+<section id="about">
   <div class="wrap">
     <div class="section-head reveal">
-      <h2>Design principles</h2>
+      <div class="small-label">About 164 Trek</div>
+      <h2>We are building a trekking group, not pretending to be a big company.</h2>
+      <p>
+        164 Trek is for people who want to train with others and do safe treks together. Slow pace, normal pace, or fast pace are welcome. The point is simple. Prepare properly, climb with people at a similar level, and make the trip feel good instead of just surviving it.
+      </p>
     </div>
 
-    <div class="grid-2">
+    <div class="grid-3">
       <div class="card reveal">
-        <h3>No falling risk</h3>
-        <p>Walking trails only. Altitude, scree, weather, mud are fine. Ropes, exposed ridges, and glaciers are out.</p>
+        <h3>Safe treks first</h3>
+        <p>Walking trails only. No ropes, no exposed ridges, no risky ego climbing.</p>
       </div>
 
       <div class="card reveal">
-        <h3>Start small</h3>
-        <p>One mountain first, then the group decides what's next.</p>
+        <h3>Train before the trip</h3>
+        <p>We do simple, practical training in Singapore so the mountain feels more enjoyable.</p>
       </div>
 
       <div class="card reveal">
-        <h3>Prepared, not rushed</h3>
-        <p>We build the fitness to finish comfortably and enjoy the whole way up.</p>
+        <h3>More than the summit</h3>
+        <p>We want the full experience. Mountain, lake, waterfalls, islands, recovery, food, and stories.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="event" id="event">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="small-label">Upcoming event</div>
+      <h2>Trek to Mount Rinjani</h2>
+      <p>
+        Rinjani is a strong first trip because it has a real mountain challenge and a proper reward after. The climb is hard, but the plan is not to rush it. We train first, go steady, and enjoy the trail together.
+      </p>
+    </div>
+
+    <div class="event-card reveal">
+      <div>
+        <h3>Rinjani 6D5N</h3>
+        <p>
+          This trip is for people who want an active holiday, not a luxury holiday where you just sit around. You will sweat. You will climb. You will probably question your life at 2 AM on summit morning. Then you will see sunrise, the crater lake, hot springs, waterfalls, and Gili Island.
+        </p>
+
+        <ul>
+          <li>Return flight from Singapore to Lombok</li>
+          <li>Hotels before and after the trek</li>
+          <li>Rinjani guide, porters, camping gear, park fees and permits</li>
+          <li>Meals during the trek</li>
+          <li>Waterfalls, Gili boat, snorkeling, and island recovery</li>
+        </ul>
+      </div>
+
+      <div class="price-box">
+        <div class="small-label">Price</div>
+        <div class="price">SGD $1,800</div>
+        <p class="fine">Per person, 6D5N. Includes return flight from Singapore, hotels, transfers, Rinjani trek support, permits, Gili boat, and snorkeling.</p>
+        <p class="fine">Not included: personal expenses, meals outside the trek, checked baggage if needed, optional upgrades, and extra tips if you personally want to give more.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20want%20to%20reserve%20a%20slot%20for%20the%20Rinjani%206D5N%20trip." target="_blank" rel="noopener">Reserve your slot now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="itinerary">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="small-label">Day by day</div>
+      <h2>6D5N itinerary</h2>
+      <p>
+        Times are a guide. The mountain, weather, group pace, and local team may adjust the exact flow. The idea is to keep the trip steady, safe, and enjoyable.
+      </p>
+    </div>
+
+    <div class="itinerary">
+      <div class="day reveal">
+        <div class="tag">Day 1</div>
+        <div>
+          <h3>Singapore to Lombok, transfer to Sembalun</h3>
+          <p><span class="time">07:35</span> Fly from Singapore to Lombok. <span class="time">10:25</span> Arrive in Lombok, airport pickup, drive to Sembalun, check in, rest, and trek briefing in the evening.</p>
+        </div>
+      </div>
+
+      <div class="day reveal">
+        <div class="tag">Day 2</div>
+        <div>
+          <h3>Sembalun to Crater Rim</h3>
+          <p><span class="time">07:00</span> Breakfast and final gear check. <span class="time">08:00</span> Start trekking from Sembalun through open savanna and forest sections. Reach Crater Rim in the afternoon, watch sunset, dinner, and camp.</p>
+        </div>
+      </div>
+
+      <div class="day reveal">
+        <div class="tag">Day 3</div>
+        <div>
+          <h3>Summit, Segara Anak Lake, hot springs</h3>
+          <p><span class="time">02:00</span> Summit push. <span class="time">06:00</span> Sunrise near the summit. Descend back to camp for breakfast, then continue down to Segara Anak Lake and hot springs. Camp near the lake area.</p>
+        </div>
+      </div>
+
+      <div class="day reveal">
+        <div class="tag">Day 4</div>
+        <div>
+          <h3>Torean route to Senaru</h3>
+          <p><span class="time">07:00</span> Breakfast and pack up. Trek out through the Torean route with jungle, river views, and waterfalls along the way. Arrive in Senaru, shower, hotel, proper rest.</p>
+        </div>
+      </div>
+
+      <div class="day reveal">
+        <div class="tag">Day 5</div>
+        <div>
+          <h3>Waterfalls and Gili Island</h3>
+          <p><span class="time">09:00</span> Visit Sendang Gile and Tiu Kelep waterfalls. Transfer to the harbor and take the boat to Gili. Afternoon is for snorkeling, island walk, sunset, massage if you want, and slow recovery.</p>
+        </div>
+      </div>
+
+      <div class="day reveal">
+        <div class="tag">Day 6</div>
+        <div>
+          <h3>Gili to Lombok, fly home</h3>
+          <p><span class="time">Morning</span> Breakfast, easy beach time if schedule allows, boat back to Lombok, airport transfer, and flight back to Singapore.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="extra" id="extra">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="small-label">Extra activities</div>
+      <h2>Not just climb, suffer, and go home.</h2>
+      <p>
+        The goal is to make the trip feel complete. The mountain is the main event, but the recovery days matter too.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card reveal">
+        <h3>Waterfalls</h3>
+        <p>Sendang Gile and Tiu Kelep after the trek, so the legs can recover and the trip does not feel rushed.</p>
       </div>
 
       <div class="card reveal">
-        <h3>Mutual accountability</h3>
-        <p>We encourage each other on training, recovery, diet, and showing up.</p>
+        <h3>Lake and hot springs</h3>
+        <p>Segara Anak Lake and the hot springs are part of what makes Rinjani special, not just the summit.</p>
       </div>
+
+      <div class="card reveal">
+        <h3>Gili Island</h3>
+        <p>Snorkeling, sunset, beach recovery, optional massage, and time to actually enjoy the last part of the trip.</p>
+      </div>
+    </div>
+
+    <div class="pill-list reveal">
+      <span class="pill">Waterfalls</span>
+      <span class="pill">Crater lake</span>
+      <span class="pill">Hot springs</span>
+      <span class="pill">Snorkeling</span>
+      <span class="pill">Gili sunset</span>
+      <span class="pill">Optional massage</span>
+      <span class="pill">Island hopping style recovery</span>
     </div>
   </div>
 </section>
@@ -807,355 +770,149 @@
 <section id="training">
   <div class="wrap">
     <div class="section-head reveal">
-      <h2>Weekly training</h2>
+      <div class="small-label">Training</div>
+      <h2>Train at your pace. Show up better prepared.</h2>
+      <p>
+        You do not need to be the fastest person. You just need to be honest about your current fitness, train consistently, and join the right pace group. Slow, normal, and fast pace are all welcome.
+      </p>
     </div>
 
-    <div class="train-row">
-      <div class="train-card reveal">
-        <svg class="ic" viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round">
-          <path d="M4 10c6-7 12 7 18 0s12 7 18 0 12 7 18 0"/>
-          <path d="M4 22c6-7 12 7 18 0s12 7 18 0 12 7 18 0"/>
-          <path d="M4 34c6-7 12 7 18 0s12 7 18 0 12 7 18 0"/>
-        </svg>
-        <div>
-          <h4>River Valley</h4>
-          <span>long runs, weighted-pack walks</span>
+    <div class="training-row">
+      <div class="training-card reveal">
+        <h3>Group training</h3>
+        <p>For people who want accountability and company. We use simple sessions that actually help for a mountain.</p>
+
+        <div class="schedule">
+          <div>
+            <b>Bukit Timah</b>
+            <span>Weekend morning, inside 7am to 7pm reserve hours</span>
+          </div>
+          <div>
+            <b>River Valley</b>
+            <span>Evening walk or run, Singapore River Promenade has lighting from 7pm to 7am</span>
+          </div>
+          <div>
+            <b>Kallang area</b>
+            <span>Evening stairs or endurance sets, exact spot depends on access</span>
+          </div>
         </div>
       </div>
 
-      <div class="train-card reveal">
-        <svg class="ic" viewBox="0 0 64 64" fill="currentColor">
-          <rect x="28" y="2" width="8" height="8" rx="2"/>
-          <circle cx="32" cy="38" r="22" fill="none" stroke="currentColor" stroke-width="5"/>
-          <rect x="30" y="22" width="4" height="18" rx="2"/>
-        </svg>
-        <div>
-          <h4>Stadium</h4>
-          <span>stairs, steady endurance sets</span>
-        </div>
-      </div>
+      <div class="training-card reveal">
+        <h3>Solo training</h3>
+        <p>For weekdays when you cannot meet the group. Keep it simple and consistent.</p>
 
-      <div class="train-card reveal">
-        <svg class="ic" viewBox="0 0 64 64" fill="currentColor">
-          <path d="M6 54 L26 18 L36 36 L44 24 L58 54 Z"/>
-          <path d="M22 26 l4 -7 l4 7 l-4 5 z" fill="var(--card)"/>
-        </svg>
-        <div>
-          <h4>Bukit Timah</h4>
-          <span>vertical repeats with pack</span>
+        <div class="schedule">
+          <div>
+            <b>Daily easy walk or jog</b>
+            <span>30 to 45 minutes</span>
+          </div>
+          <div>
+            <b>Weighted pack walk</b>
+            <span>1 to 2 times weekly, start light</span>
+          </div>
+          <div>
+            <b>Stairs or hill repeats</b>
+            <span>1 time weekly, do not destroy your knees</span>
+          </div>
         </div>
       </div>
     </div>
 
-    <p class="note reveal">Grouped by fitness. On the mountain, multiple guides so everyone has company at a comfortable pace.</p>
-
-    <h3 style="font-size:1.6rem;margin-bottom:24px" class="reveal">What a weekly commitment looks like</h3>
-
-    <div class="tiers">
-      <div class="tier light reveal">
-        <div class="top">
-          <span><b>Light</b><em>entry</em></span>
-          <span class="hrs">~3 hr/wk</span>
-        </div>
-        <ul>
-          <li>1 group session + light solo training</li>
-          <li>Solo: easy jog or walk, no pack</li>
-          <li>Group: Bukit Timah, 2 repeats with 5kg pack</li>
-        </ul>
-      </div>
-
-      <div class="tier standard reveal">
-        <div class="top">
-          <span><b>Standard</b></span>
-          <span class="hrs">~5–6 hr/wk</span>
-        </div>
-        <ul>
-          <li>2 group sessions + 1 solo session</li>
-          <li>Stadium stairs and endurance work</li>
-          <li>Bukit Timah, 3–4 repeats with 8kg pack</li>
-          <li>Long PCN walk or run, around 90 minutes</li>
-        </ul>
-      </div>
-
-      <div class="tier heavy reveal">
-        <div class="top">
-          <span><b>Heavy</b><em>pre-climb block</em></span>
-          <span class="hrs">~8–10 hr/wk</span>
-        </div>
-        <ul>
-          <li>3 group sessions + 2 solo sessions</li>
-          <li>Second hill day</li>
-          <li>Longer pack carries</li>
-          <li>Back-to-back weekend training</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="peaks">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Ten candidates, two lists</h2>
-      <p style="color:var(--ink-soft);margin-top:10px;max-width:60ch">We start with one from List A. Once it's done, the group picks one from List B.</p>
-    </div>
-
-    <div class="lists">
-      <div class="list-block list-a reveal">
-        <h3>List A, easy access</h3>
-        <p class="sub">Start here.</p>
-
-        <div class="peak">
-          <span class="pk-name">Kinabalu, Malaysia</span>
-          <div class="pk-meta">4,095 m · Standard 2 days</div>
-          <div class="pk-desc">A guided summit climb with proper pacing.</div>
-        </div>
-
-        <div class="peak">
-          <span class="pk-name">Rinjani, Indonesia</span>
-          <div class="pk-meta">3,726 m · Standard 3 days</div>
-          <div class="pk-desc">A steady 2–3 day climb with lake, hot spring, and Gili recovery.</div>
-        </div>
-
-        <div class="peak">
-          <span class="pk-name">Annapurna Circuit, Nepal</span>
-          <div class="pk-meta">5,416 m · Standard 15–20 days</div>
-          <div class="pk-desc">A bigger mountain trip for a later round.</div>
-        </div>
-      </div>
-
-      <div class="list-block list-b reveal">
-        <h3>List B, longer haul</h3>
-        <p class="sub">Next round.</p>
-
-        <div class="peak"><span class="pk-name">Tongariro Northern Circuit, NZ</span><div class="pk-meta">43 km · Standard 3–4 days</div></div>
-        <div class="peak"><span class="pk-name">Overland Track, Tasmania</span><div class="pk-meta">65 km · Standard 6–8 days</div></div>
-        <div class="peak"><span class="pk-name">Goecha La, Sikkim India</span><div class="pk-meta">4,940 m · Standard 10–11 days</div></div>
-        <div class="peak"><span class="pk-name">Tour du Mont Blanc</span><div class="pk-meta">170 km · Standard 10–12 days</div></div>
-        <div class="peak"><span class="pk-name">Kilimanjaro, Tanzania</span><div class="pk-meta">5,895 m · Standard 7–9 days</div></div>
-        <div class="peak"><span class="pk-name">Toubkal, Morocco</span><div class="pk-meta">4,167 m · Standard 2–3 days</div></div>
-        <div class="peak"><span class="pk-name">Huayhuash Circuit, Peru</span><div class="pk-meta">130 km · Standard 8–12 days</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="calendar">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Our calendar</h2>
-      <p style="color:var(--ink-soft);margin-top:10px;max-width:60ch">Four climbs mapped across the year. Exact dates are still being set.</p>
-    </div>
-
-    <div class="cal-grid">
-      <a href="#trip" class="cal-card reveal" style="text-decoration:none;color:inherit">
-        <div class="order">First climb · List A</div>
-        <div class="when">10 Jul</div>
-        <h4>Rinjani · 3,726 m</h4>
-        <div class="loc">Indonesia</div>
-        <span class="tba">6D / 5N · Rinjani + Gili</span>
-      </a>
-
-      <div class="cal-card reveal">
-        <div class="order">List B</div>
-        <div class="when">17 Oct</div>
-        <h4>Goecha La · 4,940 m</h4>
-        <div class="loc">Sikkim, India</div>
-        <span class="tba">Tentative</span>
-      </div>
-
-      <div class="cal-card reveal">
-        <div class="order">List B</div>
-        <div class="when">28 Nov</div>
-        <h4>Overland Track · 65 km</h4>
-        <div class="loc">Tasmania</div>
-        <span class="tba">Tentative</span>
-      </div>
-
-      <div class="cal-card reveal">
-        <div class="order">List B</div>
-        <div class="when">18 Jan</div>
-        <h4>Kilimanjaro · 5,895 m</h4>
-        <div class="loc">Tanzania</div>
-        <span class="tba">Tentative</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="trip">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Rinjani, July 10–15</h2>
-      <p style="color:var(--ink-soft);margin-top:10px;max-width:62ch">A 6D / 5N Rinjani and Gili trip built around training, steady climbing, and proper recovery after the mountain.</p>
-    </div>
-
-    <div class="itin reveal">
-      <div class="day">
-        <div class="dlabel">Day 1 · Fri 10 Jul · Arrival, Sembalun</div>
-        <div class="dtext">Airport pick-up, drive to Sembalun, hotel check-in, trekking briefing, and group prep.</div>
-      </div>
-
-      <div class="day">
-        <div class="dlabel">Day 2 · Sat 11 Jul · Trek to Crater Rim</div>
-        <div class="dtext">Sembalun up through savanna and forest to Crater Rim. Sunset over Segara Anak Lake. Camp overnight.</div>
-      </div>
-
-      <div class="day">
-        <div class="dlabel">Day 3 · Sun 12 Jul · Summit, Lake, Hot Spring</div>
-        <div class="dtext">Early summit push for sunrise. Descend to Segara Anak Lake, hot springs, and camp.</div>
-      </div>
-
-      <div class="day">
-        <div class="dlabel">Day 4 · Mon 13 Jul · Torean to Senaru</div>
-        <div class="dtext">Descend through the Torean route with jungle, river sections, and waterfall views. Hotel in Senaru.</div>
-      </div>
-
-      <div class="day">
-        <div class="dlabel">Day 5 · Tue 14 Jul · Waterfalls and Gili</div>
-        <div class="dtext">Visit Sendang Gile and Tiu Kelep waterfalls, then boat to Gili for snorkeling, massage, or recovery time.</div>
-      </div>
-
-      <div class="day">
-        <div class="dlabel">Day 6 · Wed 15 Jul · Home</div>
-        <div class="dtext">Boat back to Lombok, airport transfer, and flight home.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="cost">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>Price</h2>
-      <p style="color:#cfc6b2;margin-top:10px;max-width:62ch">Per person, includes return flight from Singapore.</p>
-    </div>
-
-    <div style="margin:30px 0;padding:30px;background:#383228;border:1px solid #4a4234;max-width:420px;text-align:center" class="reveal">
-      <div style="font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:#bcb29c;margin-bottom:8px">6D / 5N, Rinjani + Gili</div>
-      <div style="font-family:'Fraunces',serif;font-weight:700;font-size:3rem;color:#e8a866;line-height:1">SGD $1,800</div>
-      <div style="color:#cfc6b2;margin-top:6px">per person</div>
-    </div>
-
-    <div class="cost-split reveal">
-      <div class="cost-inc">
-        <div class="ci-head">Included</div>
-        <ul>
-          <li>Return flight, Scoot SIN to LOP</li>
-          <li>Hotels in Sembalun, Senaru, and Gili</li>
-          <li>All transfers and the Gili boat</li>
-          <li>Guide, porters, and camping gear</li>
-          <li>All meals on the trek</li>
-          <li>Snorkeling at Gili</li>
-          <li>Park fees and permits</li>
-          <li>Completion certificate</li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="cost-foot reveal">Not included: personal expenses, meals outside the trek, checked baggage if needed, optional upgrades, travel insurance, and extra tips if you personally want to give more.</p>
-  </div>
-</section>
-
-<section id="coaching">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <h2>How we coach each other</h2>
-    </div>
-
-    <div class="grid-2" style="margin-bottom:22px">
+    <div class="grid-3" style="margin-top:24px">
       <div class="card reveal">
-        <h3>Weekly progress check-ins</h3>
-        <p>How training is going, how recovery feels, and whether the pace still feels safe and enjoyable.</p>
+        <h3>Slow pace</h3>
+        <p>For people who want to build confidence and finish safely.</p>
       </div>
 
       <div class="card reveal">
-        <h3>Light diet check-ins</h3>
-        <p>No preaching. Just enough awareness to help everyone show up stronger.</p>
+        <h3>Normal pace</h3>
+        <p>For people who want a steady, comfortable climb without rushing.</p>
+      </div>
+
+      <div class="card reveal">
+        <h3>Fast pace</h3>
+        <p>For people who want to push harder, but still respect the group and the mountain.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="baseline" style="background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+<section id="future">
   <div class="wrap">
     <div class="section-head reveal">
-      <h2>Baseline</h2>
-      <p style="color:var(--ink-soft);margin-top:10px">For grouping, not gatekeeping. About finishing safely, not racing.</p>
+      <div class="small-label">Upcoming and past events</div>
+      <h2>We start with Rinjani. Then we build from there.</h2>
+      <p>
+        Once this trip is done, we can add past events here and open the next trips. The idea is to slowly build a real group, not just post one random trip and disappear.
+      </p>
     </div>
 
-    <ul class="baseline-list reveal">
-      <li>Resting heart rate</li>
-      <li>Bukit Timah round trip, no pack</li>
-      <li>100 floors with 5kg pack</li>
-      <li>12-minute walk or run distance</li>
-      <li>Longest trek in the last 2 years</li>
-      <li>Weekly cardio hours</li>
-      <li>Altitude experience above 3,000m</li>
-      <li>Any injuries or health concerns</li>
-    </ul>
+    <div class="grid-2">
+      <div class="card reveal">
+        <h3>Upcoming</h3>
+        <ul>
+          <li>Rinjani, Indonesia, 6D5N</li>
+          <li>Possible next trips: Kinabalu, Goecha La, Overland Track, Kilimanjaro</li>
+          <li>Island trips, hiking weekends, and recovery trips can be added too</li>
+        </ul>
+      </div>
+
+      <div class="card reveal">
+        <h3>Past events</h3>
+        <p>Coming soon after we complete the first trips. We can add photos, group notes, what worked, and what we will improve next time.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="needback">
-  <div class="wrap">
+<section class="faq" id="faq">
+  <div class="wrap narrow">
     <div class="section-head reveal">
-      <h2>What we need back</h2>
+      <div class="small-label">FAQ</div>
+      <h2>Simple answers before you message us.</h2>
     </div>
 
-    <div class="steps reveal">
-      <div class="step">
-        <div class="n"></div>
-        <div>
-          <h4>Pick one from List A and one from List B</h4>
-          <p>We start with List A. List B is the next round.</p>
-        </div>
-      </div>
+    <div class="faq-item reveal">
+      <h3>Do I need to be fast?</h3>
+      <p>No. Slow, normal, and fast pace are welcome. We just need to know your level so we can group people properly.</p>
+    </div>
 
-      <div class="step">
-        <div class="n"></div>
-        <div>
-          <h4>Date windows over the next 12 months</h4>
-        </div>
-      </div>
+    <div class="faq-item reveal">
+      <h3>Is this beginner friendly?</h3>
+      <p>It can be, but Rinjani is still a serious trek. You should train before going. If you are not sure, message us and be honest about your fitness.</p>
+    </div>
 
-      <div class="step">
-        <div class="n"></div>
-        <div>
-          <h4>Training commitment</h4>
-          <p>Yes, probably, or hard no.</p>
-        </div>
-      </div>
+    <div class="faq-item reveal">
+      <h3>What is included?</h3>
+      <p>Return flight, hotels, transfers, Gili boat, guide, porters, camping gear, trek meals, snorkeling, park fees, permits, and completion certificate.</p>
+    </div>
 
-      <div class="step">
-        <div class="n"></div>
-        <div>
-          <h4>Baseline</h4>
-          <p>We use this to group people properly and keep the mountain safe.</p>
-        </div>
-      </div>
+    <div class="faq-item reveal">
+      <h3>What is not included?</h3>
+      <p>Personal expenses, meals outside the trek, checked baggage if needed, optional upgrades, and extra tips if you personally want to give more.</p>
+    </div>
 
-      <div class="step">
-        <div class="n"></div>
-        <div>
-          <h4>Cost ceiling</h4>
-          <p>So we can plan trips that people can actually commit to.</p>
-        </div>
-      </div>
+    <div class="faq-item reveal">
+      <h3>How do I reserve a slot?</h3>
+      <p>Click Contact us or Reserve your slot now. It opens WhatsApp. Send us a message and we will share the next step.</p>
     </div>
   </div>
 </section>
 
-<section id="message-us">
+<section class="contact" id="contact">
   <div class="wrap reveal">
-    <h2>Want to join?</h2>
-    <p>Click Contact us and send us a message. We’ll add you to the group and share the next training details.</p>
+    <div class="small-label">Contact</div>
+    <h2>Want to join Rinjani?</h2>
+    <p>
+      We are still building this properly. For now, message us directly on WhatsApp and tell us your name, your current fitness level, and whether you want slow, normal, or fast pace.
+    </p>
+    <a class="btn btn-primary" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20want%20to%20reserve%20a%20slot%20for%20the%20Rinjani%206D5N%20trip.%20My%20pace%20is%20slow%2Fnormal%2Ffast." target="_blank" rel="noopener">Contact us on WhatsApp</a>
   </div>
 </section>
 
 <footer>
-  <div class="brand"><span class="num">164</span> Trek Group</div>
-  <div>Train weekly. Climb together. Safely.</div>
+  164 Trek
 </footer>
 
 <script>
