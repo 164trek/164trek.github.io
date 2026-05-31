@@ -325,6 +325,20 @@ h2{
   display:block;
 }
 
+.route-credit{
+  text-align:center;
+  padding:16px 18px 20px;
+  color:var(--muted);
+  font-size:.95rem;
+  background:var(--paper);
+  border-top:1px solid var(--line);
+}
+
+.route-credit a{
+  color:var(--green);
+  font-weight:900;
+}
+
 .photo-grid{
   max-width:980px;
   margin:36px auto 0;
@@ -562,6 +576,10 @@ footer b{
     max-width:none;
     height:430px;
   }
+
+  .route-credit{
+    min-width:1000px;
+  }
 }
 
 @media(max-width:560px){
@@ -700,6 +718,13 @@ footer b{
 
     <figure class="route-image-card">
       <img src="rinjani-route.png" alt="Rinjani trekking route illustration">
+
+      <figcaption class="route-credit">
+        Inspired by / credits:
+        <a href="https://planetbell.me/2016/02/25/trekking-rinjani-tips-and-advice/" target="_blank" rel="noopener">
+          planetbell.me
+        </a>
+      </figcaption>
     </figure>
   </div>
 </section>
