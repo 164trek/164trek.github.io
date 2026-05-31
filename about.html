@@ -137,28 +137,27 @@ h1,h2,h3{
   display:grid;
   grid-template-columns:1.25fr .85fr;
   gap:28px;
-  align-items:stretch;
+  align-items:start;
 }
 
 .card{
   background:var(--paper);
   border:1px solid var(--line);
-  padding:38px;
 }
 
-.person-card{
+.danny-card{
+  overflow:hidden;
+}
+
+.profile-top{
   display:grid;
-  grid-template-columns:190px 1fr;
-  gap:30px;
-  align-items:start;
+  grid-template-columns:220px 1fr;
+  min-height:230px;
 }
 
 .profile-photo{
-  width:190px;
-  aspect-ratio:1/1;
-  border:1px solid var(--line);
-  overflow:hidden;
   background:#e5ded3;
+  border-right:1px solid var(--line);
 }
 
 .profile-photo img{
@@ -168,36 +167,35 @@ h1,h2,h3{
   object-position:center;
 }
 
+.profile-info{
+  padding:34px 38px;
+}
+
 .card-label{
   color:var(--green);
   text-transform:uppercase;
   letter-spacing:.16em;
   font-weight:900;
   font-size:.78rem;
-  margin-bottom:14px;
+  margin-bottom:12px;
 }
 
 h1{
   font-size:clamp(3.2rem,7vw,5.8rem);
-  margin-bottom:18px;
+  margin-bottom:10px;
 }
 
-h2{
-  font-size:clamp(2.5rem,5vw,4.5rem);
-  margin-bottom:18px;
-}
-
-p{
+.role{
   color:var(--soft);
-  font-size:1.02rem;
-  margin-bottom:14px;
+  font-size:1.1rem;
+  margin-bottom:22px;
 }
 
 .links{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
-  margin:24px 0 30px;
+  margin-top:22px;
 }
 
 .links a{
@@ -213,10 +211,19 @@ p{
   text-transform:uppercase;
 }
 
+.links a:hover{
+  border-color:var(--green);
+}
+
+.profile-note{
+  padding:28px 38px 0;
+  color:var(--soft);
+  font-size:1.02rem;
+}
+
 .credentials{
   list-style:none;
-  border-top:1px solid var(--line);
-  margin-top:10px;
+  padding:20px 38px 34px;
 }
 
 .credentials li{
@@ -225,13 +232,25 @@ p{
   color:var(--soft);
 }
 
+.credentials li:first-child{
+  border-top:1px solid var(--line);
+}
+
 .credentials b{
   color:var(--ink);
+}
+
+.credentials a{
+  color:var(--green);
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:3px;
 }
 
 .money-card{
   background:var(--dark);
   color:#fff;
+  padding:38px;
 }
 
 .money-card .card-label{
@@ -240,10 +259,14 @@ p{
 
 .money-card h2{
   color:#fff;
+  font-size:clamp(2.8rem,5.5vw,5rem);
+  margin-bottom:22px;
 }
 
 .money-card p{
   color:rgba(255,255,255,.78);
+  font-size:1.02rem;
+  margin-bottom:18px;
 }
 
 .money-list{
@@ -327,16 +350,31 @@ footer b{
     padding:150px 16px 64px;
   }
 
-  .card{
-    padding:28px 22px;
-  }
-
-  .person-card{
+  .profile-top{
     grid-template-columns:1fr;
   }
 
   .profile-photo{
-    width:160px;
+    height:260px;
+    border-right:0;
+    border-bottom:1px solid var(--line);
+  }
+
+  .profile-info,
+  .profile-note,
+  .credentials,
+  .money-card{
+    padding-left:24px;
+    padding-right:24px;
+  }
+
+  .profile-info{
+    padding-top:28px;
+    padding-bottom:26px;
+  }
+
+  .profile-note{
+    padding-top:24px;
   }
 
   .money-list{
@@ -366,31 +404,37 @@ footer b{
 <main class="page">
   <div class="about-grid">
 
-    <section class="card person-card">
-      <div class="profile-photo">
-        <img src="danny-profile.jpg" alt="Danny Castonguay">
-      </div>
-
-      <div>
-        <div class="card-label">About</div>
-        <h1>Danny Castonguay</h1>
-
-        <p>Danny is listed here for transparency. You can check his public profile and background before joining or paying for a trip.</p>
-
-        <div class="links">
-          <a href="https://www.linkedin.com/in/dannycastonguay/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://resume.dannycastonguay.com/" target="_blank" rel="noopener">Resume</a>
-          <a href="https://blog.dannycastonguay.com/" target="_blank" rel="noopener">Blog</a>
+    <section class="card danny-card">
+      <div class="profile-top">
+        <div class="profile-photo">
+          <img src="danny-profile.jpg" alt="Danny Castonguay">
         </div>
 
-        <ul class="credentials">
-          <li><b>Founder and CEO</b>, bld.ai</li>
-          <li><b>Former Expert Associate Partner</b>, McKinsey & Company</li>
-          <li><b>Co-Founder and CTO</b>, Kalibrr</li>
-          <li><b>MBA</b>, Massachusetts Institute of Technology</li>
-          <li><b>Computer Engineering</b>, McGill University</li>
-        </ul>
+        <div class="profile-info">
+          <div class="card-label">About</div>
+          <h1>Danny Castonguay</h1>
+          <div class="role">Founder, operator, and advisor</div>
+
+          <div class="links">
+            <a href="https://www.linkedin.com/in/dannycastonguay/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://resume.dannycastonguay.com/" target="_blank" rel="noopener">Resume</a>
+            <a href="https://blog.dannycastonguay.com/" target="_blank" rel="noopener">Blog</a>
+            <a href="https://bld.ai/" target="_blank" rel="noopener">bld.ai</a>
+          </div>
+        </div>
       </div>
+
+      <p class="profile-note">
+        Danny is listed here for transparency. You can check his public profile and background before joining or paying for a trip.
+      </p>
+
+      <ul class="credentials">
+        <li><b>Founder and CEO</b>, <a href="https://bld.ai/" target="_blank" rel="noopener">bld.ai</a></li>
+        <li><b>Former Expert Associate Partner</b>, McKinsey & Company</li>
+        <li><b>Co-Founder and CTO</b>, Kalibrr</li>
+        <li><b>MBA</b>, Massachusetts Institute of Technology</li>
+        <li><b>Computer Engineering</b>, McGill University</li>
+      </ul>
     </section>
 
     <section class="card money-card">
