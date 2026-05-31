@@ -249,6 +249,10 @@ h1{
   text-transform:uppercase;
 }
 
+.torres-photo{
+  object-position:center 34%;
+}
+
 .event-body{
   padding:30px;
 }
@@ -546,7 +550,8 @@ const comingSoonTreks = [
     meta:"8–10 days. Patagonian weather.",
     pill:"Hard weather",
     img:"https://upload.wikimedia.org/wikipedia/commons/b/b3/TDP2_Stevage.jpg",
-    credit:"https://upload.wikimedia.org/wikipedia/commons/b/b3/TDP2_Stevage.jpg"
+    credit:"https://upload.wikimedia.org/wikipedia/commons/b/b3/TDP2_Stevage.jpg",
+    photoClass:"torres-photo"
   },
   {
     title:"Manaslu Circuit · 5,106 m pass",
@@ -716,7 +721,7 @@ function renderCards(items, targetId){
   target.innerHTML = items.map(item => `
     <article class="event-card">
       <a class="event-photo" href="${item.credit}" target="_blank" rel="noopener">
-        <img src="${item.img}" alt="${item.title}">
+        <img class="${item.photoClass || ""}" src="${item.img}" alt="${item.title}">
       </a>
       <div class="event-body">
         <h3>${item.title}</h3>
