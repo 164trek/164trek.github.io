@@ -165,12 +165,8 @@ h1,h2,h3{
 }
 
 @keyframes slowZoom{
-  from{
-    transform:scale(1);
-  }
-  to{
-    transform:scale(1.08);
-  }
+  from{ transform:scale(1); }
+  to{ transform:scale(1.08); }
 }
 
 .wrap{
@@ -255,7 +251,7 @@ h1{
 
 .event-card img{
   width:100%;
-  height:235px;
+  height:245px;
   object-fit:cover;
   background:#ddd3c6;
 }
@@ -364,7 +360,7 @@ footer b{
   }
 
   .event-card img{
-    height:230px;
+    height:235px;
   }
 
   .event-body{
@@ -476,7 +472,7 @@ footer b{
     <div class="event-grid">
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kangch-Goechala.jpg" alt="Goecha La trek" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Goecha La" alt="Goecha La trek">
         <div class="event-body">
           <h3>Goecha La · 4,940 m</h3>
           <div class="location">Sikkim, India</div>
@@ -488,7 +484,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Overland%20Track%20Landscape%2C%20Tasmania.jpg" alt="Overland Track Tasmania" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Overland Track" alt="Overland Track Tasmania">
         <div class="event-body">
           <h3>Overland Track · 65 km</h3>
           <div class="location">Tasmania, Australia</div>
@@ -500,7 +496,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tongariro%20Alpine%20Crossing.jpg" alt="Tongariro Northern Circuit" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Tongariro Northern Circuit" alt="Tongariro Northern Circuit">
         <div class="event-body">
           <h3>Tongariro Northern Circuit · 43 km</h3>
           <div class="location">New Zealand</div>
@@ -512,7 +508,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Kilimanjaro.jpg" alt="Mount Kilimanjaro" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Mount Kilimanjaro" alt="Mount Kilimanjaro">
         <div class="event-body">
           <h3>Kilimanjaro · 5,895 m</h3>
           <div class="location">Tanzania</div>
@@ -524,7 +520,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20view%20of%20Mont%20Blanc%20from%20the%20Tour%20du%20Mont%20Blanc%2C%202007.jpg" alt="Tour du Mont Blanc trail" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Tour du Mont Blanc" alt="Tour du Mont Blanc trail">
         <div class="event-body">
           <h3>Tour du Mont Blanc · 170 km</h3>
           <div class="location">France · Italy · Switzerland</div>
@@ -548,7 +544,7 @@ footer b{
     <div class="event-grid">
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cordillera%20Huayhuash.jpg" alt="Cordillera Huayhuash" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Cordillera Huayhuash" alt="Cordillera Huayhuash">
         <div class="event-body">
           <h3>Cordillera Huayhuash Circuit</h3>
           <div class="location">Peru</div>
@@ -560,7 +556,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Torres%20del%20paine.jpg" alt="Torres del Paine" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Torres del Paine National Park" alt="Torres del Paine O Circuit">
         <div class="event-body">
           <h3>Torres del Paine O Circuit</h3>
           <div class="location">Chile</div>
@@ -572,7 +568,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Manaslu%20from%20Samdo.jpg" alt="Manaslu" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Manaslu" alt="Manaslu Circuit">
         <div class="event-body">
           <h3>Manaslu Circuit · 5,106 m pass</h3>
           <div class="location">Nepal</div>
@@ -584,7 +580,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dusky%20Track%20at%20Lake%20Roe.jpg" alt="Dusky Track" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Dusky Track" alt="Dusky Track">
         <div class="event-body">
           <h3>Dusky Track</h3>
           <div class="location">New Zealand</div>
@@ -596,7 +592,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/K2%20from%20Concordia.jpg" alt="K2 from Concordia" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="K2" alt="K2 Base Camp Concordia">
         <div class="event-body">
           <h3>K2 Base Camp / Concordia</h3>
           <div class="location">Pakistan</div>
@@ -608,7 +604,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Thorong%20La%20pass.jpg" alt="Thorong La pass Annapurna Circuit" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Annapurna Circuit" alt="Annapurna Circuit">
         <div class="event-body">
           <h3>Annapurna Circuit · 5,416 m pass</h3>
           <div class="location">Nepal</div>
@@ -620,7 +616,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Everest%20Three%20Passes%20Trek.jpg" alt="Everest Three Passes Trek" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Everest Base Camp Trek" alt="Everest Three Passes">
         <div class="event-body">
           <h3>Everest Three Passes</h3>
           <div class="location">Nepal</div>
@@ -632,7 +628,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Markha%20Valley%20Ladakh.jpg" alt="Markha Valley Ladakh" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Markha Valley" alt="Markha Valley">
         <div class="event-body">
           <h3>Markha Valley</h3>
           <div class="location">Ladakh, India</div>
@@ -644,7 +640,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Larapinta%20Trail.jpg" alt="Larapinta Trail" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Larapinta Trail" alt="Larapinta Trail">
         <div class="event-body">
           <h3>Larapinta Trail</h3>
           <div class="location">Australia</div>
@@ -656,7 +652,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Apo.JPG" alt="Mount Apo" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Mount Apo" alt="Mount Apo">
         <div class="event-body">
           <h3>Mount Apo · 2,954 m</h3>
           <div class="location">Philippines</div>
@@ -668,7 +664,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Olympus%20from%20Litochoro.jpg" alt="Mount Olympus Greece" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Mount Olympus" alt="Mount Olympus">
         <div class="event-body">
           <h3>Mount Olympus · 2,917 m</h3>
           <div class="location">Greece</div>
@@ -680,7 +676,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Summit%20of%20Mount%20Kinabalu.jpg" alt="Mount Kinabalu summit" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Mount Kinabalu" alt="Mount Kinabalu">
         <div class="event-body">
           <h3>Mount Kinabalu · 4,095 m</h3>
           <div class="location">Malaysian Borneo</div>
@@ -692,7 +688,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Fuji%20from%20Lake%20Kawaguchi.jpg" alt="Mount Fuji" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Mount Fuji" alt="Mount Fuji">
         <div class="event-body">
           <h3>Mount Fuji · 3,776 m</h3>
           <div class="location">Japan</div>
@@ -704,7 +700,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Laugavegur%20Trail%20Iceland.jpg" alt="Laugavegur Trail Iceland" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Laugavegur" alt="Laugavegur Trail">
         <div class="event-body">
           <h3>Laugavegur Trail · 55 km</h3>
           <div class="location">Iceland</div>
@@ -716,7 +712,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/West%20Highland%20Way.jpg" alt="West Highland Way Scotland" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="West Highland Way" alt="West Highland Way">
         <div class="event-body">
           <h3>West Highland Way · 155 km</h3>
           <div class="location">Scotland</div>
@@ -728,7 +724,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Camino%20de%20Santiago%20-%20Rabanal%20del%20Camino.jpg" alt="Camino de Santiago" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Camino de Santiago" alt="Camino de Santiago">
         <div class="event-body">
           <h3>Camino de Santiago</h3>
           <div class="location">Spain</div>
@@ -740,7 +736,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Toubkal%20summit.jpg" alt="Mount Toubkal" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Toubkal" alt="Mount Toubkal">
         <div class="event-body">
           <h3>Mount Toubkal · 4,167 m</h3>
           <div class="location">Morocco</div>
@@ -752,7 +748,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Bromo%20Indonesia.jpg" alt="Mount Bromo Indonesia" onerror="this.src='upcoming-events-bg.png'">
+        <img data-wiki="Mount Bromo" alt="Mount Bromo and Ijen">
         <div class="event-body">
           <h3>Mount Bromo + Ijen</h3>
           <div class="location">Indonesia</div>
@@ -766,7 +762,7 @@ footer b{
     </div>
 
     <p class="note">
-      Photos are online reference images. If an image does not load, the page will use the 164 Trek background photo instead.
+      Dates are tentative. Message us if you are interested in any future trek.
     </p>
   </div>
 </section>
@@ -786,6 +782,31 @@ footer b{
   <b>164 Trek</b>
   <div>Train together. Climb safe. Enjoy the trail.</div>
 </footer>
+
+<script>
+const fallbackPhoto = "upcoming-events-bg.png";
+
+async function loadWikiPhoto(img){
+  const title = img.dataset.wiki;
+  if(!title) return;
+
+  try{
+    const url = "https://en.wikipedia.org/api/rest_v1/page/summary/" + encodeURIComponent(title);
+    const response = await fetch(url);
+    const data = await response.json();
+
+    if(data && data.thumbnail && data.thumbnail.source){
+      img.src = data.thumbnail.source.replace(/\/\d+px-/, "/1200px-");
+    }else{
+      img.src = fallbackPhoto;
+    }
+  }catch(error){
+    img.src = fallbackPhoto;
+  }
+}
+
+document.querySelectorAll("img[data-wiki]").forEach(loadWikiPhoto);
+</script>
 
 </body>
 </html>
