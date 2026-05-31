@@ -77,6 +77,12 @@ h1,h2,h3{
   gap:18px;
 }
 
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
 .logo{
   color:#fff;
   text-decoration:none;
@@ -92,6 +98,23 @@ h1,h2,h3{
   border-radius:999px;
   padding:5px 11px;
   margin-right:10px;
+}
+
+.home-link{
+  color:rgba(255,255,255,.82);
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:999px;
+  padding:7px 13px;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.home-link:hover{
+  color:#fff;
+  border-color:rgba(255,255,255,.55);
 }
 
 .nav-links{
@@ -142,8 +165,12 @@ h1,h2,h3{
 }
 
 @keyframes slowZoom{
-  from{ transform:scale(1); }
-  to{ transform:scale(1.08); }
+  from{
+    transform:scale(1);
+  }
+  to{
+    transform:scale(1.08);
+  }
 }
 
 .wrap{
@@ -161,7 +188,7 @@ h1,h2,h3{
 }
 
 h1{
-  font-size:clamp(4rem,10vw,8rem);
+  font-size:clamp(4.4rem,11vw,9rem);
   margin-bottom:18px;
 }
 
@@ -170,14 +197,6 @@ h1{
   margin:auto;
   color:rgba(255,255,255,.86);
   font-size:1.1rem;
-}
-
-.hero-actions{
-  margin-top:28px;
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
 }
 
 .btn{
@@ -191,12 +210,6 @@ h1{
   font-weight:900;
   letter-spacing:.08em;
   text-transform:uppercase;
-}
-
-.btn.ghost{
-  background:transparent;
-  color:#fff;
-  border:1px solid rgba(255,255,255,.55);
 }
 
 .events{
@@ -219,7 +232,7 @@ h1{
 }
 
 .section-head h2{
-  font-size:clamp(2.6rem,6vw,5rem);
+  font-size:clamp(2.8rem,6vw,5.4rem);
   margin-bottom:16px;
 }
 
@@ -369,6 +382,16 @@ footer b{
     gap:10px;
   }
 
+  .nav-left{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .home-link{
+    font-size:.66rem;
+    padding:6px 12px;
+  }
+
   .nav-links{
     gap:12px;
     flex-wrap:wrap;
@@ -385,7 +408,7 @@ footer b{
   }
 
   h1{
-    font-size:clamp(3.4rem,15vw,5.4rem);
+    font-size:clamp(3.6rem,16vw,5.8rem);
   }
 
   .lede{
@@ -421,7 +444,10 @@ footer b{
 
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="logo"><span>164</span>Trek</a>
+    <div class="nav-left">
+      <a href="index.html" class="logo"><span>164</span>Trek</a>
+      <a href="index.html" class="home-link">Home</a>
+    </div>
 
     <div class="nav-links">
       <a href="about.html">About</a>
@@ -436,11 +462,6 @@ footer b{
     <div class="label">164 Trek</div>
     <h1>Upcoming Events</h1>
     <p class="lede">Future treks we are considering. Dates are tentative and can be discussed with interested members.</p>
-
-    <div class="hero-actions">
-      <a class="btn" href="index.html">Back to Rinjani Trip</a>
-      <a class="btn ghost" href="#contact">Ask about a trek</a>
-    </div>
   </div>
 </header>
 
@@ -448,15 +469,14 @@ footer b{
   <div class="wrap">
 
     <div class="section-head">
-      <div class="kicker">Tentative dates</div>
-      <h2>Planned windows</h2>
-      <p>These have rough months already. Message us if you want to be part of the planning group.</p>
+      <div class="kicker">Upcoming Events</div>
+      <h2>Upcoming treks</h2>
     </div>
 
     <div class="event-grid">
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kangch-Goechala.jpg" alt="Goecha La trek">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kangch-Goechala.jpg" alt="Goecha La trek" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Goecha La · 4,940 m</h3>
           <div class="location">Sikkim, India</div>
@@ -468,7 +488,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Overland%20Track%20Landscape%2C%20Tasmania.jpg" alt="Overland Track Tasmania">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Overland%20Track%20Landscape%2C%20Tasmania.jpg" alt="Overland Track Tasmania" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Overland Track · 65 km</h3>
           <div class="location">Tasmania, Australia</div>
@@ -480,7 +500,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tongariro%20Alpine%20Crossing.jpg" alt="Tongariro Northern Circuit">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tongariro%20Alpine%20Crossing.jpg" alt="Tongariro Northern Circuit" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Tongariro Northern Circuit · 43 km</h3>
           <div class="location">New Zealand</div>
@@ -492,7 +512,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Kilimanjaro.jpg" alt="Mount Kilimanjaro">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Kilimanjaro.jpg" alt="Mount Kilimanjaro" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Kilimanjaro · 5,895 m</h3>
           <div class="location">Tanzania</div>
@@ -504,7 +524,7 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20view%20of%20Mont%20Blanc%20from%20the%20Tour%20du%20Mont%20Blanc%2C%202007.jpg" alt="Tour du Mont Blanc trail">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20view%20of%20Mont%20Blanc%20from%20the%20Tour%20du%20Mont%20Blanc%2C%202007.jpg" alt="Tour du Mont Blanc trail" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Tour du Mont Blanc · 170 km</h3>
           <div class="location">France · Italy · Switzerland</div>
@@ -520,163 +540,163 @@ footer b{
     <div class="spacer"></div>
 
     <div class="section-head">
-      <div class="kicker">Coming soon</div>
-      <h2>TBA mountains</h2>
-      <p>These are still open ideas. We can choose based on interest, season, cost, and how hard the group wants to go.</p>
+      <div class="kicker">Future ideas</div>
+      <h2>Coming soon</h2>
+      <p>These mountains are still open ideas. We can choose based on interest, season, cost, and how hard the group wants to go.</p>
     </div>
 
     <div class="event-grid">
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cordillera%20Huayhuash.jpg" alt="Cordillera Huayhuash">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cordillera%20Huayhuash.jpg" alt="Cordillera Huayhuash" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Cordillera Huayhuash Circuit</h3>
           <div class="location">Peru</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">10–12 days. 5,000m+ passes.</div>
           <span class="pill">Hard</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Torres%20del%20paine.jpg" alt="Torres del Paine">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Torres%20del%20paine.jpg" alt="Torres del Paine" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Torres del Paine O Circuit</h3>
           <div class="location">Chile</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">8–10 days. Patagonian weather.</div>
           <span class="pill">Hard weather</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Manaslu%20from%20Samdo.jpg" alt="Manaslu">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Manaslu%20from%20Samdo.jpg" alt="Manaslu" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Manaslu Circuit · 5,106 m pass</h3>
           <div class="location">Nepal</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">14–16 days. Larkya La pass.</div>
           <span class="pill">High altitude</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dusky%20Track%20at%20Lake%20Roe.jpg" alt="Dusky Track">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dusky%20Track%20at%20Lake%20Roe.jpg" alt="Dusky Track" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Dusky Track</h3>
           <div class="location">New Zealand</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">8–10 days. Wet, muddy, remote, and grimy.</div>
           <span class="pill">Rough trek</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/K2%20from%20Concordia.jpg" alt="K2 from Concordia">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/K2%20from%20Concordia.jpg" alt="K2 from Concordia" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>K2 Base Camp / Concordia</h3>
           <div class="location">Pakistan</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">14–21 days. Big mountain base camp trek.</div>
           <span class="pill">Expedition feel</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Thorong%20La%20pass.jpg" alt="Thorong La pass Annapurna Circuit">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Thorong%20La%20pass.jpg" alt="Thorong La pass Annapurna Circuit" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Annapurna Circuit · 5,416 m pass</h3>
           <div class="location">Nepal</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">15–20 days. Thorong La pass.</div>
           <span class="pill">High altitude</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Everest%20Three%20Passes%20Trek.jpg" alt="Everest Three Passes Trek">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Everest%20Three%20Passes%20Trek.jpg" alt="Everest Three Passes Trek" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Everest Three Passes</h3>
           <div class="location">Nepal</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">18–22 days. Three 5,000m+ passes.</div>
           <span class="pill">Big commitment</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Markha%20Valley%20Ladakh.jpg" alt="Markha Valley Ladakh">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Markha%20Valley%20Ladakh.jpg" alt="Markha Valley Ladakh" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Markha Valley</h3>
           <div class="location">Ladakh, India</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">8–10 days. High-altitude desert.</div>
           <span class="pill">Dry altitude</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Larapinta%20Trail.jpg" alt="Larapinta Trail">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Larapinta%20Trail.jpg" alt="Larapinta Trail" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Larapinta Trail</h3>
           <div class="location">Australia</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">12–20 days. Red Centre heat.</div>
           <span class="pill">Heat trek</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Apo.JPG" alt="Mount Apo">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Apo.JPG" alt="Mount Apo" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Mount Apo · 2,954 m</h3>
           <div class="location">Philippines</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">3–4 days. Highest peak in the Philippines.</div>
           <span class="pill">Warmup option</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Olympus%20from%20Litochoro.jpg" alt="Mount Olympus Greece">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Olympus%20from%20Litochoro.jpg" alt="Mount Olympus Greece" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Mount Olympus · 2,917 m</h3>
           <div class="location">Greece</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">2–3 days. Walking trail to Skala.</div>
           <span class="pill">Greece pair trip</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Summit%20of%20Mount%20Kinabalu.jpg" alt="Mount Kinabalu summit">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Summit%20of%20Mount%20Kinabalu.jpg" alt="Mount Kinabalu summit" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Mount Kinabalu · 4,095 m</h3>
           <div class="location">Malaysian Borneo</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">2 days. Steep but well-maintained.</div>
           <span class="pill">Short altitude</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Fuji%20from%20Lake%20Kawaguchi.jpg" alt="Mount Fuji">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Fuji%20from%20Lake%20Kawaguchi.jpg" alt="Mount Fuji" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Mount Fuji · 3,776 m</h3>
           <div class="location">Japan</div>
-          <div class="event-date">TBA</div>
+          <div class="event-date">Coming soon</div>
           <div class="tentative">July to September season</div>
           <div class="meta">2 days. Walking trail, crowded but iconic.</div>
           <span class="pill">Short season</span>
@@ -684,60 +704,60 @@ footer b{
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Laugavegur%20Trail%20Iceland.jpg" alt="Laugavegur Trail Iceland">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Laugavegur%20Trail%20Iceland.jpg" alt="Laugavegur Trail Iceland" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Laugavegur Trail · 55 km</h3>
           <div class="location">Iceland</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">4 days. Hot springs, glaciers, river crossings.</div>
           <span class="pill">Cold route</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/West%20Highland%20Way.jpg" alt="West Highland Way Scotland">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/West%20Highland%20Way.jpg" alt="West Highland Way Scotland" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>West Highland Way · 155 km</h3>
           <div class="location">Scotland</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">7–8 days. Wet, atmospheric, hard miles.</div>
           <span class="pill">Long walk</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Camino%20de%20Santiago%20-%20Rabanal%20del%20Camino.jpg" alt="Camino de Santiago">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Camino%20de%20Santiago%20-%20Rabanal%20del%20Camino.jpg" alt="Camino de Santiago" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Camino de Santiago</h3>
           <div class="location">Spain</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">Full Camino Frances or shorter sections. Social walking route.</div>
           <span class="pill">Low elevation</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Toubkal%20summit.jpg" alt="Mount Toubkal">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Toubkal%20summit.jpg" alt="Mount Toubkal" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Mount Toubkal · 4,167 m</h3>
           <div class="location">Morocco</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">2–3 days. Highest peak in North Africa.</div>
           <span class="pill">Short altitude</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Bromo%20Indonesia.jpg" alt="Mount Bromo Indonesia">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Bromo%20Indonesia.jpg" alt="Mount Bromo Indonesia" onerror="this.src='upcoming-events-bg.png'">
         <div class="event-body">
           <h3>Mount Bromo + Ijen</h3>
           <div class="location">Indonesia</div>
-          <div class="event-date">TBA</div>
-          <div class="tentative">Coming soon</div>
+          <div class="event-date">Coming soon</div>
+          <div class="tentative">Date to be discussed</div>
           <div class="meta">2–3 days. Volcanoes, sulfur miners, blue flames.</div>
           <span class="pill">Short trip</span>
         </div>
@@ -746,7 +766,7 @@ footer b{
     </div>
 
     <p class="note">
-      Photos are online reference images. Dates are tentative. Message us if you are interested in any future trek.
+      Photos are online reference images. If an image does not load, the page will use the 164 Trek background photo instead.
     </p>
   </div>
 </section>
