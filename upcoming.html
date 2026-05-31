@@ -24,15 +24,9 @@
   --pill:#ded4c7;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth}
 
 body{
   background:var(--bg);
@@ -41,9 +35,7 @@ body{
   line-height:1.6;
 }
 
-a{
-  color:inherit;
-}
+a{color:inherit}
 
 img{
   display:block;
@@ -132,9 +124,7 @@ h1,h2,h3{
   text-transform:uppercase;
 }
 
-.nav-links a:hover{
-  color:#fff;
-}
+.nav-links a:hover{color:#fff}
 
 .hero{
   min-height:72vh;
@@ -165,8 +155,8 @@ h1,h2,h3{
 }
 
 @keyframes slowZoom{
-  from{ transform:scale(1); }
-  to{ transform:scale(1.08); }
+  from{transform:scale(1)}
+  to{transform:scale(1.08)}
 }
 
 .wrap{
@@ -193,19 +183,6 @@ h1{
   margin:auto;
   color:rgba(255,255,255,.86);
   font-size:1.1rem;
-}
-
-.btn{
-  display:inline-block;
-  background:#fff;
-  color:#111;
-  text-decoration:none;
-  padding:14px 24px;
-  border-radius:999px;
-  font-size:.82rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
 }
 
 .events{
@@ -249,11 +226,39 @@ h1{
   overflow:hidden;
 }
 
-.event-card img{
+.event-photo{
+  display:block;
   width:100%;
-  height:245px;
-  object-fit:cover;
+  height:260px;
   background:#ddd3c6;
+  overflow:hidden;
+  position:relative;
+}
+
+.event-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .28s ease;
+}
+
+.event-photo:hover img{
+  transform:scale(1.04);
+}
+
+.event-photo::after{
+  content:"Photo credit";
+  position:absolute;
+  right:14px;
+  bottom:12px;
+  background:rgba(0,0,0,.55);
+  color:#fff;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
 }
 
 .event-body{
@@ -306,9 +311,7 @@ h1{
   font-weight:900;
 }
 
-.spacer{
-  height:70px;
-}
+.spacer{height:70px}
 
 .note{
   max-width:900px;
@@ -336,6 +339,19 @@ h1{
   margin-bottom:26px;
 }
 
+.btn{
+  display:inline-block;
+  background:#fff;
+  color:#111;
+  text-decoration:none;
+  padding:14px 24px;
+  border-radius:999px;
+  font-size:.82rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
 .number{
   margin-top:18px;
   color:rgba(255,255,255,.78);
@@ -350,17 +366,15 @@ footer{
   font-size:.9rem;
 }
 
-footer b{
-  color:#fff;
-}
+footer b{color:#fff}
 
 @media(max-width:820px){
   .event-grid{
     grid-template-columns:1fr;
   }
 
-  .event-card img{
-    height:235px;
+  .event-photo{
+    height:240px;
   }
 
   .event-body{
@@ -471,8 +485,10 @@ footer b{
 
     <div class="event-grid">
 
-      <div class="event-card">
-        <img data-wiki="Goecha La" alt="Goecha La trek">
+      <article class="event-card">
+        <a class="event-photo" href="https://commons.wikimedia.org/wiki/Category:Goecha_La" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Kangch-Goechala.jpg" alt="Goecha La Trek">
+        </a>
         <div class="event-body">
           <h3>Goecha La · 4,940 m</h3>
           <div class="location">Sikkim, India</div>
@@ -481,10 +497,12 @@ footer b{
           <div class="meta">10–11 days. Kanchenjunga views.</div>
           <span class="pill">High altitude</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Overland Track" alt="Overland Track Tasmania">
+      <article class="event-card">
+        <a class="event-photo" href="https://commons.wikimedia.org/wiki/File:Overland_Track_Landscape,_Tasmania.jpg" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Overland_Track_Past_Cradle_Mountain.jpg" alt="Overland Track Tasmania">
+        </a>
         <div class="event-body">
           <h3>Overland Track · 65 km</h3>
           <div class="location">Tasmania, Australia</div>
@@ -493,10 +511,12 @@ footer b{
           <div class="meta">6–8 days. Cold, muddy, and remote.</div>
           <span class="pill">Finish early Dec</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Tongariro Northern Circuit" alt="Tongariro Northern Circuit">
+      <article class="event-card">
+        <a class="event-photo" href="https://www.newzealand.com/us/plan/business/tongariro-northern-circuit-great-walk-3-day-guided-hiking-tour/" target="_blank" rel="noopener">
+          <img src="https://www.newzealand.com/assets/Tourism-NZ/Tongariro-National-Park/img-1536060415-2307-19803-p-2F4379E3-F55A-75EB-B9D3210EF218EFD5-2544003__aWxvdmVrZWxseQo_FocalPointCropWzQyNyw2NDAsNTAsNDksNzUsImpwZyIsNjUsMi41XQ.jpg" alt="Tongariro Northern Circuit">
+        </a>
         <div class="event-body">
           <h3>Tongariro Northern Circuit · 43 km</h3>
           <div class="location">New Zealand</div>
@@ -505,10 +525,12 @@ footer b{
           <div class="meta">3–4 days. Volcanic landscape and alpine weather.</div>
           <span class="pill">3–4 days</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Mount Kilimanjaro" alt="Mount Kilimanjaro">
+      <article class="event-card">
+        <a class="event-photo" href="https://cdn.britannica.com/33/153433-050-F76BDF75/Sunrise-Mount-Kilimanjaro-Tanzania.jpg" target="_blank" rel="noopener">
+          <img src="https://cdn.britannica.com/33/153433-050-F76BDF75/Sunrise-Mount-Kilimanjaro-Tanzania.jpg" alt="Mount Kilimanjaro">
+        </a>
         <div class="event-body">
           <h3>Kilimanjaro · 5,895 m</h3>
           <div class="location">Tanzania</div>
@@ -517,10 +539,12 @@ footer b{
           <div class="meta">7–9 days via Lemosho. High-altitude summit trek.</div>
           <span class="pill">Summit trek</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Tour du Mont Blanc" alt="Tour du Mont Blanc trail">
+      <article class="event-card">
+        <a class="event-photo" href="https://commons.wikimedia.org/wiki/Category:Tour_du_Mont_Blanc" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/PublicTMB.jpg" alt="Tour du Mont Blanc">
+        </a>
         <div class="event-body">
           <h3>Tour du Mont Blanc · 170 km</h3>
           <div class="location">France · Italy · Switzerland</div>
@@ -529,7 +553,7 @@ footer b{
           <div class="meta">10–12 days. Classic Alpine circuit.</div>
           <span class="pill">Alpine trek</span>
         </div>
-      </div>
+      </article>
 
     </div>
 
@@ -538,13 +562,15 @@ footer b{
     <div class="section-head">
       <div class="kicker">Future ideas</div>
       <h2>Coming soon</h2>
-      <p>These mountains are still open ideas. We can choose based on interest, season, cost, and how hard the group wants to go.</p>
+      <p>Dates are still open. Click any photo to view the source or credit page.</p>
     </div>
 
     <div class="event-grid">
 
-      <div class="event-card">
-        <img data-wiki="Cordillera Huayhuash" alt="Cordillera Huayhuash">
+      <article class="event-card">
+        <a class="event-photo" href="https://www.huayhuash.com/huayhuash_circuit.html" target="_blank" rel="noopener">
+          <img src="https://www.huayhuash.com/images/huayhuash-map.jpg" alt="Cordillera Huayhuash Circuit">
+        </a>
         <div class="event-body">
           <h3>Cordillera Huayhuash Circuit</h3>
           <div class="location">Peru</div>
@@ -553,10 +579,12 @@ footer b{
           <div class="meta">10–12 days. 5,000m+ passes.</div>
           <span class="pill">Hard</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Torres del Paine National Park" alt="Torres del Paine O Circuit">
+      <article class="event-card">
+        <a class="event-photo" href="https://peru-expeditions.org/destinations/lets-go-to-chile/chiletorres-del-paine-o-circuit-tour/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Cuernos_del_Paine_from_Lake_Peho%C3%A9.jpg" alt="Torres del Paine O Circuit">
+        </a>
         <div class="event-body">
           <h3>Torres del Paine O Circuit</h3>
           <div class="location">Chile</div>
@@ -565,10 +593,12 @@ footer b{
           <div class="meta">8–10 days. Patagonian weather.</div>
           <span class="pill">Hard weather</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Manaslu" alt="Manaslu Circuit">
+      <article class="event-card">
+        <a class="event-photo" href="https://www.getyourguide.com/en-gb/larkya-bazar-l253954/manaslu-circuit-trek-larkya-la-pass-tsum-valley-14-days-t1250125/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Manaslu%2C_Nepal.jpg" alt="Manaslu Circuit">
+        </a>
         <div class="event-body">
           <h3>Manaslu Circuit · 5,106 m pass</h3>
           <div class="location">Nepal</div>
@@ -577,10 +607,12 @@ footer b{
           <div class="meta">14–16 days. Larkya La pass.</div>
           <span class="pill">High altitude</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Dusky Track" alt="Dusky Track">
+      <article class="event-card">
+        <a class="event-photo" href="https://adventure.australiangeographic.com.au/read/trekking-the-dusky-track-new-zealand" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Dusky_Track_Between_Lake_Roe_and_Loch_Maree.JPG" alt="Dusky Track">
+        </a>
         <div class="event-body">
           <h3>Dusky Track</h3>
           <div class="location">New Zealand</div>
@@ -589,10 +621,12 @@ footer b{
           <div class="meta">8–10 days. Wet, muddy, remote, and grimy.</div>
           <span class="pill">Rough trek</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="K2" alt="K2 Base Camp Concordia">
+      <article class="event-card">
+        <a class="event-photo" href="https://www.atlasandboots.com/travel-blog/k2-base-camp-trek-pakistan/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/K2_2006b.jpg" alt="K2 Base Camp Concordia">
+        </a>
         <div class="event-body">
           <h3>K2 Base Camp / Concordia</h3>
           <div class="location">Pakistan</div>
@@ -601,10 +635,12 @@ footer b{
           <div class="meta">14–21 days. Big mountain base camp trek.</div>
           <span class="pill">Expedition feel</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Annapurna Circuit" alt="Annapurna Circuit">
+      <article class="event-card">
+        <a class="event-photo" href="https://suphandagcilik.com/en/annapurna-circuit-trek-thorong-la-pass-5416m/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Thorong_La_pass.jpg" alt="Annapurna Circuit">
+        </a>
         <div class="event-body">
           <h3>Annapurna Circuit · 5,416 m pass</h3>
           <div class="location">Nepal</div>
@@ -613,10 +649,12 @@ footer b{
           <div class="meta">15–20 days. Thorong La pass.</div>
           <span class="pill">High altitude</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Everest Base Camp Trek" alt="Everest Three Passes">
+      <article class="event-card">
+        <a class="event-photo" href="https://awexpeditions.org/trips/nepal-3-passes-trek/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Everest_from_Gokyo_Ri.jpg" alt="Everest Three Passes">
+        </a>
         <div class="event-body">
           <h3>Everest Three Passes</h3>
           <div class="location">Nepal</div>
@@ -625,10 +663,12 @@ footer b{
           <div class="meta">18–22 days. Three 5,000m+ passes.</div>
           <span class="pill">Big commitment</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Markha Valley" alt="Markha Valley">
+      <article class="event-card">
+        <a class="event-photo" href="https://trekupindia.com/trek/markha-valley#gallery" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Markha_valley_ladakh.jpg" alt="Markha Valley">
+        </a>
         <div class="event-body">
           <h3>Markha Valley</h3>
           <div class="location">Ladakh, India</div>
@@ -637,10 +677,12 @@ footer b{
           <div class="meta">8–10 days. High-altitude desert.</div>
           <span class="pill">Dry altitude</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Larapinta Trail" alt="Larapinta Trail">
+      <article class="event-card">
+        <a class="event-photo" href="https://en.wikipedia.org/wiki/Larapinta_Trail#/media/File:Larapinta_Trail.JPG" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Larapinta_Trail.JPG" alt="Larapinta Trail">
+        </a>
         <div class="event-body">
           <h3>Larapinta Trail</h3>
           <div class="location">Australia</div>
@@ -649,10 +691,12 @@ footer b{
           <div class="meta">12–20 days. Red Centre heat.</div>
           <span class="pill">Heat trek</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Mount Apo" alt="Mount Apo">
+      <article class="event-card">
+        <a class="event-photo" href="https://en.wikipedia.org/wiki/Mount_Apo#/media/File:Tuktok_ng_Pilipinas.jpg" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Tuktok_ng_Pilipinas.jpg" alt="Mount Apo">
+        </a>
         <div class="event-body">
           <h3>Mount Apo · 2,954 m</h3>
           <div class="location">Philippines</div>
@@ -661,10 +705,12 @@ footer b{
           <div class="meta">3–4 days. Highest peak in the Philippines.</div>
           <span class="pill">Warmup option</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Mount Olympus" alt="Mount Olympus">
+      <article class="event-card">
+        <a class="event-photo" href="https://greeking.me/blog/greek-mainland/mount-olympus" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Mount_Olympus_from_Litochoro.jpg" alt="Mount Olympus">
+        </a>
         <div class="event-body">
           <h3>Mount Olympus · 2,917 m</h3>
           <div class="location">Greece</div>
@@ -673,10 +719,12 @@ footer b{
           <div class="meta">2–3 days. Walking trail to Skala.</div>
           <span class="pill">Greece pair trip</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Mount Kinabalu" alt="Mount Kinabalu">
+      <article class="event-card">
+        <a class="event-photo" href="https://en.wikipedia.org/wiki/Mount_Kinabalu#/media/File:Kinabalu_Sabah_Borneo_Kampong_Kundasang_panorama_2.jpg" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Kinabalu_Sabah_Borneo_Kampong_Kundasang_panorama_2.jpg" alt="Mount Kinabalu">
+        </a>
         <div class="event-body">
           <h3>Mount Kinabalu · 4,095 m</h3>
           <div class="location">Malaysian Borneo</div>
@@ -685,10 +733,12 @@ footer b{
           <div class="meta">2 days. Steep but well-maintained.</div>
           <span class="pill">Short altitude</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Mount Fuji" alt="Mount Fuji">
+      <article class="event-card">
+        <a class="event-photo" href="https://en.wikipedia.org/wiki/Mount_Fuji#/media/File:View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg" alt="Mount Fuji">
+        </a>
         <div class="event-body">
           <h3>Mount Fuji · 3,776 m</h3>
           <div class="location">Japan</div>
@@ -697,10 +747,12 @@ footer b{
           <div class="meta">2 days. Walking trail, crowded but iconic.</div>
           <span class="pill">Short season</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Laugavegur" alt="Laugavegur Trail">
+      <article class="event-card">
+        <a class="event-photo" href="https://adventures.is/iceland/attractions/laugavegur-trail/" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Laugavegur_hiking_trail.jpg" alt="Laugavegur Trail">
+        </a>
         <div class="event-body">
           <h3>Laugavegur Trail · 55 km</h3>
           <div class="location">Iceland</div>
@@ -709,10 +761,12 @@ footer b{
           <div class="meta">4 days. Hot springs, glaciers, river crossings.</div>
           <span class="pill">Cold route</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="West Highland Way" alt="West Highland Way">
+      <article class="event-card">
+        <a class="event-photo" href="https://www.thehiking.club/west-highland-way" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/West_Highland_Way_near_Bridge_of_Orchy.jpg" alt="West Highland Way">
+        </a>
         <div class="event-body">
           <h3>West Highland Way · 155 km</h3>
           <div class="location">Scotland</div>
@@ -721,10 +775,12 @@ footer b{
           <div class="meta">7–8 days. Wet, atmospheric, hard miles.</div>
           <span class="pill">Long walk</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Camino de Santiago" alt="Camino de Santiago">
+      <article class="event-card">
+        <a class="event-photo" href="https://www.nationalgeographic.com/travel/article/hike-camino-de-santiago-ways" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Camino_Frances_near_Santiago.jpg" alt="Camino de Santiago">
+        </a>
         <div class="event-body">
           <h3>Camino de Santiago</h3>
           <div class="location">Spain</div>
@@ -733,10 +789,12 @@ footer b{
           <div class="meta">Full Camino Frances or shorter sections. Social walking route.</div>
           <span class="pill">Low elevation</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Toubkal" alt="Mount Toubkal">
+      <article class="event-card">
+        <a class="event-photo" href="https://en.wikipedia.org/wiki/Toubkal#/media/File:My_Toubkal.jpg" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/My_Toubkal.jpg" alt="Mount Toubkal">
+        </a>
         <div class="event-body">
           <h3>Mount Toubkal · 4,167 m</h3>
           <div class="location">Morocco</div>
@@ -745,10 +803,12 @@ footer b{
           <div class="meta">2–3 days. Highest peak in North Africa.</div>
           <span class="pill">Short altitude</span>
         </div>
-      </div>
+      </article>
 
-      <div class="event-card">
-        <img data-wiki="Mount Bromo" alt="Mount Bromo and Ijen">
+      <article class="event-card">
+        <a class="event-photo" href="https://www.tripadvisor.com/LocationPhotoDirectLink-g317103-d9722203-i479712382-Mount_Bromo_Ijen_Tour-Banyuwangi_East_Java_Java.html" target="_blank" rel="noopener">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Mount_Bromo_from_Penanjakan.jpg" alt="Mount Bromo and Ijen">
+        </a>
         <div class="event-body">
           <h3>Mount Bromo + Ijen</h3>
           <div class="location">Indonesia</div>
@@ -757,13 +817,14 @@ footer b{
           <div class="meta">2–3 days. Volcanoes, sulfur miners, blue flames.</div>
           <span class="pill">Short trip</span>
         </div>
-      </div>
+      </article>
 
     </div>
 
     <p class="note">
-      Dates are tentative. Message us if you are interested in any future trek.
+      Credits to the owners of each photo. Click the photo on each mountain card to open the source or credit link.
     </p>
+
   </div>
 </section>
 
@@ -782,31 +843,6 @@ footer b{
   <b>164 Trek</b>
   <div>Train together. Climb safe. Enjoy the trail.</div>
 </footer>
-
-<script>
-const fallbackPhoto = "upcoming-events-bg.png";
-
-async function loadWikiPhoto(img){
-  const title = img.dataset.wiki;
-  if(!title) return;
-
-  try{
-    const url = "https://en.wikipedia.org/api/rest_v1/page/summary/" + encodeURIComponent(title);
-    const response = await fetch(url);
-    const data = await response.json();
-
-    if(data && data.thumbnail && data.thumbnail.source){
-      img.src = data.thumbnail.source.replace(/\/\d+px-/, "/1200px-");
-    }else{
-      img.src = fallbackPhoto;
-    }
-  }catch(error){
-    img.src = fallbackPhoto;
-  }
-}
-
-document.querySelectorAll("img[data-wiki]").forEach(loadWikiPhoto);
-</script>
 
 </body>
 </html>
