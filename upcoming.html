@@ -19,7 +19,6 @@
   --soft:#5f574e;
   --muted:#8c8175;
   --line:#ddd3c6;
-  --dark:#0f1411;
   --green:#2f4938;
   --rust:#a0552c;
   --pill:#ded4c7;
@@ -116,15 +115,39 @@ h1,h2,h3{
 
 .hero{
   min-height:72vh;
+  position:relative;
+  overflow:hidden;
   padding:170px 22px 90px;
   text-align:center;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:
-    linear-gradient(rgba(15,20,17,.55),rgba(15,20,17,.72)),
-    url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount_Rinjani_Panorama.jpg") center/cover no-repeat;
   color:#fff;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(rgba(15,20,17,.50),rgba(15,20,17,.72)),
+    url("upcoming-events-bg.png") center/cover no-repeat;
+  animation:slowZoom 26s ease-in-out infinite alternate;
+  z-index:0;
+}
+
+.hero .wrap{
+  position:relative;
+  z-index:1;
+}
+
+@keyframes slowZoom{
+  from{
+    transform:scale(1);
+  }
+  to{
+    transform:scale(1.08);
+  }
 }
 
 .wrap{
@@ -172,13 +195,13 @@ h1{
 
 .event-card img{
   width:100%;
-  height:260px;
+  height:230px;
   object-fit:cover;
   background:#ddd3c6;
 }
 
 .event-body{
-  padding:34px;
+  padding:30px;
 }
 
 .event-type{
@@ -186,14 +209,14 @@ h1{
   text-transform:uppercase;
   letter-spacing:.18em;
   font-weight:900;
-  font-size:.8rem;
-  margin-bottom:22px;
+  font-size:.78rem;
+  margin-bottom:18px;
 }
 
 .event-date{
   font-family:'DM Serif Display',serif;
   color:var(--rust);
-  font-size:clamp(2.1rem,4vw,3.2rem);
+  font-size:clamp(2rem,4vw,3rem);
   line-height:1;
   margin-bottom:8px;
 }
@@ -203,25 +226,25 @@ h1{
   text-transform:uppercase;
   letter-spacing:.14em;
   font-weight:900;
-  font-size:.76rem;
-  margin-bottom:24px;
+  font-size:.74rem;
+  margin-bottom:22px;
 }
 
 .event-card h2{
-  font-size:clamp(1.75rem,3vw,2.45rem);
+  font-size:clamp(1.55rem,3vw,2.25rem);
   margin-bottom:8px;
 }
 
 .location{
   color:var(--soft);
-  font-size:1.05rem;
+  font-size:1rem;
   margin-bottom:12px;
 }
 
 .meta{
   color:var(--soft);
-  font-size:.98rem;
-  margin-bottom:24px;
+  font-size:.96rem;
+  margin-bottom:22px;
 }
 
 .pill{
@@ -230,7 +253,7 @@ h1{
   color:#6f695f;
   border-radius:999px;
   padding:9px 18px;
-  font-size:.78rem;
+  font-size:.76rem;
   text-transform:uppercase;
   letter-spacing:.14em;
   font-weight:900;
@@ -299,11 +322,11 @@ footer b{
   }
 
   .event-card img{
-    height:240px;
+    height:230px;
   }
 
   .event-body{
-    padding:28px 24px;
+    padding:26px 22px;
   }
 }
 
@@ -351,11 +374,11 @@ footer b{
   }
 
   .event-date{
-    font-size:2.2rem;
+    font-size:2.1rem;
   }
 
   .event-card h2{
-    font-size:2rem;
+    font-size:1.8rem;
   }
 }
 </style>
@@ -378,7 +401,7 @@ footer b{
   <div class="wrap">
     <div class="label">Upcoming Events</div>
     <h1>Trips we are considering</h1>
-    <p class="lede">Dates are tentative. If you’re interested, message us and we can discuss the best date window.</p>
+    <p class="lede">Dates are tentative. Message us if you are interested and we can discuss the best date window.</p>
   </div>
 </header>
 
@@ -387,54 +410,119 @@ footer b{
     <div class="event-grid">
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kangch-Goechala.jpg" alt="View from Goecha La pass">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cordillera_Huayhuash_from_Huaraz.jpg" alt="Cordillera Huayhuash">
         <div class="event-body">
-          <div class="event-type">List B · Longer haul</div>
-          <div class="event-date">10/2026</div>
-          <div class="tentative">Tentative month</div>
-          <h2>Goecha La · 4,940 m</h2>
-          <div class="location">Sikkim, India</div>
-          <div class="meta">High-altitude trek with Kanchenjunga views.</div>
-          <span class="pill">~9–10 day trek</span>
+          <div class="event-type">Big mountain circuit</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Cordillera Huayhuash Circuit</h2>
+          <div class="location">Peru</div>
+          <div class="meta">10–12 days. 5,000m+ passes.</div>
+          <span class="pill">Hard</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tongariro%20Alpine%20Crossing.jpg" alt="Tongariro Alpine Crossing">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Torres_del_Paine_O_Circuit.jpg" alt="Torres del Paine">
         <div class="event-body">
-          <div class="event-type">List B · Longer haul</div>
-          <div class="event-date">11/2026</div>
-          <div class="tentative">Tentative month</div>
-          <h2>Tongariro Northern Circuit · 43 km</h2>
-          <div class="location">New Zealand</div>
-          <div class="meta">Volcanic trail, alpine weather, hut or camp route.</div>
-          <span class="pill">3–4 days</span>
+          <div class="event-type">Patagonia</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Torres del Paine O Circuit</h2>
+          <div class="location">Chile</div>
+          <div class="meta">8–10 days. Patagonian weather.</div>
+          <span class="pill">Hard weather</span>
         </div>
       </div>
 
       <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Overland%20Track%20Landscape%2C%20Tasmania.jpg" alt="Overland Track landscape in Tasmania">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20view%20of%20Mont%20Blanc%20from%20the%20Tour%20du%20Mont%20Blanc%2C%202007.jpg" alt="Tour du Mont Blanc">
         <div class="event-body">
           <div class="event-type">List B · Longer haul</div>
-          <div class="event-date">11/2026</div>
-          <div class="tentative">Tentative month</div>
-          <h2>Overland Track · 65 km</h2>
-          <div class="location">Tasmania, Australia</div>
-          <div class="meta">Multi-day trail through Tasmanian wilderness.</div>
-          <span class="pill">Finish early Dec</span>
-        </div>
-      </div>
-
-      <div class="event-card">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20view%20of%20Mont%20Blanc%20from%20the%20Tour%20du%20Mont%20Blanc%2C%202007.jpg" alt="View of Mont Blanc from the Tour du Mont Blanc">
-        <div class="event-body">
-          <div class="event-type">List B · Longer haul</div>
-          <div class="event-date">07/2027 – 08/2027</div>
+          <div class="event-date">July to August 2027</div>
           <div class="tentative">Tentative window</div>
           <h2>Tour du Mont Blanc · 170 km</h2>
           <div class="location">France · Italy · Switzerland</div>
-          <div class="meta">Classic Alpine circuit around Mont Blanc.</div>
-          <span class="pill">6–7 days</span>
+          <div class="meta">10–12 days. Classic Alpine circuit.</div>
+          <span class="pill">Alpine trek</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Manaslu_from_Samdo.jpg" alt="Manaslu Circuit">
+        <div class="event-body">
+          <div class="event-type">Nepal</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Manaslu Circuit · 5,106 m pass</h2>
+          <div class="location">Nepal</div>
+          <div class="meta">14–16 days. Larkya La pass.</div>
+          <span class="pill">High altitude</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Dusky_Track_Fiordland.jpg" alt="Dusky Track">
+        <div class="event-body">
+          <div class="event-type">New Zealand</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Dusky Track · 8–10 days</h2>
+          <div class="location">New Zealand</div>
+          <div class="meta">Wet, muddy, remote, and grimy.</div>
+          <span class="pill">Rough trek</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/K2_Base_Camp_Concordia.jpg" alt="K2 Base Camp">
+        <div class="event-body">
+          <div class="event-type">Pakistan</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>K2 Base Camp / Concordia</h2>
+          <div class="location">Pakistan</div>
+          <div class="meta">14–21 days. Big mountain base camp trek.</div>
+          <span class="pill">Expedition feel</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Thorong_La_pass.jpg" alt="Annapurna Circuit">
+        <div class="event-body">
+          <div class="event-type">Nepal</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Annapurna Circuit · 5,416 m pass</h2>
+          <div class="location">Nepal</div>
+          <div class="meta">15–20 days. Thorong La pass.</div>
+          <span class="pill">High altitude</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Everest_Three_Passes_Trek.jpg" alt="Everest Three Passes">
+        <div class="event-body">
+          <div class="event-type">Nepal</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Everest Three Passes</h2>
+          <div class="location">Nepal</div>
+          <div class="meta">18–22 days. Three 5,000m+ passes.</div>
+          <span class="pill">Big commitment</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Markha_Valley_Ladakh.jpg" alt="Markha Valley">
+        <div class="event-body">
+          <div class="event-type">India</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Markha Valley</h2>
+          <div class="location">Ladakh, India</div>
+          <div class="meta">8–10 days. High-altitude desert.</div>
+          <span class="pill">Dry altitude</span>
         </div>
       </div>
 
@@ -442,19 +530,188 @@ footer b{
         <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Kilimanjaro.jpg" alt="Mount Kilimanjaro">
         <div class="event-body">
           <div class="event-type">List B · Longer haul</div>
-          <div class="event-date">01/2027</div>
+          <div class="event-date">Late January 2027</div>
           <div class="tentative">Tentative month</div>
           <h2>Kilimanjaro · 5,895 m</h2>
           <div class="location">Tanzania</div>
-          <div class="meta">High-altitude summit trip, longer acclimatization preferred.</div>
-          <span class="pill">Summit window TBD</span>
+          <div class="meta">7–9 days via Lemosho. No exposure.</div>
+          <span class="pill">Summit trek</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kangch-Goechala.jpg" alt="Goecha La">
+        <div class="event-body">
+          <div class="event-type">List B · Longer haul</div>
+          <div class="event-date">October 2026</div>
+          <div class="tentative">Tentative month</div>
+          <h2>Goecha La · 4,940 m</h2>
+          <div class="location">Sikkim, India</div>
+          <div class="meta">10–11 days. Kanchenjunga views.</div>
+          <span class="pill">High altitude</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Larapinta_Trail.jpg" alt="Larapinta Trail">
+        <div class="event-body">
+          <div class="event-type">Australia</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Larapinta Trail</h2>
+          <div class="location">Australia</div>
+          <div class="meta">12–20 days. Red Centre heat.</div>
+          <span class="pill">Heat trek</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Overland%20Track%20Landscape%2C%20Tasmania.jpg" alt="Overland Track">
+        <div class="event-body">
+          <div class="event-type">List B · Longer haul</div>
+          <div class="event-date">Late November 2026</div>
+          <div class="tentative">Tentative month</div>
+          <h2>Overland Track · 65 km</h2>
+          <div class="location">Tasmania, Australia</div>
+          <div class="meta">6–8 days. Cold and muddy.</div>
+          <span class="pill">Finish early Dec</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount_Apo.jpg" alt="Mount Apo">
+        <div class="event-body">
+          <div class="event-type">Close to Singapore</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Mount Apo · 2,954 m</h2>
+          <div class="location">Philippines</div>
+          <div class="meta">3–4 days. Highest peak in the Philippines.</div>
+          <span class="pill">Warmup option</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount_Olympus_Greece.jpg" alt="Mount Olympus">
+        <div class="event-body">
+          <div class="event-type">Europe</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Mount Olympus · 2,917 m</h2>
+          <div class="location">Greece</div>
+          <div class="meta">2–3 days. Walking trail to Skala.</div>
+          <span class="pill">Greece pair trip</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount_Kinabalu_summit.jpg" alt="Mount Kinabalu">
+        <div class="event-body">
+          <div class="event-type">Close to Singapore</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Mount Kinabalu · 4,095 m</h2>
+          <div class="location">Malaysian Borneo</div>
+          <div class="meta">2 days. Steep but well-maintained.</div>
+          <span class="pill">Short altitude</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount_Fuji_from_Lake_Kawaguchi.jpg" alt="Mount Fuji">
+        <div class="event-body">
+          <div class="event-type">Japan</div>
+          <div class="event-date">July to September</div>
+          <div class="tentative">Seasonal window</div>
+          <h2>Mount Fuji · 3,776 m</h2>
+          <div class="location">Japan</div>
+          <div class="meta">2 days. Crowded but iconic.</div>
+          <span class="pill">Short season</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tongariro%20Alpine%20Crossing.jpg" alt="Tongariro Northern Circuit">
+        <div class="event-body">
+          <div class="event-type">List B · Longer haul</div>
+          <div class="event-date">Late November 2026</div>
+          <div class="tentative">Tentative month</div>
+          <h2>Tongariro Northern Circuit · 43 km</h2>
+          <div class="location">New Zealand</div>
+          <div class="meta">3–4 days. Volcanic landscape.</div>
+          <span class="pill">3–4 days</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Laugavegur_Trail_Iceland.jpg" alt="Laugavegur Trail">
+        <div class="event-body">
+          <div class="event-type">Iceland</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Laugavegur Trail · 55 km</h2>
+          <div class="location">Iceland</div>
+          <div class="meta">4 days. Hot springs, glaciers, river crossings.</div>
+          <span class="pill">Cold route</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/West_Highland_Way.jpg" alt="West Highland Way">
+        <div class="event-body">
+          <div class="event-type">Scotland</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>West Highland Way · 155 km</h2>
+          <div class="location">Scotland</div>
+          <div class="meta">7–8 days. Wet, atmospheric, hard miles.</div>
+          <span class="pill">Long walk</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Camino_de_Santiago.jpg" alt="Camino de Santiago">
+        <div class="event-body">
+          <div class="event-type">Spain</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Camino de Santiago</h2>
+          <div class="location">Spain</div>
+          <div class="meta">Full route or shorter sections. Social walking route.</div>
+          <span class="pill">Low elevation</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Toubkal.jpg" alt="Mount Toubkal">
+        <div class="event-body">
+          <div class="event-type">Morocco</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Mount Toubkal · 4,167 m</h2>
+          <div class="location">Morocco</div>
+          <div class="meta">2–3 days. Highest peak in North Africa.</div>
+          <span class="pill">Short altitude</span>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount_Bromo_Indonesia.jpg" alt="Mount Bromo">
+        <div class="event-body">
+          <div class="event-type">Indonesia</div>
+          <div class="event-date">TBA</div>
+          <div class="tentative">Coming soon</div>
+          <h2>Mount Bromo + Ijen</h2>
+          <div class="location">Indonesia</div>
+          <div class="meta">2–3 days. Volcanoes, sulfur miners, blue flames.</div>
+          <span class="pill">Short trip</span>
         </div>
       </div>
 
     </div>
 
     <p class="note">
-      These future trips are ideas for the next group treks. Final dates, route, group size, and price will depend on interest and logistics.
+      Dates are tentative. Message us if you are interested in any of these future treks.
     </p>
   </div>
 </section>
