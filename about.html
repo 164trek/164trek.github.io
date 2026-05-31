@@ -20,7 +20,6 @@
   --muted:#8c8175;
   --line:#ddd3c6;
   --green:#2f4938;
-  --rust:#a0552c;
   --dark:#0f1411;
 }
 
@@ -50,10 +49,10 @@ img{
   display:block;
 }
 
-h1,h2,h3{
+h1,h2{
   font-family:'DM Serif Display',serif;
   font-weight:400;
-  line-height:1.05;
+  line-height:1.04;
 }
 
 .nav{
@@ -65,7 +64,6 @@ h1,h2,h3{
   background:rgba(15,20,17,.96);
   color:#fff;
   padding:20px 22px;
-  backdrop-filter:blur(10px);
 }
 
 .nav-inner{
@@ -135,7 +133,7 @@ h1,h2,h3{
   max-width:1120px;
   margin:auto;
   display:grid;
-  grid-template-columns:1.25fr .85fr;
+  grid-template-columns:1.35fr .9fr;
   gap:28px;
   align-items:start;
 }
@@ -149,15 +147,18 @@ h1,h2,h3{
   overflow:hidden;
 }
 
-.profile-top{
+.profile-header{
   display:grid;
-  grid-template-columns:220px 1fr;
-  min-height:230px;
+  grid-template-columns:210px minmax(0,1fr);
+  border-bottom:1px solid var(--line);
 }
 
 .profile-photo{
+  width:210px;
+  height:210px;
   background:#e5ded3;
   border-right:1px solid var(--line);
+  overflow:hidden;
 }
 
 .profile-photo img{
@@ -168,34 +169,37 @@ h1,h2,h3{
 }
 
 .profile-info{
-  padding:34px 38px;
+  min-width:0;
+  padding:32px 34px;
 }
 
-.card-label{
+.label{
   color:var(--green);
   text-transform:uppercase;
   letter-spacing:.16em;
   font-weight:900;
-  font-size:.78rem;
+  font-size:.76rem;
   margin-bottom:12px;
 }
 
-h1{
-  font-size:clamp(3.2rem,7vw,5.8rem);
-  margin-bottom:10px;
+.profile-info h1{
+  font-size:clamp(2.8rem,5.6vw,4.8rem);
+  max-width:100%;
+  overflow-wrap:break-word;
+  word-break:normal;
+  margin-bottom:12px;
 }
 
 .role{
   color:var(--soft);
-  font-size:1.1rem;
+  font-size:1.02rem;
   margin-bottom:22px;
 }
 
 .links{
   display:flex;
   flex-wrap:wrap;
-  gap:12px;
-  margin-top:22px;
+  gap:10px;
 }
 
 .links a{
@@ -204,36 +208,32 @@ h1{
   background:#fbf6ed;
   color:var(--green);
   border-radius:999px;
-  padding:11px 17px;
-  font-size:.78rem;
+  padding:10px 15px;
+  font-size:.74rem;
   font-weight:900;
   letter-spacing:.08em;
   text-transform:uppercase;
 }
 
-.links a:hover{
-  border-color:var(--green);
+.danny-body{
+  padding:30px 38px 34px;
 }
 
-.profile-note{
-  padding:28px 38px 0;
+.danny-body p{
   color:var(--soft);
   font-size:1.02rem;
+  margin-bottom:24px;
 }
 
 .credentials{
   list-style:none;
-  padding:20px 38px 34px;
+  border-top:1px solid var(--line);
 }
 
 .credentials li{
   padding:14px 0;
   border-bottom:1px solid var(--line);
   color:var(--soft);
-}
-
-.credentials li:first-child{
-  border-top:1px solid var(--line);
 }
 
 .credentials b{
@@ -253,14 +253,14 @@ h1{
   padding:38px;
 }
 
-.money-card .card-label{
+.money-card .label{
   color:rgba(255,255,255,.68);
 }
 
 .money-card h2{
   color:#fff;
-  font-size:clamp(2.8rem,5.5vw,5rem);
-  margin-bottom:22px;
+  font-size:clamp(2.8rem,5.2vw,4.8rem);
+  margin-bottom:24px;
 }
 
 .money-card p{
@@ -350,31 +350,26 @@ footer b{
     padding:150px 16px 64px;
   }
 
-  .profile-top{
+  .profile-header{
     grid-template-columns:1fr;
   }
 
   .profile-photo{
-    height:260px;
+    width:100%;
+    height:280px;
     border-right:0;
     border-bottom:1px solid var(--line);
   }
 
   .profile-info,
-  .profile-note,
-  .credentials,
+  .danny-body,
   .money-card{
     padding-left:24px;
     padding-right:24px;
   }
 
-  .profile-info{
-    padding-top:28px;
-    padding-bottom:26px;
-  }
-
-  .profile-note{
-    padding-top:24px;
+  .profile-info h1{
+    font-size:3.2rem;
   }
 
   .money-list{
@@ -405,13 +400,13 @@ footer b{
   <div class="about-grid">
 
     <section class="card danny-card">
-      <div class="profile-top">
+      <div class="profile-header">
         <div class="profile-photo">
           <img src="danny-profile.jpg" alt="Danny Castonguay">
         </div>
 
         <div class="profile-info">
-          <div class="card-label">About</div>
+          <div class="label">About</div>
           <h1>Danny Castonguay</h1>
           <div class="role">Founder, operator, and advisor</div>
 
@@ -424,21 +419,21 @@ footer b{
         </div>
       </div>
 
-      <p class="profile-note">
-        Danny is listed here for transparency. You can check his public profile and background before joining or paying for a trip.
-      </p>
+      <div class="danny-body">
+        <p>Danny is listed here for transparency. You can check his public profile and background before joining or paying for a trip.</p>
 
-      <ul class="credentials">
-        <li><b>Founder and CEO</b>, <a href="https://bld.ai/" target="_blank" rel="noopener">bld.ai</a></li>
-        <li><b>Former Expert Associate Partner</b>, McKinsey & Company</li>
-        <li><b>Co-Founder and CTO</b>, Kalibrr</li>
-        <li><b>MBA</b>, Massachusetts Institute of Technology</li>
-        <li><b>Computer Engineering</b>, McGill University</li>
-      </ul>
+        <ul class="credentials">
+          <li><b>Founder and CEO</b>, <a href="https://bld.ai/" target="_blank" rel="noopener">bld.ai</a></li>
+          <li><b>Former Expert Associate Partner</b>, McKinsey & Company</li>
+          <li><b>Co-Founder and CTO</b>, Kalibrr</li>
+          <li><b>MBA</b>, Massachusetts Institute of Technology</li>
+          <li><b>Computer Engineering</b>, McGill University</li>
+        </ul>
+      </div>
     </section>
 
     <section class="card money-card">
-      <div class="card-label">Money transparency</div>
+      <div class="label">Money transparency</div>
       <h2>Every penny is tracked.</h2>
 
       <p>Every penny collected will be shown clearly: where it goes, what it pays for, and what remains.</p>
