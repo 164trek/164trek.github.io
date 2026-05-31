@@ -309,31 +309,20 @@ h2{
   font-weight:900;
 }
 
-.illustration-card{
+.route-image-card{
   margin:34px auto 0;
-  max-width:1000px;
+  max-width:1100px;
   background:var(--paper);
   border:1px solid var(--line);
-  padding:22px;
   overflow:hidden;
 }
 
-.illustration-card svg{
+.route-image-card img{
   width:100%;
-  height:auto;
+  height:520px;
+  object-fit:cover;
+  object-position:top center;
   display:block;
-}
-
-.caption{
-  text-align:center;
-  margin-top:12px;
-  color:var(--muted);
-  font-size:.9rem;
-}
-
-.caption a{
-  color:var(--green);
-  font-weight:800;
 }
 
 .photo-grid{
@@ -564,13 +553,14 @@ footer b{
     font-size:1rem;
   }
 
-  .illustration-card{
-    padding:10px;
+  .route-image-card{
     overflow-x:auto;
   }
 
-  .illustration-card svg{
-    min-width:860px;
+  .route-image-card img{
+    width:1000px;
+    max-width:none;
+    height:430px;
   }
 }
 
@@ -708,62 +698,8 @@ footer b{
       <h2>Rinjani climb</h2>
     </div>
 
-    <figure class="illustration-card">
-      <svg viewBox="0 0 1200 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mount Rinjani trekking route illustration">
-        <rect width="1200" height="620" fill="#fffaf2"/>
-
-        <path d="M80 500 C220 470 310 420 420 335 C510 265 565 180 625 80 C685 215 750 310 840 365 C940 425 1035 455 1130 475 L1130 555 L80 555 Z"
-              fill="#e6e3d8"/>
-
-        <path d="M80 500 C180 482 260 430 350 360 C455 278 540 170 625 80 C690 215 760 315 850 370 C945 428 1030 455 1130 475"
-              fill="none" stroke="#211c16" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
-
-        <ellipse cx="805" cy="420" rx="130" ry="38" fill="#76b7d1" opacity="0.95"/>
-        <text x="805" y="485" text-anchor="middle" font-family="Inter" font-size="24" font-weight="900" fill="#2f4938">Segara Anak Lake</text>
-
-        <text x="625" y="48" text-anchor="middle" font-family="Inter" font-size="28" font-weight="900" fill="#a0552c">Summit · 3,726 m</text>
-        <text x="410" y="315" text-anchor="middle" font-family="Inter" font-size="23" font-weight="900" fill="#211c16">Crater Rim · 2,639 m</text>
-
-        <text x="115" y="585" text-anchor="middle" font-family="Inter" font-size="24" font-weight="900" fill="#5f574e">Sembalun</text>
-        <text x="975" y="585" text-anchor="middle" font-family="Inter" font-size="24" font-weight="900" fill="#5f574e">Torean / Senaru</text>
-        <text x="1125" y="585" text-anchor="end" font-family="Inter" font-size="24" font-weight="900" fill="#5f574e">Gili Island</text>
-
-        <g transform="translate(215 445)" stroke="#211c16" stroke-width="5" fill="none" stroke-linecap="round">
-          <circle cx="0" cy="0" r="10"/>
-          <line x1="0" y1="12" x2="0" y2="50"/>
-          <line x1="0" y1="26" x2="-28" y2="48"/>
-          <line x1="0" y1="26" x2="28" y2="48"/>
-          <line x1="0" y1="50" x2="-24" y2="88"/>
-          <line x1="0" y1="50" x2="24" y2="88"/>
-        </g>
-
-        <g transform="translate(637 128)" stroke="#211c16" stroke-width="5" fill="none" stroke-linecap="round">
-          <circle cx="0" cy="0" r="10"/>
-          <line x1="0" y1="12" x2="0" y2="52"/>
-          <line x1="0" y1="24" x2="-30" y2="0"/>
-          <line x1="0" y1="24" x2="30" y2="0"/>
-          <line x1="0" y1="52" x2="-24" y2="92"/>
-          <line x1="0" y1="52" x2="24" y2="92"/>
-        </g>
-
-        <g transform="translate(965 430)" stroke="#211c16" stroke-width="5" fill="none" stroke-linecap="round">
-          <circle cx="0" cy="0" r="10"/>
-          <line x1="0" y1="12" x2="0" y2="50"/>
-          <line x1="0" y1="28" x2="-30" y2="48"/>
-          <line x1="0" y1="28" x2="30" y2="48"/>
-          <line x1="0" y1="50" x2="-25" y2="90"/>
-          <line x1="0" y1="50" x2="25" y2="90"/>
-        </g>
-
-        <line x1="95" y1="570" x2="1110" y2="570" stroke="#d6cec2" stroke-width="4"/>
-      </svg>
-
-      <figcaption class="caption">
-        Inspired by / credits:
-        <a href="https://planetbell.me/2016/02/25/trekking-rinjani-tips-and-advice/" target="_blank" rel="noopener">
-          planetbell.me
-        </a>
-      </figcaption>
+    <figure class="route-image-card">
+      <img src="rinjani-route.png" alt="Rinjani trekking route illustration">
     </figure>
   </div>
 </section>
