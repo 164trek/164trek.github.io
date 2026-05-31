@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>About | 164 Trek</title>
-<meta name="description" content="About 164 Trek, Danny Castonguay, credentials, and payment transparency.">
+<meta name="description" content="About Danny Castonguay, credentials, and payment transparency for 164 Trek.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,7 +64,7 @@ h1,h2,h3{
 }
 
 .nav-inner{
-  max-width:1120px;
+  max-width:1040px;
   margin:auto;
   display:flex;
   align-items:center;
@@ -136,52 +136,32 @@ h1,h2,h3{
 }
 
 .about-layout{
-  max-width:1120px;
+  max-width:1040px;
   margin:auto;
   display:grid;
-  grid-template-columns:330px 1fr;
-  gap:32px;
+  grid-template-columns:300px 1fr;
+  gap:28px;
   align-items:start;
 }
 
 .profile-card{
-  position:sticky;
-  top:110px;
   background:var(--dark);
   color:#fff;
+  position:sticky;
+  top:110px;
 }
 
-.profile-link{
+.profile-photo{
+  height:330px;
+  background:
+    linear-gradient(rgba(15,20,17,.05),rgba(15,20,17,.52)),
+    url("https://media.licdn.com/dms/image/v2/D5603AQEM0c4QwqCn_A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1706249782311?e=2147483647&v=beta&t=linkedin") center/cover no-repeat;
   display:block;
   text-decoration:none;
 }
 
-.profile-image{
-  height:360px;
-  background:
-    linear-gradient(rgba(15,20,17,.25),rgba(15,20,17,.82)),
-    url("rinjani-hero-bg.png") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.initials{
-  width:126px;
-  height:126px;
-  border-radius:50%;
-  border:1px solid rgba(255,255,255,.35);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:'DM Serif Display',serif;
-  font-size:4.5rem;
-  color:#fff;
-  background:rgba(255,255,255,.08);
-}
-
 .profile-body{
-  padding:28px;
+  padding:26px;
 }
 
 .small-label{
@@ -195,13 +175,13 @@ h1,h2,h3{
 
 .profile-body h1{
   color:#fff;
-  font-size:3rem;
+  font-size:2.7rem;
   margin-bottom:12px;
 }
 
 .profile-body p{
   color:rgba(255,255,255,.72);
-  font-size:.98rem;
+  font-size:.96rem;
 }
 
 .profile-links{
@@ -259,25 +239,50 @@ h1,h2,h3{
   margin-bottom:14px;
 }
 
-.list{
-  list-style:none;
-  border-top:1px solid var(--line);
+.credential-links{
+  display:grid;
+  gap:12px;
   margin-top:18px;
 }
 
-.list li{
-  padding:16px 0;
-  border-bottom:1px solid var(--line);
+.credential-links a{
+  display:block;
+  text-decoration:none;
+  border:1px solid var(--line);
+  background:#fbf6ed;
+  padding:18px 20px;
 }
 
-.list strong{
+.credential-links a:hover{
+  border-color:var(--green);
+}
+
+.credential-links strong{
   display:block;
   color:var(--ink);
+  font-size:1.05rem;
   margin-bottom:4px;
 }
 
-.list span{
+.credential-links span{
   color:var(--soft);
+}
+
+.word-list{
+  list-style:none;
+  display:grid;
+  gap:10px;
+  margin-top:18px;
+}
+
+.word-list li{
+  color:var(--soft);
+  border-top:1px solid var(--line);
+  padding-top:12px;
+}
+
+.word-list b{
+  color:var(--ink);
 }
 
 .money-card{
@@ -347,6 +352,10 @@ footer b{
     position:relative;
     top:auto;
   }
+
+  .profile-photo{
+    height:360px;
+  }
 }
 
 @media(max-width:720px){
@@ -387,16 +396,12 @@ footer b{
     padding:28px 22px;
   }
 
-  .profile-image{
-    height:300px;
-  }
-
   .profile-body{
     padding:24px;
   }
 
   .profile-body h1{
-    font-size:2.6rem;
+    font-size:2.45rem;
   }
 
   .money-list{
@@ -427,16 +432,12 @@ footer b{
   <div class="about-layout">
 
     <aside class="profile-card">
-      <a class="profile-link" href="https://www.linkedin.com/in/dannycastonguay/" target="_blank" rel="noopener">
-        <div class="profile-image">
-          <div class="initials">DC</div>
-        </div>
-      </a>
+      <a class="profile-photo" href="https://www.linkedin.com/in/dannycastonguay/" target="_blank" rel="noopener" aria-label="Danny Castonguay LinkedIn profile"></a>
 
       <div class="profile-body">
         <div class="small-label">Public profile</div>
         <h1>Danny Castonguay</h1>
-        <p>Listed for transparency. Participants can check his public background before joining or paying for a trip.</p>
+        <p>Listed for transparency. You can review his public background before joining or paying for a trip.</p>
 
         <div class="profile-links">
           <a href="https://www.linkedin.com/in/dannycastonguay/" target="_blank" rel="noopener">LinkedIn</a>
@@ -449,41 +450,37 @@ footer b{
     <section class="content">
 
       <div class="card">
-        <div class="card-label">About</div>
-        <h2>164 Trek</h2>
-        <p>164 Trek organizes small group treks with clear planning, simple communication, and transparent handling of payments.</p>
-        <p>The current trip is Rinjani + Gili Island.</p>
+        <div class="card-label">Credentials</div>
+        <h2>Danny Castonguay</h2>
+
+        <div class="credential-links">
+          <a href="https://www.linkedin.com/in/dannycastonguay/" target="_blank" rel="noopener">
+            <strong>LinkedIn profile</strong>
+            <span>Public professional profile.</span>
+          </a>
+
+          <a href="https://resume.dannycastonguay.com/" target="_blank" rel="noopener">
+            <strong>Resume</strong>
+            <span>Work history, education, and projects.</span>
+          </a>
+
+          <a href="https://blog.dannycastonguay.com/" target="_blank" rel="noopener">
+            <strong>Blog</strong>
+            <span>Public writing and posts.</span>
+          </a>
+        </div>
       </div>
 
       <div class="card">
-        <div class="card-label">Credentials</div>
-        <h2>Danny’s public background</h2>
+        <div class="card-label">Background</div>
+        <h2>Public background</h2>
 
-        <ul class="list">
-          <li>
-            <strong>Founder and CEO, bld.ai</strong>
-            <span>Listed on his public resume.</span>
-          </li>
-
-          <li>
-            <strong>Former Expert Associate Partner, McKinsey & Company</strong>
-            <span>Listed on his public resume.</span>
-          </li>
-
-          <li>
-            <strong>Co-Founder and CTO, Kalibrr</strong>
-            <span>Listed on his public resume.</span>
-          </li>
-
-          <li>
-            <strong>MBA, Massachusetts Institute of Technology</strong>
-            <span>Listed on his public background.</span>
-          </li>
-
-          <li>
-            <strong>Computer Engineering, McGill University</strong>
-            <span>Listed on his public background.</span>
-          </li>
+        <ul class="word-list">
+          <li><b>Founder and CEO</b>, bld.ai</li>
+          <li><b>Former Expert Associate Partner</b>, McKinsey & Company</li>
+          <li><b>Co-Founder and CTO</b>, Kalibrr</li>
+          <li><b>MBA</b>, Massachusetts Institute of Technology</li>
+          <li><b>Computer Engineering</b>, McGill University</li>
         </ul>
       </div>
 
