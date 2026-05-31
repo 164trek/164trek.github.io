@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Upcoming Events | 164 Trek</title>
-<meta name="description" content="Upcoming trekking events by 164 Trek. Tentative climbs and trekking trips.">
+<meta name="description" content="Upcoming trek ideas by 164 Trek. Dates are tentative and can be discussed if interested.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -122,8 +122,8 @@ h1,h2,h3{
   align-items:center;
   justify-content:center;
   background:
-    linear-gradient(rgba(15,20,17,.64),rgba(15,20,17,.76)),
-    url("rinjani-cover-aug.png") center/cover no-repeat;
+    linear-gradient(rgba(15,20,17,.55),rgba(15,20,17,.72)),
+    url("https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount_Rinjani_Panorama.jpg") center/cover no-repeat;
   color:#fff;
 }
 
@@ -149,7 +149,7 @@ h1{
 .lede{
   max-width:760px;
   margin:auto;
-  color:rgba(255,255,255,.84);
+  color:rgba(255,255,255,.86);
   font-size:1.1rem;
 }
 
@@ -195,7 +195,16 @@ h1{
   color:var(--rust);
   font-size:clamp(2.1rem,4vw,3.2rem);
   line-height:1;
-  margin-bottom:22px;
+  margin-bottom:8px;
+}
+
+.tentative{
+  color:var(--muted);
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-weight:900;
+  font-size:.76rem;
+  margin-bottom:24px;
 }
 
 .event-card h2{
@@ -227,21 +236,49 @@ h1{
   font-weight:900;
 }
 
-.event-card.current{
-  border-color:var(--rust);
-}
-
-.event-card.current .pill{
-  color:#fff;
-  background:var(--rust);
-}
-
 .note{
   max-width:900px;
   margin:44px auto 0;
   text-align:center;
   color:var(--soft);
   font-size:.96rem;
+}
+
+.contact{
+  background:#0f1411;
+  color:#fff;
+  text-align:center;
+  padding:80px 22px;
+}
+
+.contact h2{
+  color:#fff;
+  font-size:clamp(2.4rem,6vw,4.6rem);
+  margin-bottom:14px;
+}
+
+.contact p{
+  color:rgba(255,255,255,.78);
+  margin-bottom:26px;
+}
+
+.btn{
+  display:inline-block;
+  background:#fff;
+  color:#111;
+  text-decoration:none;
+  padding:14px 24px;
+  border-radius:999px;
+  font-size:.82rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.number{
+  margin-top:18px;
+  color:rgba(255,255,255,.78);
+  font-weight:700;
 }
 
 footer{
@@ -331,9 +368,8 @@ footer b{
     <a href="index.html" class="logo"><span>164</span>Trek</a>
 
     <div class="nav-links">
-      <a href="index.html">Rinjani Trip</a>
       <a href="upcoming.html">Upcoming Events</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -342,7 +378,7 @@ footer b{
   <div class="wrap">
     <div class="label">Upcoming Events</div>
     <h1>Trips we are considering</h1>
-    <p class="lede">Dates are tentative. If you’re interested, message us and we can discuss the best date window with the group.</p>
+    <p class="lede">Dates are tentative. If you’re interested, message us and we can discuss the best date window.</p>
   </div>
 </header>
 
@@ -350,27 +386,16 @@ footer b{
   <div class="wrap">
     <div class="event-grid">
 
-      <a class="event-card current" href="index.html">
-        <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Gunung%20rinjani.jpg" alt="Mount Rinjani and Segara Anak Lake">
-        <div class="event-body">
-          <div class="event-type">First climb · List A</div>
-          <div class="event-date">6–11 Aug 2026</div>
-          <h2>Rinjani · 3,726 m</h2>
-          <div class="location">Lombok, Indonesia</div>
-          <div class="meta">6D5N trek + Gili Island recovery</div>
-          <span class="pill">Tentative date</span>
-        </div>
-      </a>
-
       <div class="event-card">
         <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Kangch-Goechala.jpg" alt="View from Goecha La pass">
         <div class="event-body">
           <div class="event-type">List B · Longer haul</div>
-          <div class="event-date">Oct 2026</div>
+          <div class="event-date">10/2026</div>
+          <div class="tentative">Tentative month</div>
           <h2>Goecha La · 4,940 m</h2>
           <div class="location">Sikkim, India</div>
-          <div class="meta">High-altitude trek with Kanchenjunga views</div>
-          <span class="pill">~9–10 day trek · tentative</span>
+          <div class="meta">High-altitude trek with Kanchenjunga views.</div>
+          <span class="pill">~9–10 day trek</span>
         </div>
       </div>
 
@@ -378,11 +403,12 @@ footer b{
         <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Tongariro%20Alpine%20Crossing.jpg" alt="Tongariro Alpine Crossing">
         <div class="event-body">
           <div class="event-type">List B · Longer haul</div>
-          <div class="event-date">Late Nov 2026</div>
+          <div class="event-date">11/2026</div>
+          <div class="tentative">Tentative month</div>
           <h2>Tongariro Northern Circuit · 43 km</h2>
           <div class="location">New Zealand</div>
-          <div class="meta">Volcanic trail, alpine weather, hut/camp route</div>
-          <span class="pill">3–4 days · tentative</span>
+          <div class="meta">Volcanic trail, alpine weather, hut or camp route.</div>
+          <span class="pill">3–4 days</span>
         </div>
       </div>
 
@@ -390,11 +416,12 @@ footer b{
         <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Overland%20Track%20Landscape%2C%20Tasmania.jpg" alt="Overland Track landscape in Tasmania">
         <div class="event-body">
           <div class="event-type">List B · Longer haul</div>
-          <div class="event-date">Late Nov 2026</div>
+          <div class="event-date">11/2026</div>
+          <div class="tentative">Tentative month</div>
           <h2>Overland Track · 65 km</h2>
           <div class="location">Tasmania, Australia</div>
-          <div class="meta">Multi-day trail through Tasmanian wilderness</div>
-          <span class="pill">Finish early Dec · tentative</span>
+          <div class="meta">Multi-day trail through Tasmanian wilderness.</div>
+          <span class="pill">Finish early Dec</span>
         </div>
       </div>
 
@@ -402,11 +429,12 @@ footer b{
         <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/A%20view%20of%20Mont%20Blanc%20from%20the%20Tour%20du%20Mont%20Blanc%2C%202007.jpg" alt="View of Mont Blanc from the Tour du Mont Blanc">
         <div class="event-body">
           <div class="event-type">List B · Longer haul</div>
-          <div class="event-date">Jul–Aug 2027</div>
+          <div class="event-date">07/2027 – 08/2027</div>
+          <div class="tentative">Tentative window</div>
           <h2>Tour du Mont Blanc · 170 km</h2>
           <div class="location">France · Italy · Switzerland</div>
-          <div class="meta">Classic Alpine circuit around Mont Blanc</div>
-          <span class="pill">6–7 days · tentative</span>
+          <div class="meta">Classic Alpine circuit around Mont Blanc.</div>
+          <span class="pill">6–7 days</span>
         </div>
       </div>
 
@@ -414,19 +442,31 @@ footer b{
         <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount%20Kilimanjaro.jpg" alt="Mount Kilimanjaro">
         <div class="event-body">
           <div class="event-type">List B · Longer haul</div>
-          <div class="event-date">Late Jan 2027</div>
+          <div class="event-date">01/2027</div>
+          <div class="tentative">Tentative month</div>
           <h2>Kilimanjaro · 5,895 m</h2>
           <div class="location">Tanzania</div>
-          <div class="meta">High-altitude summit trip, longer acclimatization preferred</div>
-          <span class="pill">Summit around 24 Jan · tentative</span>
+          <div class="meta">High-altitude summit trip, longer acclimatization preferred.</div>
+          <span class="pill">Summit window TBD</span>
         </div>
       </div>
 
     </div>
 
     <p class="note">
-      These trips are not open for booking yet. Final dates, route, group size, and price will depend on interest and logistics. Photos are sourced from Wikimedia Commons and may require attribution under their individual Creative Commons licenses.
+      These future trips are ideas for the next group treks. Final dates, route, group size, and price will depend on interest and logistics.
     </p>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Interested?</h2>
+    <p>Message us and tell us which trip you want to join.</p>
+    <a class="btn" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20want%20to%20ask%20about%20the%20upcoming%20164%20Trek%20events." target="_blank" rel="noopener">
+      Message on WhatsApp
+    </a>
+    <div class="number">Message us</div>
   </div>
 </section>
 
