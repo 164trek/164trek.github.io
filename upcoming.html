@@ -31,6 +31,10 @@
   padding:0;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   background:var(--bg);
   color:var(--ink);
@@ -110,27 +114,6 @@ h1,h2,h3{
   color:#fff;
 }
 
-@media(max-width:720px){
-  .nav{
-    padding:16px 14px;
-  }
-
-  .nav-inner{
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .nav-links{
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  .nav-links a{
-    font-size:.66rem;
-  }
-}
-
 .hero{
   min-height:72vh;
   padding:170px 22px 90px;
@@ -139,8 +122,8 @@ h1,h2,h3{
   align-items:center;
   justify-content:center;
   background:
-    linear-gradient(rgba(15,20,17,.58),rgba(15,20,17,.68)),
-    url("rinjani-cover.png") center/cover no-repeat;
+    linear-gradient(rgba(15,20,17,.64),rgba(15,20,17,.76)),
+    url("rinjani-cover-aug.png") center/cover no-repeat;
   color:#fff;
 }
 
@@ -159,14 +142,14 @@ h1,h2,h3{
 }
 
 h1{
-  font-size:clamp(3.2rem,8vw,7rem);
+  font-size:clamp(3rem,8vw,7rem);
   margin-bottom:18px;
 }
 
 .lede{
   max-width:760px;
   margin:auto;
-  color:rgba(255,255,255,.82);
+  color:rgba(255,255,255,.84);
   font-size:1.1rem;
 }
 
@@ -261,6 +244,18 @@ h1{
   font-size:.96rem;
 }
 
+footer{
+  background:#0b0f0d;
+  color:rgba(255,255,255,.65);
+  text-align:center;
+  padding:34px 20px;
+  font-size:.9rem;
+}
+
+footer b{
+  color:#fff;
+}
+
 @media(max-width:820px){
   .event-grid{
     grid-template-columns:1fr;
@@ -275,16 +270,56 @@ h1{
   }
 }
 
-footer{
-  background:#0b0f0d;
-  color:rgba(255,255,255,.65);
-  text-align:center;
-  padding:34px 20px;
-  font-size:.9rem;
+@media(max-width:720px){
+  .nav{
+    padding:14px 12px;
+  }
+
+  .nav-inner{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .nav-links{
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .nav-links a{
+    font-size:.66rem;
+  }
+
+  .hero{
+    min-height:70vh;
+    padding:150px 18px 70px;
+  }
+
+  h1{
+    font-size:clamp(3rem,15vw,5rem);
+  }
+
+  .lede{
+    font-size:1rem;
+  }
+
+  .events{
+    padding:60px 18px 80px;
+  }
 }
 
-footer b{
-  color:#fff;
+@media(max-width:420px){
+  .nav-links a{
+    font-size:.62rem;
+  }
+
+  .event-date{
+    font-size:2.2rem;
+  }
+
+  .event-card h2{
+    font-size:2rem;
+  }
 }
 </style>
 </head>
@@ -307,7 +342,7 @@ footer b{
   <div class="wrap">
     <div class="label">Upcoming Events</div>
     <h1>Trips we are considering</h1>
-    <p class="lede">Dates are tentative. The months are based on the best climbing windows and what members have asked for.</p>
+    <p class="lede">Dates are tentative. If you’re interested, message us and we can discuss the best date window with the group.</p>
   </div>
 </header>
 
@@ -319,11 +354,11 @@ footer b{
         <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Gunung%20rinjani.jpg" alt="Mount Rinjani and Segara Anak Lake">
         <div class="event-body">
           <div class="event-type">First climb · List A</div>
-          <div class="event-date">Aug 2026</div>
+          <div class="event-date">6–11 Aug 2026</div>
           <h2>Rinjani · 3,726 m</h2>
           <div class="location">Lombok, Indonesia</div>
           <div class="meta">6D5N trek + Gili Island recovery</div>
-          <span class="pill">Current trip · tentative</span>
+          <span class="pill">Tentative date</span>
         </div>
       </a>
 
