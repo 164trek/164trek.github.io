@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>164 Trek | Rinjani + Gili Island 6D5N</title>
-<meta name="description" content="Rinjani + Gili Island, 6D5N trek from Singapore. 6–11 August 2026, tentative. Estimated handled trip price from SGD $1,200 per person, excluding flights.">
+<meta name="description" content="Rinjani + Gili Island, 6D5N trek from Singapore. 08/06/2026 to 08/11/2026, tentative date. Estimated trip price from SGD $1,200 per person, excluding flights.">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="164 Trek">
 <meta property="og:title" content="164 Trek | Rinjani + Gili Island 6D5N">
-<meta property="og:description" content="Rinjani + Gili Island, 6D5N trek from Singapore. 6–11 August 2026, tentative.">
+<meta property="og:description" content="Rinjani + Gili Island, 6D5N trek from Singapore. 08/06/2026 to 08/11/2026, tentative date.">
 <meta property="og:image" content="https://164trek.github.io/rinjani-cover-aug.png">
 <meta property="og:image:secure_url" content="https://164trek.github.io/rinjani-cover-aug.png">
 <meta property="og:image:type" content="image/png">
@@ -18,7 +18,7 @@
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="164 Trek | Rinjani + Gili Island 6D5N">
-<meta name="twitter:description" content="Rinjani + Gili Island, 6D5N trek from Singapore. 6–11 August 2026, tentative.">
+<meta name="twitter:description" content="Rinjani + Gili Island, 6D5N trek from Singapore. 08/06/2026 to 08/11/2026, tentative date.">
 <meta name="twitter:image" content="https://164trek.github.io/rinjani-cover-aug.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +35,7 @@
   --line:#ddd3c6;
   --dark:#0f1411;
   --green:#2f4938;
+  --rust:#a0552c;
 }
 
 *{
@@ -129,7 +130,7 @@ h1,h2,h3{
 .hero{
   min-height:92vh;
   background:
-    linear-gradient(rgba(15,20,17,.43),rgba(15,20,17,.64)),
+    linear-gradient(rgba(15,20,17,.42),rgba(15,20,17,.66)),
     url("rinjanisummit.png") center/cover no-repeat;
   color:#fff;
   display:flex;
@@ -158,6 +159,15 @@ h1,h2,h3{
 .hero .date{
   margin-top:26px;
   font-size:clamp(1.55rem,3vw,2.3rem);
+  font-weight:900;
+}
+
+.hero .tentative{
+  margin-top:8px;
+  color:rgba(255,255,255,.75);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  font-size:.8rem;
   font-weight:900;
 }
 
@@ -204,8 +214,32 @@ h2{
   margin-bottom:22px;
 }
 
-.itinerary{
+.price-section{
   background:var(--paper);
+}
+
+.price-note{
+  max-width:760px;
+  margin:26px auto 0;
+  color:var(--soft);
+  font-size:1.08rem;
+}
+
+.price-note p{
+  margin-bottom:14px;
+}
+
+.price-big{
+  font-family:'DM Serif Display',serif;
+  color:var(--ink);
+  font-size:clamp(2.4rem,7vw,5.2rem);
+  line-height:1;
+  text-align:center;
+  margin-top:26px;
+}
+
+.itinerary{
+  background:var(--bg);
 }
 
 .days{
@@ -229,21 +263,6 @@ h2{
 
 .day p{
   color:var(--soft);
-}
-
-.price-section{
-  background:var(--bg);
-}
-
-.price-note{
-  max-width:760px;
-  margin:26px auto 0;
-  color:var(--soft);
-  font-size:1.08rem;
-}
-
-.price-note p{
-  margin-bottom:14px;
 }
 
 .included{
@@ -277,6 +296,9 @@ h2{
 .illustration-card{
   margin:34px auto 0;
   max-width:1000px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:22px;
 }
 
 .illustration-card svg{
@@ -388,8 +410,8 @@ footer b{
   position:fixed;
   inset:0;
   z-index:9999;
-  background:rgba(0,0,0,.86);
-  padding:24px;
+  background:rgba(0,0,0,.9);
+  padding:22px;
   align-items:center;
   justify-content:center;
 }
@@ -398,24 +420,54 @@ footer b{
   display:flex;
 }
 
+.lightbox-box{
+  width:min(100%,1100px);
+  text-align:center;
+}
+
 .lightbox img{
-  max-width:min(100%,1100px);
-  max-height:82vh;
+  width:100%;
+  max-height:78vh;
   object-fit:contain;
+  margin:auto;
+}
+
+.lightbox-title{
+  color:#fff;
+  margin-top:12px;
+  font-weight:800;
+}
+
+.lightbox-controls{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin-top:14px;
+}
+
+.lightbox-controls button,
+.lightbox-close{
+  background:#fff;
+  color:#111;
+  border:0;
+  cursor:pointer;
+  font-weight:900;
+}
+
+.lightbox-controls button{
+  padding:10px 16px;
+  border-radius:999px;
 }
 
 .lightbox-close{
   position:fixed;
   top:18px;
   right:22px;
-  background:#fff;
-  color:#111;
-  border:0;
   width:44px;
   height:44px;
   border-radius:50%;
   font-size:28px;
-  cursor:pointer;
 }
 
 @media(max-width:850px){
@@ -486,6 +538,10 @@ footer b{
   .photo img{
     height:260px;
   }
+
+  .price-big{
+    font-size:3rem;
+  }
 }
 </style>
 </head>
@@ -497,7 +553,6 @@ footer b{
     <a href="index.html" class="logo"><span>164</span>Trek</a>
 
     <div class="nav-links">
-      <a href="index.html">Rinjani Trip</a>
       <a href="upcoming.html">Upcoming Events</a>
       <a href="#contact">Contact</a>
     </div>
@@ -508,10 +563,28 @@ footer b{
   <div class="hero-inner">
     <h1>Rinjani + Gili Island</h1>
     <p>6D5N trek from Singapore to Mount Rinjani and Gili Island.</p>
-    <div class="date">6–11 August 2026, tentative</div>
+    <div class="date">08/06/2026 – 08/11/2026</div>
+    <div class="tentative">Tentative date</div>
     <a class="btn" href="#contact">Reserve your slot now!</a>
   </div>
 </header>
+
+<section class="section price-section">
+  <div class="wrap">
+    <div class="center">
+      <div class="label">Price</div>
+      <h2>Estimated trip price</h2>
+    </div>
+
+    <div class="price-big">From SGD $1,200</div>
+
+    <div class="price-note">
+      <p><b>Per person. Flights excluded.</b></p>
+      <p>This covers the local trip costs and the work to organize the main parts of the trip.</p>
+      <p>You can manage your own flight booking. You can also arrange your own hotel if you prefer. Message us and we can adjust what you need.</p>
+    </div>
+  </div>
+</section>
 
 <section class="section itinerary">
   <div class="wrap">
@@ -523,54 +596,39 @@ footer b{
     <div class="days">
       <div class="day">
         <h3>Day 1</h3>
-        <b>Thursday, 6 August 2026</b>
+        <b>08/06/2026</b>
         <p>Arrive in Lombok. Transfer to Sembalun. Hotel check-in and trek briefing.</p>
       </div>
 
       <div class="day">
         <h3>Day 2</h3>
-        <b>Friday, 7 August 2026</b>
+        <b>08/07/2026</b>
         <p>Trek from Sembalun to the crater rim. Camp overnight.</p>
       </div>
 
       <div class="day">
         <h3>Day 3</h3>
-        <b>Saturday, 8 August 2026</b>
+        <b>08/08/2026</b>
         <p>Early summit push. Descend to the lake and hot spring. Camp overnight.</p>
       </div>
 
       <div class="day">
         <h3>Day 4</h3>
-        <b>Sunday, 9 August 2026</b>
+        <b>08/09/2026</b>
         <p>Descend through Torean to Senaru. Hotel stay.</p>
       </div>
 
       <div class="day">
         <h3>Day 5</h3>
-        <b>Monday, 10 August 2026</b>
+        <b>08/10/2026</b>
         <p>Visit waterfalls. Boat to Gili Island. Snorkeling and recovery time.</p>
       </div>
 
       <div class="day">
         <h3>Day 6</h3>
-        <b>Tuesday, 11 August 2026</b>
+        <b>08/11/2026</b>
         <p>Boat back to Lombok. Airport transfer for departure.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="section price-section">
-  <div class="wrap">
-    <div class="center">
-      <div class="label">Price</div>
-      <h2>Estimated handled trip price</h2>
-    </div>
-
-    <div class="price-note">
-      <p><b>From SGD $1,200 per person, excluding flights.</b></p>
-      <p>This is a suggested handled trip price. It covers the local trip costs and the work to organize the main parts of the trip.</p>
-      <p>You can manage your own flight booking. You can also arrange your own hotel if you prefer. Message us and we can adjust what you need.</p>
     </div>
   </div>
 </section>
@@ -605,28 +663,61 @@ footer b{
     </div>
 
     <figure class="illustration-card">
-      <svg viewBox="0 0 1000 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rinjani route illustration">
-        <rect width="1000" height="520" fill="#fffaf2"/>
-        <path d="M60 410 C150 380 205 330 280 265 C355 200 420 250 500 95 C575 255 635 210 720 285 C800 355 875 380 940 405"
-              fill="none" stroke="#2f4938" stroke-width="6" stroke-linecap="round"/>
-        <path d="M60 410 C150 380 205 330 280 265 C355 200 420 250 500 95 C575 255 635 210 720 285 C800 355 875 380 940 405 L940 470 L60 470 Z"
+      <svg viewBox="0 0 1100 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rinjani route illustration">
+        <rect width="1100" height="520" fill="#fffaf2"/>
+
+        <path d="M70 405 C160 390 210 350 265 300 C330 240 375 230 420 170 C465 110 500 85 530 60 C570 135 600 195 660 230 C730 270 805 240 860 280 C930 330 990 360 1040 372"
+              fill="none" stroke="#211c16" stroke-width="5" stroke-linecap="round"/>
+
+        <path d="M70 405 C160 390 210 350 265 300 C330 240 375 230 420 170 C465 110 500 85 530 60 C570 135 600 195 660 230 C730 270 805 240 860 280 C930 330 990 360 1040 372 L1040 470 L70 470 Z"
               fill="#2f4938" opacity=".12"/>
-        <ellipse cx="650" cy="315" rx="86" ry="24" fill="#7bb6c9" opacity=".75"/>
-        <text x="650" y="356" text-anchor="middle" font-family="Inter" font-size="18" font-weight="800" fill="#2f4938">Segara Anak Lake</text>
-        <text x="500" y="58" text-anchor="middle" font-family="Inter" font-size="26" font-weight="900" fill="#211c16">Summit</text>
-        <text x="500" y="84" text-anchor="middle" font-family="Inter" font-size="18" font-weight="800" fill="#5f574e">3,726 m</text>
-        <text x="248" y="224" text-anchor="middle" font-family="Inter" font-size="24" font-weight="900" fill="#211c16">Crater Rim</text>
-        <text x="248" y="249" text-anchor="middle" font-family="Inter" font-size="17" font-weight="800" fill="#5f574e">2,639 m</text>
-        <text x="110" y="436" text-anchor="middle" font-family="Inter" font-size="18" font-weight="800" fill="#5f574e">Sembalun</text>
-        <text x="900" y="436" text-anchor="middle" font-family="Inter" font-size="18" font-weight="800" fill="#5f574e">Senaru / Gili</text>
-        <line x1="110" y1="485" x2="900" y2="485" stroke="#ddd3c6" stroke-width="3"/>
-        <text x="110" y="507" text-anchor="middle" font-family="Inter" font-size="14" font-weight="800" fill="#8c8175">Day 2</text>
-        <text x="500" y="507" text-anchor="middle" font-family="Inter" font-size="14" font-weight="800" fill="#8c8175">Day 3</text>
-        <text x="900" y="507" text-anchor="middle" font-family="Inter" font-size="14" font-weight="800" fill="#8c8175">Day 4–6</text>
+
+        <ellipse cx="705" cy="307" rx="92" ry="28" fill="#5aa6c8" opacity=".82"/>
+        <text x="705" y="354" text-anchor="middle" font-family="Inter" font-size="18" font-weight="800" fill="#2f4938">Segara Anak Lake</text>
+
+        <text x="528" y="36" text-anchor="middle" font-family="Inter" font-size="22" font-weight="900" fill="#a0552c">Summit · 3,726 m</text>
+        <text x="365" y="197" text-anchor="middle" font-family="Inter" font-size="18" font-weight="900" fill="#211c16">Crater Rim · 2,639 m</text>
+
+        <text x="100" y="438" text-anchor="middle" font-family="Inter" font-size="17" font-weight="800" fill="#5f574e">Sembalun</text>
+        <text x="980" y="405" text-anchor="middle" font-family="Inter" font-size="17" font-weight="800" fill="#5f574e">Torean / Senaru</text>
+        <text x="1035" y="462" text-anchor="end" font-family="Inter" font-size="17" font-weight="800" fill="#5f574e">Gili Island</text>
+
+        <g transform="translate(170 335)" stroke="#211c16" stroke-width="4" fill="none" stroke-linecap="round">
+          <circle cx="0" cy="0" r="9"/>
+          <line x1="0" y1="9" x2="0" y2="42"/>
+          <line x1="0" y1="21" x2="-18" y2="36"/>
+          <line x1="0" y1="21" x2="18" y2="36"/>
+          <line x1="0" y1="42" x2="-15" y2="68"/>
+          <line x1="0" y1="42" x2="15" y2="68"/>
+        </g>
+
+        <g transform="translate(535 84)" stroke="#211c16" stroke-width="4" fill="none" stroke-linecap="round">
+          <circle cx="0" cy="0" r="9"/>
+          <line x1="0" y1="9" x2="0" y2="42"/>
+          <line x1="0" y1="19" x2="-20" y2="0"/>
+          <line x1="0" y1="19" x2="20" y2="0"/>
+          <line x1="0" y1="42" x2="-15" y2="68"/>
+          <line x1="0" y1="42" x2="15" y2="68"/>
+        </g>
+
+        <g transform="translate(910 315)" stroke="#211c16" stroke-width="4" fill="none" stroke-linecap="round">
+          <circle cx="0" cy="0" r="9"/>
+          <line x1="0" y1="9" x2="0" y2="42"/>
+          <line x1="0" y1="22" x2="-18" y2="32"/>
+          <line x1="0" y1="22" x2="18" y2="32"/>
+          <line x1="0" y1="42" x2="-15" y2="68"/>
+          <line x1="0" y1="42" x2="15" y2="68"/>
+        </g>
+
+        <text x="185" y="296" font-family="Inter" font-size="15" font-weight="800" fill="#a0552c">Day 2: up to camp</text>
+        <text x="560" y="190" text-anchor="middle" font-family="Inter" font-size="15" font-weight="800" fill="#a0552c">Day 3: summit, lake, hot spring</text>
+        <text x="880" y="260" text-anchor="middle" font-family="Inter" font-size="15" font-weight="800" fill="#a0552c">Day 4: descend</text>
+
+        <line x1="90" y1="488" x2="1030" y2="488" stroke="#ddd3c6" stroke-width="3"/>
       </svg>
 
       <figcaption class="caption">
-        Inspired by
+        Inspired by / credits:
         <a href="https://planetbell.me/2016/02/25/trekking-rinjani-tips-and-advice/" target="_blank" rel="noopener">
           planetbell.me
         </a>
@@ -638,42 +729,44 @@ footer b{
 <section class="section photos">
   <div class="wrap">
     <div class="center">
-      <h2>Rinjani and Gili</h2>
+      <h2>Mt. Rinjani and Gili Island</h2>
     </div>
 
     <div class="photo-grid">
-      <button class="photo" onclick="openLightbox('rinjanisummit.png')">
+      <button class="photo" onclick="openGallery('summit')">
         <img src="rinjanisummit.png" alt="Mount Rinjani summit view">
         <span>Summit</span>
       </button>
 
-      <button class="photo" onclick="openLightbox('craterrim.png')">
+      <button class="photo" onclick="openGallery('crater')">
         <img src="craterrim.png" alt="Rinjani crater rim">
         <span>Crater Rim</span>
       </button>
 
-      <button class="photo" onclick="openLightbox('hotspring.png')">
+      <button class="photo" onclick="openGallery('lake')">
         <img src="hotspring.png" alt="Rinjani lake and hot spring">
         <span>Lake & Hot Spring</span>
       </button>
 
-      <button class="photo" onclick="openLightbox('waterfalls.png')">
+      <button class="photo" onclick="openGallery('waterfalls')">
         <img src="waterfalls.png" alt="Waterfalls near Rinjani">
         <span>Waterfalls</span>
       </button>
 
-      <button class="photo" onclick="openLightbox('giliisland.png')">
+      <button class="photo" onclick="openGallery('gili')">
         <img src="giliisland.png" alt="Gili Island beach">
         <span>Gili Island</span>
       </button>
 
-      <button class="photo" onclick="openLightbox('snorkel.png')">
+      <button class="photo" onclick="openGallery('snorkel')">
         <img src="snorkel.png" alt="Snorkeling in Gili Island">
         <span>Snorkeling</span>
       </button>
     </div>
 
-    <p class="credit">Photos shown for trip reference. Some activity photos are credited to Ande Rinjani.</p>
+    <p class="credit">
+      Photos shown for trip reference. Some local photos are credited to Ande Rinjani. Online reference photos are from Wikimedia Commons and may require attribution under their individual licenses.
+    </p>
   </div>
 </section>
 
@@ -697,22 +790,175 @@ footer b{
   <div>Train together. Climb safe. Enjoy the trail.</div>
 </footer>
 
-<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">×</button>
-  <img id="lightboxImg" src="" alt="Expanded trip photo">
+
+  <div class="lightbox-box">
+    <img id="lightboxImg" src="" alt="Expanded trip photo">
+    <div class="lightbox-title" id="lightboxTitle"></div>
+
+    <div class="lightbox-controls">
+      <button onclick="prevPhoto()">Previous</button>
+      <button onclick="nextPhoto()">Next</button>
+    </div>
+  </div>
 </div>
 
 <script>
-function openLightbox(src){
-  const lightbox = document.getElementById('lightbox');
-  const img = document.getElementById('lightboxImg');
-  img.src = src;
-  lightbox.classList.add('open');
+const galleries = {
+  summit: [
+    {
+      src: "rinjanisummit.png",
+      title: "Summit"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rinjani_Summit.jpg",
+      title: "Rinjani summit"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mt_Rinjani_summit_ridge..jpg",
+      title: "Summit ridge"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Descend_Mt._Rinjani_summit.JPG",
+      title: "Summit descent"
+    }
+  ],
+
+  crater: [
+    {
+      src: "craterrim.png",
+      title: "Crater Rim"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mount_Rinjani_Crater_Rim_%28187486427%29.jpeg",
+      title: "Rinjani crater rim"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/RinjaniCraterRim_1.jpg",
+      title: "Crater rim view"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Plawangan_sembalun%2C_TN_Gunung_Rinjani.jpg",
+      title: "Plawangan Sembalun"
+    }
+  ],
+
+  lake: [
+    {
+      src: "hotspring.png",
+      title: "Lake & Hot Spring"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Mt_Rinjani_and_segara_anak_lake.jpg",
+      title: "Segara Anak Lake"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Rinjaninationalpark.jpg",
+      title: "Rinjani National Park"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Segara_Anak.jpg",
+      title: "Segara Anak"
+    }
+  ],
+
+  waterfalls: [
+    {
+      src: "waterfalls.png",
+      title: "Waterfalls"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Senaru_Waterfall_of_Tiu_Kelep.jpg",
+      title: "Tiu Kelep"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Air_Terjun_Sendang_Gile.jpg",
+      title: "Sendang Gile"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Senaru_Waterfall.JPG",
+      title: "Senaru waterfall"
+    }
+  ],
+
+  gili: [
+    {
+      src: "giliisland.png",
+      title: "Gili Island"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gili_Trawangan_beach.JPG",
+      title: "Gili beach"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gili_Trawangan_beach_2010.jpg",
+      title: "Gili Trawangan"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/People_on_the_beach%2C_Gili_Trawangan_%28island%29%2C_Indonesia.jpg",
+      title: "Beach time"
+    }
+  ],
+
+  snorkel: [
+    {
+      src: "snorkel.png",
+      title: "Snorkeling"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Muslim_Women_Snorkeling_in_Gili_Trawangan_Lombok.jpg",
+      title: "Gili snorkeling"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gili_Islands_underwater_statues.jpg",
+      title: "Underwater"
+    },
+    {
+      src: "https://commons.wikimedia.org/wiki/Special:Redirect/file/Gili_Trawangan_turtle.jpg",
+      title: "Turtle point"
+    }
+  ]
+};
+
+let currentGallery = [];
+let currentIndex = 0;
+
+function openGallery(name){
+  currentGallery = galleries[name] || [];
+  currentIndex = 0;
+  showPhoto();
+  document.getElementById("lightbox").classList.add("open");
+}
+
+function showPhoto(){
+  if(!currentGallery.length) return;
+
+  const item = currentGallery[currentIndex];
+  document.getElementById("lightboxImg").src = item.src;
+  document.getElementById("lightboxTitle").textContent =
+    item.title + " (" + (currentIndex + 1) + " / " + currentGallery.length + ")";
+}
+
+function nextPhoto(){
+  currentIndex = (currentIndex + 1) % currentGallery.length;
+  showPhoto();
+}
+
+function prevPhoto(){
+  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+  showPhoto();
 }
 
 function closeLightbox(){
-  document.getElementById('lightbox').classList.remove('open');
+  document.getElementById("lightbox").classList.remove("open");
 }
+
+document.addEventListener("keydown", function(e){
+  if(e.key === "Escape") closeLightbox();
+  if(e.key === "ArrowRight") nextPhoto();
+  if(e.key === "ArrowLeft") prevPhoto();
+});
 </script>
 
 </body>
