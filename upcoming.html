@@ -99,11 +99,6 @@ h1,h2,h3{
   text-transform:uppercase;
 }
 
-.home-link:hover{
-  color:#fff;
-  border-color:rgba(255,255,255,.55);
-}
-
 .nav-links{
   display:flex;
   gap:22px;
@@ -118,8 +113,6 @@ h1,h2,h3{
   letter-spacing:.08em;
   text-transform:uppercase;
 }
-
-.nav-links a:hover{color:#fff}
 
 .hero{
   min-height:72vh;
@@ -405,12 +398,6 @@ footer b{color:#fff}
   .events{padding:64px 18px 80px}
   .spacer{height:48px}
 }
-
-@media(max-width:420px){
-  .nav-links a{font-size:.62rem}
-  .event-date{font-size:2.1rem}
-  .event-card h3{font-size:1.85rem}
-}
 </style>
 </head>
 
@@ -447,79 +434,7 @@ footer b{color:#fff}
       <h2>Upcoming treks</h2>
     </div>
 
-    <div class="event-grid">
-
-      <article class="event-card">
-        <a class="event-photo" href="https://commons.wikimedia.org/wiki/Category:Goecha_La" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Kangch-Goechala.jpg" alt="Goecha La Trek">
-        </a>
-        <div class="event-body">
-          <h3>Goecha La · 4,940 m</h3>
-          <div class="location">Sikkim, India</div>
-          <div class="event-date">October 2026</div>
-          <div class="tentative">Tentative month</div>
-          <div class="meta">10–11 days. Kanchenjunga views.</div>
-          <span class="pill">High altitude</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://commons.wikimedia.org/wiki/File:Overland_Track_Past_Cradle_Mountain.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Overland_Track_Past_Cradle_Mountain.jpg" alt="Overland Track Tasmania">
-        </a>
-        <div class="event-body">
-          <h3>Overland Track · 65 km</h3>
-          <div class="location">Tasmania, Australia</div>
-          <div class="event-date">Late November 2026</div>
-          <div class="tentative">Tentative month</div>
-          <div class="meta">6–8 days. Cold, muddy, and remote.</div>
-          <span class="pill">Finish early Dec</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Tongariro_Northern_Circuit#/media/File:Emerald_Lakes_-_panoramio_(1).jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Emerald_Lakes_-_panoramio_%281%29.jpg" alt="Tongariro Northern Circuit">
-        </a>
-        <div class="event-body">
-          <h3>Tongariro Northern Circuit · 43 km</h3>
-          <div class="location">New Zealand</div>
-          <div class="event-date">Late November 2026</div>
-          <div class="tentative">Tentative month</div>
-          <div class="meta">3–4 days. Volcanic landscape and alpine weather.</div>
-          <span class="pill">3–4 days</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://cdn.britannica.com/33/153433-050-F76BDF75/Sunrise-Mount-Kilimanjaro-Tanzania.jpg" target="_blank" rel="noopener">
-          <img src="https://cdn.britannica.com/33/153433-050-F76BDF75/Sunrise-Mount-Kilimanjaro-Tanzania.jpg" alt="Mount Kilimanjaro">
-        </a>
-        <div class="event-body">
-          <h3>Kilimanjaro · 5,895 m</h3>
-          <div class="location">Tanzania</div>
-          <div class="event-date">Late January 2027</div>
-          <div class="tentative">Tentative month</div>
-          <div class="meta">7–9 days via Lemosho. High-altitude summit trek.</div>
-          <span class="pill">Summit trek</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://commons.wikimedia.org/wiki/Category:Tour_du_Mont_Blanc" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/PublicTMB.jpg" alt="Tour du Mont Blanc">
-        </a>
-        <div class="event-body">
-          <h3>Tour du Mont Blanc · 170 km</h3>
-          <div class="location">France · Italy · Switzerland</div>
-          <div class="event-date">July to August 2027</div>
-          <div class="tentative">Tentative window</div>
-          <div class="meta">10–12 days. Classic Alpine circuit.</div>
-          <span class="pill">Alpine trek</span>
-        </div>
-      </article>
-
-    </div>
+    <div class="event-grid" id="upcomingGrid"></div>
 
     <div class="spacer"></div>
 
@@ -529,261 +444,7 @@ footer b{color:#fff}
       <p>Dates are still open. Click any photo to view the source or credit page.</p>
     </div>
 
-    <div class="event-grid">
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Cordillera_Huayhuash#/media/File:Cordillera_Huayhuash_02359.JPG" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Cordillera_Huayhuash_02359.JPG" alt="Cordillera Huayhuash Circuit">
-        </a>
-        <div class="event-body">
-          <h3>Cordillera Huayhuash Circuit</h3>
-          <div class="location">Peru</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">10–12 days. 5,000m+ passes.</div>
-          <span class="pill">Hard</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Torres_del_Paine_National_Park#/media/File:Torres_del_Paine_y_cuernos_del_Paine,_montaje.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Torres_del_Paine_y_cuernos_del_Paine%2C_montaje.jpg" alt="Torres del Paine O Circuit">
-        </a>
-        <div class="event-body">
-          <h3>Torres del Paine O Circuit</h3>
-          <div class="location">Chile</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">8–10 days. Patagonian weather.</div>
-          <span class="pill">Hard weather</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Manaslu#/media/File:Sunrise,_Manaslu.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Sunrise%2C_Manaslu.jpg" alt="Manaslu Circuit">
-        </a>
-        <div class="event-body">
-          <h3>Manaslu Circuit · 5,106 m pass</h3>
-          <div class="location">Nepal</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">14–16 days. Larkya La pass.</div>
-          <span class="pill">High altitude</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Dusky_Sound#/media/File:Tamatea_Dusky_Sound.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Tamatea_Dusky_Sound.jpg" alt="Dusky Track">
-        </a>
-        <div class="event-body">
-          <h3>Dusky Track</h3>
-          <div class="location">New Zealand</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">8–10 days. Wet, muddy, remote, and grimy.</div>
-          <span class="pill">Rough trek</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://www.atlasandboots.com/travel-blog/k2-base-camp-trek-pakistan/" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/12/K2_2006b.jpg" alt="K2 Base Camp Concordia">
-        </a>
-        <div class="event-body">
-          <h3>K2 Base Camp / Concordia</h3>
-          <div class="location">Pakistan</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">14–21 days. Big mountain base camp trek.</div>
-          <span class="pill">Expedition feel</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Annapurna_Circuit#/media/File:Annapurna_Massif_Panorama.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/71/Annapurna_Massif_Panorama.jpg" alt="Annapurna Circuit">
-        </a>
-        <div class="event-body">
-          <h3>Annapurna Circuit · 5,416 m pass</h3>
-          <div class="location">Nepal</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">15–20 days. Thorong La pass.</div>
-          <span class="pill">High altitude</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Mount_Everest#/media/File:Close_Up_View_of_Mount_Everest_from_Kala_Patthar_(5644_m)_in_2023-IMG-3485.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Close_Up_View_of_Mount_Everest_from_Kala_Patthar_%285644_m%29_in_2023-IMG-3485.jpg" alt="Everest Three Passes">
-        </a>
-        <div class="event-body">
-          <h3>Everest Three Passes</h3>
-          <div class="location">Nepal</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">18–22 days. Three 5,000m+ passes.</div>
-          <span class="pill">Big commitment</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Markha_River_(India)#/media/File:KangYatze.JPG" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/KangYatze.JPG" alt="Markha Valley">
-        </a>
-        <div class="event-body">
-          <h3>Markha Valley</h3>
-          <div class="location">Ladakh, India</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">8–10 days. High-altitude desert.</div>
-          <span class="pill">Dry altitude</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Larapinta_Trail#/media/File:Larapinta_Trail.JPG" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Larapinta_Trail.JPG" alt="Larapinta Trail">
-        </a>
-        <div class="event-body">
-          <h3>Larapinta Trail</h3>
-          <div class="location">Australia</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">12–20 days. Red Centre heat.</div>
-          <span class="pill">Heat trek</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Mount_Apo#/media/File:Tuktok_ng_Pilipinas.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Tuktok_ng_Pilipinas.jpg" alt="Mount Apo">
-        </a>
-        <div class="event-body">
-          <h3>Mount Apo · 2,954 m</h3>
-          <div class="location">Philippines</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">3–4 days. Highest peak in the Philippines.</div>
-          <span class="pill">Warmup option</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Mount_Olympus#/media/File:Skourta.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Skourta.jpg" alt="Mount Olympus">
-        </a>
-        <div class="event-body">
-          <h3>Mount Olympus · 2,917 m</h3>
-          <div class="location">Greece</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">2–3 days. Walking trail to Skala.</div>
-          <span class="pill">Greece pair trip</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Mount_Kinabalu#/media/File:Kinabalu_Sabah_Borneo_Kampong_Kundasang_panorama_2.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/72/Kinabalu_Sabah_Borneo_Kampong_Kundasang_panorama_2.jpg" alt="Mount Kinabalu">
-        </a>
-        <div class="event-body">
-          <h3>Mount Kinabalu · 4,095 m</h3>
-          <div class="location">Malaysian Borneo</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">2 days. Steep but well-maintained.</div>
-          <span class="pill">Short altitude</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Mount_Fuji#/media/File:View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg" alt="Mount Fuji">
-        </a>
-        <div class="event-body">
-          <h3>Mount Fuji · 3,776 m</h3>
-          <div class="location">Japan</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">July to September season</div>
-          <div class="meta">2 days. Walking trail, crowded but iconic.</div>
-          <span class="pill">Short season</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Laugavegur#/media/File:Landmannalaugar.jpeg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Landmannalaugar.jpeg" alt="Laugavegur Trail">
-        </a>
-        <div class="event-body">
-          <h3>Laugavegur Trail · 55 km</h3>
-          <div class="location">Iceland</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">4 days. Hot springs, glaciers, river crossings.</div>
-          <span class="pill">Cold route</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/West_Highland_Way#/media/File:WHW_Rannoch-Moor.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/WHW_Rannoch-Moor.jpg" alt="West Highland Way">
-        </a>
-        <div class="event-body">
-          <h3>West Highland Way · 155 km</h3>
-          <div class="location">Scotland</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">7–8 days. Wet, atmospheric, hard miles.</div>
-          <span class="pill">Long walk</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://upload.wikimedia.org/wikipedia/commons/8/82/Camino_de_Santiago_%2858438781%29.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Camino_de_Santiago_%2858438781%29.jpg" alt="Camino de Santiago">
-        </a>
-        <div class="event-body">
-          <h3>Camino de Santiago</h3>
-          <div class="location">Spain</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">Full Camino Frances or shorter sections. Social walking route.</div>
-          <span class="pill">Low elevation</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Toubkal#/media/File:My_Toubkal.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/My_Toubkal.jpg" alt="Mount Toubkal">
-        </a>
-        <div class="event-body">
-          <h3>Mount Toubkal · 4,167 m</h3>
-          <div class="location">Morocco</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">2–3 days. Highest peak in North Africa.</div>
-          <span class="pill">Short altitude</span>
-        </div>
-      </article>
-
-      <article class="event-card">
-        <a class="event-photo" href="https://en.wikipedia.org/wiki/Mount_Bromo#/media/File:Bromo-Semeru-Batok-Widodaren.jpg" target="_blank" rel="noopener">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/Bromo-Semeru-Batok-Widodaren.jpg" alt="Mount Bromo and Ijen">
-        </a>
-        <div class="event-body">
-          <h3>Mount Bromo + Ijen</h3>
-          <div class="location">Indonesia</div>
-          <div class="event-date">Coming soon</div>
-          <div class="tentative">Date to be discussed</div>
-          <div class="meta">2–3 days. Volcanoes, sulfur miners, blue flames.</div>
-          <span class="pill">Short trip</span>
-        </div>
-      </article>
-
-    </div>
+    <div class="event-grid" id="comingGrid"></div>
 
     <p class="note">
       Credits to the owners of each photo. Click the photo on each mountain card to open the source or credit link.
@@ -809,11 +470,268 @@ footer b{color:#fff}
 </footer>
 
 <script>
-document.querySelectorAll(".event-photo img").forEach(function(img){
-  img.addEventListener("error", function(){
-    img.src = "upcoming-events-bg.png";
-  });
-});
+function wikiFile(fileName){
+  return "https://commons.wikimedia.org/wiki/Special:FilePath/" + encodeURIComponent(fileName);
+}
+
+const upcomingTreks = [
+  {
+    title:"Goecha La · 4,940 m",
+    location:"Sikkim, India",
+    date:"October 2026",
+    tentative:"Tentative month",
+    meta:"10–11 days. Kanchenjunga views.",
+    pill:"High altitude",
+    img:wikiFile("Kangch-Goechala.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Goecha_La#/media/File:Kangch-Goechala.jpg"
+  },
+  {
+    title:"Overland Track · 65 km",
+    location:"Tasmania, Australia",
+    date:"Late November 2026",
+    tentative:"Tentative month",
+    meta:"6–8 days. Cold, muddy, and remote.",
+    pill:"Finish early Dec",
+    img:wikiFile("Overland_Track_Past_Cradle_Mountain.jpg"),
+    credit:"https://commons.wikimedia.org/wiki/File:Overland_Track_Past_Cradle_Mountain.jpg"
+  },
+  {
+    title:"Tongariro Northern Circuit · 43 km",
+    location:"New Zealand",
+    date:"Late November 2026",
+    tentative:"Tentative month",
+    meta:"3–4 days. Volcanic landscape and alpine weather.",
+    pill:"3–4 days",
+    img:wikiFile("Emerald_Lakes_-_panoramio_(1).jpg"),
+    credit:"https://en.wikipedia.org/wiki/Tongariro_Northern_Circuit#/media/File:Emerald_Lakes_-_panoramio_(1).jpg"
+  },
+  {
+    title:"Kilimanjaro · 5,895 m",
+    location:"Tanzania",
+    date:"Late January 2027",
+    tentative:"Tentative month",
+    meta:"7–9 days via Lemosho. High-altitude summit trek.",
+    pill:"Summit trek",
+    img:"https://cdn.britannica.com/33/153433-050-F76BDF75/Sunrise-Mount-Kilimanjaro-Tanzania.jpg",
+    credit:"https://cdn.britannica.com/33/153433-050-F76BDF75/Sunrise-Mount-Kilimanjaro-Tanzania.jpg"
+  },
+  {
+    title:"Tour du Mont Blanc · 170 km",
+    location:"France · Italy · Switzerland",
+    date:"July to August 2027",
+    tentative:"Tentative window",
+    meta:"10–12 days. Classic Alpine circuit.",
+    pill:"Alpine trek",
+    img:wikiFile("PublicTMB.jpg"),
+    credit:"https://upload.wikimedia.org/wikipedia/commons/2/2f/PublicTMB.jpg"
+  }
+];
+
+const comingSoonTreks = [
+  {
+    title:"Cordillera Huayhuash Circuit",
+    location:"Peru",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"10–12 days. 5,000m+ passes.",
+    pill:"Hard",
+    img:wikiFile("Cordillera_Huayhuash_02359.JPG"),
+    credit:"https://en.wikipedia.org/wiki/Cordillera_Huayhuash#/media/File:Cordillera_Huayhuash_02359.JPG"
+  },
+  {
+    title:"Torres del Paine O Circuit",
+    location:"Chile",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"8–10 days. Patagonian weather.",
+    pill:"Hard weather",
+    img:wikiFile("Torres_del_Paine_y_cuernos_del_Paine,_montaje.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Torres_del_Paine_National_Park#/media/File:Torres_del_Paine_y_cuernos_del_Paine,_montaje.jpg"
+  },
+  {
+    title:"Manaslu Circuit · 5,106 m pass",
+    location:"Nepal",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"14–16 days. Larkya La pass.",
+    pill:"High altitude",
+    img:wikiFile("Sunrise,_Manaslu.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Manaslu#/media/File:Sunrise,_Manaslu.jpg"
+  },
+  {
+    title:"Dusky Track",
+    location:"New Zealand",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"8–10 days. Wet, muddy, remote, and grimy.",
+    pill:"Rough trek",
+    img:wikiFile("Tamatea_Dusky_Sound.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Dusky_Sound#/media/File:Tamatea_Dusky_Sound.jpg"
+  },
+  {
+    title:"K2 Base Camp / Concordia",
+    location:"Pakistan",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"14–21 days. Big mountain base camp trek.",
+    pill:"Expedition feel",
+    img:wikiFile("K2_2006b.jpg"),
+    credit:"https://commons.wikimedia.org/wiki/File:K2_2006b.jpg"
+  },
+  {
+    title:"Annapurna Circuit · 5,416 m pass",
+    location:"Nepal",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"15–20 days. Thorong La pass.",
+    pill:"High altitude",
+    img:wikiFile("Annapurna_Massif_Panorama.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Annapurna_Circuit#/media/File:Annapurna_Massif_Panorama.jpg"
+  },
+  {
+    title:"Everest Three Passes",
+    location:"Nepal",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"18–22 days. Three 5,000m+ passes.",
+    pill:"Big commitment",
+    img:wikiFile("Close_Up_View_of_Mount_Everest_from_Kala_Patthar_(5644_m)_in_2023-IMG-3485.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Mount_Everest#/media/File:Close_Up_View_of_Mount_Everest_from_Kala_Patthar_(5644_m)_in_2023-IMG-3485.jpg"
+  },
+  {
+    title:"Markha Valley",
+    location:"Ladakh, India",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"8–10 days. High-altitude desert.",
+    pill:"Dry altitude",
+    img:wikiFile("KangYatze.JPG"),
+    credit:"https://en.wikipedia.org/wiki/Markha_River_(India)#/media/File:KangYatze.JPG"
+  },
+  {
+    title:"Larapinta Trail",
+    location:"Australia",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"12–20 days. Red Centre heat.",
+    pill:"Heat trek",
+    img:wikiFile("Larapinta_Trail.JPG"),
+    credit:"https://en.wikipedia.org/wiki/Larapinta_Trail#/media/File:Larapinta_Trail.JPG"
+  },
+  {
+    title:"Mount Apo · 2,954 m",
+    location:"Philippines",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"3–4 days. Highest peak in the Philippines.",
+    pill:"Warmup option",
+    img:wikiFile("Tuktok_ng_Pilipinas.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Mount_Apo#/media/File:Tuktok_ng_Pilipinas.jpg"
+  },
+  {
+    title:"Mount Olympus · 2,917 m",
+    location:"Greece",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"2–3 days. Walking trail to Skala.",
+    pill:"Greece pair trip",
+    img:wikiFile("Skourta.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Mount_Olympus#/media/File:Skourta.jpg"
+  },
+  {
+    title:"Mount Kinabalu · 4,095 m",
+    location:"Malaysian Borneo",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"2 days. Steep but well-maintained.",
+    pill:"Short altitude",
+    img:wikiFile("Kinabalu_Sabah_Borneo_Kampong_Kundasang_panorama_2.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Mount_Kinabalu#/media/File:Kinabalu_Sabah_Borneo_Kampong_Kundasang_panorama_2.jpg"
+  },
+  {
+    title:"Mount Fuji · 3,776 m",
+    location:"Japan",
+    date:"Coming soon",
+    tentative:"July to September season",
+    meta:"2 days. Walking trail, crowded but iconic.",
+    pill:"Short season",
+    img:wikiFile("View_of_Mount_Fuji_from_Ōwakudani_20211202.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Mount_Fuji#/media/File:View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg"
+  },
+  {
+    title:"Laugavegur Trail · 55 km",
+    location:"Iceland",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"4 days. Hot springs, glaciers, river crossings.",
+    pill:"Cold route",
+    img:wikiFile("Landmannalaugar.jpeg"),
+    credit:"https://en.wikipedia.org/wiki/Laugavegur#/media/File:Landmannalaugar.jpeg"
+  },
+  {
+    title:"West Highland Way · 155 km",
+    location:"Scotland",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"7–8 days. Wet, atmospheric, hard miles.",
+    pill:"Long walk",
+    img:wikiFile("WHW_Rannoch-Moor.jpg"),
+    credit:"https://en.wikipedia.org/wiki/West_Highland_Way#/media/File:WHW_Rannoch-Moor.jpg"
+  },
+  {
+    title:"Camino de Santiago",
+    location:"Spain",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"Full Camino Frances or shorter sections. Social walking route.",
+    pill:"Low elevation",
+    img:wikiFile("Camino_de_Santiago_(58438781).jpg"),
+    credit:"https://upload.wikimedia.org/wikipedia/commons/8/82/Camino_de_Santiago_%2858438781%29.jpg"
+  },
+  {
+    title:"Mount Toubkal · 4,167 m",
+    location:"Morocco",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"2–3 days. Highest peak in North Africa.",
+    pill:"Short altitude",
+    img:wikiFile("My_Toubkal.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Toubkal#/media/File:My_Toubkal.jpg"
+  },
+  {
+    title:"Mount Bromo + Ijen",
+    location:"Indonesia",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"2–3 days. Volcanoes, sulfur miners, blue flames.",
+    pill:"Short trip",
+    img:wikiFile("Bromo-Semeru-Batok-Widodaren.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Mount_Bromo#/media/File:Bromo-Semeru-Batok-Widodaren.jpg"
+  }
+];
+
+function renderCards(items, targetId){
+  const target = document.getElementById(targetId);
+
+  target.innerHTML = items.map(item => `
+    <article class="event-card">
+      <a class="event-photo" href="${item.credit}" target="_blank" rel="noopener">
+        <img src="${item.img}" alt="${item.title}">
+      </a>
+      <div class="event-body">
+        <h3>${item.title}</h3>
+        <div class="location">${item.location}</div>
+        <div class="event-date">${item.date}</div>
+        <div class="tentative">${item.tentative}</div>
+        <div class="meta">${item.meta}</div>
+        <span class="pill">${item.pill}</span>
+      </div>
+    </article>
+  `).join("");
+}
+
+renderCards(upcomingTreks, "upcomingGrid");
+renderCards(comingSoonTreks, "comingGrid");
 </script>
 
 </body>
