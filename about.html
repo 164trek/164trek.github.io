@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>About | 164 Trek</title>
-<meta name="description" content="About 164 Trek, Danny Castonguay, public credentials, and payment transparency.">
+<meta name="description" content="About 164 Trek, Danny Castonguay, credentials, and payment transparency.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,11 +43,6 @@ body{
 
 a{
   color:inherit;
-}
-
-img{
-  max-width:100%;
-  display:block;
 }
 
 h1,h2,h3{
@@ -140,7 +135,7 @@ h1,h2,h3{
   padding:132px 22px 80px;
 }
 
-.resume{
+.about-layout{
   max-width:1120px;
   margin:auto;
   display:grid;
@@ -149,61 +144,62 @@ h1,h2,h3{
   align-items:start;
 }
 
-.profile{
-  background:var(--dark);
-  color:#fff;
-  border:1px solid rgba(255,255,255,.12);
+.profile-card{
   position:sticky;
   top:110px;
+  background:var(--dark);
+  color:#fff;
 }
 
-.photo{
-  height:380px;
-  background:#1b201c;
-  overflow:hidden;
+.profile-link{
+  display:block;
+  text-decoration:none;
 }
 
-.photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-
-.initials{
-  width:100%;
-  height:100%;
+.profile-image{
+  height:360px;
+  background:
+    linear-gradient(rgba(15,20,17,.25),rgba(15,20,17,.82)),
+    url("rinjani-hero-bg.png") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
-  background:
-    linear-gradient(rgba(15,20,17,.28),rgba(15,20,17,.78)),
-    url("rinjani-hero-bg.png") center/cover no-repeat;
-  color:#fff;
+}
+
+.initials{
+  width:126px;
+  height:126px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.35);
+  display:flex;
+  align-items:center;
+  justify-content:center;
   font-family:'DM Serif Display',serif;
-  font-size:5rem;
+  font-size:4.5rem;
+  color:#fff;
+  background:rgba(255,255,255,.08);
 }
 
 .profile-body{
   padding:28px;
 }
 
-.kicker{
+.small-label{
   text-transform:uppercase;
   letter-spacing:.16em;
   font-weight:900;
   font-size:.72rem;
-  color:rgba(255,255,255,.58);
+  color:rgba(255,255,255,.6);
   margin-bottom:12px;
 }
 
-.profile h1{
+.profile-body h1{
   color:#fff;
-  font-size:3.05rem;
+  font-size:3rem;
   margin-bottom:12px;
 }
 
-.profile p{
+.profile-body p{
   color:rgba(255,255,255,.72);
   font-size:.98rem;
 }
@@ -253,7 +249,7 @@ h1,h2,h3{
 }
 
 .card h2{
-  font-size:clamp(2.3rem,5vw,4.3rem);
+  font-size:clamp(2.2rem,5vw,4rem);
   margin-bottom:18px;
 }
 
@@ -263,69 +259,41 @@ h1,h2,h3{
   margin-bottom:14px;
 }
 
-.detail-list{
+.list{
   list-style:none;
-  display:grid;
-  gap:0;
-  margin-top:18px;
   border-top:1px solid var(--line);
+  margin-top:18px;
 }
 
-.detail-list li{
+.list li{
   padding:16px 0;
   border-bottom:1px solid var(--line);
 }
 
-.detail-list strong{
+.list strong{
   display:block;
   color:var(--ink);
-  font-size:1.05rem;
   margin-bottom:4px;
 }
 
-.detail-list span{
+.list span{
   color:var(--soft);
 }
 
-.clean-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:16px;
-  margin-top:18px;
-}
-
-.clean-box{
-  border:1px solid var(--line);
-  background:#fbf6ed;
-  padding:20px;
-}
-
-.clean-box b{
-  display:block;
-  color:var(--ink);
-  margin-bottom:6px;
-}
-
-.clean-box p{
-  margin:0;
-  font-size:.98rem;
-}
-
-.dark-card{
+.money-card{
   background:var(--dark);
   color:#fff;
-  border:1px solid rgba(255,255,255,.12);
 }
 
-.dark-card .card-label{
-  color:rgba(255,255,255,.66);
+.money-card .card-label{
+  color:rgba(255,255,255,.68);
 }
 
-.dark-card h2{
+.money-card h2{
   color:#fff;
 }
 
-.dark-card p{
+.money-card p{
   color:rgba(255,255,255,.76);
 }
 
@@ -334,14 +302,14 @@ h1,h2,h3{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:12px;
-  margin-top:22px;
+  margin-top:20px;
 }
 
 .money-list li{
   background:rgba(255,255,255,.07);
   border:1px solid rgba(255,255,255,.1);
-  color:rgba(255,255,255,.84);
-  padding:14px 16px;
+  padding:13px 15px;
+  color:rgba(255,255,255,.86);
 }
 
 .btn{
@@ -371,17 +339,13 @@ footer b{
 }
 
 @media(max-width:920px){
-  .resume{
+  .about-layout{
     grid-template-columns:1fr;
   }
 
-  .profile{
+  .profile-card{
     position:relative;
     top:auto;
-  }
-
-  .photo{
-    height:360px;
   }
 }
 
@@ -423,15 +387,18 @@ footer b{
     padding:28px 22px;
   }
 
+  .profile-image{
+    height:300px;
+  }
+
   .profile-body{
     padding:24px;
   }
 
-  .profile h1{
-    font-size:2.65rem;
+  .profile-body h1{
+    font-size:2.6rem;
   }
 
-  .clean-grid,
   .money-list{
     grid-template-columns:1fr;
   }
@@ -457,22 +424,23 @@ footer b{
 </nav>
 
 <main class="page">
-  <div class="resume">
+  <div class="about-layout">
 
-    <aside class="profile">
-      <div class="photo">
-        <img src="danny-castonguay.png" alt="Danny Castonguay" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="initials" style="display:none;">DC</div>
-      </div>
+    <aside class="profile-card">
+      <a class="profile-link" href="https://www.linkedin.com/in/dannycastonguay/" target="_blank" rel="noopener">
+        <div class="profile-image">
+          <div class="initials">DC</div>
+        </div>
+      </a>
 
       <div class="profile-body">
-        <div class="kicker">Public profile</div>
+        <div class="small-label">Public profile</div>
         <h1>Danny Castonguay</h1>
-        <p>Listed here for transparency. Participants can review his public background before joining or paying for a trip.</p>
+        <p>Listed for transparency. Participants can check his public background before joining or paying for a trip.</p>
 
         <div class="profile-links">
-          <a href="https://resume.dannycastonguay.com/" target="_blank" rel="noopener">Resume</a>
           <a href="https://www.linkedin.com/in/dannycastonguay/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://resume.dannycastonguay.com/" target="_blank" rel="noopener">Resume</a>
           <a href="https://blog.dannycastonguay.com/" target="_blank" rel="noopener">Blog</a>
         </div>
       </div>
@@ -482,78 +450,61 @@ footer b{
 
       <div class="card">
         <div class="card-label">About</div>
-        <h2>Clear planning and simple accountability.</h2>
-        <p>164 Trek is starting with the Rinjani + Gili Island trip. The goal is to keep planning clear, payments transparent, and communication simple.</p>
-        <p>Danny Castonguay is listed here so participants can check the public background of one of the people helping with structure and payment transparency.</p>
+        <h2>164 Trek</h2>
+        <p>164 Trek organizes small group treks with clear planning, simple communication, and transparent handling of payments.</p>
+        <p>The current trip is Rinjani + Gili Island.</p>
       </div>
 
       <div class="card">
         <div class="card-label">Credentials</div>
-        <h2>Public background</h2>
+        <h2>Danny’s public background</h2>
 
-        <ul class="detail-list">
+        <ul class="list">
           <li>
-            <strong>Resume</strong>
-            <span>Public resume page for work history, education, and projects.</span>
+            <strong>Founder and CEO, bld.ai</strong>
+            <span>Listed on his public resume.</span>
           </li>
 
           <li>
-            <strong>LinkedIn</strong>
-            <span>Public professional profile for identity and background checks.</span>
+            <strong>Former Expert Associate Partner, McKinsey & Company</strong>
+            <span>Listed on his public resume.</span>
           </li>
 
           <li>
-            <strong>Blog</strong>
-            <span>Public writing and long-form posts.</span>
+            <strong>Co-Founder and CTO, Kalibrr</strong>
+            <span>Listed on his public resume.</span>
+          </li>
+
+          <li>
+            <strong>MBA, Massachusetts Institute of Technology</strong>
+            <span>Listed on his public background.</span>
+          </li>
+
+          <li>
+            <strong>Computer Engineering, McGill University</strong>
+            <span>Listed on his public background.</span>
           </li>
         </ul>
       </div>
 
-      <div class="card">
-        <div class="card-label">Role</div>
-        <h2>What Danny helps with</h2>
-
-        <div class="clean-grid">
-          <div class="clean-box">
-            <b>Planning structure</b>
-            <p>Keeping the trip plan organized and easy to understand.</p>
-          </div>
-
-          <div class="clean-box">
-            <b>Payment transparency</b>
-            <p>Making sure collected money is tracked clearly.</p>
-          </div>
-
-          <div class="clean-box">
-            <b>Cost visibility</b>
-            <p>Showing where money goes: guides, permits, transport, hotels, admin, and logistics.</p>
-          </div>
-
-          <div class="clean-box">
-            <b>Accountability</b>
-            <p>Giving participants public links they can check before joining.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card dark-card">
+      <div class="card money-card">
         <div class="card-label">Money transparency</div>
-        <h2>Where the money goes</h2>
+        <h2>Every penny is tracked.</h2>
 
-        <p>Money collected for the trip will be tracked clearly. It will be used for real trip costs.</p>
+        <p>Every penny collected will be shown clearly: where it goes, what it pays for, and what remains.</p>
 
         <ul class="money-list">
           <li>Guide fees</li>
-          <li>Admin and coordination</li>
-          <li>Permits and park fees</li>
-          <li>Local transport</li>
+          <li>Admin</li>
+          <li>Permits</li>
+          <li>Transport</li>
           <li>Accommodation</li>
           <li>Boats and transfers</li>
+          <li>Park fees</li>
           <li>Trip logistics</li>
-          <li>Emergency buffer</li>
         </ul>
 
-        <p style="margin-top:22px;">Any surplus will either be returned to participants or used for the next trek, with the group informed clearly.</p>
+        <p style="margin-top:22px;">Any surplus will either be returned to participants or invested into the next trek.</p>
 
         <a class="btn" href="index.html#payment">Go to payment section</a>
       </div>
