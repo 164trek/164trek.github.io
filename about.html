@@ -17,7 +17,6 @@
   --paper:#fffaf2;
   --ink:#211c16;
   --soft:#5f574e;
-  --muted:#8c8175;
   --line:#ddd3c6;
   --green:#2f4938;
   --dark:#0f1411;
@@ -151,6 +150,7 @@ h1,h2{
   display:grid;
   grid-template-columns:210px minmax(0,1fr);
   border-bottom:1px solid var(--line);
+  align-items:stretch;
 }
 
 .profile-photo{
@@ -171,6 +171,9 @@ h1,h2{
 .profile-info{
   min-width:0;
   padding:32px 34px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
 .label{
@@ -179,21 +182,16 @@ h1,h2{
   letter-spacing:.16em;
   font-weight:900;
   font-size:.76rem;
-  margin-bottom:12px;
+  margin-bottom:10px;
 }
 
 .profile-info h1{
-  font-size:clamp(2.8rem,5.6vw,4.8rem);
+  font-size:clamp(2.65rem,4.4vw,4rem);
   max-width:100%;
-  overflow-wrap:break-word;
-  word-break:normal;
-  margin-bottom:12px;
-}
-
-.role{
-  color:var(--soft);
-  font-size:1.02rem;
-  margin-bottom:22px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  margin-bottom:20px;
 }
 
 .links{
@@ -369,7 +367,10 @@ footer b{
   }
 
   .profile-info h1{
-    font-size:3.2rem;
+    font-size:3rem;
+    white-space:normal;
+    overflow:visible;
+    text-overflow:clip;
   }
 
   .money-list{
@@ -408,7 +409,6 @@ footer b{
         <div class="profile-info">
           <div class="label">About</div>
           <h1>Danny Castonguay</h1>
-          <div class="role">Founder, operator, and advisor</div>
 
           <div class="links">
             <a href="https://www.linkedin.com/in/dannycastonguay/" target="_blank" rel="noopener">LinkedIn</a>
