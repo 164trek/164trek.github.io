@@ -43,7 +43,7 @@ a{
   color:inherit;
 }
 
-h1,h2,h3{
+h1,h2{
   font-family:'DM Serif Display',serif;
   font-weight:400;
   line-height:1.05;
@@ -110,7 +110,7 @@ h1,h2,h3{
 }
 
 .wrap{
-  max-width:960px;
+  max-width:900px;
   margin:auto;
 }
 
@@ -129,38 +129,69 @@ h1,h2,h3{
 }
 
 .hero h1{
-  font-size:clamp(4rem,10vw,8rem);
+  font-size:clamp(3.8rem,9vw,7.2rem);
   margin-bottom:18px;
 }
 
 .hero p{
   color:var(--soft);
-  max-width:680px;
+  max-width:660px;
   margin:auto;
   font-size:1.05rem;
 }
 
 .faq-list{
   display:grid;
-  gap:18px;
+  gap:12px;
 }
 
 .faq{
   background:var(--paper);
   border:1px solid var(--line);
-  padding:28px 30px;
 }
 
-.faq h2{
-  font-family:'Inter',sans-serif;
-  font-size:1.12rem;
-  line-height:1.35;
+.faq summary{
+  cursor:pointer;
+  list-style:none;
+  padding:22px 26px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
   font-weight:900;
-  margin-bottom:12px;
   color:var(--ink);
+  font-size:1rem;
 }
 
-.faq p{
+.faq summary::-webkit-details-marker{
+  display:none;
+}
+
+.faq summary::after{
+  content:"+";
+  flex:0 0 auto;
+  width:30px;
+  height:30px;
+  border:1px solid var(--line);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--green);
+  font-weight:900;
+  font-size:1rem;
+}
+
+.faq[open] summary::after{
+  content:"–";
+}
+
+.answer{
+  border-top:1px solid var(--line);
+  padding:22px 26px 26px;
+}
+
+.answer p{
   color:var(--soft);
   font-size:1.02rem;
 }
@@ -240,8 +271,17 @@ footer b{
     padding:150px 16px 70px;
   }
 
-  .faq{
-    padding:24px 20px;
+  .hero{
+    margin-bottom:36px;
+  }
+
+  .faq summary{
+    padding:20px 18px;
+    font-size:.95rem;
+  }
+
+  .answer{
+    padding:20px 18px 22px;
   }
 
   .contact-block{
@@ -277,40 +317,54 @@ footer b{
 
     <section class="faq-list">
 
-      <article class="faq">
-        <h2>1. How fit do I need to be? What if I’m worried I’m not fit enough?</h2>
-        <p>You do not need to be an athlete, but you do need to be honest about your current fitness. Multi-day trekking means long hours on your feet, uneven ground, stairs, heat, cold, and tired legs. If you are unsure, join a few weekend training hikes first and see how your body handles it.</p>
-      </article>
+      <details class="faq">
+        <summary>1. How fit do I need to be? What if I’m worried I’m not fit enough?</summary>
+        <div class="answer">
+          <p>You do not need to be an athlete, but you do need to be honest about your current fitness. Multi-day trekking means long hours on your feet, uneven ground, stairs, heat, cold, and tired legs. If you are unsure, join a few weekend training hikes first and see how your body handles it.</p>
+        </div>
+      </details>
 
-      <article class="faq">
-        <h2>2. How should I train for a multi-day trek from Singapore?</h2>
-        <p>Singapore does not have big mountains, so training is mostly about consistency. Long walks, stairs, Bukit Timah, MacRitchie, loaded backpack walks, and steady weekend hikes are all useful. The free weekend training hikes are open to anyone in the community, even if you are not sure about joining a trip yet.</p>
-      </article>
+      <details class="faq">
+        <summary>2. How should I train for a multi-day trek from Singapore?</summary>
+        <div class="answer">
+          <p>Singapore does not have big mountains, so training is mostly about consistency. Long walks, stairs, Bukit Timah, MacRitchie, loaded backpack walks, and steady weekend hikes are all useful. The free weekend training hikes are open to anyone in the community, even if you are not sure about joining a trip yet.</p>
+        </div>
+      </details>
 
-      <article class="faq">
-        <h2>3. What is AMS, and how do I prepare for it?</h2>
-        <p>AMS means acute mountain sickness, which can happen when your body struggles with altitude. Fitness helps, but pace matters more; some of the fittest people get hit hardest because they move too fast. Diamox is available by prescription from any GP in Singapore, but you should ask a doctor before taking it.</p>
-      </article>
+      <details class="faq">
+        <summary>3. What is AMS, and how do I prepare for it?</summary>
+        <div class="answer">
+          <p>AMS means acute mountain sickness, which can happen when your body struggles with altitude. Fitness helps, but pace matters more; some of the fittest people get hit hardest because they move too fast. Diamox is available by prescription from any GP in Singapore, but you should ask a doctor before taking it.</p>
+        </div>
+      </details>
 
-      <article class="faq">
-        <h2>4. What gear do I actually need? Do I need expensive boots and poles?</h2>
-        <p>You do not need the most expensive gear, but you do need gear that is tested before the trip. Decathlon Quechua boots are fine if you break them in for at least 50 km first. For loose scree terrain, two trekking poles are essential, not one.</p>
-      </article>
+      <details class="faq">
+        <summary>4. What gear do I actually need? Do I need expensive boots and poles?</summary>
+        <div class="answer">
+          <p>You do not need the most expensive gear, but you do need gear that is tested before the trip. Decathlon Quechua boots are fine if you break them in for at least 50 km first. For loose scree terrain, two trekking poles are essential, not one.</p>
+        </div>
+      </details>
 
-      <article class="faq">
-        <h2>5. What if something goes wrong on the trek: injury, weather, or AMS?</h2>
-        <p>We work with licensed local guides on every multi-day trek, and their judgment comes first on the mountain. If someone gets injured, the weather turns bad, or AMS symptoms get serious, the plan may change. Reaching the summit is not more important than getting everyone down safely.</p>
-      </article>
+      <details class="faq">
+        <summary>5. What if something goes wrong on the trek: injury, weather, or AMS?</summary>
+        <div class="answer">
+          <p>We work with licensed local guides on every multi-day trek, and their judgment comes first on the mountain. If someone gets injured, the weather turns bad, or AMS symptoms get serious, the plan may change. Reaching the summit is not more important than getting everyone down safely.</p>
+        </div>
+      </details>
 
-      <article class="faq">
-        <h2>6. What if I need to drop out after paying?</h2>
-        <p>Tell us as early as possible. If money has not yet been paid out for your guide, permit, hotel, transport, or other fixed costs, we return what can be returned. If some costs are already locked in, we show clearly what was spent and what can still be recovered.</p>
-      </article>
+      <details class="faq">
+        <summary>6. What if I need to drop out after paying?</summary>
+        <div class="answer">
+          <p>Tell us as early as possible. If money has not yet been paid out for your guide, permit, hotel, transport, or other fixed costs, we return what can be returned. If some costs are already locked in, we show clearly what was spent and what can still be recovered.</p>
+        </div>
+      </details>
 
-      <article class="faq">
-        <h2>7. What if I’m joining solo and don’t know anyone in the group?</h2>
-        <p>That is completely fine. A lot of people join these kinds of trips because they want to meet others who like hiking, training, and doing something a bit harder than a normal holiday. We keep the group small so people can get comfortable before the trip.</p>
-      </article>
+      <details class="faq">
+        <summary>7. What if I’m joining solo and don’t know anyone in the group?</summary>
+        <div class="answer">
+          <p>That is completely fine. A lot of people join these kinds of trips because they want to meet others who like hiking, training, and doing something a bit harder than a normal holiday. We keep the group small so people can get comfortable before the trip.</p>
+        </div>
+      </details>
 
     </section>
 
