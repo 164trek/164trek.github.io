@@ -25,9 +25,7 @@
   --muted:#8c8175;
   --line:#ddd3c6;
   --green:#2f4938;
-  --rust:#a0552c;
   --dark:#0f1411;
-  --pill:#ded4c7;
 }
 
 *{
@@ -196,9 +194,6 @@ h1,h2,h3{
 
 .btn{
   display:inline-block;
-  margin-top:30px;
-  background:#fff;
-  color:#111;
   text-decoration:none;
   padding:15px 26px;
   border-radius:999px;
@@ -206,6 +201,11 @@ h1,h2,h3{
   font-weight:900;
   letter-spacing:.08em;
   text-transform:uppercase;
+}
+
+.btn.white{
+  background:#fff;
+  color:#111;
 }
 
 .btn.dark{
@@ -217,14 +217,6 @@ h1,h2,h3{
   background:transparent;
   color:var(--green);
   border:1px solid var(--line);
-}
-
-.price-actions{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  justify-content:center;
-  margin:30px 0 24px;
 }
 
 .section{
@@ -253,14 +245,14 @@ h1,h2,h3{
 }
 
 .price-box{
-  max-width:850px;
+  max-width:860px;
   margin:auto;
+  text-align:center;
 }
 
 .price-box h2{
-  text-align:center;
   font-size:clamp(3rem,7vw,6rem);
-  margin-bottom:32px;
+  margin-bottom:28px;
 }
 
 .price-box h3{
@@ -268,7 +260,6 @@ h1,h2,h3{
   font-size:clamp(3.5rem,8vw,7rem);
   font-weight:400;
   line-height:1;
-  text-align:center;
   margin-bottom:22px;
 }
 
@@ -278,11 +269,18 @@ h1,h2,h3{
   margin-bottom:16px;
 }
 
-.price-box .price-note{
+.price-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+  margin:30px 0 24px;
+}
+
+.price-note{
   text-align:center;
   color:var(--soft);
   font-size:.95rem;
-  margin-top:-8px;
 }
 
 .route-card{
@@ -522,7 +520,7 @@ footer b{
     <div class="hero-date">6–11 August 2026</div>
     <div class="tentative">Tentative date</div>
 
-    <a class="btn" href="#contact">Reserve your slot now!</a>
+    <a class="btn white" href="#contact">Reserve your slot now!</a>
   </div>
 </header>
 
@@ -533,20 +531,16 @@ footer b{
     <h3>SGD $1,200</h3>
 
     <p><strong>Per person. Flights excluded.</strong></p>
-    <p>This estimate can cover local transport, Gili boat, guide, porters, camping gear, trek meals, park fees, waterfalls, and snorkeling.</p>
+    <p>This estimate is based on a small group of around 5–8 people, current exchange assumptions, guide costs, tips, and a buffer for changes.</p>
 
     <div class="price-actions">
-      <a class="btn dark" href="cost-breakdown.html">
-        See full cost breakdown →
-      </a>
-
       <a class="btn outline-dark" href="https://docs.google.com/spreadsheets/d/1Mk_g6B14i3_uyKEIDbTFXiE3g41Jm5HU/edit?usp=sharing" target="_blank" rel="noopener">
         View live cost sheet →
       </a>
     </div>
 
-    <p class="price-note">The live sheet is view-only and does not include participant personal details.</p>
-    <p>You can book your own flights. Message us if you want to join or ask what can be arranged.</p>
+    <p class="price-note">The live sheet shows the current working estimate and does not include participant personal details.</p>
+    <p>You can book your own flights. Final numbers will be confirmed once the group size is locked in.</p>
   </div>
 </section>
 
@@ -636,7 +630,7 @@ footer b{
     <h2>Reserve your slot now!</h2>
     <p>Message us on WhatsApp if you want to join or ask about the trip.</p>
 
-    <a class="btn" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20want%20to%20ask%20about%20the%20Rinjani%20and%20Gili%20Island%20trip." target="_blank" rel="noopener">
+    <a class="btn white" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20want%20to%20ask%20about%20the%20Rinjani%20and%20Gili%20Island%20trip." target="_blank" rel="noopener">
       Message on WhatsApp
     </a>
 
