@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FAQs | 164 Trek</title>
+<meta name="description" content="Frequently asked questions for 164 Trek.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#f7f3ec;
+  --paper:#fffaf2;
+  --ink:#211c16;
+  --soft:#5f574e;
+  --line:#ddd3c6;
+  --green:#2f4938;
+  --dark:#0f1411;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+}
+
+h1,h2,h3{
+  font-family:'DM Serif Display',serif;
+  font-weight:400;
+  line-height:1.05;
+}
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  background:rgba(15,20,17,.96);
+  color:#fff;
+  padding:20px 22px;
+}
+
+.nav-inner{
+  max-width:1120px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.logo{
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-size:1.15rem;
+  white-space:nowrap;
+}
+
+.logo span{
+  border:1px solid rgba(255,255,255,.45);
+  border-radius:999px;
+  padding:5px 11px;
+  margin-right:10px;
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+  align-items:center;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,.82);
+  text-decoration:none;
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.nav-links a:hover{
+  color:#fff;
+}
+
+.page{
+  padding:140px 22px 90px;
+}
+
+.wrap{
+  max-width:960px;
+  margin:auto;
+}
+
+.hero{
+  text-align:center;
+  margin-bottom:54px;
+}
+
+.label{
+  color:var(--green);
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-weight:900;
+  font-size:.78rem;
+  margin-bottom:12px;
+}
+
+.hero h1{
+  font-size:clamp(4rem,10vw,8rem);
+  margin-bottom:18px;
+}
+
+.hero p{
+  color:var(--soft);
+  max-width:680px;
+  margin:auto;
+  font-size:1.05rem;
+}
+
+.faq-list{
+  display:grid;
+  gap:18px;
+}
+
+.faq{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:28px 30px;
+}
+
+.faq h2{
+  font-family:'Inter',sans-serif;
+  font-size:1.12rem;
+  line-height:1.35;
+  font-weight:900;
+  margin-bottom:12px;
+  color:var(--ink);
+}
+
+.faq p{
+  color:var(--soft);
+  font-size:1.02rem;
+}
+
+.contact-block{
+  margin-top:34px;
+  background:var(--dark);
+  color:#fff;
+  padding:38px 32px;
+  text-align:center;
+}
+
+.contact-block h2{
+  color:#fff;
+  font-size:clamp(2.4rem,6vw,4.6rem);
+  margin-bottom:14px;
+}
+
+.contact-block p{
+  color:rgba(255,255,255,.78);
+  font-size:1.05rem;
+  margin-bottom:24px;
+}
+
+.btn{
+  display:inline-block;
+  background:#fff;
+  color:#111;
+  text-decoration:none;
+  padding:14px 24px;
+  border-radius:999px;
+  font-size:.82rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.number{
+  margin-top:18px;
+  color:rgba(255,255,255,.78);
+  font-weight:800;
+}
+
+footer{
+  background:#0b0f0d;
+  color:rgba(255,255,255,.65);
+  text-align:center;
+  padding:34px 20px;
+  font-size:.9rem;
+}
+
+footer b{
+  color:#fff;
+}
+
+@media(max-width:720px){
+  .nav{
+    padding:14px 12px;
+  }
+
+  .nav-inner{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .nav-links{
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .nav-links a{
+    font-size:.66rem;
+  }
+
+  .page{
+    padding:150px 16px 70px;
+  }
+
+  .faq{
+    padding:24px 20px;
+  }
+
+  .contact-block{
+    padding:32px 22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><span>164</span>Trek</a>
+
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="upcoming.html">Upcoming Events</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="page">
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="label">FAQs</div>
+      <h1>Good to know</h1>
+      <p>Simple answers for the things people usually wonder about before joining a multi-day trek.</p>
+    </section>
+
+    <section class="faq-list">
+
+      <article class="faq">
+        <h2>1. How fit do I need to be? What if I’m worried I’m not fit enough?</h2>
+        <p>You do not need to be an athlete, but you do need to be honest about your current fitness. Multi-day trekking means long hours on your feet, uneven ground, stairs, heat, cold, and tired legs. If you are unsure, join a few weekend training hikes first and see how your body handles it.</p>
+      </article>
+
+      <article class="faq">
+        <h2>2. How should I train for a multi-day trek from Singapore?</h2>
+        <p>Singapore does not have big mountains, so training is mostly about consistency. Long walks, stairs, Bukit Timah, MacRitchie, loaded backpack walks, and steady weekend hikes are all useful. The free weekend training hikes are open to anyone in the community, even if you are not sure about joining a trip yet.</p>
+      </article>
+
+      <article class="faq">
+        <h2>3. What is AMS, and how do I prepare for it?</h2>
+        <p>AMS means acute mountain sickness, which can happen when your body struggles with altitude. Fitness helps, but pace matters more; some of the fittest people get hit hardest because they move too fast. Diamox is available by prescription from any GP in Singapore, but you should ask a doctor before taking it.</p>
+      </article>
+
+      <article class="faq">
+        <h2>4. What gear do I actually need? Do I need expensive boots and poles?</h2>
+        <p>You do not need the most expensive gear, but you do need gear that is tested before the trip. Decathlon Quechua boots are fine if you break them in for at least 50 km first. For loose scree terrain, two trekking poles are essential, not one.</p>
+      </article>
+
+      <article class="faq">
+        <h2>5. What if something goes wrong on the trek: injury, weather, or AMS?</h2>
+        <p>We work with licensed local guides on every multi-day trek, and their judgment comes first on the mountain. If someone gets injured, the weather turns bad, or AMS symptoms get serious, the plan may change. Reaching the summit is not more important than getting everyone down safely.</p>
+      </article>
+
+      <article class="faq">
+        <h2>6. What if I need to drop out after paying?</h2>
+        <p>Tell us as early as possible. If money has not yet been paid out for your guide, permit, hotel, transport, or other fixed costs, we return what can be returned. If some costs are already locked in, we show clearly what was spent and what can still be recovered.</p>
+      </article>
+
+      <article class="faq">
+        <h2>7. What if I’m joining solo and don’t know anyone in the group?</h2>
+        <p>That is completely fine. A lot of people join these kinds of trips because they want to meet others who like hiking, training, and doing something a bit harder than a normal holiday. We keep the group small so people can get comfortable before the trip.</p>
+      </article>
+
+    </section>
+
+    <section class="contact-block">
+      <h2>Still have questions?</h2>
+      <p>Message us on WhatsApp. Happy to chat through anything before you decide.</p>
+
+      <a class="btn" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20have%20a%20question%20about%20164%20Trek." target="_blank" rel="noopener">
+        Message on WhatsApp
+      </a>
+
+      <div class="number">Message us</div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <b>164 Trek</b>
+  <div>Train together. Climb safe. Enjoy the trail.</div>
+</footer>
+
+</body>
+</html>
