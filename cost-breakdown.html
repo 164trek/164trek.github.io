@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cost Breakdown | 164 Trek</title>
+<meta name="description" content="Estimated cost breakdown for the 164 Trek Rinjani + Gili Island trip.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#f7f3ec;
+  --paper:#fffaf2;
+  --ink:#211c16;
+  --soft:#5f574e;
+  --line:#ddd3c6;
+  --green:#2f4938;
+  --dark:#0f1411;
+  --rust:#a0552c;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+  line-height:1.6;
+}
+
+a{color:inherit}
+
+h1,h2,h3{
+  font-family:'DM Serif Display',serif;
+  font-weight:400;
+  line-height:1.05;
+}
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  background:rgba(15,20,17,.96);
+  color:#fff;
+  padding:20px 22px;
+}
+
+.nav-inner{
+  max-width:1120px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo{
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  font-size:1.15rem;
+  white-space:nowrap;
+}
+
+.logo span{
+  border:1px solid rgba(255,255,255,.45);
+  border-radius:999px;
+  padding:5px 11px;
+  margin-right:10px;
+}
+
+.home-link{
+  color:rgba(255,255,255,.82);
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.28);
+  border-radius:999px;
+  padding:7px 13px;
+  font-size:.72rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.nav-links{
+  display:flex;
+  gap:22px;
+  align-items:center;
+}
+
+.nav-links a{
+  color:rgba(255,255,255,.82);
+  text-decoration:none;
+  font-size:.76rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.page{
+  padding:140px 22px 90px;
+}
+
+.wrap{
+  max-width:980px;
+  margin:auto;
+}
+
+.hero{
+  text-align:center;
+  margin-bottom:48px;
+}
+
+.label{
+  color:var(--green);
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-weight:900;
+  font-size:.78rem;
+  margin-bottom:12px;
+}
+
+.hero h1{
+  font-size:clamp(3.8rem,9vw,7.2rem);
+  margin-bottom:18px;
+}
+
+.hero p{
+  color:var(--soft);
+  max-width:720px;
+  margin:auto;
+  font-size:1.05rem;
+}
+
+.total-card{
+  background:var(--dark);
+  color:#fff;
+  padding:38px;
+  margin-bottom:28px;
+}
+
+.total-card .label{
+  color:rgba(255,255,255,.68);
+}
+
+.total-card h2{
+  color:#fff;
+  font-size:clamp(2.6rem,6vw,4.8rem);
+  margin-bottom:14px;
+}
+
+.total-card p{
+  color:rgba(255,255,255,.78);
+  font-size:1.02rem;
+  margin-bottom:18px;
+}
+
+.btn-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:28px;
+}
+
+.btn{
+  display:inline-block;
+  background:var(--dark);
+  color:#fff;
+  text-decoration:none;
+  padding:14px 24px;
+  border-radius:999px;
+  font-size:.82rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.total-card .btn{
+  background:#fff;
+  color:#111;
+}
+
+.btn.secondary{
+  background:transparent;
+  color:var(--green);
+  border:1px solid var(--line);
+}
+
+.breakdown{
+  background:var(--paper);
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+
+.row{
+  display:grid;
+  grid-template-columns:1.1fr .6fr 1.4fr;
+  gap:18px;
+  padding:20px 24px;
+  border-bottom:1px solid var(--line);
+  align-items:start;
+}
+
+.row:last-child{
+  border-bottom:0;
+}
+
+.row.head{
+  background:#efe8dc;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.76rem;
+  color:var(--green);
+}
+
+.category{
+  font-weight:900;
+  color:var(--ink);
+}
+
+.amount{
+  color:var(--rust);
+  font-weight:900;
+}
+
+.note{
+  color:var(--soft);
+}
+
+.info-box{
+  margin-top:28px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:30px;
+}
+
+.info-box h2{
+  font-size:clamp(2.2rem,5vw,3.8rem);
+  margin-bottom:16px;
+}
+
+.info-box p{
+  color:var(--soft);
+  margin-bottom:14px;
+}
+
+footer{
+  background:#0b0f0d;
+  color:rgba(255,255,255,.65);
+  text-align:center;
+  padding:34px 20px;
+  font-size:.9rem;
+}
+
+footer b{color:#fff}
+
+@media(max-width:760px){
+  .nav{padding:14px 12px}
+
+  .nav-inner{
+    flex-direction:column;
+    gap:10px;
+  }
+
+  .nav-left{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .home-link{
+    font-size:.66rem;
+    padding:6px 12px;
+  }
+
+  .nav-links{
+    gap:12px;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .nav-links a{font-size:.66rem}
+
+  .page{
+    padding:150px 16px 70px;
+  }
+
+  .row{
+    grid-template-columns:1fr;
+    gap:6px;
+    padding:20px;
+  }
+
+  .row.head{
+    display:none;
+  }
+
+  .total-card,
+  .info-box{
+    padding:28px 22px;
+  }
+
+  .btn-row{
+    flex-direction:column;
+  }
+
+  .btn-row .btn{
+    text-align:center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="logo"><span>164</span>Trek</a>
+      <a href="index.html" class="home-link">Home</a>
+    </div>
+
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="upcoming.html">Upcoming Events</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="page">
+  <div class="wrap">
+
+    <section class="hero">
+      <div class="label">Cost breakdown</div>
+      <h1>Where the money goes</h1>
+      <p>This is the working estimate for the Rinjani + Gili Island trip. Final numbers will be updated as the trip approaches.</p>
+    </section>
+
+    <section class="total-card">
+      <div class="label">Estimated total</div>
+      <h2>SGD $1,200 per person</h2>
+      <p>Flights are excluded. The estimate is mainly for local trip costs, guide package, logistics, hotels, activities, and a small buffer.</p>
+
+      <div class="btn-row">
+        <a class="btn" href="https://docs.google.com/spreadsheets/d/1Mk_g6B14i3_uyKEIDbTFXiE3g41Jm5HU/edit?usp=sharing" target="_blank" rel="noopener">
+          View live cost sheet →
+        </a>
+      </div>
+    </section>
+
+    <section class="breakdown">
+      <div class="row head">
+        <div>Category</div>
+        <div>Estimate</div>
+        <div>Notes</div>
+      </div>
+
+      <div class="row">
+        <div class="category">Trek tour package</div>
+        <div class="amount">~SGD $900</div>
+        <div class="note">Paid to the local guide. Includes guide, porters, park fees, camping gear, hotels, local transfers, Gili boat, trek meals, waterfalls, and snorkeling.</div>
+      </div>
+
+      <div class="row">
+        <div class="category">Tips for guide and porters</div>
+        <div class="amount">~SGD $30</div>
+        <div class="note">Paid by 164 Trek on behalf of the group at the end of the trek.</div>
+      </div>
+
+      <div class="row">
+        <div class="category">Buffer</div>
+        <div class="amount">~SGD $270</div>
+        <div class="note">For currency loss, schedule changes, gear replacement, or unforeseen expenses. Any unused buffer is returned to participants or rolled into the next trek.</div>
+      </div>
+
+      <div class="row">
+        <div class="category">Estimated total</div>
+        <div class="amount">~SGD $1,200</div>
+        <div class="note">Per person. Flights are not included.</div>
+      </div>
+    </section>
+
+    <section class="info-box">
+      <h2>How transparency works</h2>
+      <p>Every penny collected is tracked. The live sheet shows roughly where the money goes and will be updated as the trip gets closer.</p>
+      <p>After the trip, actual costs will be shared with participants. If there is unused buffer, it will either be returned to participants or rolled into the next trek.</p>
+      <p>Personal participant details are not included in the public sheet.</p>
+
+      <div class="btn-row">
+        <a class="btn" href="index.html#payment">Go to payment section</a>
+        <a class="btn secondary" href="about.html">Back to about</a>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <b>164 Trek</b>
+  <div>Train together. Climb safe. Enjoy the trail.</div>
+</footer>
+
+</body>
+</html>
