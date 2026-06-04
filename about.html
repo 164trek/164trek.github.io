@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>About | 164 Trek</title>
-<meta name="description" content="About 164 Trek, trip transparency, and payment handling.">
+<meta name="description" content="About 164 Trek and how trip costs are handled.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -204,29 +204,29 @@ h1,h2{
   margin:0;
 }
 
-.money-card{
+.costs-card{
   background:var(--dark);
   color:#fff;
   padding:38px;
 }
 
-.money-card .label{
+.costs-card .label{
   color:rgba(255,255,255,.68);
 }
 
-.money-card h2{
+.costs-card h2{
   color:#fff;
-  font-size:clamp(2.8rem,5vw,4.8rem);
+  font-size:clamp(2.2rem,4vw,3.6rem);
   margin-bottom:22px;
 }
 
-.money-card p{
+.costs-card p{
   color:rgba(255,255,255,.78);
   font-size:1.02rem;
   margin-bottom:18px;
 }
 
-.money-list{
+.cost-list{
   list-style:none;
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr;
@@ -234,7 +234,7 @@ h1,h2{
   margin:24px 0;
 }
 
-.money-list li{
+.cost-list li{
   background:rgba(255,255,255,.07);
   border:1px solid rgba(255,255,255,.1);
   color:rgba(255,255,255,.86);
@@ -265,14 +265,12 @@ h1,h2{
   color:#111;
 }
 
-.sheet-btn,
 .secondary-btn{
   background:transparent;
   color:#fff;
   border:1px solid rgba(255,255,255,.35);
 }
 
-.sheet-btn:hover,
 .secondary-btn:hover{
   background:#fff;
   color:#111;
@@ -281,7 +279,7 @@ h1,h2{
 .small-note{
   font-size:.95rem;
   color:rgba(255,255,255,.68) !important;
-  margin-bottom:26px !important;
+  margin-bottom:0 !important;
 }
 
 footer{
@@ -295,7 +293,7 @@ footer{
 footer b{color:#fff}
 
 @media(max-width:980px){
-  .money-list{
+  .cost-list{
     grid-template-columns:1fr 1fr;
   }
 }
@@ -343,7 +341,7 @@ footer b{color:#fff}
 
   .profile-info,
   .about-body,
-  .money-card{
+  .costs-card{
     padding-left:24px;
     padding-right:24px;
   }
@@ -353,7 +351,7 @@ footer b{color:#fff}
     white-space:normal;
   }
 
-  .money-list{
+  .cost-list{
     grid-template-columns:1fr 1fr;
   }
 
@@ -367,7 +365,7 @@ footer b{color:#fff}
 }
 
 @media(max-width:520px){
-  .money-list{
+  .cost-list{
     grid-template-columns:1fr;
   }
 }
@@ -418,16 +416,17 @@ footer b{color:#fff}
       </div>
     </section>
 
-    <section class="card money-card">
-      <div class="label">Money transparency</div>
-      <h2>Every penny is tracked.</h2>
+    <section class="card costs-card">
+      <div class="label">Costs</div>
+      <h2>How trip costs are handled</h2>
 
-      <p>Every penny collected is shown clearly: where it goes, what it pays for, and what remains.</p>
-      <p>Your trip cost mostly goes to the local guide package, which covers:</p>
+      <p>Trip costs are shared clearly before and after the trek. The public estimate is based on a small group, current exchange assumptions, and a buffer for changes.</p>
 
-      <ul class="money-list">
+      <p>Most of the cost goes to the local guide package and other ground expenses, including:</p>
+
+      <ul class="cost-list">
         <li>Guide fees</li>
-        <li>Admin</li>
+        <li>Porters</li>
         <li>Permits</li>
         <li>Transport</li>
         <li>Accommodation</li>
@@ -437,14 +436,11 @@ footer b{color:#fff}
       </ul>
 
       <div class="btn-row">
-        <a class="btn primary-btn" href="cost-breakdown.html">See full cost breakdown →</a>
-        <a class="btn sheet-btn" href="https://docs.google.com/spreadsheets/d/1Mk_g6B14i3_uyKEIDbTFXiE3g41Jm5HU/edit?usp=sharing" target="_blank" rel="noopener">View live cost sheet →</a>
+        <a class="btn primary-btn" href="https://docs.google.com/spreadsheets/d/1Mk_g6B14i3_uyKEIDbTFXiE3g41Jm5HU/edit?usp=sharing" target="_blank" rel="noopener">View live cost sheet →</a>
         <a class="btn secondary-btn" href="index.html#payment">Go to payment section</a>
       </div>
 
-      <p class="small-note">Updated as the trip approaches. Actual costs shared with all participants after the trip.</p>
-
-      <p>After the trip, any unused buffer is either returned to participants or rolled into the next trek.</p>
+      <p class="small-note">Final costs are shared with participants after the trip. Any unused buffer is either returned or rolled into the next trek.</p>
     </section>
 
   </div>
