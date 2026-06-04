@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Cost Breakdown | 164 Trek</title>
-<meta name="description" content="Estimated cost breakdown for the 164 Trek Rinjani + Gili Island trip.">
+<meta name="description" content="Working trip estimate for the 164 Trek Rinjani + Gili Island trip.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,6 @@
   --line:#ddd3c6;
   --green:#2f4938;
   --dark:#0f1411;
-  --rust:#a0552c;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
@@ -35,7 +34,7 @@ body{
 
 a{color:inherit}
 
-h1,h2,h3{
+h1,h2{
   font-family:'DM Serif Display',serif;
   font-weight:400;
   line-height:1.05;
@@ -50,6 +49,7 @@ h1,h2,h3{
   background:rgba(15,20,17,.96);
   color:#fff;
   padding:20px 22px;
+  backdrop-filter:blur(10px);
 }
 
 .nav-inner{
@@ -116,7 +116,7 @@ h1,h2,h3{
 }
 
 .wrap{
-  max-width:980px;
+  max-width:940px;
   margin:auto;
 }
 
@@ -135,7 +135,7 @@ h1,h2,h3{
 }
 
 .hero h1{
-  font-size:clamp(3.8rem,9vw,7.2rem);
+  font-size:clamp(3.8rem,9vw,7rem);
   margin-bottom:18px;
 }
 
@@ -144,6 +144,11 @@ h1,h2,h3{
   max-width:720px;
   margin:auto;
   font-size:1.05rem;
+}
+
+.card{
+  background:var(--paper);
+  border:1px solid var(--line);
 }
 
 .total-card{
@@ -159,14 +164,28 @@ h1,h2,h3{
 
 .total-card h2{
   color:#fff;
-  font-size:clamp(2.6rem,6vw,4.8rem);
+  font-size:clamp(2.6rem,6vw,4.6rem);
   margin-bottom:14px;
 }
 
 .total-card p{
   color:rgba(255,255,255,.78);
   font-size:1.02rem;
+  margin-bottom:16px;
+}
+
+.info-box{
+  padding:32px 34px;
+}
+
+.info-box h2{
+  font-size:clamp(2.2rem,5vw,3.8rem);
   margin-bottom:18px;
+}
+
+.info-box p{
+  color:var(--soft);
+  margin-bottom:14px;
 }
 
 .btn-row{
@@ -178,8 +197,6 @@ h1,h2,h3{
 
 .btn{
   display:inline-block;
-  background:var(--dark);
-  color:#fff;
   text-decoration:none;
   padding:14px 24px;
   border-radius:999px;
@@ -200,63 +217,10 @@ h1,h2,h3{
   border:1px solid var(--line);
 }
 
-.breakdown{
-  background:var(--paper);
-  border:1px solid var(--line);
-  overflow:hidden;
-}
-
-.row{
-  display:grid;
-  grid-template-columns:1.1fr .6fr 1.4fr;
-  gap:18px;
-  padding:20px 24px;
-  border-bottom:1px solid var(--line);
-  align-items:start;
-}
-
-.row:last-child{
-  border-bottom:0;
-}
-
-.row.head{
-  background:#efe8dc;
-  font-weight:900;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  font-size:.76rem;
-  color:var(--green);
-}
-
-.category{
-  font-weight:900;
-  color:var(--ink);
-}
-
-.amount{
-  color:var(--rust);
-  font-weight:900;
-}
-
-.note{
-  color:var(--soft);
-}
-
-.info-box{
-  margin-top:28px;
-  background:var(--paper);
-  border:1px solid var(--line);
-  padding:30px;
-}
-
-.info-box h2{
-  font-size:clamp(2.2rem,5vw,3.8rem);
-  margin-bottom:16px;
-}
-
-.info-box p{
-  color:var(--soft);
-  margin-bottom:14px;
+.sheet-note{
+  margin-top:18px;
+  color:rgba(255,255,255,.68) !important;
+  font-size:.95rem !important;
 }
 
 footer{
@@ -299,16 +263,6 @@ footer b{color:#fff}
     padding:150px 16px 70px;
   }
 
-  .row{
-    grid-template-columns:1fr;
-    gap:6px;
-    padding:20px;
-  }
-
-  .row.head{
-    display:none;
-  }
-
   .total-card,
   .info-box{
     padding:28px 22px;
@@ -348,62 +302,34 @@ footer b{color:#fff}
 
     <section class="hero">
       <div class="label">Cost breakdown</div>
-      <h1>Where the money goes</h1>
-      <p>This is the working estimate for the Rinjani + Gili Island trip. Final numbers will be updated as the trip approaches.</p>
+      <h1>Working trip estimate</h1>
+      <p>This page shows the current public estimate for the Rinjani + Gili Island trip. The detailed working numbers are in the live cost sheet.</p>
     </section>
 
     <section class="total-card">
-      <div class="label">Estimated total</div>
-      <h2>SGD $1,200 per person</h2>
-      <p>Flights are excluded. The estimate is mainly for local trip costs, guide package, logistics, hotels, activities, and a small buffer.</p>
+      <div class="label">Estimated trip price</div>
+      <h2>About SGD $1,200 per person</h2>
+      <p>This estimate is based on a small group of around 5–8 people, current exchange assumptions, guide costs, tips, and a buffer for changes. Flights are excluded.</p>
 
       <div class="btn-row">
         <a class="btn" href="https://docs.google.com/spreadsheets/d/1Mk_g6B14i3_uyKEIDbTFXiE3g41Jm5HU/edit?usp=sharing" target="_blank" rel="noopener">
           View live cost sheet →
         </a>
+        <a class="btn" href="index.html#payment">
+          Go to payment section
+        </a>
       </div>
+
+      <p class="sheet-note">The live sheet contains the detailed working estimate and does not include participant personal details.</p>
     </section>
 
-    <section class="breakdown">
-      <div class="row head">
-        <div>Category</div>
-        <div>Estimate</div>
-        <div>Notes</div>
-      </div>
-
-      <div class="row">
-        <div class="category">Trek tour package</div>
-        <div class="amount">~SGD $900</div>
-        <div class="note">Paid to the local guide. Includes guide, porters, park fees, camping gear, hotels, local transfers, Gili boat, trek meals, waterfalls, and snorkeling.</div>
-      </div>
-
-      <div class="row">
-        <div class="category">Tips for guide and porters</div>
-        <div class="amount">~SGD $30</div>
-        <div class="note">Paid by 164 Trek on behalf of the group at the end of the trek.</div>
-      </div>
-
-      <div class="row">
-        <div class="category">Buffer</div>
-        <div class="amount">~SGD $270</div>
-        <div class="note">For currency loss, schedule changes, gear replacement, or unforeseen expenses. Any unused buffer is returned to participants or rolled into the next trek.</div>
-      </div>
-
-      <div class="row">
-        <div class="category">Estimated total</div>
-        <div class="amount">~SGD $1,200</div>
-        <div class="note">Per person. Flights are not included.</div>
-      </div>
-    </section>
-
-    <section class="info-box">
-      <h2>How transparency works</h2>
-      <p>Every penny collected is tracked. The live sheet shows roughly where the money goes and will be updated as the trip gets closer.</p>
-      <p>After the trip, actual costs will be shared with participants. If there is unused buffer, it will either be returned to participants or rolled into the next trek.</p>
-      <p>Personal participant details are not included in the public sheet.</p>
+    <section class="card info-box">
+      <h2>How this estimate works</h2>
+      <p>The live sheet shows the current working cost basis for the trip. Final numbers may change if the group size, exchange rate, or supplier costs change before departure.</p>
+      <p>The public estimate is based on a small-group assumption. If more people join, the shared cost per person can come down.</p>
+      <p>After the trip, actual costs will be shared with participants. If there is unused buffer, it will either be returned or rolled into the next trek.</p>
 
       <div class="btn-row">
-        <a class="btn" href="index.html#payment">Go to payment section</a>
         <a class="btn secondary" href="about.html">Back to about</a>
       </div>
     </section>
