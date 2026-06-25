@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Upcoming Events | 164 Trek</title>
-<meta name="description" content="Upcoming trek ideas by 164 Trek. Dates are tentative and can be discussed if interested.">
+<meta name="description" content="Gunung Tahan 2026 via Merapoh – Merapoh. Tentative Date: 20–23 July 2026. Duration: 4D3N.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -427,7 +427,7 @@ footer b{color:#fff}
   <div class="wrap">
     <div class="label">164 Trek</div>
     <h1>Upcoming Events</h1>
-    <p class="lede">Future treks we are considering. Dates are tentative and can be discussed with interested members.</p>
+    <p class="lede">Current treks and future ideas from our small Singapore-based trekking group.</p>
   </div>
 </header>
 
@@ -435,8 +435,8 @@ footer b{color:#fff}
   <div class="wrap">
 
     <div class="section-head">
-      <div class="kicker">Upcoming Events</div>
-      <h2>Upcoming treks</h2>
+      <div class="kicker">Current upcoming trek</div>
+      <h2>Gunung Tahan, Malaysia</h2>
     </div>
 
     <div class="event-grid" id="upcomingGrid"></div>
@@ -461,9 +461,9 @@ footer b{color:#fff}
 <section class="contact" id="contact">
   <div class="wrap">
     <h2>Interested?</h2>
-    <p>Message us and tell us which trip you want to join.</p>
-    <a class="btn" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20want%20to%20ask%20about%20the%20upcoming%20164%20Trek%20events." target="_blank" rel="noopener">
-      Message on WhatsApp
+    <p>Please message us first before sending any payment. Final payment details will be shared clearly before collection.</p>
+    <a class="btn" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20am%20interested%20in%20the%20Gunung%20Tahan%20trek%20in%20July%202026." target="_blank" rel="noopener">
+      Message us if interested
     </a>
     <div class="number">Message us</div>
   </div>
@@ -480,6 +480,43 @@ function wikiFile(fileName){
 }
 
 const upcomingTreks = [
+  {
+    title:"Gunung Tahan, Malaysia",
+    location:"Route: Merapoh – Merapoh",
+    date:"Tentative Date: 20–23 July 2026",
+    tentative:"Duration: 4D3N",
+    meta:`Estimated basic climbing cost: RM220 / pax · Approx. SGD 75 / pax.<br>
+      Based on 10 pax. SGD amount is rounded for exchange-rate movement and small buffer.<br>
+      This is only the basic Gunung Tahan climbing cost. It is not the full Singapore-to-Malaysia trip cost.<br><br>
+      <strong>Tentative Itinerary — Gunung Tahan via Merapoh</strong><br><br>
+      <strong>Day 1 — 20 July 2026</strong><br>
+      8:00 AM – Register at Taman Negara Sungai Relau Merapoh office<br>
+      9:00 AM – 10:00 AM – Check and declare belongings/equipment<br>
+      10:00 AM – 11:00 AM – 4x4 transfer to Kuala Juram<br>
+      11:00 AM – 11:30 AM – Briefing by guide<br>
+      11:30 AM – 2:30 PM – Trek Kuala Juram to Kuala Luis / packed lunch<br>
+      2:30 PM – 6:00 PM – Trek Kuala Luis to Kem Kor / overnight<br><br>
+      <strong>Day 2 — 21 July 2026</strong><br>
+      7:00 AM – Breakfast<br>
+      8:00 AM – 1:00 PM – Trek Kem Kor to Kem Kubang / lunch<br>
+      2:00 PM – 6:00 PM – Trek Kem Kubang to Kem Botak / overnight<br><br>
+      <strong>Day 3 — 22 July 2026</strong><br>
+      6:00 AM – Trek to summit / summit view / breakfast<br>
+      10:00 AM – 11:00 AM – Trek summit back to Kem Botak<br>
+      11:00 AM – 6:00 PM – Trek Kem Botak to Kem Kor / overnight<br><br>
+      <strong>Day 4 — 23 July 2026</strong><br>
+      7:00 AM – Breakfast<br>
+      8:00 AM – 1:00 PM – Trek Kem Kor to Kuala Juram / lunch<br>
+      2:00 PM – 3:00 PM – 4x4 transfer back to Sungai Relau<br>
+      3:00 PM – Check belongings, check out / expedition ends<br><br>
+      Itinerary is for reference only and may change depending on weather, trail condition, safety, and group pace. The guide may adjust the plan if conditions are unsafe.`,
+    pill:"Message us if interested",
+    img:"upcoming-events-bg.png",
+    credit:"upcoming-events-bg.png"
+  }
+];
+
+const comingSoonTreks = [
   {
     title:"Goecha La · 4,940 m",
     location:"Sikkim, India",
@@ -529,10 +566,7 @@ const upcomingTreks = [
     pill:"Alpine trek",
     img:wikiFile("PublicTMB.jpg"),
     credit:"https://upload.wikimedia.org/wikipedia/commons/2/2f/PublicTMB.jpg"
-  }
-];
-
-const comingSoonTreks = [
+  },
   {
     title:"Cordillera Huayhuash Circuit",
     location:"Peru",
