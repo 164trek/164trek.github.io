@@ -13,365 +13,90 @@
 
 <style>
 :root{
-  --bg:#f7f3ec;
-  --paper:#fffaf2;
-  --ink:#211c16;
+  --bg:#f3f4f1;
+  --paper:#ffffff;
+  --ink:#1c1a16;
   --soft:#5f574e;
-  --line:#ddd3c6;
+  --muted:#8c8175;
+  --line:#e7e6e1;
   --green:#2f4938;
   --dark:#0f1411;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-
-body{
-  background:var(--bg);
-  color:var(--ink);
-  font-family:'Inter',sans-serif;
-  line-height:1.6;
-}
-
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6}
 a{color:inherit}
 img{max-width:100%;display:block}
+h1,h2{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.04}
 
-h1,h2{
-  font-family:'DM Serif Display',serif;
-  font-weight:400;
-  line-height:1.04;
-}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,20,17,.96);color:#fff;padding:20px 22px;backdrop-filter:blur(10px)}
+.nav-inner{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.nav-left{display:flex;align-items:center;gap:14px}
+.logo{color:#fff;text-decoration:none;font-weight:900;letter-spacing:.1em;text-transform:uppercase;font-size:1.15rem;white-space:nowrap}
+.logo span{border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:5px 11px;margin-right:10px}
+.home-link{color:rgba(255,255,255,.82);text-decoration:none;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 13px;font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.76rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
 
-.nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:1000;
-  background:rgba(15,20,17,.96);
-  color:#fff;
-  padding:20px 22px;
-  backdrop-filter:blur(10px);
-}
+.page{padding:132px 22px 80px}
+.wrap{max-width:1120px;margin:auto}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px}
+.about-card{margin-bottom:28px;overflow:hidden}
 
-.nav-inner{
-  max-width:1120px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-}
+.profile-header{display:grid;grid-template-columns:160px minmax(0,1fr);border-bottom:1px solid var(--line)}
+.profile-photo{width:160px;height:160px;background:#e7e6e1;border-right:1px solid var(--line);overflow:hidden}
+.profile-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
+.profile-info{min-width:0;padding:22px 30px;display:flex;flex-direction:column;justify-content:center}
+.label{color:var(--green);text-transform:uppercase;letter-spacing:.16em;font-weight:900;font-size:.76rem;margin-bottom:8px}
+.profile-info h1{font-size:clamp(1.85rem,2.75vw,2.6rem);white-space:nowrap;margin-bottom:16px}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{text-decoration:none;border:1px solid var(--line);background:#f3f4f1;color:var(--green);border-radius:999px;padding:10px 15px;font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
 
-.nav-left{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
+.about-body{padding:28px 38px 32px}
+.about-body p{color:var(--soft);font-size:1.04rem;max-width:760px;margin:0 0 16px}
+.about-body p:last-child{margin-bottom:0}
 
-.logo{
-  color:#fff;
-  text-decoration:none;
-  font-weight:900;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  font-size:1.15rem;
-  white-space:nowrap;
-}
+.btn{display:inline-block;text-decoration:none;padding:14px 24px;border-radius:999px;font-size:.82rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 18px}
+.primary-btn{background:var(--dark);color:#fff}
+.secondary-btn{background:transparent;color:var(--green);border:1px solid var(--line)}
+.secondary-btn:hover{background:var(--dark);color:#fff;border-color:var(--dark)}
+.small-note{font-size:.95rem;color:var(--soft);margin-bottom:0}
 
-.logo span{
-  border:1px solid rgba(255,255,255,.45);
-  border-radius:999px;
-  padding:5px 11px;
-  margin-right:10px;
-}
+/* annotated cost list */
+.cost-detail{padding:34px 38px 38px}
+.cost-detail h2{font-size:clamp(1.9rem,3.5vw,2.8rem);margin-bottom:8px}
+.cost-detail .lead{color:var(--soft);margin-bottom:22px;max-width:720px}
+.cost-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.cost-item{border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.cost-item .top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:4px}
+.cost-item .name{font-weight:800;font-size:1rem}
+.cstatus{border-radius:999px;padding:4px 11px;font-size:.66rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.cstatus.inc{background:#eef3ee;color:var(--green)}
+.cstatus.part{background:#f4ece6;color:#a0552c}
+.cstatus.na{background:#eceae4;color:var(--muted)}
+.cost-item .note{color:var(--soft);font-size:.9rem}
+.excl-line{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);color:var(--soft);font-size:.98rem}
 
-.home-link{
-  color:rgba(255,255,255,.82);
-  text-decoration:none;
-  border:1px solid rgba(255,255,255,.28);
-  border-radius:999px;
-  padding:7px 13px;
-  font-size:.72rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.nav-links{
-  display:flex;
-  gap:22px;
-  align-items:center;
-}
-
-.nav-links a{
-  color:rgba(255,255,255,.82);
-  text-decoration:none;
-  font-size:.76rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.page{
-  padding:132px 22px 80px;
-}
-
-.wrap{
-  max-width:1120px;
-  margin:auto;
-}
-
-.card{
-  background:var(--paper);
-  border:1px solid var(--line);
-}
-
-.about-card{
-  margin-bottom:28px;
-}
-
-.profile-header{
-  display:grid;
-  grid-template-columns:160px minmax(0,1fr);
-  border-bottom:1px solid var(--line);
-}
-
-.profile-photo{
-  width:160px;
-  height:160px;
-  background:#e5ded3;
-  border-right:1px solid var(--line);
-  overflow:hidden;
-}
-
-.profile-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-
-.profile-info{
-  min-width:0;
-  padding:22px 30px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.label{
-  color:var(--green);
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-weight:900;
-  font-size:.76rem;
-  margin-bottom:8px;
-}
-
-.profile-info h1{
-  font-size:clamp(1.85rem,2.75vw,2.6rem);
-  white-space:nowrap;
-  margin-bottom:16px;
-}
-
-.links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px;
-}
-
-.links a{
-  text-decoration:none;
-  border:1px solid var(--line);
-  background:#fbf6ed;
-  color:var(--green);
-  border-radius:999px;
-  padding:10px 15px;
-  font-size:.72rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.about-body{
-  padding:28px 38px 32px;
-}
-
-.about-body p{
-  color:var(--soft);
-  font-size:1.04rem;
-  max-width:760px;
-  margin:0 0 16px;
-}
-
-.about-body p:last-child{
-  margin-bottom:0;
-}
-
-.costs-card{
-  background:var(--dark);
-  color:#fff;
-  padding:38px;
-}
-
-.costs-card .label{
-  color:rgba(255,255,255,.68);
-}
-
-.costs-card h2{
-  color:#fff;
-  font-size:clamp(2.2rem,4vw,3.6rem);
-  margin-bottom:22px;
-}
-
-.costs-card p{
-  color:rgba(255,255,255,.78);
-  font-size:1.02rem;
-  margin-bottom:18px;
-}
-
-.cost-list{
-  list-style:none;
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr 1fr;
-  gap:12px;
-  margin:24px 0;
-}
-
-.cost-list li{
-  background:rgba(255,255,255,.07);
-  border:1px solid rgba(255,255,255,.1);
-  color:rgba(255,255,255,.86);
-  padding:13px 15px;
-  text-align:center;
-}
-
-.btn{
-  display:inline-block;
-  text-decoration:none;
-  padding:14px 24px;
-  border-radius:999px;
-  font-size:.82rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.btn-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin:28px 0 18px;
-}
-
-.primary-btn{
-  background:#fff;
-  color:#111;
-}
-
-.secondary-btn{
-  background:transparent;
-  color:#fff;
-  border:1px solid rgba(255,255,255,.35);
-}
-
-.secondary-btn:hover{
-  background:#fff;
-  color:#111;
-}
-
-.small-note{
-  font-size:.95rem;
-  color:rgba(255,255,255,.68) !important;
-  margin-bottom:0 !important;
-}
-
-footer{
-  background:#0b0f0d;
-  color:rgba(255,255,255,.65);
-  text-align:center;
-  padding:34px 20px;
-  font-size:.9rem;
-}
-
+footer{background:#0b0f0d;color:rgba(255,255,255,.65);text-align:center;padding:34px 20px;font-size:.9rem}
 footer b{color:#fff}
-
-@media(max-width:980px){
-  .cost-list{
-    grid-template-columns:1fr 1fr;
-  }
-}
 
 @media(max-width:760px){
   .nav{padding:14px 12px}
-
-  .nav-inner{
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .nav-left{
-    flex-direction:column;
-    gap:8px;
-  }
-
-  .home-link{
-    font-size:.66rem;
-    padding:6px 12px;
-  }
-
-  .nav-links{
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
+  .nav-inner{flex-direction:column;gap:10px}
+  .nav-left{flex-direction:column;gap:8px}
+  .home-link{font-size:.66rem;padding:6px 12px}
+  .nav-links{gap:12px;flex-wrap:wrap;justify-content:center}
   .nav-links a{font-size:.66rem}
-
-  .page{
-    padding:150px 16px 64px;
-  }
-
-  .profile-header{
-    grid-template-columns:1fr;
-  }
-
-  .profile-photo{
-    width:100%;
-    height:260px;
-    border-right:0;
-    border-bottom:1px solid var(--line);
-  }
-
-  .profile-info,
-  .about-body,
-  .costs-card{
-    padding-left:24px;
-    padding-right:24px;
-  }
-
-  .profile-info h1{
-    font-size:2.5rem;
-    white-space:normal;
-  }
-
-  .cost-list{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .btn-row{
-    flex-direction:column;
-  }
-
-  .btn-row .btn{
-    text-align:center;
-  }
-}
-
-@media(max-width:520px){
-  .cost-list{
-    grid-template-columns:1fr;
-  }
+  .page{padding:150px 16px 64px}
+  .profile-header{grid-template-columns:1fr}
+  .profile-photo{width:100%;height:260px;border-right:0;border-bottom:1px solid var(--line)}
+  .profile-info,.about-body,.cost-detail{padding-left:24px;padding-right:24px}
+  .profile-info h1{font-size:2.5rem;white-space:normal}
+  .cost-grid{grid-template-columns:1fr}
+  .btn-row{flex-direction:column}
+  .btn-row .btn{text-align:center}
 }
 </style>
 </head>
@@ -384,7 +109,6 @@ footer b{color:#fff}
       <a href="index.html" class="logo"><span>164</span>Trek</a>
       <a href="index.html" class="home-link">Home</a>
     </div>
-
     <div class="nav-links">
       <a href="about.html">About</a>
       <a href="upcoming.html">Upcoming Events</a>
@@ -402,11 +126,9 @@ footer b{color:#fff}
         <div class="profile-photo">
           <img src="danny-profile.jpg" alt="Danny Castonguay">
         </div>
-
         <div class="profile-info">
-          <div class="label">TRIP ORGANIZER</div>
+          <div class="label">Trip organizer</div>
           <h1>Danny Castonguay</h1>
-
           <div class="links">
             <a href="https://www.linkedin.com/in/dannycastonguay/" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://resume.dannycastonguay.com/" target="_blank" rel="noopener">dannycastonguay.com</a>
@@ -416,33 +138,66 @@ footer b{color:#fff}
       </div>
 
       <div class="about-body">
-        <p>Hi, I started 164 Trek because I wanted to train in Singapore and travel with others to treks worth preparing for.</p>
-
-        <p>164 Trek is a small Singapore-based trekking group. We train together, keep groups small, work with local guides/operators, and explain costs clearly before collecting payment.</p>
+        <p>Hi, I started 164 Trek as a small Singapore-based trekking group for people who want to train together and travel to trails worth preparing for.</p>
+        <p>We keep groups small, work with local guides and operators, and explain costs before collecting payment. Train together. Climb safe. Enjoy the trail.</p>
       </div>
     </section>
 
-    <section class="card costs-card">
+    <section class="card cost-detail">
       <div class="label">Costs</div>
-      <h2>How trip costs are handled</h2>
+      <h2>What the cost covers</h2>
+      <p class="lead">This is for the July 2026 Gunung Tahan trek. Most of the cost is the local guide package and ground expenses. Other trips will show their own numbers before payment.</p>
 
-      <p>Each trek option shows the estimated package price per pax. The included and excluded items are listed clearly before payment. Anything not listed as included should be treated as a personal or separate cost.</p>
-
-      <ul class="cost-list">
-        <li>Guide / operator support</li>
-        <li>Permits and fees</li>
-        <li>Trail transfers</li>
-        <li>Food / ration where included</li>
-        <li>Insurance where included</li>
-        <li>Local logistics</li>
-      </ul>
-
-      <div class="btn-row">
-        <a class="btn primary-btn" href="cost-breakdown.html">View cost breakdown</a>
-        <a class="btn secondary-btn" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20want%20to%20ask%20about%20164%20Trek." target="_blank" rel="noopener">Message us before payment</a>
+      <div class="cost-grid">
+        <div class="cost-item">
+          <div class="top"><span class="name">Guide fees</span><span class="cstatus inc">Included</span></div>
+          <div class="note">Licensed mountain guide for the whole route.</div>
+        </div>
+        <div class="cost-item">
+          <div class="top"><span class="name">Operator fees</span><span class="cstatus inc">Included</span></div>
+          <div class="note">Booked through a licensed Taman Negara operator.</div>
+        </div>
+        <div class="cost-item">
+          <div class="top"><span class="name">Permits</span><span class="cstatus inc">Included</span></div>
+          <div class="note">Park entry, camping, and camera fees.</div>
+        </div>
+        <div class="cost-item">
+          <div class="top"><span class="name">Transport</span><span class="cstatus inc">Included</span></div>
+          <div class="note">4x4 transfer, plus a boat on the final day for the traverse.</div>
+        </div>
+        <div class="cost-item">
+          <div class="top"><span class="name">Accommodation</span><span class="cstatus part">Camping</span></div>
+          <div class="note">Tents on the trail (flysheet and groundsheet). No hotel nights on this trek.</div>
+        </div>
+        <div class="cost-item">
+          <div class="top"><span class="name">Food and camping</span><span class="cstatus inc">Included</span></div>
+          <div class="note">All meals on the trail, cooked by a chef. Tent provided.</div>
+        </div>
+        <div class="cost-item">
+          <div class="top"><span class="name">Support crew</span><span class="cstatus part">Partly</span></div>
+          <div class="note">Guide and chef are included. A personal porter is optional and not included.</div>
+        </div>
+        <div class="cost-item">
+          <div class="top"><span class="name">Trip logistics</span><span class="cstatus inc">Included</span></div>
+          <div class="note">Park briefing, route coordination, and on-mountain support.</div>
+        </div>
+        <div class="cost-item">
+          <div class="top"><span class="name">Insurance and certificate</span><span class="cstatus inc">Included</span></div>
+          <div class="note">Trek insurance and a summit certificate.</div>
+        </div>
+        <div class="cost-item">
+          <div class="top"><span class="name">Getting to Malaysia and Merapoh</span><span class="cstatus na">N/A</span></div>
+          <div class="note">You arrange and pay for your own way to the trailhead. By land or air is up to you. Danny and I travel by land.</div>
+        </div>
       </div>
 
-      <p class="small-note">Please message us before sending any payment. After payment, send a screenshot or receipt for confirmation.</p>
+      <p class="excl-line">Not included on this trek: your way to Malaysia and Merapoh, personal expenses, and an optional porter.</p>
+
+      <div class="btn-row">
+        <a class="btn primary-btn" href="cost-breakdown.html">View cost breakdown →</a>
+        <a class="btn secondary-btn" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20want%20to%20ask%20about%20164%20Trek." target="_blank" rel="noopener">Message us before payment</a>
+      </div>
+      <p class="small-note">Please message us first before sending any payment. Final payment details will be shared clearly before collection.</p>
     </section>
 
   </div>

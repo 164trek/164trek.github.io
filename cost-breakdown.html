@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Cost Breakdown | 164 Trek</title>
-<meta name="description" content="Gunung Tahan 2026 package options for 164 Trek.">
+<meta name="description" content="Price per person by group size for the 164 Trek Gunung Tahan trip.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,268 +13,80 @@
 
 <style>
 :root{
-  --bg:#f7f3ec;
-  --paper:#fffaf2;
-  --ink:#211c16;
+  --bg:#f3f4f1;
+  --paper:#ffffff;
+  --ink:#1c1a16;
   --soft:#5f574e;
-  --line:#ddd3c6;
+  --muted:#8c8175;
+  --line:#e7e6e1;
   --green:#2f4938;
   --dark:#0f1411;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-
-body{
-  background:var(--bg);
-  color:var(--ink);
-  font-family:'Inter',sans-serif;
-  line-height:1.6;
-}
-
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6}
 a{color:inherit}
+h1,h2{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.05}
 
-h1,h2{
-  font-family:'DM Serif Display',serif;
-  font-weight:400;
-  line-height:1.05;
-}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,20,17,.96);color:#fff;padding:20px 22px;backdrop-filter:blur(10px)}
+.nav-inner{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.nav-left{display:flex;align-items:center;gap:14px}
+.logo{color:#fff;text-decoration:none;font-weight:900;letter-spacing:.1em;text-transform:uppercase;font-size:1.15rem;white-space:nowrap}
+.logo span{border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:5px 11px;margin-right:10px}
+.home-link{color:rgba(255,255,255,.82);text-decoration:none;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 13px;font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.76rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
 
-.nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:1000;
-  background:rgba(15,20,17,.96);
-  color:#fff;
-  padding:20px 22px;
-  backdrop-filter:blur(10px);
-}
+.page{padding:140px 22px 90px}
+.wrap{max-width:940px;margin:auto}
+.hero{text-align:center;margin-bottom:40px}
+.label{color:var(--green);text-transform:uppercase;letter-spacing:.16em;font-weight:900;font-size:.78rem;margin-bottom:12px}
+.hero h1{font-size:clamp(3.4rem,8vw,6rem);margin-bottom:18px}
+.hero p{color:var(--soft);max-width:720px;margin:auto;font-size:1.05rem}
 
-.nav-inner{
-  max-width:1120px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:16px}
 
-.nav-left{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px}
+.price-card{padding:28px 26px}
+.price-card .tag{display:inline-block;border-radius:999px;padding:6px 14px;font-size:.7rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.tag.easy{background:#eef3ee;color:var(--green)}
+.tag.hard{background:#f4ece6;color:#a0552c}
+.price-card h2{font-size:1.9rem;margin-bottom:4px}
+.price-card .sub{color:var(--soft);font-size:.95rem;margin-bottom:18px}
+.ptable{width:100%;border-collapse:collapse}
+.ptable th,.ptable td{text-align:left;padding:11px 4px;border-bottom:1px solid var(--line);font-size:.98rem}
+.ptable th{text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;font-weight:900;color:var(--muted)}
+.ptable td:last-child,.ptable th:last-child{text-align:right;font-weight:800}
 
-.logo{
-  color:#fff;
-  text-decoration:none;
-  font-weight:900;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  font-size:1.15rem;
-  white-space:nowrap;
-}
+.total-card{background:var(--dark);color:#fff;padding:36px;border-radius:16px;margin-bottom:24px}
+.total-card .label{color:rgba(255,255,255,.68)}
+.total-card h2{color:#fff;font-size:clamp(1.9rem,4vw,3rem);margin-bottom:14px}
+.total-card p{color:rgba(255,255,255,.78);font-size:1.02rem;margin-bottom:14px}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-block;text-decoration:none;padding:14px 24px;border-radius:999px;font-size:.82rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.total-card .btn{background:#fff;color:#111}
 
-.logo span{
-  border:1px solid rgba(255,255,255,.45);
-  border-radius:999px;
-  padding:5px 11px;
-  margin-right:10px;
-}
+.info-box{padding:32px 34px}
+.info-box h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:16px}
+.info-box p{color:var(--soft);margin-bottom:14px}
+.btn.secondary{background:transparent;color:var(--green);border:1px solid var(--line)}
 
-.home-link{
-  color:rgba(255,255,255,.82);
-  text-decoration:none;
-  border:1px solid rgba(255,255,255,.28);
-  border-radius:999px;
-  padding:7px 13px;
-  font-size:.72rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.nav-links{
-  display:flex;
-  gap:22px;
-  align-items:center;
-}
-
-.nav-links a{
-  color:rgba(255,255,255,.82);
-  text-decoration:none;
-  font-size:.76rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.page{
-  padding:140px 22px 90px;
-}
-
-.wrap{
-  max-width:940px;
-  margin:auto;
-}
-
-.hero{
-  text-align:center;
-  margin-bottom:48px;
-}
-
-.label{
-  color:var(--green);
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-weight:900;
-  font-size:.78rem;
-  margin-bottom:12px;
-}
-
-.hero h1{
-  font-size:clamp(3.8rem,9vw,7rem);
-  margin-bottom:18px;
-}
-
-.hero p{
-  color:var(--soft);
-  max-width:720px;
-  margin:auto;
-  font-size:1.05rem;
-}
-
-.card{
-  background:var(--paper);
-  border:1px solid var(--line);
-}
-
-.total-card{
-  background:var(--dark);
-  color:#fff;
-  padding:38px;
-  margin-bottom:28px;
-}
-
-.total-card .label{
-  color:rgba(255,255,255,.68);
-}
-
-.total-card h2{
-  color:#fff;
-  font-size:clamp(2.6rem,6vw,4.6rem);
-  margin-bottom:14px;
-}
-
-.total-card p{
-  color:rgba(255,255,255,.78);
-  font-size:1.02rem;
-  margin-bottom:16px;
-}
-
-.info-box{
-  padding:32px 34px;
-}
-
-.info-box h2{
-  font-size:clamp(2.2rem,5vw,3.8rem);
-  margin-bottom:18px;
-}
-
-.info-box p{
-  color:var(--soft);
-  margin-bottom:14px;
-}
-
-.btn-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:28px;
-}
-
-.btn{
-  display:inline-block;
-  text-decoration:none;
-  padding:14px 24px;
-  border-radius:999px;
-  font-size:.82rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.total-card .btn{
-  background:#fff;
-  color:#111;
-}
-
-.btn.secondary{
-  background:transparent;
-  color:var(--green);
-  border:1px solid var(--line);
-}
-
-.sheet-note{
-  margin-top:18px;
-  color:rgba(255,255,255,.68) !important;
-  font-size:.95rem !important;
-}
-
-footer{
-  background:#0b0f0d;
-  color:rgba(255,255,255,.65);
-  text-align:center;
-  padding:34px 20px;
-  font-size:.9rem;
-}
-
+footer{background:#0b0f0d;color:rgba(255,255,255,.65);text-align:center;padding:34px 20px;font-size:.9rem}
 footer b{color:#fff}
 
 @media(max-width:760px){
   .nav{padding:14px 12px}
-
-  .nav-inner{
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .nav-left{
-    flex-direction:column;
-    gap:8px;
-  }
-
-  .home-link{
-    font-size:.66rem;
-    padding:6px 12px;
-  }
-
-  .nav-links{
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
+  .nav-inner{flex-direction:column;gap:10px}
+  .nav-left{flex-direction:column;gap:8px}
+  .home-link{font-size:.66rem;padding:6px 12px}
+  .nav-links{gap:12px;flex-wrap:wrap;justify-content:center}
   .nav-links a{font-size:.66rem}
-
-  .page{
-    padding:150px 16px 70px;
-  }
-
-  .total-card,
-  .info-box{
-    padding:28px 22px;
-  }
-
-  .btn-row{
-    flex-direction:column;
-  }
-
-  .btn-row .btn{
-    text-align:center;
-  }
+  .page{padding:150px 16px 70px}
+  .price-grid{grid-template-columns:1fr}
+  .total-card,.info-box,.price-card{padding:26px 22px}
+  .btn-row{flex-direction:column}
+  .btn-row .btn{text-align:center}
 }
 </style>
 </head>
@@ -287,7 +99,6 @@ footer b{color:#fff}
       <a href="index.html" class="logo"><span>164</span>Trek</a>
       <a href="index.html" class="home-link">Home</a>
     </div>
-
     <div class="nav-links">
       <a href="about.html">About</a>
       <a href="upcoming.html">Upcoming Events</a>
@@ -301,32 +112,62 @@ footer b{color:#fff}
   <div class="wrap">
 
     <section class="hero">
-      <div class="label">Gunung Tahan 2026</div>
-      <h1>Cost information</h1>
-      <p>Package prices, inclusions, and exclusions are shared clearly before payment.</p>
+      <div class="label">Cost breakdown</div>
+      <h1>Gunung Tahan pricing</h1>
+      <p>This fee covers the trip only. Getting to Malaysia and Merapoh, and personal expenses, are not included. Price per person drops as the group gets bigger.</p>
     </section>
 
-    <section class="total-card">
-      <div class="label">Trip costs</div>
-      <h2>Clear before collection</h2>
-      <p>Each trek option shows the estimated package price per pax. The included and excluded items are listed clearly before payment. Anything not listed as included should be treated as a personal or separate cost.</p>
-
-      <div class="btn-row">
-        <a class="btn" href="[ADD GOOGLE SHEET COST BREAKDOWN LINK HERE]" target="_blank" rel="noopener">
-          View estimated cost breakdown
-        </a>
+    <div class="price-grid">
+      <div class="card price-card">
+        <span class="tag easy">Shorter option</span>
+        <h2>Summit · 4D3N</h2>
+        <div class="sub">Merapoh in and out. 15 to 18 July 2026.</div>
+        <table class="ptable">
+          <thead><tr><th>Group size</th><th>Per person</th></tr></thead>
+          <tbody>
+            <tr><td>2 pax</td><td>S$670</td></tr>
+            <tr><td>4 pax</td><td>S$434</td></tr>
+            <tr><td>6 pax</td><td>S$324</td></tr>
+            <tr><td>8 pax</td><td>S$286</td></tr>
+            <tr><td>10 pax</td><td>S$245</td></tr>
+          </tbody>
+        </table>
       </div>
 
-      <p class="sheet-note">Please message us before sending any payment. After payment, send a screenshot or receipt for confirmation.</p>
+      <div class="card price-card">
+        <span class="tag hard">Challenging option</span>
+        <h2>Full Traverse · 7D6N</h2>
+        <div class="sub">Merapoh in, Kuala Tahan out. 15 to 21 July 2026.</div>
+        <table class="ptable">
+          <thead><tr><th>Group size</th><th>Per person</th></tr></thead>
+          <tbody>
+            <tr><td>2 pax</td><td>S$765</td></tr>
+            <tr><td>4 pax</td><td>S$465</td></tr>
+            <tr><td>6 pax</td><td>S$349</td></tr>
+            <tr><td>8 pax</td><td>S$308</td></tr>
+            <tr><td>10 pax</td><td>S$292</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <section class="total-card">
+      <div class="label">What the price covers</div>
+      <h2>Most of the cost is the guide package and ground costs</h2>
+      <p>Both options include a licensed mountain guide, all permits and camping and camera fees, 4x4 transfer (plus a boat on the final day for the traverse), all meals cooked by a chef on the trail, a tent, and insurance with a summit certificate.</p>
+      <p>Not included: your way to Malaysia and Merapoh, personal expenses, and an optional porter.</p>
+      <div class="btn-row">
+        <a class="btn" href="index.html#options">See full option details →</a>
+        <a class="btn" href="index.html#payment">Go to payment section</a>
+      </div>
     </section>
 
     <section class="card info-box">
-      <h2>What package costs can cover</h2>
-      <p>Guide / operator support, permits and fees, trail transfers, food or ration where included, insurance where included, and local logistics.</p>
-      <p>Check the selected trek page for its current package price, dates, and inclusions.</p>
-
+      <h2>How this estimate works</h2>
+      <p>These are the working prices per person by group size. Final numbers may change if the group size, exchange rate, or supplier costs change before departure.</p>
+      <p>After the trip, actual costs are shared with participants. If there is unused buffer, it is either returned or rolled into the next trek.</p>
       <div class="btn-row">
-        <a class="btn secondary" href="index.html#options">View Gunung Tahan options</a>
+        <a class="btn secondary" href="about.html">Back to about</a>
       </div>
     </section>
 

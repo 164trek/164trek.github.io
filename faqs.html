@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>FAQs | 164 Trek</title>
-<meta name="description" content="Frequently asked questions for 164 Trek.">
+<meta name="description" content="General questions and answers for 164 Trek trips.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,292 +13,66 @@
 
 <style>
 :root{
-  --bg:#f7f3ec;
-  --paper:#fffaf2;
-  --ink:#211c16;
+  --bg:#f3f4f1;
+  --paper:#ffffff;
+  --ink:#1c1a16;
   --soft:#5f574e;
-  --line:#ddd3c6;
+  --line:#e7e6e1;
   --green:#2f4938;
   --dark:#0f1411;
 }
 
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6}
+a{color:inherit}
+h1,h2{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.05}
 
-html{
-  scroll-behavior:smooth;
-}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,20,17,.96);color:#fff;padding:20px 22px;backdrop-filter:blur(10px)}
+.nav-inner{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{color:#fff;text-decoration:none;font-weight:900;letter-spacing:.1em;text-transform:uppercase;font-size:1.15rem;white-space:nowrap}
+.logo span{border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:5px 11px;margin-right:10px}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.76rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.nav-links a:hover{color:#fff}
 
-body{
-  background:var(--bg);
-  color:var(--ink);
-  font-family:'Inter',sans-serif;
-  line-height:1.6;
-}
+.page{padding:140px 22px 90px}
+.wrap{max-width:900px;margin:auto}
+.hero{text-align:center;margin-bottom:54px}
+.label{color:var(--green);text-transform:uppercase;letter-spacing:.16em;font-weight:900;font-size:.78rem;margin-bottom:12px}
+.hero h1{font-size:clamp(3.8rem,9vw,7.2rem);margin-bottom:18px}
+.hero p{color:var(--soft);max-width:660px;margin:auto;font-size:1.05rem}
 
-a{
-  color:inherit;
-}
+.faq-list{display:grid;gap:12px}
+.faq{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq summary{cursor:pointer;list-style:none;padding:22px 26px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-weight:900;color:var(--ink);font-size:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:0 0 auto;width:30px;height:30px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);font-weight:900;font-size:1rem}
+.faq[open] summary::after{content:"–"}
+.answer{border-top:1px solid var(--line);padding:22px 26px 26px}
+.answer p{color:var(--soft);font-size:1.02rem;margin-bottom:14px}
+.answer p:last-child{margin-bottom:0}
+.answer a{color:var(--green);font-weight:900;text-underline-offset:4px}
 
-h1,h2{
-  font-family:'DM Serif Display',serif;
-  font-weight:400;
-  line-height:1.05;
-}
+.contact-block{margin-top:34px;background:var(--dark);color:#fff;padding:38px 32px;text-align:center;border-radius:16px}
+.contact-block h2{color:#fff;font-size:clamp(2.4rem,6vw,4.6rem);margin-bottom:14px}
+.contact-block p{color:rgba(255,255,255,.78);font-size:1.05rem;margin-bottom:24px}
+.btn{display:inline-block;background:#fff;color:#111;text-decoration:none;padding:14px 24px;border-radius:999px;font-size:.82rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.number{margin-top:18px;color:rgba(255,255,255,.78);font-weight:800}
 
-.nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:1000;
-  background:rgba(15,20,17,.96);
-  color:#fff;
-  padding:20px 22px;
-  backdrop-filter:blur(10px);
-}
-
-.nav-inner{
-  max-width:1120px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-}
-
-.logo{
-  color:#fff;
-  text-decoration:none;
-  font-weight:900;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  font-size:1.15rem;
-  white-space:nowrap;
-}
-
-.logo span{
-  border:1px solid rgba(255,255,255,.45);
-  border-radius:999px;
-  padding:5px 11px;
-  margin-right:10px;
-}
-
-.nav-links{
-  display:flex;
-  gap:22px;
-  align-items:center;
-}
-
-.nav-links a{
-  color:rgba(255,255,255,.82);
-  text-decoration:none;
-  font-size:.76rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.nav-links a:hover{
-  color:#fff;
-}
-
-.page{
-  padding:140px 22px 90px;
-}
-
-.wrap{
-  max-width:900px;
-  margin:auto;
-}
-
-.hero{
-  text-align:center;
-  margin-bottom:54px;
-}
-
-.label{
-  color:var(--green);
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-weight:900;
-  font-size:.78rem;
-  margin-bottom:12px;
-}
-
-.hero h1{
-  font-size:clamp(3.8rem,9vw,7.2rem);
-  margin-bottom:18px;
-}
-
-.hero p{
-  color:var(--soft);
-  max-width:660px;
-  margin:auto;
-  font-size:1.05rem;
-}
-
-.faq-list{
-  display:grid;
-  gap:12px;
-}
-
-.faq{
-  background:var(--paper);
-  border:1px solid var(--line);
-}
-
-.faq summary{
-  cursor:pointer;
-  list-style:none;
-  padding:22px 26px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-  font-weight:900;
-  color:var(--ink);
-  font-size:1rem;
-}
-
-.faq summary::-webkit-details-marker{
-  display:none;
-}
-
-.faq summary::after{
-  content:"+";
-  flex:0 0 auto;
-  width:30px;
-  height:30px;
-  border:1px solid var(--line);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--green);
-  font-weight:900;
-  font-size:1rem;
-}
-
-.faq[open] summary::after{
-  content:"–";
-}
-
-.answer{
-  border-top:1px solid var(--line);
-  padding:22px 26px 26px;
-}
-
-.answer p{
-  color:var(--soft);
-  font-size:1.02rem;
-  margin-bottom:14px;
-}
-
-.answer p:last-child{
-  margin-bottom:0;
-}
-
-.answer a{
-  color:var(--green);
-  font-weight:900;
-  text-underline-offset:4px;
-}
-
-.contact-block{
-  margin-top:34px;
-  background:var(--dark);
-  color:#fff;
-  padding:38px 32px;
-  text-align:center;
-}
-
-.contact-block h2{
-  color:#fff;
-  font-size:clamp(2.4rem,6vw,4.6rem);
-  margin-bottom:14px;
-}
-
-.contact-block p{
-  color:rgba(255,255,255,.78);
-  font-size:1.05rem;
-  margin-bottom:24px;
-}
-
-.btn{
-  display:inline-block;
-  background:#fff;
-  color:#111;
-  text-decoration:none;
-  padding:14px 24px;
-  border-radius:999px;
-  font-size:.82rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.number{
-  margin-top:18px;
-  color:rgba(255,255,255,.78);
-  font-weight:800;
-}
-
-footer{
-  background:#0b0f0d;
-  color:rgba(255,255,255,.65);
-  text-align:center;
-  padding:34px 20px;
-  font-size:.9rem;
-}
-
-footer b{
-  color:#fff;
-}
+footer{background:#0b0f0d;color:rgba(255,255,255,.65);text-align:center;padding:34px 20px;font-size:.9rem}
+footer b{color:#fff}
 
 @media(max-width:720px){
-  .nav{
-    padding:14px 12px;
-  }
-
-  .nav-inner{
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .nav-links{
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  .nav-links a{
-    font-size:.66rem;
-  }
-
-  .page{
-    padding:150px 16px 70px;
-  }
-
-  .hero{
-    margin-bottom:36px;
-  }
-
-  .faq summary{
-    padding:20px 18px;
-    font-size:.95rem;
-  }
-
-  .answer{
-    padding:20px 18px 22px;
-  }
-
-  .contact-block{
-    padding:32px 22px;
-  }
+  .nav{padding:14px 12px}
+  .nav-inner{flex-direction:column;gap:10px}
+  .nav-links{gap:12px;flex-wrap:wrap;justify-content:center}
+  .nav-links a{font-size:.66rem}
+  .page{padding:150px 16px 70px}
+  .hero{margin-bottom:36px}
+  .faq summary{padding:20px 18px;font-size:.95rem}
+  .answer{padding:20px 18px 22px}
+  .contact-block{padding:32px 22px}
 }
 </style>
 </head>
@@ -308,7 +82,6 @@ footer b{
 <nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="logo"><span>164</span>Trek</a>
-
     <div class="nav-links">
       <a href="about.html">About</a>
       <a href="upcoming.html">Upcoming Events</a>
@@ -324,97 +97,86 @@ footer b{
     <section class="hero">
       <div class="label">FAQs</div>
       <h1>Good to know</h1>
-      <p>Simple answers for the things people usually wonder about before joining a 164 Trek trip.</p>
+      <p>General answers that apply across our trips, from low mountains and jungle treks to high mountains and altitude routes. Trip-specific details are shared on each trip page and before payment.</p>
     </section>
 
     <section class="faq-list">
 
       <details class="faq">
-        <summary>1. How fit do I need to be? What if I’m worried I’m not fit enough?</summary>
+        <summary>1. How fit do I need to be?</summary>
         <div class="answer">
-          <p>You don't need to be an athlete, but you do need to be honest about your current fitness. Different treks can involve long hours on your feet, uneven ground, heat, cold, rain, stairs, river crossings, altitude, or tired legs. If you're unsure, join a few weekend training hikes first and see how your body handles it.</p>
+          <p>It depends on the trek. A short hike may only need steady basic fitness, while a multi-day jungle or mountain trek can mean long hours, steep ground, a loaded pack, heat, cold, and tired legs. We describe the expected difficulty for each trip. If you are unsure, join a few training hikes first and see how your body responds.</p>
         </div>
       </details>
 
       <details class="faq">
-        <summary>2. How should I train for a multi-day trek from Singapore?</summary>
+        <summary>2. How should I train from Singapore?</summary>
         <div class="answer">
-          <p>Singapore doesn't have big mountains, so training is mostly about consistency. Long walks, stairs, Bukit Timah, MacRitchie, loaded backpack walks, and steady weekend hikes are all useful. The free weekend training hikes are open to anyone in the community, even if you're not sure about joining a trip yet.</p>
+          <p>Consistency matters more than finding a big mountain. Long walks, stairs, Bukit Timah, MacRitchie, loaded-backpack walks, strength work, and steady weekend hikes all help. Build up so your training gradually matches the trek's distance, elevation, terrain, and pack weight.</p>
         </div>
       </details>
 
       <details class="faq">
         <summary>3. What is AMS, and does it apply to every trek?</summary>
         <div class="answer">
-          <p>AMS means acute mountain sickness, which can happen when your body struggles with altitude. It mainly applies to altitude treks, not every low mountain, jungle trek, or warm-up hike. Fitness helps, but pace, acclimatization, sleep, hydration, and listening to symptoms matter more.</p>
-          <p>For future altitude treks, some hikers speak with a doctor about prevention options such as Diamox. Please get proper medical advice before taking any medication.</p>
+          <p>AMS means acute mountain sickness. It is relevant to altitude treks, not every trek. Low mountains and most jungle treks do not carry the same altitude risk. For a high-altitude trip we will discuss the ascent rate, acclimatisation, symptoms, and turnaround plan in advance. Always ask a doctor for personal medical advice or before taking altitude medication.</p>
         </div>
       </details>
 
       <details class="faq">
-        <summary>4. What gear do I actually need? Do I need expensive boots and poles?</summary>
+        <summary>4. What are the main challenges on different treks?</summary>
         <div class="answer">
-          <p>You don't need the most expensive gear, but you do need gear that's suitable for the specific trek and tested before the trip. Jungle treks, cold mountains, wet trails, camping routes, and altitude treks can require different shoes, layers, rain protection, sleep systems, and personal medication.</p>
-          <p>We will share a trip-specific packing guide once the route and guide requirements are confirmed.</p>
+          <p>Low mountains can still be steep and hot. Jungle treks may be muddy, wet, humid, slippery, and remote, with river crossings and leeches. High mountains add cold, wind, and exposed terrain. Altitude treks also bring acclimatisation and AMS concerns. Each trip page explains the main challenges for that route.</p>
         </div>
       </details>
 
       <details class="faq">
-        <summary>5. What happens if there is injury, bad weather, exhaustion, or altitude issues?</summary>
+        <summary>5. What gear do I need?</summary>
         <div class="answer">
-          <p>We work with local guides or operators for multi-day treks, and their safety judgment comes first on the trail. If someone gets injured, the weather turns bad, the group is exhausted, or altitude symptoms become serious, the plan may change.</p>
-          <p>Getting everyone down safely matters more than reaching a summit or completing the original itinerary.</p>
+          <p>It changes with the route, weather, altitude, and how you sleep on the trek. You do not always need expensive gear, but your footwear, rain protection, layers, and pack should fit properly and be tested before departure. We share a trip-specific checklist once details are set.</p>
         </div>
       </details>
 
       <details class="faq">
-        <summary>6. What if I need to drop out after paying?</summary>
+        <summary>6. What happens if there is injury, bad weather, or exhaustion?</summary>
         <div class="answer">
-          <p>Tell us as early as possible. Some costs may already be committed to the local guide/operator, permits, transport, accommodation, or other arrangements. Any refundable amount will depend on what has already been paid and what can still be recovered. We'll share the cancellation terms before you pay so there are no surprises.</p>
-          <p>As a rule of thumb: the closer to departure, the less is recoverable, because flights, permits, and operator deposits get locked in along the way. We don't keep any money that isn't already spent.</p>
+          <p>The plan may change, turn around, or stop. On the mountain, the licensed guide's safety judgment comes first. The response depends on the trek and may include rest, descent, evacuation, or outside help. Reaching the summit or finishing the route never matters more than getting everyone back safely.</p>
         </div>
       </details>
 
       <details class="faq">
-        <summary>7. What if I’m joining solo and don’t know anyone in the group?</summary>
+        <summary>7. Where does my money go?</summary>
         <div class="answer">
-          <p>That's completely fine. A lot of people join these kinds of trips because they want to meet others who like hiking, training, and doing something a bit harder than a normal holiday. We keep the group small so people can get comfortable before the trip.</p>
+          <p>Costs vary by trip and may include the guide or operator, permits, transport, accommodation or camping, food, support crew, and other shared logistics. The known costs, assumptions, and any buffer are shown clearly before payment is requested.</p>
+          <p><a href="cost-breakdown.html">See the cost breakdown →</a></p>
         </div>
       </details>
 
       <details class="faq">
-        <summary>8. Where does my money actually go?</summary>
+        <summary>8. Do I need to pay right away?</summary>
         <div class="answer">
-          <p>Costs are shared clearly for each trip once the guide/operator, route, permits, transport, and group size are known. Most of the money goes to local guide or operator fees, permits, transport, accommodation, food arrangements, and other ground costs.</p>
-          <p>If a buffer is collected and not used, we explain it clearly to participants.</p>
+          <p>No. Please message us first before sending any payment. We confirm your slot, deposit amount, and cancellation terms before you reserve. Final payment details are shared clearly before collection.</p>
         </div>
       </details>
 
       <details class="faq">
-        <summary>9. What if the group doesn't reach minimum size?</summary>
+        <summary>9. What if I drop out after paying?</summary>
         <div class="answer">
-          <p>Some trips need a minimum group size because guide, transport, permit, or accommodation costs are shared. If the group does not reach the minimum size, the trip may be postponed, repriced, or cancelled. We will explain the options clearly before collecting payment.</p>
+          <p>Tell us as early as possible. Some costs may already be committed to guides, operators, permits, accommodation, or transport. Any refund depends on the trip's stated cancellation terms and what can still be recovered. Those terms are shared before any payment is requested.</p>
         </div>
       </details>
 
       <details class="faq">
-        <summary>10. Are all trips beginner-friendly?</summary>
+        <summary>10. What if the group does not reach the minimum size?</summary>
         <div class="answer">
-          <p>No. Some trips are suitable for newer hikers who train consistently, while others may involve jungle terrain, long trekking days, technical weather, remote camps, or high altitude. We will describe the expected difficulty before asking anyone to commit.</p>
+          <p>Group cost per person depends on how many people join, and some treks have a minimum size set by guide, permit, and transport arrangements. We state the minimum size and cutoff before asking for payment. If a trip cannot proceed, the cancellation and refund terms for that trip apply.</p>
         </div>
       </details>
 
       <details class="faq">
-        <summary>11. What are the challenges of different treks?</summary>
+        <summary>11. Can I join solo, and are all trips beginner-friendly?</summary>
         <div class="answer">
-          <p>Low mountains may still be hot, steep, muddy, or slippery. Jungle treks can be wet, humid, and mentally tiring. High mountains can involve cold, long days, thinner air, or altitude sickness. Overseas treks may also involve travel delays, changing weather, and unfamiliar food or sleeping conditions.</p>
-        </div>
-      </details>
-
-      <details class="faq">
-        <summary>12. Do I need to pay immediately?</summary>
-        <div class="answer">
-          <p>Please message us first before sending any payment. Final payment details, PayNow QR, and Wise payment link will be shared clearly before collection. After payment, send us a screenshot or receipt so we can verify and confirm your slot.</p>
+          <p>Joining solo is completely fine. Many people join to meet others who enjoy hiking and training, and we keep groups small. Not every trip is beginner-friendly though. Some suit beginners who train, while others need prior multi-day, remote, or altitude experience. We describe the expected fitness and experience for each trip so you can make an honest decision.</p>
         </div>
       </details>
 
@@ -423,11 +185,9 @@ footer b{
     <section class="contact-block">
       <h2>Still have questions?</h2>
       <p>Message us on WhatsApp. Happy to chat through anything before you decide.</p>
-
       <a class="btn" href="https://wa.me/qr/5MDC44IBSXFPN1?text=Hi!%20I%20have%20a%20question%20about%20164%20Trek." target="_blank" rel="noopener">
         Message on WhatsApp
       </a>
-
       <div class="number">Message us</div>
     </section>
 

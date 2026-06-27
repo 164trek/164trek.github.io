@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Upcoming Events | 164 Trek</title>
-<meta name="description" content="Upcoming trek ideas by 164 Trek. Dates are tentative and can be discussed if interested.">
+<meta name="description" content="Current and upcoming treks by 164 Trek. Gunung Tahan is the current trip. Other dates are tentative and can be discussed.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,394 +13,121 @@
 
 <style>
 :root{
-  --bg:#f7f3ec;
-  --paper:#fffaf2;
-  --ink:#211c16;
+  --bg:#f3f4f1;
+  --paper:#ffffff;
+  --ink:#1c1a16;
   --soft:#5f574e;
   --muted:#8c8175;
-  --line:#ddd3c6;
+  --line:#e7e6e1;
   --green:#2f4938;
   --rust:#a0552c;
-  --pill:#ded4c7;
+  --pill:#eceae4;
+  --dark:#0f1411;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-
-body{
-  background:var(--bg);
-  color:var(--ink);
-  font-family:'Inter',sans-serif;
-  line-height:1.6;
-}
-
+body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6}
 a{color:inherit}
 img{display:block;max-width:100%}
+h1,h2,h3{font-family:'DM Serif Display',serif;font-weight:400;line-height:1.05}
 
-h1,h2,h3{
-  font-family:'DM Serif Display',serif;
-  font-weight:400;
-  line-height:1.05;
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(15,20,17,.96);color:#fff;padding:20px 22px;backdrop-filter:blur(10px)}
+.nav-inner{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.nav-left{display:flex;align-items:center;gap:14px}
+.logo{color:#fff;text-decoration:none;font-weight:900;letter-spacing:.1em;text-transform:uppercase;font-size:1.15rem;white-space:nowrap}
+.logo span{border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:5px 11px;margin-right:10px}
+.home-link{color:rgba(255,255,255,.82);text-decoration:none;border:1px solid rgba(255,255,255,.28);border-radius:999px;padding:7px 13px;font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.76rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+
+.hero{min-height:60vh;position:relative;overflow:hidden;padding:170px 22px 80px;text-align:center;display:flex;align-items:center;justify-content:center;color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(15,20,17,.48),rgba(15,20,17,.74)),url("upcoming-events-bg.png") center/cover no-repeat;animation:slowZoom 26s ease-in-out infinite alternate;z-index:0}
+.hero .wrap{position:relative;z-index:1}
+@keyframes slowZoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+
+.wrap{max-width:1120px;margin:auto}
+.label{text-transform:uppercase;letter-spacing:.16em;font-weight:900;color:#fff;font-size:.82rem;margin-bottom:14px}
+h1{font-size:clamp(4rem,11vw,8.5rem);margin-bottom:18px}
+.lede{max-width:760px;margin:auto;color:rgba(255,255,255,.86);font-size:1.1rem}
+
+.events{padding:78px 22px 90px}
+.section-head{max-width:820px;margin:0 auto 34px;text-align:center}
+.section-head .kicker{color:var(--green);text-transform:uppercase;letter-spacing:.14em;font-weight:900;font-size:.8rem;margin-bottom:10px}
+.section-head h2{font-size:clamp(2.6rem,6vw,5rem);margin-bottom:16px}
+.section-head p{color:var(--soft);font-size:1.02rem}
+
+/* current trip feature */
+.current{
+  background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-bottom:24px;
 }
-
-.nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:1000;
-  background:rgba(15,20,17,.96);
-  color:#fff;
-  padding:20px 22px;
-  backdrop-filter:blur(10px);
+.current-photo{position:relative;min-height:340px;background:#e7e6e1}
+.current-photo img{width:100%;height:100%;object-fit:cover}
+.current-flag{
+  position:absolute;top:16px;left:16px;background:var(--green);color:#fff;
+  border-radius:999px;padding:8px 15px;font-size:.7rem;font-weight:900;
+  letter-spacing:.12em;text-transform:uppercase;
 }
+.current-body{padding:38px 36px;display:flex;flex-direction:column;justify-content:center}
+.current-body h3{font-size:clamp(2.4rem,4vw,3.4rem);margin-bottom:6px}
+.current-loc{color:var(--soft);margin-bottom:20px}
+.opt-chips{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.opt-chip{border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.opt-chip .name{font-weight:800}
+.opt-chip .date{color:var(--rust);font-weight:800}
+.opt-chip .meta{color:var(--muted);font-size:.9rem}
+.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;padding:14px 24px;border-radius:999px;font-size:.82rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;align-self:flex-start}
 
-.nav-inner{
-  max-width:1120px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:18px;
-}
+.event-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.event-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.event-photo{display:block;width:100%;height:260px;background:#e7e6e1;overflow:hidden;position:relative}
+.event-photo img{width:100%;height:100%;object-fit:cover;transition:transform .28s ease}
+.event-photo:hover img{transform:scale(1.04)}
+.event-photo::after{content:"Credit";position:absolute;right:14px;bottom:12px;background:rgba(0,0,0,.58);color:#fff;padding:6px 10px;border-radius:999px;font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.torres-photo{object-position:center 34%}
+.event-body{padding:30px}
+.event-card h3{font-size:clamp(1.7rem,3vw,2.45rem);margin-bottom:10px}
+.location{color:var(--soft);font-size:1rem;margin-bottom:18px}
+.event-date{font-family:'DM Serif Display',serif;color:var(--rust);font-size:clamp(2rem,4vw,3rem);line-height:1;margin-bottom:8px}
+.tentative{color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-weight:900;font-size:.74rem;margin-bottom:20px}
+.meta{color:var(--soft);font-size:.96rem;margin-bottom:22px}
+.pill{display:inline-block;background:var(--pill);color:#6f695f;border-radius:999px;padding:9px 18px;font-size:.76rem;text-transform:uppercase;letter-spacing:.14em;font-weight:900}
 
-.nav-left{
-  display:flex;
-  align-items:center;
-  gap:14px;
-}
+.spacer{height:64px}
+.note{max-width:900px;margin:44px auto 0;text-align:center;color:var(--soft);font-size:.96rem}
 
-.logo{
-  color:#fff;
-  text-decoration:none;
-  font-weight:900;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-  font-size:1.15rem;
-  white-space:nowrap;
-}
+.contact{background:var(--dark);color:#fff;text-align:center;padding:80px 22px}
+.contact h2{color:#fff;font-size:clamp(2.4rem,6vw,4.6rem);margin-bottom:14px}
+.contact p{color:rgba(255,255,255,.78);margin-bottom:26px}
+.contact .btn{background:#fff;color:#111}
+.number{margin-top:18px;color:rgba(255,255,255,.78);font-weight:700}
 
-.logo span{
-  border:1px solid rgba(255,255,255,.45);
-  border-radius:999px;
-  padding:5px 11px;
-  margin-right:10px;
-}
-
-.home-link{
-  color:rgba(255,255,255,.82);
-  text-decoration:none;
-  border:1px solid rgba(255,255,255,.28);
-  border-radius:999px;
-  padding:7px 13px;
-  font-size:.72rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.nav-links{
-  display:flex;
-  gap:22px;
-  align-items:center;
-}
-
-.nav-links a{
-  color:rgba(255,255,255,.82);
-  text-decoration:none;
-  font-size:.76rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.hero{
-  min-height:72vh;
-  position:relative;
-  overflow:hidden;
-  padding:170px 22px 90px;
-  text-align:center;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#fff;
-}
-
-.hero::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(rgba(15,20,17,.48),rgba(15,20,17,.74)),
-    url("upcoming-events-bg.png") center/cover no-repeat;
-  animation:slowZoom 26s ease-in-out infinite alternate;
-  z-index:0;
-}
-
-.hero .wrap{
-  position:relative;
-  z-index:1;
-}
-
-@keyframes slowZoom{
-  from{transform:scale(1)}
-  to{transform:scale(1.08)}
-}
-
-.wrap{
-  max-width:1120px;
-  margin:auto;
-}
-
-.label{
-  text-transform:uppercase;
-  letter-spacing:.16em;
-  font-weight:900;
-  color:#fff;
-  font-size:.82rem;
-  margin-bottom:14px;
-}
-
-h1{
-  font-size:clamp(4.4rem,11vw,9rem);
-  margin-bottom:18px;
-}
-
-.lede{
-  max-width:760px;
-  margin:auto;
-  color:rgba(255,255,255,.86);
-  font-size:1.1rem;
-}
-
-.events{
-  padding:82px 22px 90px;
-}
-
-.section-head{
-  max-width:820px;
-  margin:0 auto 38px;
-  text-align:center;
-}
-
-.section-head .kicker{
-  color:var(--green);
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  font-weight:900;
-  font-size:.8rem;
-  margin-bottom:10px;
-}
-
-.section-head h2{
-  font-size:clamp(2.8rem,6vw,5.4rem);
-  margin-bottom:16px;
-}
-
-.section-head p{
-  color:var(--soft);
-  font-size:1.03rem;
-}
-
-.event-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:28px;
-}
-
-.event-card{
-  background:var(--paper);
-  border:1px solid var(--line);
-  overflow:hidden;
-}
-
-.event-photo{
-  display:block;
-  width:100%;
-  height:260px;
-  background:#ddd3c6;
-  overflow:hidden;
-  position:relative;
-}
-
-.event-photo img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:transform .28s ease;
-}
-
-.event-photo:hover img{
-  transform:scale(1.04);
-}
-
-.event-photo::after{
-  content:"Credit";
-  position:absolute;
-  right:14px;
-  bottom:12px;
-  background:rgba(0,0,0,.58);
-  color:#fff;
-  padding:6px 10px;
-  border-radius:999px;
-  font-size:.68rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.torres-photo{
-  object-position:center 34%;
-}
-
-.event-body{
-  padding:30px;
-}
-
-.event-card h3{
-  font-size:clamp(1.7rem,3vw,2.45rem);
-  margin-bottom:10px;
-}
-
-.location{
-  color:var(--soft);
-  font-size:1rem;
-  margin-bottom:18px;
-}
-
-.event-date{
-  font-family:'DM Serif Display',serif;
-  color:var(--rust);
-  font-size:clamp(2rem,4vw,3rem);
-  line-height:1;
-  margin-bottom:8px;
-}
-
-.tentative{
-  color:var(--muted);
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  font-weight:900;
-  font-size:.74rem;
-  margin-bottom:20px;
-}
-
-.meta{
-  color:var(--soft);
-  font-size:.96rem;
-  margin-bottom:22px;
-}
-
-.pill{
-  display:inline-block;
-  background:var(--pill);
-  color:#6f695f;
-  border-radius:999px;
-  padding:9px 18px;
-  font-size:.76rem;
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  font-weight:900;
-}
-
-.spacer{height:70px}
-
-.note{
-  max-width:900px;
-  margin:44px auto 0;
-  text-align:center;
-  color:var(--soft);
-  font-size:.96rem;
-}
-
-.contact{
-  background:#0f1411;
-  color:#fff;
-  text-align:center;
-  padding:80px 22px;
-}
-
-.contact h2{
-  color:#fff;
-  font-size:clamp(2.4rem,6vw,4.6rem);
-  margin-bottom:14px;
-}
-
-.contact p{
-  color:rgba(255,255,255,.78);
-  margin-bottom:26px;
-}
-
-.btn{
-  display:inline-block;
-  background:#fff;
-  color:#111;
-  text-decoration:none;
-  padding:14px 24px;
-  border-radius:999px;
-  font-size:.82rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-
-.number{
-  margin-top:18px;
-  color:rgba(255,255,255,.78);
-  font-weight:700;
-}
-
-footer{
-  background:#0b0f0d;
-  color:rgba(255,255,255,.65);
-  text-align:center;
-  padding:34px 20px;
-  font-size:.9rem;
-}
-
+footer{background:#0b0f0d;color:rgba(255,255,255,.65);text-align:center;padding:34px 20px;font-size:.9rem}
 footer b{color:#fff}
 
+@media(max-width:860px){
+  .current{grid-template-columns:1fr}
+  .current-photo{min-height:240px}
+}
 @media(max-width:820px){
   .event-grid{grid-template-columns:1fr}
   .event-photo{height:240px}
   .event-body{padding:26px 22px}
 }
-
 @media(max-width:720px){
   .nav{padding:14px 12px}
-
-  .nav-inner{
-    flex-direction:column;
-    gap:10px;
-  }
-
-  .nav-left{
-    flex-direction:column;
-    gap:8px;
-  }
-
-  .home-link{
-    font-size:.66rem;
-    padding:6px 12px;
-  }
-
-  .nav-links{
-    gap:12px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
+  .nav-inner{flex-direction:column;gap:10px}
+  .nav-left{flex-direction:column;gap:8px}
+  .home-link{font-size:.66rem;padding:6px 12px}
+  .nav-links{gap:12px;flex-wrap:wrap;justify-content:center}
   .nav-links a{font-size:.66rem}
-
-  .hero{
-    min-height:70vh;
-    padding:150px 18px 70px;
-  }
-
-  h1{font-size:clamp(3.6rem,16vw,5.8rem)}
+  .hero{min-height:54vh;padding:150px 18px 64px}
+  h1{font-size:clamp(3.4rem,16vw,5.6rem)}
   .lede{font-size:1rem}
-  .events{padding:64px 18px 80px}
-  .spacer{height:48px}
+  .events{padding:60px 18px 80px}
+  .current-body{padding:28px 24px}
+  .spacer{height:44px}
 }
 </style>
 </head>
@@ -413,7 +140,6 @@ footer b{color:#fff}
       <a href="index.html" class="logo"><span>164</span>Trek</a>
       <a href="index.html" class="home-link">Home</a>
     </div>
-
     <div class="nav-links">
       <a href="about.html">About</a>
       <a href="upcoming.html">Upcoming Events</a>
@@ -427,26 +153,65 @@ footer b{color:#fff}
   <div class="wrap">
     <div class="label">164 Trek</div>
     <h1>Upcoming Events</h1>
-    <p class="lede">Current trek plans and future ideas by 164 Trek. Message us if you are interested before making any payment.</p>
+    <p class="lede">Our current trip, plus treks we are planning next. Dates are tentative and can be discussed with interested members.</p>
   </div>
 </header>
 
 <section class="events">
   <div class="wrap">
 
+    <!-- CURRENT TRIP -->
+    <div class="section-head">
+      <div class="kicker">Current trip</div>
+      <h2>Gunung Tahan</h2>
+      <p>The highest peak in Peninsular Malaysia. Two options in July 2026, easy or challenging.</p>
+    </div>
+
+    <div class="current">
+      <div class="current-photo">
+        <span class="current-flag">Booking now</span>
+        <!-- Loads from Wikimedia Commons. To use your own photo, swap src to tahan-cover.jpg after uploading it. -->
+        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/View%20Near%20Kem%20Botak%2C%20Gunung%20Tahan.jpg"
+             onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/Unnamed%20Lesser%20Peak%2C%20Gunung%20Tahan.%20Snapped%20from%20Kem%20Botak.jpg';"
+             alt="Gunung Tahan">
+      </div>
+      <div class="current-body">
+        <h3>Gunung Tahan</h3>
+        <div class="current-loc">Taman Negara, Peninsular Malaysia · 2,187 m</div>
+
+        <div class="opt-chips">
+          <div class="opt-chip">
+            <div class="name">Summit · 4D3N <span class="date">· 15 to 18 July 2026</span></div>
+            <div class="meta">Merapoh in and out. The shorter option.</div>
+          </div>
+          <div class="opt-chip">
+            <div class="name">Full Traverse · 7D6N <span class="date">· 15 to 21 July 2026</span></div>
+            <div class="meta">Merapoh in, Kuala Tahan out. The challenging option.</div>
+          </div>
+        </div>
+
+        <a class="btn" href="index.html">View trip details →</a>
+      </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <!-- UPCOMING (tentative dates) -->
     <div class="section-head">
       <div class="kicker">Upcoming Events</div>
-      <h2>Current upcoming trek</h2>
+      <h2>Upcoming treks</h2>
+      <p>Treks with tentative dates. Click any photo to view the source or credit page.</p>
     </div>
 
     <div class="event-grid" id="upcomingGrid"></div>
 
     <div class="spacer"></div>
 
+    <!-- COMING SOON -->
     <div class="section-head">
       <div class="kicker">Future ideas</div>
-      <h2>Future ideas</h2>
-      <p>Early ideas for future 164 Trek trips.</p>
+      <h2>Coming soon</h2>
+      <p>Dates are still open. Click any photo to view the source or credit page.</p>
     </div>
 
     <div class="event-grid" id="comingGrid"></div>
@@ -481,38 +246,267 @@ function wikiFile(fileName){
 
 const upcomingTreks = [
   {
-    title:"Gunung Tahan, Malaysia",
-    location:"Choose between 4D3N M2M or 7D6N Traverse.",
-    date:"Gunung Tahan 2026",
-    tentative:"Current upcoming trek",
-    meta:"Option 1:<br>4D3N Mt. Tahan M2M<br>July 15–18, 2026<br>SGD 350 per pax<br>Excluded: food/ration<br><br>Option 2:<br>7D6N Mt. Tahan Traverse<br>July 15–21, 2026<br>SGD 380 per pax package.",
-    pill:"Message us if interested",
-    img:"assets/images/sunset-near-kem-botak-gunung-tahan.jpg",
-    alt:"Sunset near Kem Botak, Gunung Tahan",
-    credit:"https://en.wikipedia.org/wiki/Mount_Tahan#/media/File:Sunset_near_Kem_Botak,_Gunung_Tahan.jpg"
+    title:"Goecha La · 4,940 m",
+    location:"Sikkim, India",
+    date:"October 2026",
+    tentative:"Tentative month",
+    meta:"10–11 days. Kanchenjunga views.",
+    pill:"High altitude",
+    img:wikiFile("Kangch-Goechala.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Goecha_La#/media/File:Kangch-Goechala.jpg"
+  },
+  {
+    title:"Overland Track · 65 km",
+    location:"Tasmania, Australia",
+    date:"Late November 2026",
+    tentative:"Tentative month",
+    meta:"6–8 days. Cold, muddy, and remote.",
+    pill:"Finish early Dec",
+    img:wikiFile("Overland_Track_Past_Cradle_Mountain.jpg"),
+    credit:"https://commons.wikimedia.org/wiki/File:Overland_Track_Past_Cradle_Mountain.jpg"
+  },
+  {
+    title:"Tongariro Northern Circuit · 43 km",
+    location:"New Zealand",
+    date:"Late November 2026",
+    tentative:"Tentative month",
+    meta:"3–4 days. Volcanic landscape and alpine weather.",
+    pill:"3–4 days",
+    img:wikiFile("Emerald_Lakes_-_panoramio_(1).jpg"),
+    credit:"https://en.wikipedia.org/wiki/Tongariro_Northern_Circuit#/media/File:Emerald_Lakes_-_panoramio_(1).jpg"
+  },
+  {
+    title:"Kilimanjaro · 5,895 m",
+    location:"Tanzania",
+    date:"Late January 2027",
+    tentative:"Tentative month",
+    meta:"7–9 days via Lemosho. High-altitude summit trek.",
+    pill:"Summit trek",
+    img:"https://cdn.britannica.com/33/153433-050-F76BDF75/Sunrise-Mount-Kilimanjaro-Tanzania.jpg",
+    credit:"https://cdn.britannica.com/33/153433-050-F76BDF75/Sunrise-Mount-Kilimanjaro-Tanzania.jpg"
+  },
+  {
+    title:"Tour du Mont Blanc · 170 km",
+    location:"France · Italy · Switzerland",
+    date:"July to August 2027",
+    tentative:"Tentative window",
+    meta:"10–12 days. Classic Alpine circuit.",
+    pill:"Alpine trek",
+    img:wikiFile("PublicTMB.jpg"),
+    credit:"https://upload.wikimedia.org/wikipedia/commons/2/2f/PublicTMB.jpg"
   }
 ];
 
 const comingSoonTreks = [
   {
-    title:"Mt. Apo, Philippines",
-    location:"Target idea: September",
-    date:"Future idea",
-    tentative:"Dates to be discussed",
-    meta:"Message us if interested.",
-    pill:"Future idea",
+    title:"Mount Rinjani · 3,726 m",
+    location:"Lombok, Indonesia",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"3–4 days. Crater rim, turquoise lake, summit at dawn.",
+    pill:"Classic",
+    img:wikiFile("Gunung rinjani.jpg"),
+    credit:"https://commons.wikimedia.org/wiki/File:Gunung_rinjani.jpg"
+  },
+  {
+    title:"Mount Pulag · 2,928 m",
+    location:"Benguet, Philippines",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"2–3 days. Sea of clouds and a grassland summit.",
+    pill:"Warmup option",
+    img:wikiFile("Sunrise at Mt. Pulag.jpg"),
+    credit:"https://commons.wikimedia.org/wiki/File:Sunrise_at_Mt._Pulag.jpg"
+  },
+  {
+    title:"Cordillera Huayhuash Circuit",
+    location:"Peru",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"10–12 days. 5,000m+ passes.",
+    pill:"Hard",
+    img:wikiFile("Cordillera_Huayhuash_02359.JPG"),
+    credit:"https://en.wikipedia.org/wiki/Cordillera_Huayhuash#/media/File:Cordillera_Huayhuash_02359.JPG"
+  },
+  {
+    title:"Torres del Paine O Circuit",
+    location:"Chile",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"8–10 days. Patagonian weather.",
+    pill:"Hard weather",
+    img:"https://upload.wikimedia.org/wikipedia/commons/b/b3/TDP2_Stevage.jpg",
+    credit:"https://upload.wikimedia.org/wikipedia/commons/b/b3/TDP2_Stevage.jpg",
+    photoClass:"torres-photo"
+  },
+  {
+    title:"Manaslu Circuit · 5,106 m pass",
+    location:"Nepal",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"14–16 days. Larkya La pass.",
+    pill:"High altitude",
+    img:wikiFile("Sunrise,_Manaslu.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Manaslu#/media/File:Sunrise,_Manaslu.jpg"
+  },
+  {
+    title:"Dusky Track",
+    location:"New Zealand",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"8–10 days. Wet, muddy, remote, and grimy.",
+    pill:"Rough trek",
+    img:wikiFile("Tamatea_Dusky_Sound.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Dusky_Sound#/media/File:Tamatea_Dusky_Sound.jpg"
+  },
+  {
+    title:"K2 Base Camp / Concordia",
+    location:"Pakistan",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"14–21 days. Big mountain base camp trek.",
+    pill:"Expedition feel",
+    img:wikiFile("K2_2006b.jpg"),
+    credit:"https://commons.wikimedia.org/wiki/File:K2_2006b.jpg"
+  },
+  {
+    title:"Annapurna Circuit · 5,416 m pass",
+    location:"Nepal",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"15–20 days. Thorong La pass.",
+    pill:"High altitude",
+    img:wikiFile("Annapurna_Massif_Panorama.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Annapurna_Circuit#/media/File:Annapurna_Massif_Panorama.jpg"
+  },
+  {
+    title:"Everest Three Passes",
+    location:"Nepal",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"18–22 days. Three 5,000m+ passes.",
+    pill:"Big commitment",
+    img:wikiFile("Close_Up_View_of_Mount_Everest_from_Kala_Patthar_(5644_m)_in_2023-IMG-3485.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Mount_Everest#/media/File:Close_Up_View_of_Mount_Everest_from_Kala_Patthar_(5644_m)_in_2023-IMG-3485.jpg"
+  },
+  {
+    title:"Markha Valley",
+    location:"Ladakh, India",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"8–10 days. High-altitude desert.",
+    pill:"Dry altitude",
+    img:wikiFile("KangYatze.JPG"),
+    credit:"https://en.wikipedia.org/wiki/Markha_River_(India)#/media/File:KangYatze.JPG"
+  },
+  {
+    title:"Larapinta Trail",
+    location:"Australia",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"12–20 days. Red Centre heat.",
+    pill:"Heat trek",
+    img:wikiFile("Larapinta_Trail.JPG"),
+    credit:"https://en.wikipedia.org/wiki/Larapinta_Trail#/media/File:Larapinta_Trail.JPG"
+  },
+  {
+    title:"Mount Apo · 2,954 m",
+    location:"Philippines",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"3–4 days. Highest peak in the Philippines.",
+    pill:"Warmup option",
     img:wikiFile("Tuktok_ng_Pilipinas.jpg"),
     credit:"https://en.wikipedia.org/wiki/Mount_Apo#/media/File:Tuktok_ng_Pilipinas.jpg"
+  },
+  {
+    title:"Mount Olympus · 2,917 m",
+    location:"Greece",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"2–3 days. Walking trail to Skala.",
+    pill:"Greece pair trip",
+    img:wikiFile("Skourta.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Mount_Olympus#/media/File:Skourta.jpg"
+  },
+  {
+    title:"Mount Kinabalu · 4,095 m",
+    location:"Malaysian Borneo",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"2 days. Steep but well-maintained.",
+    pill:"Short altitude",
+    img:wikiFile("Kinabalu_Sabah_Borneo_Kampong_Kundasang_panorama_2.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Mount_Kinabalu#/media/File:Kinabalu_Sabah_Borneo_Kampong_Kundasang_panorama_2.jpg"
+  },
+  {
+    title:"Mount Fuji · 3,776 m",
+    location:"Japan",
+    date:"Coming soon",
+    tentative:"July to September season",
+    meta:"2 days. Walking trail, crowded but iconic.",
+    pill:"Short season",
+    img:wikiFile("View_of_Mount_Fuji_from_Ōwakudani_20211202.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Mount_Fuji#/media/File:View_of_Mount_Fuji_from_%C5%8Cwakudani_20211202.jpg"
+  },
+  {
+    title:"Laugavegur Trail · 55 km",
+    location:"Iceland",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"4 days. Hot springs, glaciers, river crossings.",
+    pill:"Cold route",
+    img:wikiFile("Landmannalaugar.jpeg"),
+    credit:"https://en.wikipedia.org/wiki/Laugavegur#/media/File:Landmannalaugar.jpeg"
+  },
+  {
+    title:"West Highland Way · 155 km",
+    location:"Scotland",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"7–8 days. Wet, atmospheric, hard miles.",
+    pill:"Long walk",
+    img:wikiFile("WHW_Rannoch-Moor.jpg"),
+    credit:"https://en.wikipedia.org/wiki/West_Highland_Way#/media/File:WHW_Rannoch-Moor.jpg"
+  },
+  {
+    title:"Camino de Santiago",
+    location:"Spain",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"Full Camino Frances or shorter sections. Social walking route.",
+    pill:"Low elevation",
+    img:wikiFile("Camino_de_Santiago_(58438781).jpg"),
+    credit:"https://upload.wikimedia.org/wikipedia/commons/8/82/Camino_de_Santiago_%2858438781%29.jpg"
+  },
+  {
+    title:"Mount Toubkal · 4,167 m",
+    location:"Morocco",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"2–3 days. Highest peak in North Africa.",
+    pill:"Short altitude",
+    img:wikiFile("My_Toubkal.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Toubkal#/media/File:My_Toubkal.jpg"
+  },
+  {
+    title:"Mount Bromo + Ijen",
+    location:"Indonesia",
+    date:"Coming soon",
+    tentative:"Date to be discussed",
+    meta:"2–3 days. Volcanoes, sulfur miners, blue flames.",
+    pill:"Short trip",
+    img:wikiFile("Bromo-Semeru-Batok-Widodaren.jpg"),
+    credit:"https://en.wikipedia.org/wiki/Mount_Bromo#/media/File:Bromo-Semeru-Batok-Widodaren.jpg"
   }
 ];
 
 function renderCards(items, targetId){
   const target = document.getElementById(targetId);
-
   target.innerHTML = items.map(item => `
     <article class="event-card">
       <a class="event-photo" href="${item.credit}" target="_blank" rel="noopener">
-        <img class="${item.photoClass || ""}" src="${item.img}" alt="${item.alt || item.title}">
+        <img class="${item.photoClass || ""}" src="${item.img}" alt="${item.title}">
       </a>
       <div class="event-body">
         <h3>${item.title}</h3>
